@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="TongCuoc_Ca">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+      <xs:element name="kmCoKhachField" type="xs:double" />
+      <xs:element name="kmRongField" type="xs:double" />
+      <xs:element name="tongCuocKhachField" type="xs:int" />
+      <xs:element name="tongTienField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TongCuoc_Ca" nillable="true" type="tns:TongCuoc_Ca" />
+  <xs:complexType name="ArrayOfVungBound">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VungBound" nillable="true" type="tns:VungBound" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVungBound" nillable="true" type="tns:ArrayOfVungBound" />
+  <xs:complexType name="VungBound">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q2:PropertyChangedEventHandler" />
+      <xs:element name="idField" type="xs:int" />
+      <xs:element name="kinhDoTamField" type="xs:double" />
+      <xs:element name="loaiVungField" type="xs:short" />
+      <xs:element name="maCungXNField" type="xs:int" />
+      <xs:element name="muiGioVungField" nillable="true" type="tns:ArrayOfMuiGioVung" />
+      <xs:element name="tenVietTatField" nillable="true" type="xs:string" />
+      <xs:element name="tenVungField" nillable="true" type="xs:string" />
+      <xs:element name="thuTuSapXepField" type="xs:int" />
+      <xs:element name="toaDoCacDinhField" nillable="true" type="xs:string" />
+      <xs:element name="viDoTamField" type="xs:double" />
+      <xs:element name="vungMRField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VungBound" nillable="true" type="tns:VungBound" />
+  <xs:complexType name="ArrayOfMuiGioVung">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MuiGioVung" nillable="true" type="tns:MuiGioVung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMuiGioVung" nillable="true" type="tns:ArrayOfMuiGioVung" />
+  <xs:complexType name="MuiGioVung">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q3:PropertyChangedEventHandler" />
+      <xs:element name="gioBatDauField" type="xs:dateTime" />
+      <xs:element name="gioKetThucField" type="xs:dateTime" />
+      <xs:element name="maxXeField" type="xs:int" />
+      <xs:element name="minXeField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MuiGioVung" nillable="true" type="tns:MuiGioVung" />
+  <xs:complexType name="ArrayOfCuocKhach">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CuocKhach" nillable="true" type="tns:CuocKhach" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCuocKhach" nillable="true" type="tns:ArrayOfCuocKhach" />
+  <xs:complexType name="CuocKhach">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q4:PropertyChangedEventHandler" />
+      <xs:element name="bienSoXeField" nillable="true" type="xs:string" />
+      <xs:element name="diaChiField" nillable="true" type="xs:string" />
+      <xs:element name="fKDiemBDField" type="xs:int" />
+      <xs:element name="fKDiemKTField" type="xs:int" />
+      <xs:element name="gioField" nillable="true" type="xs:string" />
+      <xs:element name="gioKhachLenDField" type="xs:dateTime" />
+      <xs:element name="gioKhachLenField" nillable="true" type="xs:string" />
+      <xs:element name="gioKhachLenLechGioField" type="xs:dateTime" />
+      <xs:element name="gioKhachXuongDField" type="xs:dateTime" />
+      <xs:element name="gioKhachXuongField" nillable="true" type="xs:string" />
+      <xs:element name="gioKhachXuongLechGioField" type="xs:dateTime" />
+      <xs:element name="idField" type="xs:long" />
+      <xs:element name="kDBDField" type="xs:float" />
+      <xs:element name="kDKTField" type="xs:float" />
+      <xs:element name="kmCKChuyenTruocField" type="xs:float" />
+      <xs:element name="kmCoKhachField" type="xs:float" />
+      <xs:element name="kmRongField" type="xs:float" />
+      <xs:element name="maXNField" nillable="true" type="xs:string" />
+      <xs:element name="ngayField" nillable="true" type="xs:string" />
+      <xs:element name="soHieuXeField" nillable="true" type="xs:string" />
+      <xs:element name="thoiGianField" type="xs:dateTime" />
+      <xs:element name="tienField" type="xs:int" />
+      <xs:element name="tienThucThuField" type="xs:int" />
+      <xs:element name="tienTrenDongHoField" type="xs:int" />
+      <xs:element name="trangThaiField" nillable="true" type="xs:string" />
+      <xs:element name="vDBDField" type="xs:float" />
+      <xs:element name="vDKTField" type="xs:float" />
+      <xs:element name="vungDHIDField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CuocKhach" nillable="true" type="tns:CuocKhach" />
+  <xs:complexType name="ArrayOfChotCuoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChotCuoc" nillable="true" type="tns:ChotCuoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChotCuoc" nillable="true" type="tns:ArrayOfChotCuoc" />
+  <xs:complexType name="ChotCuoc">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q5:PropertyChangedEventHandler" />
+      <xs:element name="bienSoXeField" nillable="true" type="xs:string" />
+      <xs:element name="kmRongField" type="xs:float" />
+      <xs:element name="maCungXNField" nillable="true" type="xs:string" />
+      <xs:element name="soCuocField" type="xs:int" />
+      <xs:element name="soHieuXeField" nillable="true" type="xs:string" />
+      <xs:element name="thoiDiemChotCuocField" type="xs:dateTime" />
+      <xs:element name="tongKMDaChayField" type="xs:float" />
+      <xs:element name="tongKMTichLuyField" type="xs:float" />
+      <xs:element name="tongTienField" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChotCuoc" nillable="true" type="tns:ChotCuoc" />
+</xs:schema>

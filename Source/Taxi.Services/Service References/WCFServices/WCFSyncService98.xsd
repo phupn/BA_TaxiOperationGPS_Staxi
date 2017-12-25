@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" />
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd5" namespace="WCF_SyncOnline.ServiceLibrary" />
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" />
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/ServiceLibrary" />
+  <xs:element name="GetTongCuoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BSXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isChotCo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTongCuocResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" minOccurs="0" name="GetTongCuocResult" nillable="true" type="q1:TongCuoc_Ca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="request" nillable="true" type="q2:XeOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetXeOnlineResult" nillable="true" type="q3:XeOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKCXeNhan_DiemDonKhach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="MaXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SHXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKCXeNhan_DiemDonKhachResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKCXeNhan_DiemDonKhachResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnlineBySHX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SHXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnlineBySHXResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetXeOnlineBySHXResult" nillable="true" type="q4:T_XeOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListObjectXeOnline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListObjectXeOnlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetListObjectXeOnlineResult" nillable="true" type="q5:ArrayOfT_XeOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeDonKhach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SHXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeDonKhachResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetXeDonKhachResult" nillable="true" type="q6:T_XeOnline_TT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="banKinhGioiHan" type="xs:int" />
+        <xs:element minOccurs="0" name="isBAMap" type="xs:boolean" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachXeDeCu_ToaDoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo_SANBAY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo_SANBAYResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachXeDeCu_ToaDo_SANBAYResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDoV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="banKinhGioiHan" type="xs:int" />
+        <xs:element minOccurs="0" name="isBAMap" type="xs:boolean" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+        <xs:element minOccurs="0" name="thoiDiemGoi" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idCG" type="xs:long" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="diaChi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDoV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachXeDeCu_ToaDoV2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo_SANBAYV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+        <xs:element minOccurs="0" name="thoiDiemGoi" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idCG" type="xs:long" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="diaChi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo_SANBAYV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachXeDeCu_ToaDo_SANBAYV2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTaxiOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+        <xs:element minOccurs="0" name="thoiDiemGoi" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idCG" type="xs:long" />
+        <xs:element minOccurs="0" name="xeDeCu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xeDeCu_TD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xeNhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTaxiOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveTaxiOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCG" type="xs:long" />
+        <xs:element minOccurs="0" name="vung" type="xs:int" />
+        <xs:element minOccurs="0" name="xeNhan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xeDon" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveTaxiOperationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckXeDonCach5Phut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xeCheck" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckXeDonCach5PhutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckXeDonCach5PhutResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressOfTaxiOperation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressOfTaxiOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAddressOfTaxiOperationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="message" nillable="true" type="q7:T_Messages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMessagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsReadMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsReadMessageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasMessageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetMessageResult" nillable="true" type="q8:T_Messages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCauHinhThoatCuocTheoVung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vung" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCauHinhThoatCuocTheoVungResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetCauHinhThoatCuocTheoVungResult" nillable="true" type="q9:T_ThoatCuoc999" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipAddress" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckInResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vung" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetMKLoginResult" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountMKLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vung" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountMKLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountMKLoginResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListVungDieuHanh_XN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListVungDieuHanh_XNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" minOccurs="0" name="GetListVungDieuHanh_XNResult" nillable="true" type="q11:ArrayOfVungBound" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDSCuocKhach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SoHieuXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TuNgay" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DenNgay" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="KmCoKhach" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDSCuocKhachResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" minOccurs="0" name="GetDSCuocKhachResult" nillable="true" type="q12:ArrayOfCuocKhach" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGioKhachLen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BienSoXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGioKhachLenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGioKhachLenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGioKhachXuong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BienSoXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ThoiGianDonKhach" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGioKhachXuongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGioKhachXuongResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncCuocKhachThueBao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDCuocKhach" type="xs:long" />
+        <xs:element minOccurs="0" name="CuocThueBaoID" type="xs:long" />
+        <xs:element minOccurs="0" name="TienThucThu" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncCuocKhachThueBaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SyncCuocKhachThueBaoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeoOfVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BienSoXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeoOfVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetGeoOfVehicleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kinhDo_Start" type="xs:double" />
+        <xs:element minOccurs="0" name="viDo_Start" type="xs:double" />
+        <xs:element minOccurs="0" name="kinhDo_End" type="xs:double" />
+        <xs:element minOccurs="0" name="viDo_End" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDistanceResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListChotCuoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ListSHX" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TuNgay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DenNgay" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListChotCuocResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" minOccurs="0" name="GetListChotCuocResult" nillable="true" type="q13:ArrayOfChotCuoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeDiTuyen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeDiTuyenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXeDiTuyenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallSumary">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCallSumaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ServiceLibrary" minOccurs="0" name="GetCallSumaryResult" nillable="true" type="q14:ArrayOfCall_Sumary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehiclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetVehiclesResult" nillable="true" type="q15:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxiOperation_SyncKHTT">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxiOperation_SyncKHTTResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Truck_GetDanhSachXeChuaMoHang">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Truck_GetDanhSachXeChuaMoHangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Truck_GetDanhSachXeChuaMoHangResult" nillable="true" type="q16:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeServer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTimeServerResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

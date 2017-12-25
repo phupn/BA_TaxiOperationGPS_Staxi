@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EC03F78-3CFD-41C8-BBF4-0C9CD0577FB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxiApplication</RootNamespace>
+    <AssemblyName>DienThoai_G5</AssemblyName>
+    <ApplicationIcon>Telephone_01.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/EFiling/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Asterisk.NET, Version=1.6.3.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Asterisk.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.Data.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.Pdf.v16.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.Printing.v16.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.Utils.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2.UI">
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.Utils.v16.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.XtraBars.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.XtraEditors.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.XtraPrinting.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>..\Taxi.Controls\DLL\Dev16_2\DevExpress.XtraGrid.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\DLL\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\DLL\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="netchartdir">
+      <HintPath>..\TaxiOperation_DieuHanhChinhV2\DLL_Common\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\TaxiOperation_DieuHanhChinhV2\DLL_Common\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Taxi.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Utils\Dll\Taxi.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Validator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxiOperation_DieuHanhChinhV2\DLL_Common\Validator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\G5ServiceSyn.cs" />
+    <Compile Include="FormMainRibbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainRibbon.Designer.cs">
+      <DependentUpon>FormMainRibbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTestRealTimeGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTestRealTimeGridView.Designer.cs">
+      <DependentUpon>FrmTestRealTimeGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ConfigLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ConfigLine.Designer.cs">
+      <DependentUpon>ConfigLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmCanhBaoDieuApp\frmCanhBaoDieuApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmCanhBaoDieuApp\frmCanhBaoDieuApp.Designer.cs">
+      <DependentUpon>frmCanhBaoDieuApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCommandHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCommandHistory.Designer.cs">
+      <DependentUpon>frmCommandHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConfirmXeDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmConfirmXeDon.Designer.cs">
+      <DependentUpon>frmConfirmXeDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDangGoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDangGoi.designer.cs">
+      <DependentUpon>frmDangGoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDanhBaCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDanhBaCongTy.Designer.cs">
+      <DependentUpon>frmDanhBaCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDienThoaiInputDataNew_V3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDienThoaiInputDataNew_V3.designer.cs">
+      <DependentUpon>frmDienThoaiInputDataNew_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDieuHanhDienThoaiNEWCP_V3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDieuHanhDienThoaiNEWCP_V3.designer.cs">
+      <DependentUpon>frmDieuHanhDienThoaiNEWCP_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDSLaiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDSLaiXe.Designer.cs">
+      <DependentUpon>frmDSLaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHienThiBanDo_XeNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHienThiBanDo_XeNhan.designer.cs">
+      <DependentUpon>frmHienThiBanDo_XeNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmInputOnGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmInputOnGrid.designer.cs">
+      <DependentUpon>frmInputOnGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmInputXeNhan_Don.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmInputXeNhan_Don.Designer.cs">
+      <DependentUpon>frmInputXeNhan_Don.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNhanVienTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNhanVienTimKiem.Designer.cs">
+      <DependentUpon>frmNhanVienTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CapNhatThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CapNhatThongTinCaNhan.Designer.cs">
+      <DependentUpon>CapNhatThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCheckInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCheckInOut.Designer.cs">
+      <DependentUpon>frmCheckInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmChenMoiMotCuocDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChenMoiMotCuocDienThoai.Designer.cs">
+      <DependentUpon>frmChenMoiMotCuocDienThoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDMDiaDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDMDiaDanh.Designer.cs">
+      <DependentUpon>frmDMDiaDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTinhTienTheoKm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTinhTienTheoKm.designer.cs">
+      <DependentUpon>frmTinhTienTheoKm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MemberCard\frmMemberCard_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MemberCard\frmMemberCard_Search.designer.cs">
+      <DependentUpon>frmMemberCard_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMainRibbon.resx">
+      <DependentUpon>FormMainRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTestRealTimeGridView.resx">
+      <DependentUpon>FrmTestRealTimeGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ConfigLine.resx">
+      <DependentUpon>ConfigLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmCanhBaoDieuApp\frmCanhBaoDieuApp.resx">
+      <DependentUpon>frmCanhBaoDieuApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCommandHistory.resx">
+      <DependentUpon>frmCommandHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmConfirmXeDon.resx">
+      <DependentUpon>frmConfirmXeDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangGoi.resx">
+      <DependentUpon>frmDangGoi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDanhBaCongTy.resx">
+      <DependentUpon>frmDanhBaCongTy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDienThoaiInputDataNew_V3.resx">
+      <DependentUpon>frmDienThoaiInputDataNew_V3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDieuHanhDienThoaiNEWCP_V3.resx">
+      <DependentUpon>frmDieuHanhDienThoaiNEWCP_V3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDSLaiXe.resx">
+      <DependentUpon>frmDSLaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHienThiBanDo_XeNhan.resx">
+      <DependentUpon>frmHienThiBanDo_XeNhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmInputOnGrid.resx">
+      <DependentUpon>frmInputOnGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmInputXeNhan_Don.resx">
+      <DependentUpon>frmInputXeNhan_Don.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNhanVienTimKiem.resx">
+      <DependentUpon>frmNhanVienTimKiem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CapNhatThongTinCaNhan.resx">
+      <DependentUpon>CapNhatThongTinCaNhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCheckInOut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCheckInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmChenMoiMotCuocDienThoai.resx">
+      <DependentUpon>frmChenMoiMotCuocDienThoai.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDMDiaDanh.resx">
+      <DependentUpon>frmDMDiaDanh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTinhTienTheoKm.resx">
+      <DependentUpon>frmTinhTienTheoKm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MemberCard\frmMemberCard_Search.resx">
+      <DependentUpon>frmMemberCard_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChat\MessageTemplate.resx">
+      <DependentUpon>MessageTemplate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChat\Messenger.resx">
+      <DependentUpon>Messenger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChat\SendMessage.resx">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BaoCao_KhongXePhucVu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCao_KhongXePhucVu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TimKiemCuocGoi.resx">
+      <DependentUpon>TimKiemCuocGoi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QuanLyChat\MessageTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChat\MessageTemplate.Designer.cs">
+      <DependentUpon>MessageTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChat\Messenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChat\Messenger.designer.cs">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChat\SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChat\SendMessage.designer.cs">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BaoCao_KhongXePhucVu.cs">
+      <DependentUpon>BaoCao_KhongXePhucVu.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="GUI\TimKiemCuocGoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TimKiemCuocGoi.designer.cs">
+      <DependentUpon>TimKiemCuocGoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siemens\CallCapture_OpenSpaceSiemens.cs" />
+    <None Include="Template\Template Message.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Components\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Components\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="Components\Interop.Microsoft.Office.Interop.Word.dll" />
+    <Content Include="Components\Interop.VBIDE.dll" />
+    <Content Include="Components\Noip.IPFile.Win.dll" />
+    <Content Include="Components\Validator.dll" />
+    <Content Include="ConventionCode.txt" />
+    <Content Include="DLL\Asterisk.NET.dll" />
+    <Content Include="DLL\BA.CallCaptureOpenSpaceSiemens.dll" />
+    <Content Include="DLL\Interop.HiPathProCenterScreenPopAPILibrary.dll" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="Images\Airport-Blue-icon.png" />
+    <Content Include="Images\applications.png" />
+    <Content Include="Images\ApplicationTemplate.png" />
+    <Content Include="Images\App_Connect_16x.png" />
+    <Content Include="Images\App_Error_16x.png" />
+    <Content Include="Images\Attachement.JPG" />
+    <Content Include="Images\CaNhan.png" />
+    <Content Include="Images\Classifications.png" />
+    <Content Include="Images\clock.png" />
+    <Content Include="Images\Close.bmp" />
+    <Content Include="Images\CountryProvince.png" />
+    <Content Include="Images\default.png" />
+    <Content Include="Images\Delete.bmp" />
+    <None Include="Resources\icon175x175.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\Map-Marker-Flag--Right-Azure.png" />
+    <None Include="Resources\32_Map-Marker-Flag--Right-Azure.png" />
+    <None Include="Resources\Staxi_96_ic_launcher.ico" />
+    <None Include="Resources\Staxi_96_ic_launcher.png" />
+    <None Include="Resources\Get Info.png" />
+    <None Include="Resources\App.png" />
+    <None Include="Resources\768px-Approve_icon.svg %281%29.png" />
+    <None Include="Resources\Actions-arrow-down-icon.png" />
+    <None Include="Resources\Actions-arrow-up-icon.png" />
+    <None Include="Resources\App_Cancel2.png" />
+    <None Include="Resources\airplane_sport.png" />
+    <None Include="Resources\App16x16.png" />
+    <None Include="Resources\App_Cancel16x16.png" />
+    <None Include="Resources\phone16x16.png" />
+    <None Include="Resources\phone_add1.png" />
+    <None Include="Resources\help1.png" />
+    <None Include="Resources\Apps-date-icon.png" />
+    <None Include="Resources\dollar-icon.png" />
+    <None Include="Resources\actions-view-refresh-icon.png" />
+    <Content Include="Images\ic_car_P.png" />
+    <Content Include="Images\ic_car_time-01.png" />
+    <Content Include="Images\ic_car_time-01_Red.png" />
+    <Content Include="Images\ic_GPS_A-01.png" />
+    <Content Include="Images\ic_GPS_B-01.png" />
+    <Content Include="Images\ic_help_04-01_Red.png" />
+    <Content Include="Resources\help.png" />
+    <None Include="Resources\homee.png" />
+    <None Include="Resources\ic_order_02-01.png" />
+    <None Include="Resources\ic_success-01.png" />
+    <None Include="Resources\ic_success-01 copy.png" />
+    <None Include="Resources\ic_app_02-01.png" />
+    <None Include="Resources\ic_order-01 copy.png" />
+    <None Include="Resources\ic_delete_06-01.png" />
+    <None Include="Resources\ic_map_search-01 copy.png" />
+    <None Include="Resources\ic_map_search-del-01 copy.png" />
+    <None Include="Resources\ic_GPS-01.png" />
+    <None Include="Resources\ic_user-01 copy.png" />
+    <None Include="Resources\ic_GPS-01_Red.png" />
+    <None Include="Resources\ic_airport-01.png" />
+    <None Include="Resources\ic_delete_06-01_Red.png" />
+    <None Include="Resources\ic_map_search-del-01.png" />
+    <None Include="Resources\ic_list_customer_02-01.png" />
+    <None Include="Resources\ic_Phone_ insert the call-01.png" />
+    <None Include="Resources\ic_order_02-011.png" />
+    <None Include="Resources\ic_money-01.png" />
+    <None Include="Resources\ic_planes_02-01.png" />
+    <None Include="Resources\ic_search_02-01.png" />
+    <None Include="Resources\ic_user manegement-01.png" />
+    <None Include="Resources\ic_help_04-01.png" />
+    <Content Include="Resources\ic_ find_people-01.png" />
+    <None Include="Resources\ic_Data_02-01.png" />
+    <Content Include="Resources\phone_add.png" />
+    <None Include="Resources\search.gif" />
+    <Content Include="Settings\Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Sound\notify.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Telephone_01.ico" />
+    <Content Include="telephone_02.ico" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Images\disk.png" />
+    <Content Include="Images\Dollar.png" />
+    <Content Include="Images\eApplicationSet.gif" />
+    <Content Include="Images\eFolder.bmp" />
+    <Content Include="Images\ExportCVS.JPG" />
+    <Content Include="Images\ExportHTML.png" />
+    <Content Include="Images\FeeAttachment.png" />
+    <Content Include="Images\FilingReport.gif" />
+    <Content Include="Images\Date and Time.png" />
+    <Content Include="Images\Approve.bmp" />
+    <None Include="Images\forward.png" />
+    <Content Include="Images\Help.bmp" />
+    <Content Include="Images\Images.bmp" />
+    <Content Include="Images\FilingMan.gif" />
+    <Content Include="Images\Function.jpg" />
+    <Content Include="Images\LockXP.png" />
+    <Content Include="Images\LogOff.png" />
+    <Content Include="Images\MyDocXP.png" />
+    <Content Include="Images\New.bmp" />
+    <Content Include="Images\OpenFolder.bmp" />
+    <None Include="Images\previous.png" />
+    <Content Include="Images\Printer.bmp" />
+    <Content Include="Images\Save.bmp" />
+    <Content Include="Images\Edit.bmp" />
+    <Content Include="Images\Save_DVD.png" />
+    <Content Include="Images\Scan.bmp" />
+    <Content Include="Images\Search.bmp" />
+    <Content Include="Images\SystemAdmin.png" />
+    <Content Include="Images\SystemSetting.png" />
+    <Content Include="Images\SystemUpdate.png" />
+    <Content Include="Images\TurnOffXP.png" />
+    <Content Include="Images\Undo.jpg" />
+    <Content Include="Images\UserXP.png" />
+    <Content Include="Report\BaoCao_KhongXePhucVu_DuLieu.xml" />
+    <None Include="Resources\Abou.jpg" />
+    <None Include="Resources\help2.png" />
+    <None Include="Resources\Connect.jpg" />
+    <None Include="Resources\Disconnect.png" />
+    <None Include="Resources\Actions-application-exit-icon.png" />
+    <None Include="Resources\maps.png" />
+    <None Include="Resources\lightblue.gif" />
+    <None Include="Resources\lightred.gif" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\Taxi.ico" />
+    <None Include="Resources\ok-icon.png" />
+    <None Include="Resources\marker.png" />
+    <None Include="Resources\marker2.png" />
+    <None Include="Resources\RentalCar.png" />
+    <None Include="Resources\RentalCar2.png" />
+    <None Include="Resources\pink.png" />
+    <None Include="Resources\red.png" />
+    <None Include="Resources\white.png" />
+    <None Include="Resources\yellow.png" />
+    <None Include="Resources\grey.png" />
+    <None Include="Resources\littlecar.jpg" />
+    <None Include="Resources\Alarm-Tick-icon.png" />
+    <None Include="Resources\Apps-preferences-desktop-user-password-icon %281%29.png" />
+    <None Include="Resources\Actions-dialog-cancel-icon.png" />
+    <None Include="Resources\Xe.png" />
+    <None Include="Resources\XeTM_DH.png" />
+    <None Include="Resources\XeTM.png" />
+    <Content Include="Taxi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BA.CallCaptureOpenSpaceSiemens\BA.CallCaptureOpenSpaceSiemens.csproj">
+      <Project>{44a15daf-75c1-4f45-9f6e-e74fbb568ad0}</Project>
+      <Name>BA.CallCaptureOpenSpaceSiemens</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Femiani.Forms.UI\Femiani.Forms.UI.csproj">
+      <Project>{77FB2ED1-B6BE-4425-8B29-51E8565E84EC}</Project>
+      <Name>Femiani.Forms.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Business\Taxi.Business.csproj">
+      <Project>{889A0A5C-D624-49B5-877E-C365672541A8}</Project>
+      <Name>Taxi.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Controls\Taxi.Controls.csproj">
+      <Project>{AAC3CE12-F739-4F19-8FD9-5399CD29CE2E}</Project>
+      <Name>Taxi.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Data\Taxi.Data.csproj">
+      <Project>{C6D7A3EE-B50C-4EA6-9053-2ED7F6C9975D}</Project>
+      <Name>Taxi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Entity\Taxi.Entity.csproj">
+      <Project>{735B945A-3B37-4796-8810-DE7B3B0D168F}</Project>
+      <Name>Taxi.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.MessageBox\Taxi.MessageBox.csproj">
+      <Project>{6d777ac5-0a39-4d93-807f-49d602071243}</Project>
+      <Name>Taxi.MessageBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Services\Taxi.Services.csproj">
+      <Project>{1BB1149D-AB19-462E-8D3D-F18A207B6EF8}</Project>
+      <Name>Taxi.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{E7EBA72B-31F7-4280-90A5-DA0984CCE7D9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3924545A-F8E2-475A-B1A4-05175BC41E50}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GMapResources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

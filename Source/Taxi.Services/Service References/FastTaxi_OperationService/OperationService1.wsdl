@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OperationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IOperationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.Sockets.Operation_345.MsgToMasters_2.From_4" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.Enum" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute.BLL" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.TaxiReturnTopo" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd10" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOperationService_SendToMasterOperationCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterOperationCancel" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterOperationCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterOperationCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterSigningCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterSigningCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterSigningCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterSigningCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterNoCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterNoCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterNoCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterNoCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterSignedCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterSignedCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterSignedCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterSignedCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterCatchingCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterCatchingCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterCatchingCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterCatchingCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterTaxiCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterTaxiCancel" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterTaxiCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterTaxiCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterReceivedInBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterReceivedInBook" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterReceivedInBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterReceivedInBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterBookingDone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterBookingDone" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterBookingDone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterBookingDoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterBookingFail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterBookingFail" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendToMasterBookingFail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendToMasterBookingFailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_AddTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTrip" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_AddTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_UpdateTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrip" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_UpdateTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_ReplaceTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceTrip" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_ReplaceTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_TripUpdateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:TripUpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_TripUpdateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TripUpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_OperationAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:OperationAnswer" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_OperationAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OperationAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_OperationAnswer2_InputMessage">
+    <wsdl:part name="parameters" element="tns:OperationAnswer2" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_OperationAnswer2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OperationAnswer2Response" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_OperationHasReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:OperationHasReceive" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_OperationHasReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OperationHasReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_RemoveScheduleVehicleReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveScheduleVehicleReturn" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_RemoveScheduleVehicleReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveScheduleVehicleReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_FinishVehicleReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinishVehicleReturn" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_FinishVehicleReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinishVehicleReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_DenyTripInBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:DenyTripInBooking" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_DenyTripInBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DenyTripInBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_CalRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalRoute" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_CalRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetAddressByGeos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeos" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetAddressByGeos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOperationService">
+    <wsdl:operation name="SendToMasterOperationCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterOperationCancel" message="tns:IOperationService_SendToMasterOperationCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterOperationCancelResponse" message="tns:IOperationService_SendToMasterOperationCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterSigningCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterSigningCar" message="tns:IOperationService_SendToMasterSigningCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterSigningCarResponse" message="tns:IOperationService_SendToMasterSigningCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterNoCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterNoCar" message="tns:IOperationService_SendToMasterNoCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterNoCarResponse" message="tns:IOperationService_SendToMasterNoCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterSignedCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterSignedCar" message="tns:IOperationService_SendToMasterSignedCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterSignedCarResponse" message="tns:IOperationService_SendToMasterSignedCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterCatchingCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterCatchingCar" message="tns:IOperationService_SendToMasterCatchingCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterCatchingCarResponse" message="tns:IOperationService_SendToMasterCatchingCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterTaxiCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterTaxiCancel" message="tns:IOperationService_SendToMasterTaxiCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterTaxiCancelResponse" message="tns:IOperationService_SendToMasterTaxiCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterReceivedInBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterReceivedInBook" message="tns:IOperationService_SendToMasterReceivedInBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterReceivedInBookResponse" message="tns:IOperationService_SendToMasterReceivedInBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterBookingDone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterBookingDone" message="tns:IOperationService_SendToMasterBookingDone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterBookingDoneResponse" message="tns:IOperationService_SendToMasterBookingDone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterBookingFail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendToMasterBookingFail" message="tns:IOperationService_SendToMasterBookingFail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendToMasterBookingFailResponse" message="tns:IOperationService_SendToMasterBookingFail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/AddTrip" message="tns:IOperationService_AddTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/AddTripResponse" message="tns:IOperationService_AddTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/UpdateTrip" message="tns:IOperationService_UpdateTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/UpdateTripResponse" message="tns:IOperationService_UpdateTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/ReplaceTrip" message="tns:IOperationService_ReplaceTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/ReplaceTripResponse" message="tns:IOperationService_ReplaceTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TripUpdateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/TripUpdateStatus" message="tns:IOperationService_TripUpdateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/TripUpdateStatusResponse" message="tns:IOperationService_TripUpdateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OperationAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/OperationAnswer" message="tns:IOperationService_OperationAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/OperationAnswerResponse" message="tns:IOperationService_OperationAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OperationAnswer2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/OperationAnswer2" message="tns:IOperationService_OperationAnswer2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/OperationAnswer2Response" message="tns:IOperationService_OperationAnswer2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OperationHasReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/OperationHasReceive" message="tns:IOperationService_OperationHasReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/OperationHasReceiveResponse" message="tns:IOperationService_OperationHasReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveScheduleVehicleReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/RemoveScheduleVehicleReturn" message="tns:IOperationService_RemoveScheduleVehicleReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/RemoveScheduleVehicleReturnResponse" message="tns:IOperationService_RemoveScheduleVehicleReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinishVehicleReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/FinishVehicleReturn" message="tns:IOperationService_FinishVehicleReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/FinishVehicleReturnResponse" message="tns:IOperationService_FinishVehicleReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DenyTripInBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/DenyTripInBooking" message="tns:IOperationService_DenyTripInBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/DenyTripInBookingResponse" message="tns:IOperationService_DenyTripInBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS" message="tns:IOperationService_SendSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMSResponse" message="tns:IOperationService_SendSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalRoute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/CalRoute" message="tns:IOperationService_CalRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/CalRouteResponse" message="tns:IOperationService_CalRoute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/GetAddressByGeos" message="tns:IOperationService_GetAddressByGeos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/GetAddressByGeosResponse" message="tns:IOperationService_GetAddressByGeos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IOperationService" type="tns:IOperationService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IOperationService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SendToMasterOperationCancel">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterOperationCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterSigningCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterSigningCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterNoCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterNoCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterSignedCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterSignedCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterCatchingCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterCatchingCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterTaxiCancel">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterTaxiCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterReceivedInBook">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterReceivedInBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterBookingDone">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterBookingDone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToMasterBookingFail">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendToMasterBookingFail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTrip">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/AddTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrip">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/UpdateTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceTrip">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/ReplaceTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TripUpdateStatus">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/TripUpdateStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationAnswer">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/OperationAnswer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationAnswer2">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/OperationAnswer2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationHasReceive">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/OperationHasReceive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveScheduleVehicleReturn">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/RemoveScheduleVehicleReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinishVehicleReturn">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/FinishVehicleReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DenyTripInBooking">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/DenyTripInBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalRoute">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/CalRoute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeos">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/GetAddressByGeos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OperationService">
+    <wsdl:port name="NetTcpBinding_IOperationService" binding="tns:NetTcpBinding_IOperationService">
+      <soap12:address location="net.tcp://10.0.2.172:2526/OperationService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.2.172:2526/OperationService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

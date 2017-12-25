@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.gps.binhanh.com.vn/types/" elementFormDefault="qualified" targetNamespace="http://www.gps.binhanh.com.vn/types/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="VehicleLocationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="local" nillable="true" type="tns:VehicleLocation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleLocationRequest" nillable="true" type="tns:VehicleLocationRequest" />
+  <xs:complexType name="RequestBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientTag" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LoadOptions" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestBase" nillable="true" type="tns:RequestBase" />
+  <xs:complexType name="VehicleLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="st" type="xs:int" />
+      <xs:element minOccurs="0" name="vdt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gdt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ddt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ldt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vtgps" type="xs:int" />
+      <xs:element minOccurs="0" name="vtco" type="xs:int" />
+      <xs:element minOccurs="0" name="dir" type="xs:int" />
+      <xs:element minOccurs="0" name="tgdd" type="xs:double" />
+      <xs:element minOccurs="0" name="ttht" type="xs:int" />
+      <xs:element minOccurs="0" name="tgsos" type="xs:double" />
+      <xs:element minOccurs="0" name="kdsos" type="xs:double" />
+      <xs:element minOccurs="0" name="vdsos" type="xs:double" />
+      <xs:element minOccurs="0" name="countDD" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleLocation" nillable="true" type="tns:VehicleLocation" />
+  <xs:complexType name="VehicleLocationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StateUpdate" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleLocationResponse" nillable="true" type="tns:VehicleLocationResponse" />
+  <xs:complexType name="ResponseBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Acknowledge" type="tns:AcknowledgeType" />
+      <xs:element minOccurs="0" name="Build" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorrelationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationExpires" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReservationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowsAffected" type="xs:int" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+  <xs:simpleType name="AcknowledgeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Failure" />
+      <xs:enumeration value="Success" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AcknowledgeType" nillable="true" type="tns:AcknowledgeType" />
+  <xs:complexType name="VehicleExtendRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ext" nillable="true" type="tns:VehicleExtend" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleExtendRequest" nillable="true" type="tns:VehicleExtendRequest" />
+  <xs:complexType name="VehicleExtend">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VehicleLocation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="comid" type="xs:int" />
+          <xs:element minOccurs="0" name="id" type="xs:long" />
+          <xs:element minOccurs="0" name="gid" type="xs:int" />
+          <xs:element minOccurs="0" name="rid" type="xs:int" />
+          <xs:element minOccurs="0" name="cdd" type="xs:int" />
+          <xs:element minOccurs="0" name="kmgps" type="xs:double" />
+          <xs:element minOccurs="0" name="xco" type="xs:double" />
+          <xs:element minOccurs="0" name="xnl" type="xs:double" />
+          <xs:element minOccurs="0" name="cqvt" type="xs:int" />
+          <xs:element minOccurs="0" name="battery" type="xs:double" />
+          <xs:element minOccurs="0" name="alert" type="xs:int" />
+          <xs:element minOccurs="0" name="vton" type="xs:int" />
+          <xs:element minOccurs="0" name="ext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ccua" type="xs:int" />
+          <xs:element minOccurs="0" name="sobt" type="xs:int" />
+          <xs:element minOccurs="0" name="kmrongkmck" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tien" type="xs:double" />
+          <xs:element minOccurs="0" name="sock" type="xs:int" />
+          <xs:element minOccurs="0" name="kmronght" type="xs:int" />
+          <xs:element minOccurs="0" name="ttk" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleExtend" nillable="true" type="tns:VehicleExtend" />
+  <xs:complexType name="VehicleExtendResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StateUpdate" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleExtendResponse" nillable="true" type="tns:VehicleExtendResponse" />
+  <xs:complexType name="VehilceOnlineRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MaXN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SHX" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="maxComID" type="xs:int" />
+          <xs:element minOccurs="0" name="minComID" type="xs:int" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehilceOnlineRequest" nillable="true" type="tns:VehilceOnlineRequest" />
+  <xs:complexType name="VehicleOnlineResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Onlines" nillable="true" type="tns:ArrayOfVehicleOnline" />
+          <xs:element minOccurs="0" name="OnlinesExtend" nillable="true" type="tns:ArrayOfVehicleOnlineEntity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleOnlineResponse" nillable="true" type="tns:VehicleOnlineResponse" />
+  <xs:complexType name="ArrayOfVehicleOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleOnline" nillable="true" type="tns:VehicleOnline" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleOnline" nillable="true" type="tns:ArrayOfVehicleOnline" />
+  <xs:complexType name="VehicleOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sysid" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="comid" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="xn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="rid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="st" type="xs:int" />
+      <xs:element minOccurs="0" name="vdt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gdt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ddt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ldt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vtgps" type="xs:int" />
+      <xs:element minOccurs="0" name="vtco" type="xs:int" />
+      <xs:element minOccurs="0" name="dir" type="xs:int" />
+      <xs:element minOccurs="0" name="cdd" type="xs:int" />
+      <xs:element minOccurs="0" name="kmgps" type="xs:double" />
+      <xs:element minOccurs="0" name="tgdd" type="xs:double" />
+      <xs:element minOccurs="0" name="cqvt" type="xs:int" />
+      <xs:element minOccurs="0" name="battery" type="xs:double" />
+      <xs:element minOccurs="0" name="alert" type="xs:int" />
+      <xs:element minOccurs="0" name="vton" type="xs:int" />
+      <xs:element minOccurs="0" name="ext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ccua" type="xs:int" />
+      <xs:element minOccurs="0" name="sobt" type="xs:int" />
+      <xs:element minOccurs="0" name="kmrongkmck" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tien" type="xs:double" />
+      <xs:element minOccurs="0" name="sock" type="xs:int" />
+      <xs:element minOccurs="0" name="kmronght" type="xs:int" />
+      <xs:element minOccurs="0" name="ttht" type="xs:int" />
+      <xs:element minOccurs="0" name="ttk" type="xs:int" />
+      <xs:element minOccurs="0" name="trip" nillable="true" type="tns:TripOnline" />
+      <xs:element minOccurs="0" name="seat" type="xs:int" />
+      <xs:element minOccurs="0" name="shx" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lng_com" type="xs:double" />
+      <xs:element minOccurs="0" name="lat_com" type="xs:double" />
+      <xs:element minOccurs="0" name="stateVehicle" type="xs:int" />
+      <xs:element minOccurs="0" name="LostState" type="xs:int" />
+      <xs:element minOccurs="0" name="tgon" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tgsos" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="kdsos" type="xs:double" />
+      <xs:element minOccurs="0" name="vdsos" type="xs:double" />
+      <xs:element minOccurs="0" name="loaixe" type="xs:int" />
+      <xs:element minOccurs="0" name="nt" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleOnline" nillable="true" type="tns:VehicleOnline" />
+  <xs:complexType name="TripOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountKmPulseWithPassenger" type="xs:double" />
+      <xs:element minOccurs="0" name="EmptyKm" type="xs:double" />
+      <xs:element minOccurs="0" name="FreeWatingTime" type="xs:int" />
+      <xs:element minOccurs="0" name="GPSTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsPatent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KmWithPassenger" type="xs:double" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Money" type="xs:int" />
+      <xs:element minOccurs="0" name="PrevPulse" type="xs:int" />
+      <xs:element minOccurs="0" name="PulseBeforeReset" type="xs:int" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WaitingTime" type="xs:int" />
+      <xs:element minOccurs="0" name="isResetPulse" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TripOnline" nillable="true" type="tns:TripOnline" />
+  <xs:complexType name="ArrayOfVehicleOnlineEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleOnlineEntity" nillable="true" type="tns:VehicleOnlineEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleOnlineEntity" nillable="true" type="tns:ArrayOfVehicleOnlineEntity" />
+  <xs:complexType name="VehicleOnlineEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GPSVelocity" type="xs:int" />
+      <xs:element minOccurs="0" name="Lattitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longtitude" type="xs:double" />
+      <xs:element minOccurs="0" name="StatusVehicle" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeDevice" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MachineVelocity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleOnlineEntity" nillable="true" type="tns:VehicleOnlineEntity" />
+  <xs:complexType name="VehicleIndexRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyIDNew" type="xs:int" />
+          <xs:element minOccurs="0" name="CompanyIDOld" type="xs:int" />
+          <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="privateCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleIndexRequest" nillable="true" type="tns:VehicleIndexRequest" />
+  <xs:complexType name="VehicleIndexResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleIndexResponse" nillable="true" type="tns:VehicleIndexResponse" />
+</xs:schema>

@@ -1,0 +1,12 @@
+﻿24/04/2011		- Them truong CuocGoiCoCS trong view GROUP_vw_GetAll_TAXIOPERATION_KETTHUC
+				- Chinh lai bao cao kq nhan vien
+				- BC_2_3_KetQuaDieuHanhTheoNhanVien
+				- Lấy thời điểm chèn là thời gian server ngay trong hệ thống : sp_T_TAXIOPERATION_Insert_CuocGoiLanDau
+				- spDelete_T_DOITAC
+				- sp_GetAddressFromPhoneNumber - lay vung cuoc goi lai
+				
+28/04/2011      - Moi gioi them JAX
+				- BC 5.3 them cot dien thoai
+		 
+				
+				

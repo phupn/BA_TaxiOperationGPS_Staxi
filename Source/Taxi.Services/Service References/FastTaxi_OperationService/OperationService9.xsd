@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" />
+  <xs:complexType name="TripBookingsSendResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddTripSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TripBookingsSend" nillable="true" type="tns:TripBookingsSend" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TripBookingsSendResult" nillable="true" type="tns:TripBookingsSendResult" />
+  <xs:complexType name="TripBookingsSend">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" minOccurs="0" name="Bookings" nillable="true" type="q1:ArrayOfBooking" />
+      <xs:element minOccurs="0" name="TripID" type="xs:long" />
+      <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TripBookingsSend" nillable="true" type="tns:TripBookingsSend" />
+  <xs:simpleType name="UpdateTripType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UpdateAll" />
+      <xs:enumeration value="UpdateStatus" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UpdateTripType" nillable="true" type="tns:UpdateTripType" />
+  <xs:complexType name="TimerSendBooking.TimerSendBookingAnswer">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" minOccurs="0" name="Answer" type="q2:BookingDetailStatus" />
+      <xs:element minOccurs="0" name="Money" type="xs:float" />
+      <xs:element minOccurs="0" name="TripId" type="xs:long" />
+      <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimerSendBooking.TimerSendBookingAnswer" nillable="true" type="tns:TimerSendBooking.TimerSendBookingAnswer" />
+  <xs:complexType name="TimerSendTrip.TimerSendTripAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BookID" type="xs:long" />
+      <xs:element minOccurs="0" name="Money" type="xs:float" />
+      <xs:element minOccurs="0" name="Trip" type="xs:long" />
+      <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimerSendTrip.TimerSendTripAnswer" nillable="true" type="tns:TimerSendTrip.TimerSendTripAnswer" />
+  <xs:complexType name="TimerSendBooking.TimerSendBookingHasReceive">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimerSendBooking.TimerSendBookingHasReceive" nillable="true" type="tns:TimerSendBooking.TimerSendBookingHasReceive" />
+</xs:schema>

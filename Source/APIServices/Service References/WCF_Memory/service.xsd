@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.gps.binhanh.com.vn/types/" />
+  <xs:element name="UpdateVehicleLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q1:VehicleLocationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="UpdateVehicleLocationResult" nillable="true" type="q2:VehicleLocationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleExtend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q3:VehicleExtendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleExtendResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="UpdateVehicleExtendResult" nillable="true" type="q4:VehicleExtendResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleStatusExtent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q5:VehicleExtendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleStatusExtentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="UpdateVehicleStatusExtentResult" nillable="true" type="q6:VehicleExtendResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVerhicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q7:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVerhicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetOnlineVerhicleResult" nillable="true" type="q8:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVehicle_NT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q9:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVehicle_NTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetOnlineVehicle_NTResult" nillable="true" type="q10:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneOnlineVerhicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q11:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneOnlineVerhicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetOneOnlineVerhicleResult" nillable="true" type="q12:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitOnlineVerhicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q13:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitOnlineVerhicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="InitOnlineVerhicleResult" nillable="true" type="q14:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q15:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetAllDataResult" nillable="true" type="q16:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataByXN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q17:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataByXNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetAllDataByXNResult" nillable="true" type="q18:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataByXN_NT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q19:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataByXN_NTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetAllDataByXN_NTResult" nillable="true" type="q20:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetIndexVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q21:VehicleIndexRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetIndexVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="ResetIndexVehicleResult" nillable="true" type="q22:VehicleIndexResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVehicle_Paging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q23:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVehicle_PagingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetOnlineVehicle_PagingResult" nillable="true" type="q24:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicle_TimeStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q25:VehicleExtendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicle_TimeStopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="UpdateVehicle_TimeStopResult" nillable="true" type="q26:VehicleExtendResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeServer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTimeServerResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoHieuXe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q27:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoHieuXeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSoHieuXeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckService">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckMetterConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MaXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BienSoXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckMetterConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckMetterConnectionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVerhicle_Extend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="request" nillable="true" type="q28:VehilceOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlineVerhicle_ExtendResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://www.gps.binhanh.com.vn/types/" minOccurs="0" name="GetOnlineVerhicle_ExtendResult" nillable="true" type="q29:VehicleOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

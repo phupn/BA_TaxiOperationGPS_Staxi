@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarOnlineSystemService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_CarOnlineSystemService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" />
+      <xsd:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.Concretes.DriverServer" />
+      <xsd:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CarOnlineSystemService_CheckEndTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEndTrip" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_CheckEndTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEndTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_CalDistanceRouter_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalDistanceRouter" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_CalDistanceRouter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalDistanceRouterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetAllMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMobile" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetAllMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetVehicleState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleState" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetVehicleState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_NominateCarByCompanyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:NominateCarByCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_NominateCarByCompanyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NominateCarByCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetGPSData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGPSData" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetGPSData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGPSDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetLogCars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogCars" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetLogCars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetLogfilePath_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogfilePath" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetLogfilePath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogfilePathResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetLogfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogfiles" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetLogfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetSystemInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemInfo" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetSystemInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetVehicleInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleInformation" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetVehicleInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_LoadChildrenVehicleType_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadChildrenVehicleType" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_LoadChildrenVehicleType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadChildrenVehicleTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_EstimatePriceForAutoVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstimatePriceForAutoVehicle" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_EstimatePriceForAutoVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstimatePriceForAutoVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_EstimatePriceForNominateVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstimatePriceForNominateVehicle" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_EstimatePriceForNominateVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstimatePriceForNominateVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_FindTripReturnTaxi_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTripReturnTaxi" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_FindTripReturnTaxi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTripReturnTaxiResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_FindTripReturnTaxiAround_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTripReturnTaxiAround" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_FindTripReturnTaxiAround_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTripReturnTaxiAroundResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_FindTripByVehiclePlate_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTripByVehiclePlate" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_FindTripByVehiclePlate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTripByVehiclePlateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetVehicleReturnDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleReturnDetail" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetVehicleReturnDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleReturnDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_AddVehiclePlateNorminated_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddVehiclePlateNorminated" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_AddVehiclePlateNorminated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddVehiclePlateNorminatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateNorminatingStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNorminatingStatus" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateNorminatingStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNorminatingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateTripStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTripStatus" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateTripStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTripStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateDriverCancelReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDriverCancelReturn" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateDriverCancelReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDriverCancelReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateCustomerReturnState_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerReturnState" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateCustomerReturnState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerReturnStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_DriverUpdateDriverCancelReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:DriverUpdateDriverCancelReturn" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_DriverUpdateDriverCancelReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DriverUpdateDriverCancelReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_WebCSKHDeleteReturnTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebCSKHDeleteReturnTrip" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_WebCSKHDeleteReturnTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebCSKHDeleteReturnTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTrip" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertAutoReturnTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertAutoReturnTrip" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertAutoReturnTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertAutoReturnTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTripOperator_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripOperator" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTripOperator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripOperatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTripWebCSKH_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripWebCSKH" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTripWebCSKH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripWebCSKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTripWebGPS_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripWebGPS" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpsertReturnTripWebGPS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpsertReturnTripWebGPSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ChangeSignCarConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeSignCarConfig" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ChangeSignCarConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeSignCarConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_LoadRouteVehicleTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRouteVehicleTypes" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_LoadRouteVehicleTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRouteVehicleTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetDataHitMap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataHitMap" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetDataHitMap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataHitMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetAllDataHitMap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataHitMap" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetAllDataHitMap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataHitMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ChangeHitMapConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeHitMapConfig" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ChangeHitMapConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeHitMapConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_RealTimeCarInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RealTimeCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_RealTimeCarInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RealTimeCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_RealTimeCarInfo2_InputMessage">
+    <wsdl:part name="parameters" element="tns:RealTimeCarInfo2" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_RealTimeCarInfo2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RealTimeCarInfo2Response" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_RealTimeCarInfo3_InputMessage">
+    <wsdl:part name="parameters" element="tns:RealTimeCarInfo3" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_RealTimeCarInfo3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RealTimeCarInfo3Response" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateCarInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateCarInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateCarType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarType" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_UpdateCarType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCarTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetDriverOnlines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriverOnlines" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetDriverOnlines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriverOnlinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetViewCarInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetViewCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetViewCarInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetViewCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ReloadLoadVehicles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReloadLoadVehicles" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ReloadLoadVehicles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReloadLoadVehiclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ReloadDriverFeeTripHelper_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReloadDriverFeeTripHelper" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_ReloadDriverFeeTripHelper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReloadDriverFeeTripHelperResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetSummeryVehicles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSummeryVehicles" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_GetSummeryVehicles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSummeryVehiclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_Test123_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test123" />
+  </wsdl:message>
+  <wsdl:message name="CarOnlineSystemService_Test123_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Test123Response" />
+  </wsdl:message>
+  <wsdl:portType name="CarOnlineSystemService">
+    <wsdl:operation name="CheckEndTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/CheckEndTrip" message="tns:CarOnlineSystemService_CheckEndTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/CheckEndTripResponse" message="tns:CarOnlineSystemService_CheckEndTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalDistanceRouter">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/CalDistanceRouter" message="tns:CarOnlineSystemService_CalDistanceRouter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/CalDistanceRouterResponse" message="tns:CarOnlineSystemService_CalDistanceRouter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMobile">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetAllMobile" message="tns:CarOnlineSystemService_GetAllMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetAllMobileResponse" message="tns:CarOnlineSystemService_GetAllMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleState">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetVehicleState" message="tns:CarOnlineSystemService_GetVehicleState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetVehicleStateResponse" message="tns:CarOnlineSystemService_GetVehicleState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NominateCarByCompanyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/NominateCarByCompanyID" message="tns:CarOnlineSystemService_NominateCarByCompanyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/NominateCarByCompanyIDResponse" message="tns:CarOnlineSystemService_NominateCarByCompanyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGPSData">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetGPSData" message="tns:CarOnlineSystemService_GetGPSData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetGPSDataResponse" message="tns:CarOnlineSystemService_GetGPSData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogCars">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetLogCars" message="tns:CarOnlineSystemService_GetLogCars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetLogCarsResponse" message="tns:CarOnlineSystemService_GetLogCars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogfilePath">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetLogfilePath" message="tns:CarOnlineSystemService_GetLogfilePath_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetLogfilePathResponse" message="tns:CarOnlineSystemService_GetLogfilePath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetLogfiles" message="tns:CarOnlineSystemService_GetLogfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetLogfilesResponse" message="tns:CarOnlineSystemService_GetLogfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetSystemInfo" message="tns:CarOnlineSystemService_GetSystemInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetSystemInfoResponse" message="tns:CarOnlineSystemService_GetSystemInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetVehicleInformation" message="tns:CarOnlineSystemService_GetVehicleInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetVehicleInformationResponse" message="tns:CarOnlineSystemService_GetVehicleInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadChildrenVehicleType">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/LoadChildrenVehicleType" message="tns:CarOnlineSystemService_LoadChildrenVehicleType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/LoadChildrenVehicleTypeResponse" message="tns:CarOnlineSystemService_LoadChildrenVehicleType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstimatePriceForAutoVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/EstimatePriceForAutoVehicle" message="tns:CarOnlineSystemService_EstimatePriceForAutoVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/EstimatePriceForAutoVehicleResponse" message="tns:CarOnlineSystemService_EstimatePriceForAutoVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstimatePriceForNominateVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/EstimatePriceForNominateVehicle" message="tns:CarOnlineSystemService_EstimatePriceForNominateVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/EstimatePriceForNominateVehicleResponse" message="tns:CarOnlineSystemService_EstimatePriceForNominateVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTripReturnTaxi">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/FindTripReturnTaxi" message="tns:CarOnlineSystemService_FindTripReturnTaxi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/FindTripReturnTaxiResponse" message="tns:CarOnlineSystemService_FindTripReturnTaxi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTripReturnTaxiAround">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/FindTripReturnTaxiAround" message="tns:CarOnlineSystemService_FindTripReturnTaxiAround_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/FindTripReturnTaxiAroundResponse" message="tns:CarOnlineSystemService_FindTripReturnTaxiAround_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTripByVehiclePlate">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/FindTripByVehiclePlate" message="tns:CarOnlineSystemService_FindTripByVehiclePlate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/FindTripByVehiclePlateResponse" message="tns:CarOnlineSystemService_FindTripByVehiclePlate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleReturnDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetVehicleReturnDetail" message="tns:CarOnlineSystemService_GetVehicleReturnDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetVehicleReturnDetailResponse" message="tns:CarOnlineSystemService_GetVehicleReturnDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVehiclePlateNorminated">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/AddVehiclePlateNorminated" message="tns:CarOnlineSystemService_AddVehiclePlateNorminated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/AddVehiclePlateNorminatedResponse" message="tns:CarOnlineSystemService_AddVehiclePlateNorminated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNorminatingStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateNorminatingStatus" message="tns:CarOnlineSystemService_UpdateNorminatingStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateNorminatingStatusResponse" message="tns:CarOnlineSystemService_UpdateNorminatingStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTripStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateTripStatus" message="tns:CarOnlineSystemService_UpdateTripStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateTripStatusResponse" message="tns:CarOnlineSystemService_UpdateTripStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDriverCancelReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateDriverCancelReturn" message="tns:CarOnlineSystemService_UpdateDriverCancelReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateDriverCancelReturnResponse" message="tns:CarOnlineSystemService_UpdateDriverCancelReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerReturnState">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateCustomerReturnState" message="tns:CarOnlineSystemService_UpdateCustomerReturnState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateCustomerReturnStateResponse" message="tns:CarOnlineSystemService_UpdateCustomerReturnState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DriverUpdateDriverCancelReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/DriverUpdateDriverCancelReturn" message="tns:CarOnlineSystemService_DriverUpdateDriverCancelReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/DriverUpdateDriverCancelReturnResponse" message="tns:CarOnlineSystemService_DriverUpdateDriverCancelReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebCSKHDeleteReturnTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/WebCSKHDeleteReturnTrip" message="tns:CarOnlineSystemService_WebCSKHDeleteReturnTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/WebCSKHDeleteReturnTripResponse" message="tns:CarOnlineSystemService_WebCSKHDeleteReturnTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTrip" message="tns:CarOnlineSystemService_UpsertReturnTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripResponse" message="tns:CarOnlineSystemService_UpsertReturnTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpsertAutoReturnTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertAutoReturnTrip" message="tns:CarOnlineSystemService_UpsertAutoReturnTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertAutoReturnTripResponse" message="tns:CarOnlineSystemService_UpsertAutoReturnTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTripOperator">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripOperator" message="tns:CarOnlineSystemService_UpsertReturnTripOperator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripOperatorResponse" message="tns:CarOnlineSystemService_UpsertReturnTripOperator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTripWebCSKH">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripWebCSKH" message="tns:CarOnlineSystemService_UpsertReturnTripWebCSKH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripWebCSKHResponse" message="tns:CarOnlineSystemService_UpsertReturnTripWebCSKH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTripWebGPS">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripWebGPS" message="tns:CarOnlineSystemService_UpsertReturnTripWebGPS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripWebGPSResponse" message="tns:CarOnlineSystemService_UpsertReturnTripWebGPS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSignCarConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/ChangeSignCarConfig" message="tns:CarOnlineSystemService_ChangeSignCarConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/ChangeSignCarConfigResponse" message="tns:CarOnlineSystemService_ChangeSignCarConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRouteVehicleTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/LoadRouteVehicleTypes" message="tns:CarOnlineSystemService_LoadRouteVehicleTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/LoadRouteVehicleTypesResponse" message="tns:CarOnlineSystemService_LoadRouteVehicleTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHitMap">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetDataHitMap" message="tns:CarOnlineSystemService_GetDataHitMap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetDataHitMapResponse" message="tns:CarOnlineSystemService_GetDataHitMap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataHitMap">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetAllDataHitMap" message="tns:CarOnlineSystemService_GetAllDataHitMap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetAllDataHitMapResponse" message="tns:CarOnlineSystemService_GetAllDataHitMap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeHitMapConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/ChangeHitMapConfig" message="tns:CarOnlineSystemService_ChangeHitMapConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/ChangeHitMapConfigResponse" message="tns:CarOnlineSystemService_ChangeHitMapConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RealTimeCarInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo" message="tns:CarOnlineSystemService_RealTimeCarInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfoResponse" message="tns:CarOnlineSystemService_RealTimeCarInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RealTimeCarInfo2">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo2" message="tns:CarOnlineSystemService_RealTimeCarInfo2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo2Response" message="tns:CarOnlineSystemService_RealTimeCarInfo2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RealTimeCarInfo3">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo3" message="tns:CarOnlineSystemService_RealTimeCarInfo3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo3Response" message="tns:CarOnlineSystemService_RealTimeCarInfo3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateCarInfo" message="tns:CarOnlineSystemService_UpdateCarInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateCarInfoResponse" message="tns:CarOnlineSystemService_UpdateCarInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarType">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateCarType" message="tns:CarOnlineSystemService_UpdateCarType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/UpdateCarTypeResponse" message="tns:CarOnlineSystemService_UpdateCarType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverOnlines">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetDriverOnlines" message="tns:CarOnlineSystemService_GetDriverOnlines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetDriverOnlinesResponse" message="tns:CarOnlineSystemService_GetDriverOnlines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViewCarInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetViewCarInfo" message="tns:CarOnlineSystemService_GetViewCarInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetViewCarInfoResponse" message="tns:CarOnlineSystemService_GetViewCarInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReloadLoadVehicles">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/ReloadLoadVehicles" message="tns:CarOnlineSystemService_ReloadLoadVehicles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/ReloadLoadVehiclesResponse" message="tns:CarOnlineSystemService_ReloadLoadVehicles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReloadDriverFeeTripHelper">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/ReloadDriverFeeTripHelper" message="tns:CarOnlineSystemService_ReloadDriverFeeTripHelper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/ReloadDriverFeeTripHelperResponse" message="tns:CarOnlineSystemService_ReloadDriverFeeTripHelper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSummeryVehicles">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetSummeryVehicles" message="tns:CarOnlineSystemService_GetSummeryVehicles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/GetSummeryVehiclesResponse" message="tns:CarOnlineSystemService_GetSummeryVehicles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/Ping" message="tns:CarOnlineSystemService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/PingResponse" message="tns:CarOnlineSystemService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test123">
+      <wsdl:input wsaw:Action="http://tempuri.org/CarOnlineSystemService/Test123" message="tns:CarOnlineSystemService_Test123_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CarOnlineSystemService/Test123Response" message="tns:CarOnlineSystemService_Test123_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_CarOnlineSystemService" type="tns:CarOnlineSystemService">
+    <wsp:PolicyReference URI="#NetTcpBinding_CarOnlineSystemService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="CheckEndTrip">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/CheckEndTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalDistanceRouter">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/CalDistanceRouter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMobile">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetAllMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleState">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetVehicleState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NominateCarByCompanyID">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/NominateCarByCompanyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGPSData">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetGPSData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogCars">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetLogCars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogfilePath">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetLogfilePath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogfiles">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetLogfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemInfo">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetSystemInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInformation">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetVehicleInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadChildrenVehicleType">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/LoadChildrenVehicleType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstimatePriceForAutoVehicle">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/EstimatePriceForAutoVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstimatePriceForNominateVehicle">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/EstimatePriceForNominateVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTripReturnTaxi">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/FindTripReturnTaxi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTripReturnTaxiAround">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/FindTripReturnTaxiAround" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTripByVehiclePlate">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/FindTripByVehiclePlate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleReturnDetail">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetVehicleReturnDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVehiclePlateNorminated">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/AddVehiclePlateNorminated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNorminatingStatus">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpdateNorminatingStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTripStatus">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpdateTripStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDriverCancelReturn">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpdateDriverCancelReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerReturnState">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpdateCustomerReturnState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DriverUpdateDriverCancelReturn">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/DriverUpdateDriverCancelReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebCSKHDeleteReturnTrip">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/WebCSKHDeleteReturnTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTrip">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpsertReturnTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertAutoReturnTrip">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpsertAutoReturnTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTripOperator">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripOperator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTripWebCSKH">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripWebCSKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertReturnTripWebGPS">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpsertReturnTripWebGPS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSignCarConfig">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/ChangeSignCarConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRouteVehicleTypes">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/LoadRouteVehicleTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHitMap">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetDataHitMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataHitMap">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetAllDataHitMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeHitMapConfig">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/ChangeHitMapConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RealTimeCarInfo">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RealTimeCarInfo2">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RealTimeCarInfo3">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/RealTimeCarInfo3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarInfo">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpdateCarInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarType">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/UpdateCarType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverOnlines">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetDriverOnlines" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViewCarInfo">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetViewCarInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReloadLoadVehicles">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/ReloadLoadVehicles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReloadDriverFeeTripHelper">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/ReloadDriverFeeTripHelper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSummeryVehicles">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/GetSummeryVehicles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test123">
+      <soap12:operation soapAction="http://tempuri.org/CarOnlineSystemService/Test123" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CarOnlineSystemService">
+    <wsdl:port name="NetTcpBinding_CarOnlineSystemService" binding="tns:NetTcpBinding_CarOnlineSystemService">
+      <soap12:address location="net.tcp://115.84.178.70:1106/CarOnlineSystemService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://115.84.178.70:1106/CarOnlineSystemService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

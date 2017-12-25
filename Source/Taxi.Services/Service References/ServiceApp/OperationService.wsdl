@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OperationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IOperationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.Concretes.OperatorServer" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" />
+      <xsd:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOperationService_SendACKGetPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendACKGetPhone" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendACKGetPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendACKGetPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendACKInvite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendACKInvite" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendACKInvite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendACKInviteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorCancel" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendInitTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendInitTrip" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendInitTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendInitTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_RadioInitTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:RadioInitTrip" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_RadioInitTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RadioInitTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendLogoutDriver_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendLogoutDriver" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendLogoutDriver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendLogoutDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorCatched_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorCatched" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorCatched_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorCatchedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendMissCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMissCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendMissCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMissCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendText_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendText" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendConfirmDone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendConfirmDone" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendConfirmDone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendConfirmDoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorCmd_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorCmd" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorCmd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendACKDriverCmd_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendACKDriverCmd" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendACKDriverCmd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendACKDriverCmdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SyncCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncCommand" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SyncCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SyncVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SyncVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetVehicleOnlne_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleOnlne" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetVehicleOnlne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleOnlneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_UpdateVehicleToNotSync_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleToNotSync" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_UpdateVehicleToNotSync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleToNotSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_IsOperatorClientConnecting_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsOperatorClientConnecting" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_IsOperatorClientConnecting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsOperatorClientConnectingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetCarType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarType" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetCarType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendWrongCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWrongCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendWrongCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWrongCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendConfirmDoneBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendConfirmDoneBook" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendConfirmDoneBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendConfirmDoneBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendDeleteBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendDeleteBook" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendDeleteBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendDeleteBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetBookStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_GetBookStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorDispatched_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorDispatched" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendOperatorDispatched_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOperatorDispatchedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendAskBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendAskBook" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendAskBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendAskBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_FindCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_FindCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveCarInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveCarInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveCatchedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUser" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveCatchedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveCatchedUser_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUser_V2" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveCatchedUser_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUser_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveDriverCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveDriverCancel" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveDriverCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveDriverCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveNoCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveNoCar" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_ReceiveNoCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveNoCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_CustomerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_CustomerInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_CustomerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_CustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendUpdateMoneyLongTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendUpdateMoneyLongTrip" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendUpdateMoneyLongTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendUpdateMoneyLongTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_DuongThao_CustomerPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_DuongThao_CustomerPhone" />
+  </wsdl:message>
+  <wsdl:message name="IOperationService_SendSMS_DuongThao_CustomerPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_DuongThao_CustomerPhoneResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOperationService">
+    <wsdl:operation name="SendACKGetPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendACKGetPhone" message="tns:IOperationService_SendACKGetPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendACKGetPhoneResponse" message="tns:IOperationService_SendACKGetPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendACKInvite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendACKInvite" message="tns:IOperationService_SendACKInvite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendACKInviteResponse" message="tns:IOperationService_SendACKInvite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendOperatorCancel" message="tns:IOperationService_SendOperatorCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendOperatorCancelResponse" message="tns:IOperationService_SendOperatorCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInitTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendInitTrip" message="tns:IOperationService_SendInitTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendInitTripResponse" message="tns:IOperationService_SendInitTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RadioInitTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/RadioInitTrip" message="tns:IOperationService_RadioInitTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/RadioInitTripResponse" message="tns:IOperationService_RadioInitTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendLogoutDriver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendLogoutDriver" message="tns:IOperationService_SendLogoutDriver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendLogoutDriverResponse" message="tns:IOperationService_SendLogoutDriver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorCatched">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendOperatorCatched" message="tns:IOperationService_SendOperatorCatched_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendOperatorCatchedResponse" message="tns:IOperationService_SendOperatorCatched_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMissCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendMissCar" message="tns:IOperationService_SendMissCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendMissCarResponse" message="tns:IOperationService_SendMissCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendText" message="tns:IOperationService_SendText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendTextResponse" message="tns:IOperationService_SendText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendConfirmDone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendConfirmDone" message="tns:IOperationService_SendConfirmDone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendConfirmDoneResponse" message="tns:IOperationService_SendConfirmDone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorCmd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendOperatorCmd" message="tns:IOperationService_SendOperatorCmd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendOperatorCmdResponse" message="tns:IOperationService_SendOperatorCmd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendACKDriverCmd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendACKDriverCmd" message="tns:IOperationService_SendACKDriverCmd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendACKDriverCmdResponse" message="tns:IOperationService_SendACKDriverCmd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncCommand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SyncCommand" message="tns:IOperationService_SyncCommand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SyncCommandResponse" message="tns:IOperationService_SyncCommand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SyncVehicle" message="tns:IOperationService_SyncVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SyncVehicleResponse" message="tns:IOperationService_SyncVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleOnlne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/GetVehicleOnlne" message="tns:IOperationService_GetVehicleOnlne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/GetVehicleOnlneResponse" message="tns:IOperationService_GetVehicleOnlne_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleToNotSync">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/UpdateVehicleToNotSync" message="tns:IOperationService_UpdateVehicleToNotSync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/UpdateVehicleToNotSyncResponse" message="tns:IOperationService_UpdateVehicleToNotSync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOperatorClientConnecting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/IsOperatorClientConnecting" message="tns:IOperationService_IsOperatorClientConnecting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/IsOperatorClientConnectingResponse" message="tns:IOperationService_IsOperatorClientConnecting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/GetVehicle" message="tns:IOperationService_GetVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/GetVehicleResponse" message="tns:IOperationService_GetVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/GetCarType" message="tns:IOperationService_GetCarType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/GetCarTypeResponse" message="tns:IOperationService_GetCarType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWrongCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendWrongCustomer" message="tns:IOperationService_SendWrongCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendWrongCustomerResponse" message="tns:IOperationService_SendWrongCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendConfirmDoneBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendConfirmDoneBook" message="tns:IOperationService_SendConfirmDoneBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendConfirmDoneBookResponse" message="tns:IOperationService_SendConfirmDoneBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDeleteBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendDeleteBook" message="tns:IOperationService_SendDeleteBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendDeleteBookResponse" message="tns:IOperationService_SendDeleteBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/GetBookStatus" message="tns:IOperationService_GetBookStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/GetBookStatusResponse" message="tns:IOperationService_GetBookStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorDispatched">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendOperatorDispatched" message="tns:IOperationService_SendOperatorDispatched_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendOperatorDispatchedResponse" message="tns:IOperationService_SendOperatorDispatched_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAskBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendAskBook" message="tns:IOperationService_SendAskBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendAskBookResponse" message="tns:IOperationService_SendAskBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/FindCar" message="tns:IOperationService_FindCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/FindCarResponse" message="tns:IOperationService_FindCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCarInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveCarInfo" message="tns:IOperationService_SendSMS_ReceiveCarInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveCarInfoResponse" message="tns:IOperationService_SendSMS_ReceiveCarInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveCatchedUser" message="tns:IOperationService_SendSMS_ReceiveCatchedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveCatchedUserResponse" message="tns:IOperationService_SendSMS_ReceiveCatchedUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveCatchedUser_V2" message="tns:IOperationService_SendSMS_ReceiveCatchedUser_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveCatchedUser_V2Response" message="tns:IOperationService_SendSMS_ReceiveCatchedUser_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveDriverCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveDriverCancel" message="tns:IOperationService_SendSMS_ReceiveDriverCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveDriverCancelResponse" message="tns:IOperationService_SendSMS_ReceiveDriverCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveNoCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveNoCar" message="tns:IOperationService_SendSMS_ReceiveNoCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_ReceiveNoCarResponse" message="tns:IOperationService_SendSMS_ReceiveNoCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_CustomerInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_CustomerInfo" message="tns:IOperationService_SendSMS_CustomerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_CustomerInfoResponse" message="tns:IOperationService_SendSMS_CustomerInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUpdateMoneyLongTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendUpdateMoneyLongTrip" message="tns:IOperationService_SendUpdateMoneyLongTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendUpdateMoneyLongTripResponse" message="tns:IOperationService_SendUpdateMoneyLongTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS" message="tns:IOperationService_SendSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMSResponse" message="tns:IOperationService_SendSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_DuongThao_CustomerPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOperationService/SendSMS_DuongThao_CustomerPhone" message="tns:IOperationService_SendSMS_DuongThao_CustomerPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOperationService/SendSMS_DuongThao_CustomerPhoneResponse" message="tns:IOperationService_SendSMS_DuongThao_CustomerPhone_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IOperationService" type="tns:IOperationService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IOperationService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SendACKGetPhone">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendACKGetPhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendACKInvite">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendACKInvite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorCancel">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendOperatorCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInitTrip">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendInitTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RadioInitTrip">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/RadioInitTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendLogoutDriver">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendLogoutDriver" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorCatched">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendOperatorCatched" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMissCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendMissCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendText">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendConfirmDone">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendConfirmDone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorCmd">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendOperatorCmd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendACKDriverCmd">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendACKDriverCmd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncCommand">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SyncCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncVehicle">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SyncVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleOnlne">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/GetVehicleOnlne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleToNotSync">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/UpdateVehicleToNotSync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOperatorClientConnecting">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/IsOperatorClientConnecting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicle">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/GetVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarType">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/GetCarType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWrongCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendWrongCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendConfirmDoneBook">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendConfirmDoneBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDeleteBook">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendDeleteBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookStatus">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/GetBookStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOperatorDispatched">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendOperatorDispatched" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAskBook">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendAskBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/FindCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCarInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_ReceiveCarInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_ReceiveCatchedUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser_V2">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_ReceiveCatchedUser_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveDriverCancel">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_ReceiveDriverCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveNoCar">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_ReceiveNoCar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_CustomerInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_CustomerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUpdateMoneyLongTrip">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendUpdateMoneyLongTrip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_DuongThao_CustomerPhone">
+      <soap12:operation soapAction="http://tempuri.org/IOperationService/SendSMS_DuongThao_CustomerPhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OperationService">
+    <wsdl:port name="NetTcpBinding_IOperationService" binding="tns:NetTcpBinding_IOperationService">
+      <soap12:address location="net.tcp://10.1.11.179:8794/OperationService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.1.11.179:8794/OperationService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

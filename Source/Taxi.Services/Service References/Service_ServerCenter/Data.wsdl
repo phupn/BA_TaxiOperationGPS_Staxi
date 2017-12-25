@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Data" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://115.84.179.34:9090/Data.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://115.84.179.34:9090/Data.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://115.84.179.34:9090/Data.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IData_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IData_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_LoginWithCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWithCode" />
+  </wsdl:message>
+  <wsdl:message name="IData_LoginWithCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginWithCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_AddDriverCheckInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDriverCheckInOut" />
+  </wsdl:message>
+  <wsdl:message name="IData_AddDriverCheckInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDriverCheckInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_GetByXNCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByXNCode" />
+  </wsdl:message>
+  <wsdl:message name="IData_GetByXNCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByXNCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_SendSms_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms" />
+  </wsdl:message>
+  <wsdl:message name="IData_SendSms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_GetTimeServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeServer" />
+  </wsdl:message>
+  <wsdl:message name="IData_GetTimeServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_SaveTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTrip" />
+  </wsdl:message>
+  <wsdl:message name="IData_SaveTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_SyncLandmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncLandmark" />
+  </wsdl:message>
+  <wsdl:message name="IData_SyncLandmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncLandmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IData_SyncCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncCommand" />
+  </wsdl:message>
+  <wsdl:message name="IData_SyncCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncCommandResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IData">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/Login" message="tns:IData_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/LoginResponse" message="tns:IData_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/LoginWithCode" message="tns:IData_LoginWithCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/LoginWithCodeResponse" message="tns:IData_LoginWithCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDriverCheckInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/AddDriverCheckInOut" message="tns:IData_AddDriverCheckInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/AddDriverCheckInOutResponse" message="tns:IData_AddDriverCheckInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByXNCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/GetByXNCode" message="tns:IData_GetByXNCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/GetByXNCodeResponse" message="tns:IData_GetByXNCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/SendSms" message="tns:IData_SendSms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/SendSmsResponse" message="tns:IData_SendSms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/GetTimeServer" message="tns:IData_GetTimeServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/GetTimeServerResponse" message="tns:IData_GetTimeServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/SaveTrip" message="tns:IData_SaveTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/SaveTripResponse" message="tns:IData_SaveTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncLandmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/SyncLandmark" message="tns:IData_SyncLandmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/SyncLandmarkResponse" message="tns:IData_SyncLandmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncCommand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IData/SyncCommand" message="tns:IData_SyncCommand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IData/SyncCommandResponse" message="tns:IData_SyncCommand_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IData" type="tns:IData">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IData/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginWithCode">
+      <soap:operation soapAction="http://tempuri.org/IData/LoginWithCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDriverCheckInOut">
+      <soap:operation soapAction="http://tempuri.org/IData/AddDriverCheckInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByXNCode">
+      <soap:operation soapAction="http://tempuri.org/IData/GetByXNCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms">
+      <soap:operation soapAction="http://tempuri.org/IData/SendSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeServer">
+      <soap:operation soapAction="http://tempuri.org/IData/GetTimeServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrip">
+      <soap:operation soapAction="http://tempuri.org/IData/SaveTrip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncLandmark">
+      <soap:operation soapAction="http://tempuri.org/IData/SyncLandmark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncCommand">
+      <soap:operation soapAction="http://tempuri.org/IData/SyncCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Data">
+    <wsdl:port name="BasicHttpBinding_IData" binding="tns:BasicHttpBinding_IData">
+      <soap:address location="http://115.84.179.34:9090/Data.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

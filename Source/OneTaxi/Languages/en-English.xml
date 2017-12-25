@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Languages>
+  <!--System-->
+  <tag name="Ok">Ok</tag>  
+  <tag name="Cancel">Cancel</tag>
+</Languages>

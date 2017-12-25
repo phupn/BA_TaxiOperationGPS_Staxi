@@ -1,0 +1,140 @@
+﻿NET
+
+Template
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name=""></param>
+/// <returns></returns>
+
+/// <Modified>        
+///	Name		Date		    Comment 
+/// </Modified>
+
+
+
+Data type	Prefix	Example
+Boolean	bool	boolFound
+Byte	byte	byteRasterData
+Array	arr	arrVar
+Collection object	col	colWidgets
+Currency	cur	curRevenue
+Date (Time)	date	dateStart
+Double	dbl	dblTolerance
+Error	err	errOrderNum
+Integer	int	intQuantity
+Long	long	longDistance
+Object	obj	objCurrent
+Single	sgl	sglAverage
+String	str	strFName
+User-defined type	udt	udtEmployee
+
+
+Control type	prefix	Example
+Label	lbl	lblHelpMessage
+LinkLabel	llbl	llblAuthor
+Button	btn	btnSave
+TextBox	txt	txtHoTen
+CheckBox	chk	chkReadOnly
+RadioButton	Rdo/opt	rdoChonLop/ optChonLop
+ListBox	lst	lstLop
+CheckedListBox	chklst	chklstDanhSach
+ComboBox	cb	cbMonHoc
+ListView	lv	lvMonHoc
+TreeView	tv	trPhong
+DateTimePicker	dtp	dtpNgaySinh
+Calendar	cal	calKeHoach
+DataColumn	col	colNgaySinh
+DataGrid	grd	grdDanhSach
+DataGridTableStyle	dgts	dgtsUnion
+DataGridTextBoxColumn	dgbc	dgbcHoTen
+GroupBox	grp	grpHocKy
+Image	img	imgIcon
+PictureBox	pbx	pbxLogo
+Panel	pnl	pnlTongHop
+MainMenu	mnu	mnuTroGiup
+MenuItem	mnu	mnuDanhSach
+ContextMenu	ctxmnu	ctxmnuLop
+TabControl	tab	tabHoSo
+Timer	tmr	tmrXuLy
+UserControl	uc	ucMyControl
+ProgressBar	prg	prgLoadFile
+RichTextBox	txt	txtReport
+ImageList	imlst	imlstAllIcons
+ToolBar	tlb	tlbActions
+StatusBar	sta	staDateTime
+Exception	ex	exSQL
+OpenFileDialog	dlg	dlgOpenFileDialog
+SaveFileDialog	dlg	dlgSaveFileDialog
+FolderBrowserDialog	dlg	dlgFolderBrowserDialog
+FontDialog	dlg	dlgFontDialog
+ColorDialog	dlg	dlgColorDialog
+PrintDialog	dlg	dlgPrintDialog
+PrintPreviewDialog	dlg	dlgPrintDialog
+PrintPreviewControl	prt	prtPrintPreviewControl
+PrintDocument	prt	prtPrintDocument
+ErrorProvider	err	errErrorProvider
+
+
+
+SQL CONVENTION
+
+Template 
+
+-----------------------------------------------------------------
+-- Purpose: Mục đích ...
+-- Parameters:
+-- Returns:
+
+-- MODIFICATION HISTORY
+-- Person      Date         Comments
+--------------------------------------------------------------
+
+
+VD
+-----------------------------------------------------------------
+-- Purpose: Mục đích ...
+-- Parameters:
+--     pCQ_BAN_HANH_ID: id cơ quan ban hành
+--     pCHUC_DANH_CURSOR: trả lại recordset
+-- Returns:
+--	id: giá trị trả về
+-- MODIFICATION HISTORY
+-- Person      Date         Comments
+-- quynhnx     20/12/06		Tạo mới
+-- quynhnx     22/01/07		Thêm cq_ban_hanh_id
+--------------------------------------------------------------
+
+
+Datatype	prefix	Example
+Char	chr	@chrFirstName
+Varchar	chv	@chvActivity
+Nchar	chrn	@chrnLastName
+Nvarchar	chvn	@chvnLastName
+Text	txt	@txtNote
+Ntext	txtn	@txtnComment
+Datetime	dtm	@dtmTargetDate
+Smalldatetime	dts	@dtsCompletedDate 
+Tinyint	iny	@inyActivityID
+Smallint	ins	@insEquipmentTypeID
+Integer	int	@intAsset
+Bigint	inb	@inbGTIN
+Numeric or Decimal	dec	@decProfit
+Real	rea 	@reaVelocity 
+Float	flt	@fltLength 
+Smallmoney	mns	@mnsCost 
+Money	mny	@mnyPrice 
+Binary	bin	@binPath 
+Varbinary	biv	@bivContract 
+Image	img	@imgLogo 
+Bit	bit	@bitOperational 
+Timestamp	tsp	@tspOrderID 
+Uniqueidentifier	guid	@guidPrice 
+sql_variant	var	@varInventory 
+Cursor	cur	@curInventory 
+Table	tbl	@tblLease 
+
+
+- Sử dụng chữ hoa cho tất cả các câu lệnh SQL
+SELECT, INSERT, UPDATE, WHERE, AND, OR, LIKE, etc.

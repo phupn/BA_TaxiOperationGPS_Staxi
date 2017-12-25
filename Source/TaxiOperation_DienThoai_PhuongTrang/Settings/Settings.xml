@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Settings>
+  <!--BA-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfeZAPXFAxjmd</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>-->
+  <!--Bao sao-->
+
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwiJFabUUaKbuA==</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfeZAPXFAxjmd</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH762WIEAN4FtVS612Q==</Password>-->
+  
+   <!--Phương Trang-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>kW20R6KQxuFXyoGzYteS62FN6kyIiuFo</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfScoQcmwktGy075VM9NafBk=</Catalog>
+  <User>EhBEDmPvh+Hnqy7D/O1BGA==</User>
+  <Password>EhBEDmPvh+GssB0QRKaDDg==</Password>-->
+  
+  <!--Group-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgkp+wAH+a68I6Jpf3fZYwN</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAff98ZUCCqRmGULFeBLRA/Wo=</Catalog>
+  <User>PLusDTlaIKFiwrLDKIx2GA==</User>
+  <Password>PLusDTlaIKHYDXtNU/HMFw==</Password>-->
+ <!--Fast taxi-->
+  <!--<IPAddress>
+  </IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfVWvLTIsKXDwXti1cBI584M=</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>-->
+
+
+  <IPAddress>10.72.1.10</IPAddress>
+  <Source>baDXiG7xUewczM0Wn19mfw==</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfScoQcmwktGy075VM9NafBk=</Catalog>
+  <User>xnzykrWiSc5TJTqf66HygA==</User>
+  <Password>xnzykrWiSc5tA8a2AxlmeA==</Password>
+</Settings>

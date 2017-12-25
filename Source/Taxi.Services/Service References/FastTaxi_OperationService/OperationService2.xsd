@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ModelBaseOfTripf55ZOt36">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModelBaseOfTripf55ZOt36" nillable="true" type="tns:ModelBaseOfTripf55ZOt36" />
+  <xs:complexType name="ModelBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="ModelBase" nillable="true" type="tns:ModelBase" />
+  <xs:complexType name="ModelBaseOfBookingf55ZOt36">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModelBaseOfBookingf55ZOt36" nillable="true" type="tns:ModelBaseOfBookingf55ZOt36" />
+  <xs:complexType name="ModelBaseOfBookingDetailf55ZOt36">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModelBaseOfBookingDetailf55ZOt36" nillable="true" type="tns:ModelBaseOfBookingDetailf55ZOt36" />
+</xs:schema>

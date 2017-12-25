@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://115.84.179.34:9090/Data.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="LoginResult" nillable="true" type="q1:Data.DriverLogin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginWithCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginWithCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="LoginWithCodeResult" nillable="true" type="q2:Data.DriverLogin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDriverCheckInOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="driverId" type="xs:int" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+        <xs:element minOccurs="0" name="isCheckIn" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isDriverCheckout" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDriverCheckInOutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByXNCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xncode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByXNCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="GetByXNCodeResult" nillable="true" type="q3:Data.CompanyInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSmsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSmsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeServer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTimeServerResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FK_CompanyId" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_DriverID" type="xs:int" />
+        <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromLat" type="xs:float" />
+        <xs:element minOccurs="0" name="FromLng" type="xs:float" />
+        <xs:element minOccurs="0" name="ToName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ToAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ToLat" type="xs:float" />
+        <xs:element minOccurs="0" name="ToLng" type="xs:float" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vehicles" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Chosens" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTripResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncLandmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xncode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="landmarks" nillable="true" type="q4:ArrayOfData.DataLandmark" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncLandmarkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncCommand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xncode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="workflows" nillable="true" type="q5:ArrayOfData.DataWorkflow" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="stepWorkflows" nillable="true" type="q6:ArrayOfData.DataStepWorkflow" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" minOccurs="0" name="commands" nillable="true" type="q7:ArrayOfData.DataCommand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncCommandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

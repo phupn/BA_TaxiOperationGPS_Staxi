@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices" />
+  <xs:import schemaLocation="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" />
+  <xs:import schemaLocation="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBooks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Staxi.WebServices" minOccurs="0" name="source" type="q1:Api.UnitSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBooksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetBooksResult" nillable="true" type="q2:ArrayOfTcpOP.BookTrip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetCarTypesResult" nillable="true" type="q3:ArrayOfTcpOP.CarTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommands">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommandsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetCommandsResult" nillable="true" type="q4:ArrayOfTcpOP.CommandResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompLandmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompLandmarkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetCompLandmarkResult" nillable="true" type="q5:ArrayOfTcpOP.CompLandmark" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpSendCompLandmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="landmarks" nillable="true" type="q6:ArrayOfTcpOP.CompLandmarkUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpSendCompLandmarkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OpSendCompLandmarkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigSignCarType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigSignCarTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetConfigSignCarTypeResult" nillable="true" type="q7:TcpOP.ConfigSignCarTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDrivers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriversResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetDriversResult" nillable="true" type="q8:ArrayOfTcpOP.DriverResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehiclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetVehiclesResult" nillable="true" type="q9:ArrayOfTcpOP.VehicleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetVehicleResult" nillable="true" type="q10:TcpOP.VehicleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleToNotSync">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicles" nillable="true" type="q11:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleToNotSyncResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateVehicleToNotSyncResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCarInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q12:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverPhone" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q13:TcpOP.BookTripType" />
+        <xs:element minOccurs="0" name="carNoOld" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCarInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveCarInfoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCatchedUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q14:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="money" type="xs:int" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q15:TcpOP.BookTripType" />
+        <xs:element minOccurs="0" name="giaPhuTroi" type="xs:int" />
+        <xs:element minOccurs="0" name="quangduong" type="xs:int" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="dir" type="q16:TcpOP.Direction" />
+        <xs:element minOccurs="0" name="param6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param8" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param9" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param10" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCatchedUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveCatchedUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveDriverCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q17:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q18:TcpOP.BookTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveDriverCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveDriverCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveNoCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q19:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q20:TcpOP.BookTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveNoCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveNoCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_LongTripReceiveCatchedUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q21:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="dir" type="q22:TcpOP.Direction" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Distance" type="xs:float" />
+        <xs:element minOccurs="0" name="Money2" type="xs:int" />
+        <xs:element minOccurs="0" name="MoneyExtend" type="xs:int" />
+        <xs:element minOccurs="0" name="MoneyExtendByTime" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_LongTripReceiveCatchedUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_LongTripReceiveCatchedUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCatchedUser_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q23:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="money" type="xs:int" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q24:TcpOP.BookTripType" />
+        <xs:element minOccurs="0" name="giaPhuTroi" type="xs:int" />
+        <xs:element minOccurs="0" name="quangduong" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="dir" type="q25:TcpOP.Direction" />
+        <xs:element minOccurs="0" name="param6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param8" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param9" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param10" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCatchedUser_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveCatchedUser_V2Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_CustomerPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q26:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customermobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="info" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_CustomerPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_CustomerPhoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_ReceiveCarInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="privateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custLat" type="xs:float" />
+        <xs:element minOccurs="0" name="custLng" type="xs:float" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookID" type="q27:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_ReceiveCarInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_ReceiveCarInfoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_ViewCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="privateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custLat" type="xs:float" />
+        <xs:element minOccurs="0" name="custLng" type="xs:float" />
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookID" type="q28:guid" />
+        <xs:element minOccurs="0" name="estimateTime" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_ViewCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_ViewCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_CatchedUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="privateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_CatchedUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_CatchedUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_NoCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_NoCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_NoCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_ThankCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="privateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_ThankCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_ThankCustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_Other">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="content" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_OtherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_OtherResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_HappyBirthDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_VinaTaxi_HappyBirthDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_VinaTaxi_HappyBirthDayResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_DuongThao_CustomerPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receiveNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="info" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms_DuongThao_CustomerPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSms_DuongThao_CustomerPhoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

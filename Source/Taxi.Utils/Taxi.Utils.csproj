@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7EBA72B-31F7-4280-90A5-DA0984CCE7D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taxi.Utils</RootNamespace>
+    <AssemblyName>Taxi.Utils</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BALicenseManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\BALicenseManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Taxi.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Taxi.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BanCo_Enum.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="Chain.cs" />
+    <Compile Include="CommonUtils.cs" />
+    <Compile Include="ConvertDate.cs" />
+    <Compile Include="Coordinate.cs" />
+    <Compile Include="DataSetHelper.cs" />
+    <Compile Include="DataTableExtend.cs" />
+    <Compile Include="DateTimeExtender.cs" />
+    <Compile Include="DbEntityBase.cs" />
+    <Compile Include="DBObject.cs" />
+    <Compile Include="DesignTimeHelper.cs" />
+    <Compile Include="DisplayValueAttribute.cs" />
+    <Compile Include="EnumG5Taxi.cs" />
+    <Compile Include="EnumItemTypeAttribute.cs" />
+    <Compile Include="EnumMarkerAttribute.cs" />
+    <Compile Include="EnumModule.cs" />
+    <Compile Include="Enums\Command.cs" />
+    <Compile Include="Enums\DieuXeChieuVe\Enum_BookingsDetail_Status.cs" />
+    <Compile Include="Enums\DieuXeChieuVe\Enum_Bookings_OpStatus.cs" />
+    <Compile Include="Enums\DieuXeChieuVe\Enum_Bookings_Status.cs" />
+    <Compile Include="Enums\Enum_CommandCode.cs" />
+    <Compile Include="Enums\Enum_FastTaxi_Status.cs" />
+    <Compile Include="Enums\Enum_DieuXeDuongDai.cs" />
+    <Compile Include="Enums\Enum_FT_ServiceMap.cs" />
+    <Compile Include="Enums\Enum_StaxiFileType.cs" />
+    <Compile Include="Enums\Enum_Workflow.cs" />
+    <Compile Include="Enums\Enum_XeDiDuongDai.cs" />
+    <Compile Include="EnumTaxi.cs" />
+    <Compile Include="Enum_Config_Common.cs" />
+    <Compile Include="ExcelDataAccess.cs" />
+    <Compile Include="FileTools.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IReportData.cs" />
+    <Compile Include="Enum_ItemType.cs" />
+    <Compile Include="LatLngOperation.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="MapHelper.cs" />
+    <Compile Include="MemberInfoHelper.cs" />
+    <Compile Include="NetworkInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\ConnectionSetting.cs" />
+    <Compile Include="Settings\MySettings.cs" />
+    <Compile Include="Settings\SettingsBase.cs" />
+    <Compile Include="Settings\SimpleEncryption.cs" />
+    <Compile Include="Settings\UserSettingsReader.cs" />
+    <Compile Include="Settings\UserSettingsWriter.cs" />
+    <Compile Include="SoundUtils.cs" />
+    <Compile Include="StringTools.cs" />
+    <Compile Include="TaxiEventArgs.cs" />
+    <Compile Include="TaxiFunction.cs" />
+    <Compile Include="TaxiLicense.cs" />
+    <Compile Include="UnicodeStrings.cs" />
+    <Compile Include="UtilsExtender.cs" />
+    <Compile Include="Validators\ValidatorAttribute.cs" />
+    <Compile Include="Validators\ValidatorDenyDateMin.cs" />
+    <Compile Include="Validators\ValidatorDenyValue.cs" />
+    <Compile Include="Validators\ValidatorGreaterBaseAttribute.cs" />
+    <Compile Include="Validators\ValidatorGreaterDateNowAttribute.cs" />
+    <Compile Include="Validators\ValidatorIsNumeric.cs" />
+    <Compile Include="Validators\ValidatorRange.cs" />
+    <Compile Include="Validators\ValidatorRequireAttribute.cs" />
+    <Compile Include="CONST.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dll\BACryptor.dll" />
+    <Content Include="Dll\BALicenseManager.dll" />
+    <Content Include="Dll\LicenseManager.dll" />
+    <Content Include="Dll\Taxi.Common.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

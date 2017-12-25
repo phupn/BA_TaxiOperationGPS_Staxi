@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SyncSystemService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ISyncSystemService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://www.gps.binhanh.com.vn/types/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISyncSystemService_UpdateVehicleLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleLocation" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicleLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicleExtend_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleExtend" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicleExtend_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleExtendResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicleStatusExtent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleStatusExtent" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicleStatusExtent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleStatusExtentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVerhicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVerhicle" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVerhicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVerhicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVehicle_NT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVehicle_NT" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVehicle_NT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVehicle_NTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOneOnlineVerhicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneOnlineVerhicle" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOneOnlineVerhicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneOnlineVerhicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_InitOnlineVerhicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitOnlineVerhicle" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_InitOnlineVerhicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitOnlineVerhicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetAllData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllData" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetAllData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetAllDataByXN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataByXN" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetAllDataByXN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataByXNResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetAllDataByXN_NT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataByXN_NT" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetAllDataByXN_NT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataByXN_NTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_ResetIndexVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetIndexVehicle" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_ResetIndexVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetIndexVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVehicle_Paging_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVehicle_Paging" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVehicle_Paging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVehicle_PagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicle_TimeStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicle_TimeStop" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_UpdateVehicle_TimeStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicle_TimeStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetTimeServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeServer" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetTimeServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetSoHieuXe_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoHieuXe" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetSoHieuXe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoHieuXeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_CheckService_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckService" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_CheckService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_CheckMetterConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckMetterConnection" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_CheckMetterConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckMetterConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVerhicle_Extend_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVerhicle_Extend" />
+  </wsdl:message>
+  <wsdl:message name="ISyncSystemService_GetOnlineVerhicle_Extend_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineVerhicle_ExtendResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISyncSystemService">
+    <wsdl:operation name="UpdateVehicleLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicleLocation" message="tns:ISyncSystemService_UpdateVehicleLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicleLocationResponse" message="tns:ISyncSystemService_UpdateVehicleLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleExtend">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicleExtend" message="tns:ISyncSystemService_UpdateVehicleExtend_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicleExtendResponse" message="tns:ISyncSystemService_UpdateVehicleExtend_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleStatusExtent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicleStatusExtent" message="tns:ISyncSystemService_UpdateVehicleStatusExtent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicleStatusExtentResponse" message="tns:ISyncSystemService_UpdateVehicleStatusExtent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVerhicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVerhicle" message="tns:ISyncSystemService_GetOnlineVerhicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVerhicleResponse" message="tns:ISyncSystemService_GetOnlineVerhicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVehicle_NT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVehicle_NT" message="tns:ISyncSystemService_GetOnlineVehicle_NT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVehicle_NTResponse" message="tns:ISyncSystemService_GetOnlineVehicle_NT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneOnlineVerhicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetOneOnlineVerhicle" message="tns:ISyncSystemService_GetOneOnlineVerhicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetOneOnlineVerhicleResponse" message="tns:ISyncSystemService_GetOneOnlineVerhicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitOnlineVerhicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/InitOnlineVerhicle" message="tns:ISyncSystemService_InitOnlineVerhicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/InitOnlineVerhicleResponse" message="tns:ISyncSystemService_InitOnlineVerhicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetAllData" message="tns:ISyncSystemService_GetAllData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetAllDataResponse" message="tns:ISyncSystemService_GetAllData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataByXN">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetAllDataByXN" message="tns:ISyncSystemService_GetAllDataByXN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetAllDataByXNResponse" message="tns:ISyncSystemService_GetAllDataByXN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataByXN_NT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetAllDataByXN_NT" message="tns:ISyncSystemService_GetAllDataByXN_NT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetAllDataByXN_NTResponse" message="tns:ISyncSystemService_GetAllDataByXN_NT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetIndexVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/ResetIndexVehicle" message="tns:ISyncSystemService_ResetIndexVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/ResetIndexVehicleResponse" message="tns:ISyncSystemService_ResetIndexVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVehicle_Paging">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVehicle_Paging" message="tns:ISyncSystemService_GetOnlineVehicle_Paging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVehicle_PagingResponse" message="tns:ISyncSystemService_GetOnlineVehicle_Paging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicle_TimeStop">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicle_TimeStop" message="tns:ISyncSystemService_UpdateVehicle_TimeStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/UpdateVehicle_TimeStopResponse" message="tns:ISyncSystemService_UpdateVehicle_TimeStop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetTimeServer" message="tns:ISyncSystemService_GetTimeServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetTimeServerResponse" message="tns:ISyncSystemService_GetTimeServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoHieuXe">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetSoHieuXe" message="tns:ISyncSystemService_GetSoHieuXe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetSoHieuXeResponse" message="tns:ISyncSystemService_GetSoHieuXe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/Ping" message="tns:ISyncSystemService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/PingResponse" message="tns:ISyncSystemService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/CheckService" message="tns:ISyncSystemService_CheckService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/CheckServiceResponse" message="tns:ISyncSystemService_CheckService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMetterConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/CheckMetterConnection" message="tns:ISyncSystemService_CheckMetterConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/CheckMetterConnectionResponse" message="tns:ISyncSystemService_CheckMetterConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVerhicle_Extend">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVerhicle_Extend" message="tns:ISyncSystemService_GetOnlineVerhicle_Extend_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncSystemService/GetOnlineVerhicle_ExtendResponse" message="tns:ISyncSystemService_GetOnlineVerhicle_Extend_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ISyncSystemService" type="tns:ISyncSystemService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ISyncSystemService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="UpdateVehicleLocation">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/UpdateVehicleLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleExtend">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/UpdateVehicleExtend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleStatusExtent">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/UpdateVehicleStatusExtent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVerhicle">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetOnlineVerhicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVehicle_NT">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetOnlineVehicle_NT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneOnlineVerhicle">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetOneOnlineVerhicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitOnlineVerhicle">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/InitOnlineVerhicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetAllData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataByXN">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetAllDataByXN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataByXN_NT">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetAllDataByXN_NT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetIndexVehicle">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/ResetIndexVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVehicle_Paging">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetOnlineVehicle_Paging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicle_TimeStop">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/UpdateVehicle_TimeStop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeServer">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetTimeServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoHieuXe">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetSoHieuXe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckService">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/CheckService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMetterConnection">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/CheckMetterConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineVerhicle_Extend">
+      <soap12:operation soapAction="http://tempuri.org/ISyncSystemService/GetOnlineVerhicle_Extend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncSystemService">
+    <wsdl:port name="NetTcpBinding_ISyncSystemService" binding="tns:NetTcpBinding_ISyncSystemService">
+      <soap12:address location="net.tcp://210.211.124.117:8085/SyncServices/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://210.211.124.117:8085/SyncServices/</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

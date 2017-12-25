@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DE6D86C-6E12-4C8B-8679-8F9E3BC7D438}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxiOperation_DieuXeDuongDai</RootNamespace>
+    <AssemblyName>TaxiOperation_DieuXeDuongDai</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\Taxi.Controls\DLL\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxiOperation_DieuHanhChinhV2\DLL_Common\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxiOperation_DieuHanhChinhV2\DLL_Common\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCao\frmBaoCaoNhatTrinhXeBaoDuongDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBaoCaoNhatTrinhXeBaoDuongDai.Designer.cs">
+      <DependentUpon>frmBaoCaoNhatTrinhXeBaoDuongDai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CommonBl.cs" />
+    <Compile Include="Base\Extender\Controls.cs" />
+    <Compile Include="Base\Extender\WinformKey.cs" />
+    <Compile Include="DangKyDonKhach\frmDanhSachDangKyDonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyDonKhach\frmDanhSachDangKyDonKhach.Designer.cs">
+      <DependentUpon>frmDanhSachDangKyDonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyDonKhach\frmLichSuDangKyDonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyDonKhach\frmLichSuDangKyDonKhach.Designer.cs">
+      <DependentUpon>frmLichSuDangKyDonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyDonKhach\frmThemDangKyDonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyDonKhach\frmThemDangKyDonKhach.Designer.cs">
+      <DependentUpon>frmThemDangKyDonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatLichDonKhach\frmDanhSachDatLichDonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatLichDonKhach\frmDanhSachDatLichDonKhach.Designer.cs">
+      <DependentUpon>frmDanhSachDatLichDonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatLichDonKhach\FrmDatLichDonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatLichDonKhach\FrmDatLichDonKhach.Designer.cs">
+      <DependentUpon>FrmDatLichDonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatLichDonKhach\frmLichSuDatLichDonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatLichDonKhach\frmLichSuDatLichDonKhach.Designer.cs">
+      <DependentUpon>frmLichSuDatLichDonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatLichDonKhach\frmMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatLichDonKhach\frmMap.Designer.cs">
+      <DependentUpon>frmMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XeDiTinh\frmDanhSachXeDiTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XeDiTinh\frmDanhSachXeDiTinh.Designer.cs">
+      <DependentUpon>frmDanhSachXeDiTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XeDiTinh\frmLichSuXeDiTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XeDiTinh\frmLichSuXeDiTinh.Designer.cs">
+      <DependentUpon>frmLichSuXeDiTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XeDiTinh\frmThemXeDiTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XeDiTinh\frmThemXeDiTinh.Designer.cs">
+      <DependentUpon>frmThemXeDiTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyDieuXe\frmDieuXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyDieuXe\frmDieuXe.Designer.cs">
+      <DependentUpon>frmDieuXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyDieuXe\frmXeDiTinhXoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyDieuXe\frmXeDiTinhXoa.Designer.cs">
+      <DependentUpon>frmXeDiTinhXoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyDieuXe\frmXuLyDieuXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyDieuXe\frmXuLyDieuXe.Designer.cs">
+      <DependentUpon>frmXuLyDieuXe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCao\frmBaoCaoNhatTrinhXeBaoDuongDai.resx">
+      <DependentUpon>frmBaoCaoNhatTrinhXeBaoDuongDai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyDonKhach\frmDanhSachDangKyDonKhach.resx">
+      <DependentUpon>frmDanhSachDangKyDonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyDonKhach\frmLichSuDangKyDonKhach.resx">
+      <DependentUpon>frmLichSuDangKyDonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyDonKhach\frmThemDangKyDonKhach.resx">
+      <DependentUpon>frmThemDangKyDonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatLichDonKhach\frmDanhSachDatLichDonKhach.resx">
+      <DependentUpon>frmDanhSachDatLichDonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatLichDonKhach\FrmDatLichDonKhach.resx">
+      <DependentUpon>FrmDatLichDonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatLichDonKhach\frmLichSuDatLichDonKhach.resx">
+      <DependentUpon>frmLichSuDatLichDonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatLichDonKhach\frmMap.resx">
+      <DependentUpon>frmMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="XeDiTinh\frmDanhSachXeDiTinh.resx">
+      <DependentUpon>frmDanhSachXeDiTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XeDiTinh\frmLichSuXeDiTinh.resx">
+      <DependentUpon>frmLichSuXeDiTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XeDiTinh\frmThemXeDiTinh.resx">
+      <DependentUpon>frmThemXeDiTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyDieuXe\frmDieuXe.resx">
+      <DependentUpon>frmDieuXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyDieuXe\frmXeDiTinhXoa.resx">
+      <DependentUpon>frmXeDiTinhXoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyDieuXe\frmXuLyDieuXe.resx">
+      <DependentUpon>frmXuLyDieuXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAGPS\BAGPS.csproj">
+      <Project>{E836681D-4FBD-417F-8A01-6AB3125AC366}</Project>
+      <Name>BAGPS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Business\Taxi.Business.csproj">
+      <Project>{889A0A5C-D624-49B5-877E-C365672541A8}</Project>
+      <Name>Taxi.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Controls\Taxi.Controls.csproj">
+      <Project>{aac3ce12-f739-4f19-8fd9-5399cd29ce2e}</Project>
+      <Name>Taxi.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Data\Taxi.Data.csproj">
+      <Project>{c6d7a3ee-b50c-4ea6-9053-2ed7f6c9975d}</Project>
+      <Name>Taxi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Entity\Taxi.Entity.csproj">
+      <Project>{735b945a-3b37-4796-8810-de7b3b0d168f}</Project>
+      <Name>Taxi.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Exception\Taxi.Exceptions.csproj">
+      <Project>{f46e3f0b-30a1-4228-9680-3f46897a27ad}</Project>
+      <Name>Taxi.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.MessageBox\Taxi.MessageBox.csproj">
+      <Project>{6d777ac5-0a39-4d93-807f-49d602071243}</Project>
+      <Name>Taxi.MessageBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{e7eba72b-31f7-4280-90a5-da0984cce7d9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marker-A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425461332_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425461335_back.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

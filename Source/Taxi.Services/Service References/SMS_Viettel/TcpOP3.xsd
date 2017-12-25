@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTcpOP.BookTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.BookTrip" nillable="true" type="tns:TcpOP.BookTrip" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.BookTrip" nillable="true" type="tns:ArrayOfTcpOP.BookTrip" />
+  <xs:complexType name="TcpOP.BookTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BookId" type="ser:guid" />
+      <xs:element minOccurs="0" name="BookParent" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="BookTripType" type="xs:int" />
+      <xs:element minOccurs="0" name="BookType" type="xs:int" />
+      <xs:element minOccurs="0" name="CanRetrip" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CancelType" type="xs:int" />
+      <xs:element minOccurs="0" name="CarType" type="xs:int" />
+      <xs:element minOccurs="0" name="CarTypes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CatchedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ComLandmarkId" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyIdsDeny" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyIdsFavorite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountCar" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentLat" type="xs:float" />
+      <xs:element minOccurs="0" name="CurrentLng" type="xs:float" />
+      <xs:element minOccurs="0" name="DateDeleted" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DistanceProvider" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverCancelMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="FK_CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_RouteID" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_SignCarDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="FloorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloorUserCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloorUserFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloorUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromLat" type="xs:float" />
+      <xs:element minOccurs="0" name="FromLng" type="xs:float" />
+      <xs:element minOccurs="0" name="FromName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReceivedCall" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KeyOffer" type="ser:guid" />
+      <xs:element minOccurs="0" name="LastestDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Money" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="Money2" type="xs:int" />
+      <xs:element minOccurs="0" name="MoneyTip" type="xs:int" />
+      <xs:element minOccurs="0" name="Offer" type="xs:int" />
+      <xs:element minOccurs="0" name="OperationId" type="xs:int" />
+      <xs:element minOccurs="0" name="OperatorConfirm" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnTripId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SaleOffCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SentTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SourceCancalTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SourceCancel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SourceType" type="xs:int" />
+      <xs:element minOccurs="0" name="SumNormiate" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SumOffer" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ToAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToLat" type="xs:float" />
+      <xs:element minOccurs="0" name="ToLng" type="xs:float" />
+      <xs:element minOccurs="0" name="ToName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCancel" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalDone" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalKm" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="TotalMissTrip" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalNominate" type="xs:int" />
+      <xs:element minOccurs="0" name="Trips" nillable="true" type="tns:ArrayOfTcpOP.Trip" />
+      <xs:element minOccurs="0" name="ValueSaleOffCode" type="xs:int" />
+      <xs:element minOccurs="0" name="VehiclePlateNominate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehiclesDeny" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WrongCustomer" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WrongVehicle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.BookTrip" nillable="true" type="tns:TcpOP.BookTrip" />
+  <xs:complexType name="ArrayOfTcpOP.Trip">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.Trip" nillable="true" type="tns:TcpOP.Trip" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.Trip" nillable="true" type="tns:ArrayOfTcpOP.Trip" />
+  <xs:complexType name="TcpOP.Trip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlackBoxLostGSM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BookId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CancelType" type="xs:int" />
+      <xs:element minOccurs="0" name="Chosen" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="ConfirmTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDriverCancel" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDriverDone" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateSendCatchedUser" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateSendInvite" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Distance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DistanceCatchedUser" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="DriverCancelMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverConfirm" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverId" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverState" type="xs:int" />
+      <xs:element minOccurs="0" name="KeyOffer" type="ser:guid" />
+      <xs:element minOccurs="0" name="Lat" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LatCancel" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LatCatchedUser" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LatSendDone" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LatSendInvite" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LngCancel" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LngCatchedUser" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LngSendDone" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="LngSendInvite" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="Money" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="Offer" type="xs:int" />
+      <xs:element minOccurs="0" name="OperationId" type="xs:int" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ReasonState" type="xs:int" />
+      <xs:element minOccurs="0" name="ReturnTripId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Send" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendCatchedUser" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendInvite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SourceType" type="xs:int" />
+      <xs:element minOccurs="0" name="Timeout" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TotalInvite" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalKm" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="TripId" type="xs:long" />
+      <xs:element minOccurs="0" name="VehicleId" type="xs:long" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.Trip" nillable="true" type="tns:TcpOP.Trip" />
+  <xs:complexType name="ArrayOfTcpOP.CarTypeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.CarTypeResponse" nillable="true" type="tns:TcpOP.CarTypeResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.CarTypeResponse" nillable="true" type="tns:ArrayOfTcpOP.CarTypeResponse" />
+  <xs:complexType name="TcpOP.CarTypeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FK_CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_VehicleTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seat" type="xs:int" />
+      <xs:element minOccurs="0" name="Stt" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.CarTypeResponse" nillable="true" type="tns:TcpOP.CarTypeResponse" />
+  <xs:complexType name="ArrayOfTcpOP.CommandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.CommandResponse" nillable="true" type="tns:TcpOP.CommandResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.CommandResponse" nillable="true" type="tns:ArrayOfTcpOP.CommandResponse" />
+  <xs:complexType name="TcpOP.CommandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BackgroundColor" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CommandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_MobileOperationStepWorkflowID" type="xs:int" />
+      <xs:element minOccurs="0" name="ForeColor" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FromMinutes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HasAlarmVoice" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasLimitedTime" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDelete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadyRecieveCustomer" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShow" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSystemCommand" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_CommandID" type="xs:int" />
+      <xs:element minOccurs="0" name="PMDH_CallStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PMDH_CallType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PMDH_DriverStatus" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PMDH_FunctionUsing" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PMDH_ParentColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PMDH_ParentCommand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PMDH_RequireVehicle" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PMDH_SendDriver" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PMDH_Shortcuts" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PMDH_Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeechSynthesizerVoice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToMinutes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VoiceAlarm" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.CommandResponse" nillable="true" type="tns:TcpOP.CommandResponse" />
+  <xs:complexType name="ArrayOfTcpOP.CompLandmark">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.CompLandmark" nillable="true" type="tns:TcpOP.CompLandmark" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.CompLandmark" nillable="true" type="tns:ArrayOfTcpOP.CompLandmark" />
+  <xs:complexType name="TcpOP.CompLandmark">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TcpOP.CompLandmarkUpdate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+          <xs:element minOccurs="0" name="PK_LandmarkID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TcpOP.CompLandmark" nillable="true" type="tns:TcpOP.CompLandmark" />
+  <xs:complexType name="TcpOP.CompLandmarkUpdate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:float" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:float" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Radius" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.CompLandmarkUpdate" nillable="true" type="tns:TcpOP.CompLandmarkUpdate" />
+  <xs:complexType name="ArrayOfTcpOP.CompLandmarkUpdate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.CompLandmarkUpdate" nillable="true" type="tns:TcpOP.CompLandmarkUpdate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.CompLandmarkUpdate" nillable="true" type="tns:ArrayOfTcpOP.CompLandmarkUpdate" />
+  <xs:complexType name="TcpOP.ConfigSignCarTypeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DriverTimeout" type="xs:short" />
+      <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxCarNum" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxRadius" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperatorType" type="tns:TcpOP.Operator" />
+      <xs:element minOccurs="0" name="PK_ConfigSignCarType" type="xs:int" />
+      <xs:element minOccurs="0" name="RetrySignNum" type="xs:int" />
+      <xs:element minOccurs="0" name="SendTimeout" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalOffer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.ConfigSignCarTypeResponse" nillable="true" type="tns:TcpOP.ConfigSignCarTypeResponse" />
+  <xs:simpleType name="TcpOP.Operator">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BySequentially">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NearestPriority">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Normal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="None">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TcpOP.Operator" nillable="true" type="tns:TcpOP.Operator" />
+  <xs:complexType name="ArrayOfTcpOP.DriverResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.DriverResponse" nillable="true" type="tns:TcpOP.DriverResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.DriverResponse" nillable="true" type="tns:ArrayOfTcpOP.DriverResponse" />
+  <xs:complexType name="TcpOP.DriverResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AverageRating" type="xs:float" />
+      <xs:element minOccurs="0" name="CarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverLicense" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_DriverID" type="xs:int" />
+      <xs:element minOccurs="0" name="PhoneNumber1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRating" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.DriverResponse" nillable="true" type="tns:TcpOP.DriverResponse" />
+  <xs:complexType name="ArrayOfTcpOP.VehicleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TcpOP.VehicleResponse" nillable="true" type="tns:TcpOP.VehicleResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTcpOP.VehicleResponse" nillable="true" type="tns:ArrayOfTcpOP.VehicleResponse" />
+  <xs:complexType name="TcpOP.VehicleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PrivateCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Server_CarType_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TcpOP.VehicleResponse" nillable="true" type="tns:TcpOP.VehicleResponse" />
+  <xs:simpleType name="TcpOP.BookTripType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Long">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Airport">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TcpOP.BookTripType" nillable="true" type="tns:TcpOP.BookTripType" />
+  <xs:simpleType name="TcpOP.Direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MotChieu">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HaiChieu">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TcpOP.Direction" nillable="true" type="tns:TcpOP.Direction" />
+</xs:schema>

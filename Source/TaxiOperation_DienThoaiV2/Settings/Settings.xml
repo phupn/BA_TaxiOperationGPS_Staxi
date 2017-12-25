@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Settings>  
+  <!--<IPAddress></IPAddress>
+  <Source>6nTeyA7DFaqiqpRXF1NRf+qqrwKCRF9R</Source>
+  <Catalog>4eVbmACEjlITL7Dr8HlogA==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH762WIEAN4FtVS612Q==</Password>-->
+  <!--<IPAddress>TaxiSongNhue_That_14.177.66.186</IPAddress>
+  <Source>HohKLR56kPZcMtJYQaqAow==</Source>
+  <Catalog>e8zvertZ2qED2LLoS0n4sw==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH7 =</Password>-->    
+  <!--<IPAddress>TaxiSongNhue_That_14.177.66.186</IPAddress>
+  <Source>HohKLR56kPZcMtJYQaqAow==</Source>
+  <Catalog>e8zvertZ2qED2LLoS0n4sw==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>s=</Password>-->  
+  <!--Sao HN test-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfdFNGL4Lv5Gop2yVbExi360=</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>-->  
+  
+  <!--TaxiOperationGPS_Staxi-->
+  <IPAddress></IPAddress>
+  <Source>0gcjprYLwwjHcLip7QnCRdxd9FoIoAGn</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfdtLc7zM+Ur6</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password></Password>
+  <!--Song Nhue-->
+  <!--<IPAddress>
+  </IPAddress>
+  <Source>HohKLR56kPZcMtJYQaqAow==</Source>
+  <Catalog>8wuTkKpJUy+DwdDioNKMyQ==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH762WIEAN4FtVS612Q==</Password>-->
+</Settings>

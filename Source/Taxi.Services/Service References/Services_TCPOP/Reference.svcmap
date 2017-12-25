@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e32b160c-3c2f-4a7b-a255-adf164e49c04" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://125.212.226.60:1108/Services/TcpOP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TcpOP.xsd" MetadataType="Schema" ID="36ca21fc-583c-4cab-b03d-e606f2d9fdac" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd1" />
+    <MetadataFile FileName="TcpOP1.xsd" MetadataType="Schema" ID="f0b05788-b9cd-4440-84a3-ddef46d074ac" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd0" />
+    <MetadataFile FileName="TcpOP.wsdl" MetadataType="Wsdl" ID="41d34f9f-6936-4fc4-934f-a9552b249e26" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?wsdl" />
+    <MetadataFile FileName="TcpOP.disco" MetadataType="Disco" ID="d1dbfed7-6edd-41f4-b6a2-9a4d3347d8d3" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?disco" />
+    <MetadataFile FileName="TcpOP2.xsd" MetadataType="Schema" ID="8e610198-adb3-4a44-92bf-51e71dec6e8e" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd5" />
+    <MetadataFile FileName="TcpOP3.xsd" MetadataType="Schema" ID="72f9222c-6c7d-43b8-9788-99b4894ca045" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd4" />
+    <MetadataFile FileName="TcpOP4.xsd" MetadataType="Schema" ID="e6519a07-b789-4211-88f0-8201bb2e3b66" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd3" />
+    <MetadataFile FileName="TcpOP5.xsd" MetadataType="Schema" ID="a615c203-a2a3-474d-9b88-47a01d8512dc" SourceId="1" SourceUrl="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

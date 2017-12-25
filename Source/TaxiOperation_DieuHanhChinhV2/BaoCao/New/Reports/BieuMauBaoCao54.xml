@@ -1,0 +1,19 @@
+<!--
+
+-->
+<dataroot>
+  <BaoCaoBieuMau54>
+    <SoHieuXe></SoHieuXe>
+    <MaLaiXe></MaLaiXe>
+    <ViTriDiemBao></ViTriDiemBao>
+    <ViTriDiemDen></ViTriDiemDen>
+    <SanBay></SanBay>
+    <DuongDai></DuongDai>
+   <ThoiDiemBaoDi></ThoiDiemBaoDi>   
+   <ThoiDiemBaoVe></ThoiDiemBaoVe>
+   <KmDi></KmDi>
+   <KmVe></KmVe>
+    <GhiChu></GhiChu>    
+	<CongTy></CongTy>	
+  </BaoCaoBieuMau54>
+</dataroot>

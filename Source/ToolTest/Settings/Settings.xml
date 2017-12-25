@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Settings>
+  <!--Thanh Cong-->
+  <!--<IPAddress>192.168.0.2</IPAddress>
+  <Source>wHWDG2IDWmNMlF/b1/EVqVf9EjFsj+NH</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfeZAPXFAxjmd</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>A+NMmyHrQpVTAJBlvsr2CgVWvQm4fJKF</Password>-->
+  <!--BA : TaxiOperationGPS_BaSao-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfdD0VcwbNhJI</Catalog>
+  <User>tyZe7ZH4km0s2oUxkimjew==</User>
+  <Password>CiV0UUaPYMk=</Password>-->-->
+  <!--<Settings>
+    <IPAddres0.0.2.110</IPAddress>
+    <Source>0gcjprYLwwjYRoa80RFlug==</Source>
+    <Catalog>gfizw5EkqHLhoIuIYp3esn9ol7B3tyr9</Catalog>
+    <User>EXaYlC9cNwA=</User>
+    <Password>ufuCH762WIEAN4FtVS612Q==</Password>
+  </Settings>-->
+
+  <!--Sao HN-->
+<!--<Settings>
+  <IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwjYRoa80RFlug==</Source>
+  <Catalog>gfizw5EkqHLhoIuIYp3esn9ol7B3tyr9</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH762WIEAN4FtVS612Q==</Password>
+</Settings-->>
+  <!--Group-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgkp+wAH+a68I6Jpf3fZYwN</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAff98ZUCCqRmGULFeBLRA/Wo=</Catalog>
+  <User>PLusDTlaIKFiwrLDKIx2GA==</User>
+  <Password>PLusDTlaIKHYDXtNU/HMFw==</Password>-->
+  <!--G5 BA-->
+  <IPAddress></IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfeZAPXFAxjmd</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>
+</Settings>

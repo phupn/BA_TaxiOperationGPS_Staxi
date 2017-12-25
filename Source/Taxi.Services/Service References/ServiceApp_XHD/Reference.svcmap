@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="23e8dae0-a8d4-45d1-87de-5fc009ae507a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.11.179:8793/Operationservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OperationService.xsd" MetadataType="Schema" ID="9995e4e4-d533-46c2-9026-f79dbb54c774" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd3" />
+    <MetadataFile FileName="OperationService1.xsd" MetadataType="Schema" ID="139f4f49-884f-43c9-8dad-f309e63ae478" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd2" />
+    <MetadataFile FileName="OperationService2.xsd" MetadataType="Schema" ID="fb84d682-357d-4cc9-8f15-50cd289fa1a9" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd1" />
+    <MetadataFile FileName="OperationService3.xsd" MetadataType="Schema" ID="1fa16015-eb65-4fd5-9bd7-e518de7d18d7" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd0" />
+    <MetadataFile FileName="OperationService.wsdl" MetadataType="Wsdl" ID="1b24c106-f16b-4a92-8077-1943045ad5c3" SourceId="1" SourceUrl="http://10.1.11.179:8793/Operationservice" />
+    <MetadataFile FileName="OperationService4.xsd" MetadataType="Schema" ID="3a87f457-deda-4ad5-afc6-cb57cc8fce3e" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd6" />
+    <MetadataFile FileName="OperationService5.xsd" MetadataType="Schema" ID="7225a733-6950-4728-8955-f20802f97eee" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd5" />
+    <MetadataFile FileName="OperationService6.xsd" MetadataType="Schema" ID="cdf03e0f-985a-4228-b7c1-1e655c3d950e" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd4" />
+    <MetadataFile FileName="OperationService7.xsd" MetadataType="Schema" ID="00a59822-959f-4982-a1cd-f7a16bba8d57" SourceId="1" SourceUrl="http://10.1.11.179:8793/OperationService?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

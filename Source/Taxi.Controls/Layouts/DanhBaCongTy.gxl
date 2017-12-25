@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GridEXLayoutFile LayoutType="Janus.Windows.GridEX.GridEX" LayoutVersion="1.1">
+    <RootTable>
+        <Columns Collection="true">
+            <Column0 ID="PhoneNumber">
+                <Caption>Số điện thoại</Caption>
+                <DataMember>PhoneNumber</DataMember>
+                <EditType>NoEdit</EditType>
+                <Key>PhoneNumber</Key>
+                <Position>0</Position>
+            </Column0>
+            <Column1 ID="Name">
+                <Caption>Tên số máy</Caption>
+                <DataMember>Name</DataMember>
+                <Key>Name</Key>
+                <Position>1</Position>
+                <Width>225</Width>
+            </Column1>
+            <Column2 ID="Address">
+                <Caption>Địa chỉ</Caption>
+                <DataMember>Address</DataMember>
+                <Key>Address</Key>
+                <Position>2</Position>
+                <Width>374</Width>
+            </Column2>
+        </Columns>
+        <SortKeys Collection="true">
+            <SortKey0 ID="SortKey0">
+                <ColIndex>2</ColIndex>
+            </SortKey0>
+        </SortKeys>
+        <GroupCondition ID="" />
+    </RootTable>
+    <RowWithErrorsFormatStyle>
+        <PredefinedStyle>RowWithErrorsFormatStyle</PredefinedStyle>
+    </RowWithErrorsFormatStyle>
+    <LinkFormatStyle>
+        <PredefinedStyle>LinkFormatStyle</PredefinedStyle>
+    </LinkFormatStyle>
+    <CardCaptionFormatStyle>
+        <PredefinedStyle>CardCaptionFormatStyle</PredefinedStyle>
+    </CardCaptionFormatStyle>
+    <GroupByBoxFormatStyle>
+        <PredefinedStyle>GroupByBoxFormatStyle</PredefinedStyle>
+    </GroupByBoxFormatStyle>
+    <GroupByBoxInfoFormatStyle>
+        <PredefinedStyle>GroupByBoxInfoFormatStyle</PredefinedStyle>
+    </GroupByBoxInfoFormatStyle>
+    <GroupRowFormatStyle>
+        <PredefinedStyle>GroupRowFormatStyle</PredefinedStyle>
+    </GroupRowFormatStyle>
+    <HeaderFormatStyle>
+        <PredefinedStyle>HeaderFormatStyle</PredefinedStyle>
+    </HeaderFormatStyle>
+    <PreviewRowFormatStyle>
+        <PredefinedStyle>PreviewRowFormatStyle</PredefinedStyle>
+    </PreviewRowFormatStyle>
+    <RowFormatStyle>
+        <PredefinedStyle>RowFormatStyle</PredefinedStyle>
+    </RowFormatStyle>
+    <SelectedFormatStyle>
+        <PredefinedStyle>SelectedFormatStyle</PredefinedStyle>
+    </SelectedFormatStyle>
+    <SelectedInactiveFormatStyle>
+        <PredefinedStyle>SelectedInactiveFormatStyle</PredefinedStyle>
+    </SelectedInactiveFormatStyle>
+    <WatermarkImage />
+    <VisualStyle>Standard</VisualStyle>
+    <GroupByBoxVisible>False</GroupByBoxVisible>
+</GridEXLayoutFile>

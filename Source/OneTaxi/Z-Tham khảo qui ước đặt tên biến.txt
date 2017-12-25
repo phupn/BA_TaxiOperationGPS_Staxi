@@ -1,0 +1,37 @@
+---------------------------------------------------
+1.1 Pascal case : P
+Viết chữ cái đầu tiên trong cụm từ đặt cho tên.
+Vd :  GetProducts(), ProductName 
+---------------------------------------------------
+1.2 Camel case : c
+Chữ đầu tiên của cụm từ đặt tên viết chữ thường
+Vd  :  isValid,  numberOfDay
+---------------------------------------------------
+1.3 Viết hoa cả chữ - Dùng cho hằng số
+Vd :  PI, MAX_ROWS, MAX
+---------------------------------------------------
+1.4 Kiểu Hungarian
+Cách viết tiền tố của kiểu dữ liệu cộng với tên
+Vd :  strName, iCount
+----------------------------------------------------
+<<Dùng '_' + camelCase cho biến private>>
+<<x: Không dùng đến>>
+------------------------------------------------------------------------------------------------------------------------------
+Kiểu						  Public	Protected	Internal	Private		Ghi chú
+------------------------------------------------------------------------------------------------------------------------------
+Tên Project						P			x			x 			x 		Tên Assembly & Namespace
+Tên file sourcecode				P			x			x 			x 	
+Namespace						P			x			x 			x 	
+Class và Struct					P			P			P			P	
+Interface						P			P			P			P		Thêm tiền tố chứ ‘I’ ở đầu VD: ICar
+Generic Class					P			P			P			P	 	Dùng T, K để đặt tên kiểu.
+Tên phương thức, hàm (Methods)	P			P			P			P		Dùng một động từ chỉ tên phương thức
+Thuộc tính (Property)			P			P			P			P		Không dùng từ Get, Set (từ có động từ) cho thuộc tính
+Trường (Field)					P			P			P			_c		Thêm dấu gạch chân ‘_’ và và dùng camelCase cho trường là private. VD: _lstSoHieuXe
+Hằng (Constant)																Viết hoa các từ của hằng.  VD:MAX_ROWS
+Static Field					P			P			P			_c		Chỉ dụng _camelCase cho private. VD: _lstSoHieuXe
+Enum							P			P			P			P		Thêm từ Type, hoặc Option ở cuối để phần biệt rõ, không cho tiền tố Enum ở đầu
+Delegate						P			P			P			P	
+Event							P			P			P			P	
+Biến cục bộ (inline variable)	x			x 			x 			c		Không được dùng một k‎ý tự để đặt tên. VD: lstSoHieuXe, dtReportData...
+Parameter						x			x 			x 			c		vd:parSoHieuXe,parSHX,parSoHieu hoặc pSoHieuXe, pSHX,pSoHieu...

@@ -1,0 +1,5 @@
+﻿2011-04-04 : Chỉnh chuyển CS, sử dụng trường dữ liệu có sẵn là CAMON_DanhGia để đặt thông tin
+            0 : tổng đài tự xử lý
+            1 : Máy một CS xử lý
+            2 : Máy hai CS xử lý
+            

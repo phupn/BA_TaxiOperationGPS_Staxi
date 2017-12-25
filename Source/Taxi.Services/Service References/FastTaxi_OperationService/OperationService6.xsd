@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.Enum" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.Enum" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Enum_TaxiOperation_CallStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PDHHuyCuoc" />
+      <xs:enumeration value="DonDuocKhach" />
+      <xs:enumeration value="Truot" />
+      <xs:enumeration value="Hoan" />
+      <xs:enumeration value="KhongXe" />
+      <xs:enumeration value="ChuaXacDinh" />
+      <xs:enumeration value="KhongXeLan1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enum_TaxiOperation_CallStatus" nillable="true" type="tns:Enum_TaxiOperation_CallStatus" />
+</xs:schema>

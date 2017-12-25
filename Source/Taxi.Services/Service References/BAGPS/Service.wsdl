@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeobyAddressBA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeobyAddressBAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeobyAddressBAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeobyAddressBA3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeobyAddressBA3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeobyAddressBA3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeobyAddressBA_HN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeobyAddressBA_HNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeobyAddressBA_HNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressByGeo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="lng" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressByGeoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddressByGeoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayToaDoXeNhan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KD" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="VD" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="maXN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SoHieuXe" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayToaDoXeNhanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayToaDoXeNhanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeDeCu_ToaDo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KD" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="VD" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="maXN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loaiXe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="banKinhGioiHan" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isBAMap" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="soLuongXe" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeDeCu_ToaDoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachXeDeCu_ToaDoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeDeCu_DiaChi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="diaChi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maXN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loaiXe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="banKinhGioiHan" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isBAMap" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="soLuongXe" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeDeCu_DiaChiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachXeDeCu_DiaChiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeDeCu_DiaChi3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="diaChi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maXN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loaiXe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="banKinhGioiHan" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isBAMap" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="soLuongXe" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeDeCu_DiaChi3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachXeDeCu_DiaChi3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeToiDiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuocCanKiemTraXeToiDiems" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="soGiayGioiHanCoTinHieu" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="maCungXNs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="banKinhGioiHan" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeToiDiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachXeToiDiemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeToiDiemDonDuocKhach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuocCanKiemTraXeToiDiemDonKhachs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="soGiayGioiHanCoTinHieu" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="maCungXNs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDanhSachXeToiDiemDonDuocKhachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachXeToiDiemDonDuocKhachResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetViTriOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TGLayGuLieuTruoc" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetViTriOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetViTriOnlineResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicense">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseResult" type="tns:LicenseEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LicenseEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeobyAddressBASoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeobyAddressBA" />
+  </wsdl:message>
+  <wsdl:message name="GetGeobyAddressBASoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeobyAddressBAResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeobyAddressBA3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeobyAddressBA3" />
+  </wsdl:message>
+  <wsdl:message name="GetGeobyAddressBA3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeobyAddressBA3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetGeobyAddressBA_HNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeobyAddressBA_HN" />
+  </wsdl:message>
+  <wsdl:message name="GetGeobyAddressBA_HNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeobyAddressBA_HNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeo" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayToaDoXeNhanSoapIn">
+    <wsdl:part name="parameters" element="tns:LayToaDoXeNhan" />
+  </wsdl:message>
+  <wsdl:message name="LayToaDoXeNhanSoapOut">
+    <wsdl:part name="parameters" element="tns:LayToaDoXeNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeDeCu_ToaDoSoapIn">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeDeCu_ToaDoSoapOut">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeDeCu_DiaChiSoapIn">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_DiaChi" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeDeCu_DiaChiSoapOut">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_DiaChiResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeDeCu_DiaChi3SoapIn">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_DiaChi3" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeDeCu_DiaChi3SoapOut">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_DiaChi3Response" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeToiDiemSoapIn">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeToiDiem" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeToiDiemSoapOut">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeToiDiemResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeToiDiemDonDuocKhachSoapIn">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeToiDiemDonDuocKhach" />
+  </wsdl:message>
+  <wsdl:message name="LayDanhSachXeToiDiemDonDuocKhachSoapOut">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeToiDiemDonDuocKhachResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetViTriOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:GetViTriOnline" />
+  </wsdl:message>
+  <wsdl:message name="GetViTriOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:GetViTriOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicense" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA">
+      <wsdl:input message="tns:GetGeobyAddressBASoapIn" />
+      <wsdl:output message="tns:GetGeobyAddressBASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA3">
+      <wsdl:input message="tns:GetGeobyAddressBA3SoapIn" />
+      <wsdl:output message="tns:GetGeobyAddressBA3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA_HN">
+      <wsdl:input message="tns:GetGeobyAddressBA_HNSoapIn" />
+      <wsdl:output message="tns:GetGeobyAddressBA_HNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeo">
+      <wsdl:input message="tns:GetAddressByGeoSoapIn" />
+      <wsdl:output message="tns:GetAddressByGeoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayToaDoXeNhan">
+      <wsdl:input message="tns:LayToaDoXeNhanSoapIn" />
+      <wsdl:output message="tns:LayToaDoXeNhanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <wsdl:input message="tns:LayDanhSachXeDeCu_ToaDoSoapIn" />
+      <wsdl:output message="tns:LayDanhSachXeDeCu_ToaDoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_DiaChi">
+      <wsdl:input message="tns:LayDanhSachXeDeCu_DiaChiSoapIn" />
+      <wsdl:output message="tns:LayDanhSachXeDeCu_DiaChiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_DiaChi3">
+      <wsdl:input message="tns:LayDanhSachXeDeCu_DiaChi3SoapIn" />
+      <wsdl:output message="tns:LayDanhSachXeDeCu_DiaChi3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeToiDiem">
+      <wsdl:input message="tns:LayDanhSachXeToiDiemSoapIn" />
+      <wsdl:output message="tns:LayDanhSachXeToiDiemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeToiDiemDonDuocKhach">
+      <wsdl:input message="tns:LayDanhSachXeToiDiemDonDuocKhachSoapIn" />
+      <wsdl:output message="tns:LayDanhSachXeToiDiemDonDuocKhachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViTriOnline">
+      <wsdl:input message="tns:GetViTriOnlineSoapIn" />
+      <wsdl:output message="tns:GetViTriOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicense">
+      <wsdl:input message="tns:GetLicenseSoapIn" />
+      <wsdl:output message="tns:GetLicenseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA">
+      <soap:operation soapAction="http://tempuri.org/GetGeobyAddressBA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA3">
+      <soap:operation soapAction="http://tempuri.org/GetGeobyAddressBA3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA_HN">
+      <soap:operation soapAction="http://tempuri.org/GetGeobyAddressBA_HN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeo">
+      <soap:operation soapAction="http://tempuri.org/GetAddressByGeo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayToaDoXeNhan">
+      <soap:operation soapAction="http://tempuri.org/LayToaDoXeNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <soap:operation soapAction="http://tempuri.org/LayDanhSachXeDeCu_ToaDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_DiaChi">
+      <soap:operation soapAction="http://tempuri.org/LayDanhSachXeDeCu_DiaChi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_DiaChi3">
+      <soap:operation soapAction="http://tempuri.org/LayDanhSachXeDeCu_DiaChi3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeToiDiem">
+      <soap:operation soapAction="http://tempuri.org/LayDanhSachXeToiDiem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeToiDiemDonDuocKhach">
+      <soap:operation soapAction="http://tempuri.org/LayDanhSachXeToiDiemDonDuocKhach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViTriOnline">
+      <soap:operation soapAction="http://tempuri.org/GetViTriOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicense">
+      <soap:operation soapAction="http://tempuri.org/GetLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA">
+      <soap12:operation soapAction="http://tempuri.org/GetGeobyAddressBA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA3">
+      <soap12:operation soapAction="http://tempuri.org/GetGeobyAddressBA3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeobyAddressBA_HN">
+      <soap12:operation soapAction="http://tempuri.org/GetGeobyAddressBA_HN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeo">
+      <soap12:operation soapAction="http://tempuri.org/GetAddressByGeo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayToaDoXeNhan">
+      <soap12:operation soapAction="http://tempuri.org/LayToaDoXeNhan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <soap12:operation soapAction="http://tempuri.org/LayDanhSachXeDeCu_ToaDo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_DiaChi">
+      <soap12:operation soapAction="http://tempuri.org/LayDanhSachXeDeCu_DiaChi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_DiaChi3">
+      <soap12:operation soapAction="http://tempuri.org/LayDanhSachXeDeCu_DiaChi3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeToiDiem">
+      <soap12:operation soapAction="http://tempuri.org/LayDanhSachXeToiDiem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeToiDiemDonDuocKhach">
+      <soap12:operation soapAction="http://tempuri.org/LayDanhSachXeToiDiemDonDuocKhach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViTriOnline">
+      <soap12:operation soapAction="http://tempuri.org/GetViTriOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicense">
+      <soap12:operation soapAction="http://tempuri.org/GetLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.1.17:85/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.1.17:85/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

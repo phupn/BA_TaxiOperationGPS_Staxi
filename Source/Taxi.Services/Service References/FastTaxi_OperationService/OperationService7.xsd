@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" />
+  <xs:complexType name="FasttaxiDbEntityBaseOfTripf55ZOt36">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" base="q1:ModelBaseOfTripf55ZOt36">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FasttaxiDbEntityBaseOfTripf55ZOt36" nillable="true" type="tns:FasttaxiDbEntityBaseOfTripf55ZOt36" />
+  <xs:complexType name="FasttaxiDbEntityBaseOfBookingf55ZOt36">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" base="q2:ModelBaseOfBookingf55ZOt36">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FasttaxiDbEntityBaseOfBookingf55ZOt36" nillable="true" type="tns:FasttaxiDbEntityBaseOfBookingf55ZOt36" />
+  <xs:complexType name="FasttaxiDbEntityBaseOfBookingDetailf55ZOt36">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.DbBase" base="q3:ModelBaseOfBookingDetailf55ZOt36">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FasttaxiDbEntityBaseOfBookingDetailf55ZOt36" nillable="true" type="tns:FasttaxiDbEntityBaseOfBookingDetailf55ZOt36" />
+</xs:schema>

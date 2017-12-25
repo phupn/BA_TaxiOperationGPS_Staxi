@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute.BLL" />
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" />
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute" />
+  <xs:complexType name="Trip">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" base="q1:FasttaxiDbEntityBaseOfTripf55ZOt36">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AD_FloorDistance" nillable="true" type="xs:double" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute.BLL" minOccurs="0" name="AD_Route" nillable="true" type="q2:Route" />
+          <xs:element minOccurs="0" name="AddressFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressFromLat" type="xs:float" />
+          <xs:element minOccurs="0" name="AddressFromLng" type="xs:float" />
+          <xs:element minOccurs="0" name="AddressTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressToLat" type="xs:float" />
+          <xs:element minOccurs="0" name="AddressToLng" type="xs:float" />
+          <xs:element minOccurs="0" name="DiscountRoundWay" type="xs:float" />
+          <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DriverPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FK_BookID" type="xs:long" />
+          <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+          <xs:element minOccurs="0" name="InputType" type="xs:int" />
+          <xs:element minOccurs="0" name="KmExpected" type="xs:int" />
+          <xs:element minOccurs="0" name="Money" type="xs:float" />
+          <xs:element minOccurs="0" name="MoneyExpected" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_TripID" type="xs:long" />
+          <xs:element minOccurs="0" name="PK_VehicleID" type="xs:long" />
+          <xs:element minOccurs="0" name="PrivateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Route" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Route_Points" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TimeExpected" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TimeFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TimeTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TripStatus" type="tns:Trip.Status" />
+          <xs:element minOccurs="0" name="TripType" type="xs:int" />
+          <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Vehicle_Lat" type="xs:float" />
+          <xs:element minOccurs="0" name="Vehicle_Lng" type="xs:float" />
+          <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Trip" nillable="true" type="tns:Trip" />
+  <xs:complexType name="Booking">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" base="q3:FasttaxiDbEntityBaseOfBookingf55ZOt36">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute" minOccurs="0" name="BC" nillable="true" type="q4:RouteDetails" />
+          <xs:element minOccurs="0" name="BC_FloorDistance" nillable="true" type="xs:double" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute.BLL" minOccurs="0" name="BC_Route" nillable="true" type="q5:Route" />
+          <xs:element minOccurs="0" name="BookDetails" nillable="true" type="tns:ArrayOfBookingDetail" />
+          <xs:element minOccurs="0" name="ClientKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="F" type="xs:double" />
+          <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromLat" type="xs:float" />
+          <xs:element minOccurs="0" name="FromLng" type="xs:float" />
+          <xs:element minOccurs="0" name="FromName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GPSLat" type="xs:float" />
+          <xs:element minOccurs="0" name="GPSLng" type="xs:float" />
+          <xs:element minOccurs="0" name="IsCancel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSchedule" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_BooID" type="xs:long" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="tns:Booking.BookingStatus" />
+          <xs:element minOccurs="0" name="ToAdress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToLat" type="xs:float" />
+          <xs:element minOccurs="0" name="ToLng" type="xs:float" />
+          <xs:element minOccurs="0" name="ToName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Booking" nillable="true" type="tns:Booking" />
+  <xs:complexType name="ArrayOfBookingDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BookingDetail" nillable="true" type="tns:BookingDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBookingDetail" nillable="true" type="tns:ArrayOfBookingDetail" />
+  <xs:complexType name="BookingDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext" base="q6:FasttaxiDbEntityBaseOfBookingDetailf55ZOt36">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FK_BookID" type="xs:long" />
+          <xs:element minOccurs="0" name="PK_BookingDetailID" type="xs:long" />
+          <xs:element minOccurs="0" name="SendOperation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Status" type="tns:BookingDetailStatus" />
+          <xs:element minOccurs="0" name="TripID" type="xs:long" />
+          <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BookingDetail" nillable="true" type="tns:BookingDetail" />
+  <xs:simpleType name="BookingDetailStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Waiting" />
+      <xs:enumeration value="Accept" />
+      <xs:enumeration value="Deny" />
+      <xs:enumeration value="Timeout" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BookingDetailStatus" nillable="true" type="tns:BookingDetailStatus" />
+  <xs:simpleType name="Booking.BookingStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ChuaGui" />
+      <xs:enumeration value="DangGui" />
+      <xs:enumeration value="DaKetThucGui" />
+      <xs:enumeration value="DaHetHan" />
+      <xs:enumeration value="KetThuc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Booking.BookingStatus" nillable="true" type="tns:Booking.BookingStatus" />
+  <xs:simpleType name="Trip.Status">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DangDi" />
+      <xs:enumeration value="DaTraKhach" />
+      <xs:enumeration value="DaGhepKhach" />
+      <xs:enumeration value="KhachDaLenXe" />
+      <xs:enumeration value="HuyDieu" />
+      <xs:enumeration value="KetThuc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Trip.Status" nillable="true" type="tns:Trip.Status" />
+  <xs:complexType name="ArrayOfBooking">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Booking" nillable="true" type="tns:Booking" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBooking" nillable="true" type="tns:ArrayOfBooking" />
+</xs:schema>

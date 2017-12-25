@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EnVangVIP.WebServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://115.84.179.34:9090/Data.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Data.DriverLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommandVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActived" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValidVehicle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LandmarkVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_DriverID" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalTripInDay" type="xs:int" />
+      <xs:element minOccurs="0" name="VehiclePrivateCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Data.DriverLogin" nillable="true" type="tns:Data.DriverLogin" />
+  <xs:complexType name="Data.CompanyInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="XNCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Data.CompanyInfo" nillable="true" type="tns:Data.CompanyInfo" />
+  <xs:complexType name="ArrayOfData.DataLandmark">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data.DataLandmark" nillable="true" type="tns:Data.DataLandmark" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfData.DataLandmark" nillable="true" type="tns:ArrayOfData.DataLandmark" />
+  <xs:complexType name="Data.DataLandmark">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Altitude" type="xs:int" />
+      <xs:element minOccurs="0" name="Color" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedByUser" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_LandmarkCategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="Flags" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLandmarkManagement" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPolygon" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:float" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:float" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberCompanySuggest" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_LandmarkID" type="xs:int" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Polygon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Radius" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Data.DataLandmark" nillable="true" type="tns:Data.DataLandmark" />
+  <xs:complexType name="ArrayOfData.DataWorkflow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data.DataWorkflow" nillable="true" type="tns:Data.DataWorkflow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfData.DataWorkflow" nillable="true" type="tns:ArrayOfData.DataWorkflow" />
+  <xs:complexType name="Data.DataWorkflow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Descriptions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PK_WorkflowID" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WorkflowName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Data.DataWorkflow" nillable="true" type="tns:Data.DataWorkflow" />
+  <xs:complexType name="ArrayOfData.DataStepWorkflow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data.DataStepWorkflow" nillable="true" type="tns:Data.DataStepWorkflow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfData.DataStepWorkflow" nillable="true" type="tns:ArrayOfData.DataStepWorkflow" />
+  <xs:complexType name="Data.DataStepWorkflow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_WorkflowID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCommon" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEnd" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStart" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_StepWorkflowID" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Data.DataStepWorkflow" nillable="true" type="tns:Data.DataStepWorkflow" />
+  <xs:complexType name="ArrayOfData.DataCommand">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data.DataCommand" nillable="true" type="tns:Data.DataCommand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfData.DataCommand" nillable="true" type="tns:ArrayOfData.DataCommand" />
+  <xs:complexType name="Data.DataCommand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BackgroundColor" type="xs:int" />
+      <xs:element minOccurs="0" name="CommandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_MobileOperationStepWorkflowID" type="xs:int" />
+      <xs:element minOccurs="0" name="ForeColor" type="xs:int" />
+      <xs:element minOccurs="0" name="FromMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="HasAlarmVoice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasLimitedTime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReadyRecieveCustomer" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShow" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSystemCommand" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_CommandID" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="SpeechSynthesizerVoice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedByUser" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VoiceAlarm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Data.DataCommand" nillable="true" type="tns:Data.DataCommand" />
+</xs:schema>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="WCF_SyncOnline.ServiceLibrary" elementFormDefault="qualified" targetNamespace="WCF_SyncOnline.ServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" />
+  <xs:complexType name="XeOnlineRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BKGioiHan" type="xs:int" />
+          <xs:element minOccurs="0" name="BKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KD" type="xs:double" />
+          <xs:element minOccurs="0" name="LastTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LoaiXe" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaXN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SHX" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SLXe" type="xs:int" />
+          <xs:element minOccurs="0" name="VD" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XeOnlineRequest" nillable="true" type="tns:XeOnlineRequest" />
+  <xs:complexType name="RequestBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientTag" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LoadOptions" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="RequestId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestBase" nillable="true" type="tns:RequestBase" />
+  <xs:complexType name="XeOnlineResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="XeOnline" nillable="true" type="q2:T_XeOnline" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="XeOnlines" nillable="true" type="q3:ArrayOfT_XeOnline" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XeOnlineResponse" nillable="true" type="tns:XeOnlineResponse" />
+  <xs:complexType name="ResponseBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Acknowledge" type="tns:AcknowledgeType" />
+      <xs:element minOccurs="0" name="Build" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorrelationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReservationExpires" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReservationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowsAffected" type="xs:int" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+  <xs:simpleType name="AcknowledgeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Failure" />
+      <xs:enumeration value="Success" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AcknowledgeType" nillable="true" type="tns:AcknowledgeType" />
+</xs:schema>

@@ -1,0 +1,37 @@
+<!--
+Ngay     varchar (50),
+TongCuocGoiTaxi     int,
+CuocGoiDonDuoc int,
+CuocGoiTruotHoan int,
+CuocGoiKhongXe int,
+PhanTramDonDuoc int,
+CuocGoiMoiGioi int,
+CuocGoiVangLai int,
+PhanTramMoiGioi int
+-->
+<dataroot>
+  <BaoCaoBieuMau45>
+    <NhanVienID></NhanVienID>
+    <NhanVienTen></NhanVienTen>
+    <CuocGoiNhan></CuocGoiNhan>
+    <CuocGoiTaxi></CuocGoiTaxi>
+    <CuocGoiChuyenCham></CuocGoiChuyenCham>
+    <PhanTramChuyenCham></PhanTramChuyenCham>
+    <CuocGoiDieu></CuocGoiDieu>
+    <CuocDonDuoc></CuocDonDuoc>
+    <PhanTramDonDuoc></PhanTramDonDuoc>
+    <CSCuocGoiTaxi></CSCuocGoiTaxi>
+	<CuocGoiCoCS></CuocGoiCoCS>
+	<PhanTramCS></PhanTramCS>
+	<CSCuocGoiDonDuoc></CSCuocGoiDonDuoc>
+	<CSPhanTramDonDuoc></CSPhanTramDonDuoc>
+	<TongCuoc888></TongCuoc888>
+	<CuoiGoiGiaiQuyet></CuoiGoiGiaiQuyet>
+	<CuocGoiGiaiQuyetDuoc></CuocGoiGiaiQuyetDuoc>
+	<PhanTramGiaiQuyetDuoc></PhanTramGiaiQuyetDuoc>
+	<CuocKhach999></CuocKhach999>
+	<CuocGoiDieuNHOM></CuocGoiDieuNHOM>
+	<DonDuocNHOM></DonDuocNHOM>
+	<PhanTramDonDuocNHOM></PhanTramDonDuocNHOM>
+  </BaoCaoBieuMau45>
+</dataroot>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAddressByGeo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lng" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="lan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressByGeoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddressByGeoResult" type="tns:GSAddresResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GSAddresResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Lng" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lat" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Building" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Road" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commune" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="District" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GSAuthenticationHeader" type="tns:GSAuthenticationHeader" />
+      <s:complexType name="GSAuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetAddressByGeo2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="slat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressByGeo2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddressByGeo2Result" type="tns:ArrayOfGSAddresResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGSAddresResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GSAddresResult" nillable="true" type="tns:GSAddresResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGeoByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="prv" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeoByNameResult" type="tns:GSAddresResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoByName2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoByName2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeoByName2Result" type="tns:GSAddresResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoByName3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoByName3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeoByName3Result" type="tns:GSAddresResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAddressByGeoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeo" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeoGSAuthenticationHeader">
+    <wsdl:part name="GSAuthenticationHeader" element="tns:GSAuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeo2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeo2" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeo2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddressByGeo2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressByGeo2GSAuthenticationHeader">
+    <wsdl:part name="GSAuthenticationHeader" element="tns:GSAuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeoByName" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeoByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByNameGSAuthenticationHeader">
+    <wsdl:part name="GSAuthenticationHeader" element="tns:GSAuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByName2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeoByName2" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByName2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeoByName2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByName2GSAuthenticationHeader">
+    <wsdl:part name="GSAuthenticationHeader" element="tns:GSAuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByName3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeoByName3" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByName3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeoByName3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoByName3GSAuthenticationHeader">
+    <wsdl:part name="GSAuthenticationHeader" element="tns:GSAuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:portType name="gisSoap">
+    <wsdl:operation name="GetAddressByGeo">
+      <wsdl:input message="tns:GetAddressByGeoSoapIn" />
+      <wsdl:output message="tns:GetAddressByGeoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeo2">
+      <wsdl:input message="tns:GetAddressByGeo2SoapIn" />
+      <wsdl:output message="tns:GetAddressByGeo2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName">
+      <wsdl:input message="tns:GetGeoByNameSoapIn" />
+      <wsdl:output message="tns:GetGeoByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName2">
+      <wsdl:input message="tns:GetGeoByName2SoapIn" />
+      <wsdl:output message="tns:GetGeoByName2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName3">
+      <wsdl:input message="tns:GetGeoByName3SoapIn" />
+      <wsdl:output message="tns:GetGeoByName3SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="gisSoap" type="tns:gisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAddressByGeo">
+      <soap:operation soapAction="http://tempuri.org/GetAddressByGeo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAddressByGeoGSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeo2">
+      <soap:operation soapAction="http://tempuri.org/GetAddressByGeo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAddressByGeo2GSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName">
+      <soap:operation soapAction="http://tempuri.org/GetGeoByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetGeoByNameGSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName2">
+      <soap:operation soapAction="http://tempuri.org/GetGeoByName2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetGeoByName2GSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName3">
+      <soap:operation soapAction="http://tempuri.org/GetGeoByName3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetGeoByName3GSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="gisSoap12" type="tns:gisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAddressByGeo">
+      <soap12:operation soapAction="http://tempuri.org/GetAddressByGeo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAddressByGeoGSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressByGeo2">
+      <soap12:operation soapAction="http://tempuri.org/GetAddressByGeo2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAddressByGeo2GSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName">
+      <soap12:operation soapAction="http://tempuri.org/GetGeoByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetGeoByNameGSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName2">
+      <soap12:operation soapAction="http://tempuri.org/GetGeoByName2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetGeoByName2GSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoByName3">
+      <soap12:operation soapAction="http://tempuri.org/GetGeoByName3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetGeoByName3GSAuthenticationHeader" part="GSAuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="gis">
+    <wsdl:port name="gisSoap" binding="tns:gisSoap">
+      <soap:address location="http://gis.binhanh.com.vn/gis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="gisSoap12" binding="tns:gisSoap12">
+      <soap12:address location="http://gis.binhanh.com.vn/gis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

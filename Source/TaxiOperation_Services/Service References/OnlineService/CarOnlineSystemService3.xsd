@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.Concretes.DriverServer" />
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CarOnlineSystemService.LatLngBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.LatLngBase" nillable="true" type="tns:CarOnlineSystemService.LatLngBase" />
+  <xs:complexType name="ArrayOfCarInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarInfo" nillable="true" type="tns:CarInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarInfo" nillable="true" type="tns:ArrayOfCarInfo" />
+  <xs:complexType name="CarInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsGPSLoss" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOntrip" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReady" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Lat_BlackBox" type="xs:float" />
+      <xs:element minOccurs="0" name="Lat_MB" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng_BlackBox" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng_MB" type="xs:float" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxiType" type="xs:int" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time_BlackBox" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time_MB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarInfo" nillable="true" type="tns:CarInfo" />
+  <xs:complexType name="CarOnlineSystemService.ServerServiceVehicleOnlineStateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FarVehicle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FarVehicleLongTime" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.Concretes.DriverServer" minOccurs="0" name="State" type="q1:ServerService.VehicleOnlineState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.ServerServiceVehicleOnlineStateResponse" nillable="true" type="tns:CarOnlineSystemService.ServerServiceVehicleOnlineStateResponse" />
+  <xs:complexType name="CarOnlineSystemService.NominateCarByCompanyIDRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BookId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CarType" type="xs:int" />
+      <xs:element minOccurs="0" name="CarTypeType" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompanyIdsDeny" nillable="true" type="q2:ArrayOfint" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompanyIdsFavorite" nillable="true" type="q3:ArrayOfint" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExceptCar" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="KeyOffer" type="ser:guid" />
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+      <xs:element minOccurs="0" name="RouterId" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitSource" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.NominateCarByCompanyIDRequest" nillable="true" type="tns:CarOnlineSystemService.NominateCarByCompanyIDRequest" />
+  <xs:complexType name="CarOnlineSystemService.SignCarConfigRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DistanceProvider" type="tns:CarOnlineSystemService.DistanceByRequest" />
+      <xs:element minOccurs="0" name="MaxCarNum" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxPerFindDistance" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxRadius" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.SignCarConfigRequest" nillable="true" type="tns:CarOnlineSystemService.SignCarConfigRequest" />
+  <xs:simpleType name="CarOnlineSystemService.DistanceByRequest">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Bird" />
+      <xs:enumeration value="Google" />
+      <xs:enumeration value="BaTopo" />
+      <xs:enumeration value="VietBanDo" />
+      <xs:enumeration value="IMap" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CarOnlineSystemService.DistanceByRequest" nillable="true" type="tns:CarOnlineSystemService.DistanceByRequest" />
+  <xs:complexType name="ArrayOfCarNomination">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarNomination" nillable="true" type="tns:CarNomination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarNomination" nillable="true" type="tns:ArrayOfCarNomination" />
+  <xs:complexType name="CarNomination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlackBoxLostGSM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentLat" type="xs:float" />
+      <xs:element minOccurs="0" name="CurrentLng" type="xs:float" />
+      <xs:element minOccurs="0" name="Distance" type="xs:double" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarNomination" nillable="true" type="tns:CarNomination" />
+  <xs:complexType name="GPSData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lat" type="xs:double" />
+      <xs:element minOccurs="0" name="Lng" type="xs:double" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Velocity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GPSData" nillable="true" type="tns:GPSData" />
+  <xs:complexType name="SystemInfoHost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PercentageCPU" type="xs:int" />
+      <xs:element minOccurs="0" name="PercentageMemory" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessInfos" nillable="true" type="tns:ArrayOfProcessInfoHost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemInfoHost" nillable="true" type="tns:SystemInfoHost" />
+  <xs:complexType name="ArrayOfProcessInfoHost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcessInfoHost" nillable="true" type="tns:ProcessInfoHost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcessInfoHost" nillable="true" type="tns:ArrayOfProcessInfoHost" />
+  <xs:complexType name="ProcessInfoHost">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsedCpu" type="ser:duration" />
+      <xs:element minOccurs="0" name="UsedMemory" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessInfoHost" nillable="true" type="tns:ProcessInfoHost" />
+  <xs:complexType name="CarOnlineSystemService.VehicleState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bearing" type="xs:float" />
+      <xs:element minOccurs="0" name="CellIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverFarVehicle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAbleToReceiveBook" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsBlackBoxLostGSM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDriverFarFromCar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFirstBlackBoxMsg" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGPSLost_BlackBox" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGPSLost_MB" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGSMLost_BlackBox" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOnTrip" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOnTrip_MB" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReady_MB" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSmartPhoneLostGSM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LandMarkID" type="xs:short" />
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lat_BlackBox" type="xs:float" />
+      <xs:element minOccurs="0" name="Lat_MB" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng_BlackBox" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng_MB" type="xs:float" />
+      <xs:element minOccurs="0" name="Moved_BB" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time_BlackBox" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time_MB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Velocity" type="xs:int" />
+      <xs:element minOccurs="0" name="WasOnTrip" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.VehicleState" nillable="true" type="tns:CarOnlineSystemService.VehicleState" />
+  <xs:complexType name="CarOnlineSystemService.EstimatePriceForAutoVehicleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromCoordinate" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest" />
+      <xs:element minOccurs="0" name="ToCoordinate" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.EstimatePriceForAutoVehicleRequest" nillable="true" type="tns:CarOnlineSystemService.EstimatePriceForAutoVehicleRequest" />
+  <xs:complexType name="CarOnlineSystemService.CoordinateRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.CoordinateRequest" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest" />
+  <xs:complexType name="ArrayOfCarOnlineSystemService.EstimatePriceForAutoVehicleRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarOnlineSystemService.EstimatePriceForAutoVehicleRes" nillable="true" type="tns:CarOnlineSystemService.EstimatePriceForAutoVehicleRes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarOnlineSystemService.EstimatePriceForAutoVehicleRes" nillable="true" type="tns:ArrayOfCarOnlineSystemService.EstimatePriceForAutoVehicleRes" />
+  <xs:complexType name="CarOnlineSystemService.EstimatePriceForAutoVehicleRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvailableVehicle" type="xs:short" />
+      <xs:element minOccurs="0" name="CarTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="EstimateTime" type="xs:int" />
+      <xs:element minOccurs="0" name="FullPrice" type="xs:int" />
+      <xs:element minOccurs="0" name="RealPrice" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.EstimatePriceForAutoVehicleRes" nillable="true" type="tns:CarOnlineSystemService.EstimatePriceForAutoVehicleRes" />
+  <xs:complexType name="CarOnlineSystemService.EstimatePriceReturnVehicleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromCoordinate" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest2" />
+      <xs:element minOccurs="0" name="ToCoordinate" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest2" />
+      <xs:element minOccurs="0" name="TripId" type="ser:guid" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.EstimatePriceReturnVehicleRequest" nillable="true" type="tns:CarOnlineSystemService.EstimatePriceReturnVehicleRequest" />
+  <xs:complexType name="CarOnlineSystemService.CoordinateRequest2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CarOnlineSystemService.LatLngBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.CoordinateRequest2" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest2" />
+  <xs:complexType name="CarOnlineSystemService.EstimatePriceForNominateVehicleRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstimateTime" type="xs:int" />
+      <xs:element minOccurs="0" name="FullPrice" type="xs:int" />
+      <xs:element minOccurs="0" name="RealPrice" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.EstimatePriceForNominateVehicleRes" nillable="true" type="tns:CarOnlineSystemService.EstimatePriceForNominateVehicleRes" />
+  <xs:complexType name="CarOnlineSystemService.TaxiReturnBookRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FK_CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="FromCoordinate" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest" />
+      <xs:element minOccurs="0" name="FromProvinceId" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="InorgeVehiclePlate" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToCoordinate" nillable="true" type="tns:CarOnlineSystemService.CoordinateRequest" />
+      <xs:element minOccurs="0" name="VehicleType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.TaxiReturnBookRequest" nillable="true" type="tns:CarOnlineSystemService.TaxiReturnBookRequest" />
+  <xs:complexType name="ArrayOfCarOnlineSystemService.TaxiReturnTripNormination">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarOnlineSystemService.TaxiReturnTripNormination" nillable="true" type="tns:CarOnlineSystemService.TaxiReturnTripNormination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarOnlineSystemService.TaxiReturnTripNormination" nillable="true" type="tns:ArrayOfCarOnlineSystemService.TaxiReturnTripNormination" />
+  <xs:complexType name="CarOnlineSystemService.TaxiReturnTripNormination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bearing" type="xs:float" />
+      <xs:element minOccurs="0" name="CarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentCoordinate" nillable="true" type="tns:CarOnlineSystemService.LatLngNormination" />
+      <xs:element minOccurs="0" name="DistanceToSource" type="xs:double" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_VehicleTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="tns:CarOnlineSystemService.LatLngNormination" />
+      <xs:element minOccurs="0" name="PK_ReturnTripId" type="ser:guid" />
+      <xs:element minOccurs="0" name="To" nillable="true" type="tns:CarOnlineSystemService.LatLngNormination" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.TaxiReturnTripNormination" nillable="true" type="tns:CarOnlineSystemService.TaxiReturnTripNormination" />
+  <xs:complexType name="CarOnlineSystemService.LatLngNormination">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CarOnlineSystemService.LatLngBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.LatLngNormination" nillable="true" type="tns:CarOnlineSystemService.LatLngNormination" />
+  <xs:complexType name="CarOnlineSystemService.ReturnTripVehicleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResDriverInfo" nillable="true" type="tns:CarOnlineSystemService.DriverInfoRes" />
+      <xs:element minOccurs="0" name="ResTripInfo" nillable="true" type="tns:CarOnlineSystemService.TripInfoRes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.ReturnTripVehicleInfo" nillable="true" type="tns:CarOnlineSystemService.ReturnTripVehicleInfo" />
+  <xs:complexType name="CarOnlineSystemService.DriverInfoRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rating" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.DriverInfoRes" nillable="true" type="tns:CarOnlineSystemService.DriverInfoRes" />
+  <xs:complexType name="CarOnlineSystemService.TripInfoRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndPoint" nillable="true" type="tns:CarOnlineSystemService.PointInfoRes" />
+      <xs:element minOccurs="0" name="StartPoint" nillable="true" type="tns:CarOnlineSystemService.PointInfoRes" />
+      <xs:element minOccurs="0" name="TripStatusRes" type="tns:CarOnlineSystemService.ReturnTripStatusRes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.TripInfoRes" nillable="true" type="tns:CarOnlineSystemService.TripInfoRes" />
+  <xs:complexType name="CarOnlineSystemService.PointInfoRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.PointInfoRes" nillable="true" type="tns:CarOnlineSystemService.PointInfoRes" />
+  <xs:simpleType name="CarOnlineSystemService.ReturnTripStatusRes">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AutomaticTrip">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DeclaredTrip">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CarOnlineSystemService.ReturnTripStatusRes" nillable="true" type="tns:CarOnlineSystemService.ReturnTripStatusRes" />
+  <xs:complexType name="CarOnlineSystemService.TaxiReturnUpsertTripRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerReturnState" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DriverCancelReturn" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DriverCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverIsNorminating" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DriverPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_CompanyID" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_VehicleTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="FromAddress" nillable="true" type="tns:CarOnlineSystemService.AddressInfoRequest" />
+      <xs:element minOccurs="0" name="LandmarkIdOfDriver" type="xs:int" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_ReturnTripId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TimeTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToAddress" nillable="true" type="tns:CarOnlineSystemService.AddressInfoRequest" />
+      <xs:element minOccurs="0" name="TripStatus" type="tns:CarOnlineSystemService.LongTripStatusRequest" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.TaxiReturnUpsertTripRequest" nillable="true" type="tns:CarOnlineSystemService.TaxiReturnUpsertTripRequest" />
+  <xs:complexType name="CarOnlineSystemService.AddressInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LatLng" nillable="true" type="tns:CarOnlineSystemService.LatLngRequest" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.AddressInfoRequest" nillable="true" type="tns:CarOnlineSystemService.AddressInfoRequest" />
+  <xs:complexType name="CarOnlineSystemService.LatLngRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.LatLngRequest" nillable="true" type="tns:CarOnlineSystemService.LatLngRequest" />
+  <xs:simpleType name="CarOnlineSystemService.LongTripStatusRequest">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotReady" />
+      <xs:enumeration value="Ready" />
+      <xs:enumeration value="CSKHCancel" />
+      <xs:enumeration value="GPSCancel" />
+      <xs:enumeration value="OperatorCancel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CarOnlineSystemService.LongTripStatusRequest" nillable="true" type="tns:CarOnlineSystemService.LongTripStatusRequest" />
+  <xs:complexType name="CarOnlineSystemService.CreateAutoTripRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReturnTripId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.CreateAutoTripRes" nillable="true" type="tns:CarOnlineSystemService.CreateAutoTripRes" />
+  <xs:complexType name="ArrayOfCarOnlineSystemService.HitMapResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarOnlineSystemService.HitMapResult" nillable="true" type="tns:CarOnlineSystemService.HitMapResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarOnlineSystemService.HitMapResult" nillable="true" type="tns:ArrayOfCarOnlineSystemService.HitMapResult" />
+  <xs:complexType name="CarOnlineSystemService.HitMapResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CellIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.HitMapResult" nillable="true" type="tns:CarOnlineSystemService.HitMapResult" />
+  <xs:complexType name="OneTaxiCarOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountNearestCars" type="xs:short" />
+      <xs:element minOccurs="0" name="OnlineCar" nillable="true" type="tns:ArrayOfOneTaxiCar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OneTaxiCarOnline" nillable="true" type="tns:OneTaxiCarOnline" />
+  <xs:complexType name="ArrayOfOneTaxiCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OneTaxiCar" nillable="true" type="tns:OneTaxiCar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOneTaxiCar" nillable="true" type="tns:ArrayOfOneTaxiCar" />
+  <xs:complexType name="OneTaxiCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bearing" type="xs:float" />
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+      <xs:element minOccurs="0" name="TaxiType" type="xs:int" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OneTaxiCar" nillable="true" type="tns:OneTaxiCar" />
+  <xs:complexType name="CarOnlineSystemService.RealTimeCarInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarType" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompanyIdsDeny" nillable="true" type="q6:ArrayOfint" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompanyIdsFavorite" nillable="true" type="q7:ArrayOfint" />
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+      <xs:element minOccurs="0" name="RouterId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.RealTimeCarInfoRequest" nillable="true" type="tns:CarOnlineSystemService.RealTimeCarInfoRequest" />
+  <xs:complexType name="ArrayOfCarOnlineSystemService.DriverOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarOnlineSystemService.DriverOnline" nillable="true" type="tns:CarOnlineSystemService.DriverOnline" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarOnlineSystemService.DriverOnline" nillable="true" type="tns:ArrayOfCarOnlineSystemService.DriverOnline" />
+  <xs:complexType name="CarOnlineSystemService.DriverOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsGPSLoss" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOntrip" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReady" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Lat_BlackBox" type="xs:float" />
+      <xs:element minOccurs="0" name="Lat_MB" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng_BlackBox" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng_MB" type="xs:float" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxiType" type="xs:int" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time_BlackBox" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Time_MB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XNCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.DriverOnline" nillable="true" type="tns:CarOnlineSystemService.DriverOnline" />
+  <xs:complexType name="CarOnlineSystemService.ViewCarInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Lat" type="xs:float" />
+      <xs:element minOccurs="0" name="Lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.ViewCarInfo" nillable="true" type="tns:CarOnlineSystemService.ViewCarInfo" />
+  <xs:complexType name="CarOnlineSystemService.SummaryVehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalVehicles" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalVehiclesInNDays" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalVehiclesLostGSMBlackBox" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarOnlineSystemService.SummaryVehicle" nillable="true" type="tns:CarOnlineSystemService.SummaryVehicle" />
+</xs:schema>

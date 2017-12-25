@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="68125c1f-fc7b-490d-94b0-06a6f4ebfe3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.2.179:7001/WCFServiceGEO" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFServiceGEO.xsd" MetadataType="Schema" ID="d445c9b1-582c-4701-9bd9-689c905c7f1b" SourceId="1" SourceUrl="http://10.0.2.179:7001/WCFServiceGEO?xsd=xsd0" />
+    <MetadataFile FileName="WCFServiceGEO1.xsd" MetadataType="Schema" ID="cfe98163-ad99-4be6-a19b-213caa818edd" SourceId="1" SourceUrl="http://10.0.2.179:7001/WCFServiceGEO?xsd=xsd2" />
+    <MetadataFile FileName="WCFServiceGEO2.xsd" MetadataType="Schema" ID="d6adda6e-b596-4e17-b24b-b3d2defe740c" SourceId="1" SourceUrl="http://10.0.2.179:7001/WCFServiceGEO?xsd=xsd1" />
+    <MetadataFile FileName="ServicesOnline.wsdl" MetadataType="Wsdl" ID="bcb63cc0-ec4c-4b55-9283-d45f5ecc7913" SourceId="1" SourceUrl="http://10.0.2.179:7001/WCFServiceGEO" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

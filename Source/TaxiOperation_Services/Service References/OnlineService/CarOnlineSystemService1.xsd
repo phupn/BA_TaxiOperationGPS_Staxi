@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" />
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" />
+  <xs:element name="CheckEndTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEndTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckEndTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalDistanceRouter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="from" nillable="true" type="q1:CarOnlineSystemService.LatLngBase" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="to" nillable="true" type="q2:CarOnlineSystemService.LatLngBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalDistanceRouterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalDistanceRouterResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMobile">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMobileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetAllMobileResult" nillable="true" type="q3:ArrayOfCarInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetVehicleStateResult" nillable="true" type="q4:CarOnlineSystemService.ServerServiceVehicleOnlineStateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NominateCarByCompanyID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="request" nillable="true" type="q5:CarOnlineSystemService.NominateCarByCompanyIDRequest" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="config" nillable="true" type="q6:CarOnlineSystemService.SignCarConfigRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NominateCarByCompanyIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="NominateCarByCompanyIDResult" nillable="true" type="q7:ArrayOfCarNomination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGPSData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGPSDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetGPSDataResult" nillable="true" type="q8:GPSData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogCars">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="time" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="VehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogCarsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLogCarsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogfilePath">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogfilePathResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLogfilePathResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetLogfilesResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetSystemInfoResult" nillable="true" type="q10:SystemInfoHost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetVehicleInformationResult" nillable="true" type="q11:CarOnlineSystemService.VehicleState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadChildrenVehicleType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadChildrenVehicleTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadChildrenVehicleTypeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstimatePriceForAutoVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="request" nillable="true" type="q12:CarOnlineSystemService.EstimatePriceForAutoVehicleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstimatePriceForAutoVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="EstimatePriceForAutoVehicleResult" nillable="true" type="q13:ArrayOfCarOnlineSystemService.EstimatePriceForAutoVehicleRes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstimatePriceForNominateVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="request" nillable="true" type="q14:CarOnlineSystemService.EstimatePriceReturnVehicleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstimatePriceForNominateVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="EstimatePriceForNominateVehicleResult" nillable="true" type="q15:CarOnlineSystemService.EstimatePriceForNominateVehicleRes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTripReturnTaxi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="book" nillable="true" type="q16:CarOnlineSystemService.TaxiReturnBookRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTripReturnTaxiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="FindTripReturnTaxiResult" nillable="true" type="q17:ArrayOfCarOnlineSystemService.TaxiReturnTripNormination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTripReturnTaxiAround">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="book" nillable="true" type="q18:CarOnlineSystemService.TaxiReturnBookRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTripReturnTaxiAroundResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="FindTripReturnTaxiAroundResult" nillable="true" type="q19:ArrayOfCarOnlineSystemService.TaxiReturnTripNormination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTripByVehiclePlate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTripByVehiclePlateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="FindTripByVehiclePlateResult" type="q20:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleReturnDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="tripId" type="q21:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleReturnDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetVehicleReturnDetailResult" nillable="true" type="q22:CarOnlineSystemService.ReturnTripVehicleInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddVehiclePlateNorminated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddVehiclePlateNorminatedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddVehiclePlateNorminatedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNorminatingStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="tripId" type="q23:guid" />
+        <xs:element minOccurs="0" name="status" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNorminatingStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNorminatingStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTripStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="tripId" type="q24:guid" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" minOccurs="0" name="status" type="q25:TaxiReturnTrip.ReturnTripStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTripStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTripStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverCancelReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="tripId" type="q26:guid" />
+        <xs:element minOccurs="0" name="driverCancelReturn" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDriverCancelReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDriverCancelReturnResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomerReturnState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="tripId" type="q27:guid" />
+        <xs:element minOccurs="0" name="customerReturnState" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomerReturnStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCustomerReturnStateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DriverUpdateDriverCancelReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverCancelReturn" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DriverUpdateDriverCancelReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DriverUpdateDriverCancelReturnResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebCSKHDeleteReturnTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="tripId" type="q28:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebCSKHDeleteReturnTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebCSKHDeleteReturnTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="trip" nillable="true" type="q29:CarOnlineSystemService.TaxiReturnUpsertTripRequest" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" minOccurs="0" name="sourceType" type="q30:TaxiReturnTrip.ReturnTripSourceType" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" minOccurs="0" name="tripType" type="q31:TaxiReturnTrip.ReturnTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="UpsertReturnTripResult" type="q32:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertAutoReturnTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isCreate" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertAutoReturnTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="UpsertAutoReturnTripResult" nillable="true" type="q33:CarOnlineSystemService.CreateAutoTripRes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripOperator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="trip" nillable="true" type="q34:CarOnlineSystemService.TaxiReturnUpsertTripRequest" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" minOccurs="0" name="tripType" type="q35:TaxiReturnTrip.ReturnTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripOperatorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="UpsertReturnTripOperatorResult" type="q36:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripWebCSKH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="trip" nillable="true" type="q37:CarOnlineSystemService.TaxiReturnUpsertTripRequest" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" minOccurs="0" name="tripType" type="q38:TaxiReturnTrip.ReturnTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripWebCSKHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="UpsertReturnTripWebCSKHResult" type="q39:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripWebGPS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="trip" nillable="true" type="q40:CarOnlineSystemService.TaxiReturnUpsertTripRequest" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" minOccurs="0" name="tripType" type="q41:TaxiReturnTrip.ReturnTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpsertReturnTripWebGPSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="UpsertReturnTripWebGPSResult" type="q42:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeSignCarConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeSignCarConfigResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRouteVehicleTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadRouteVehicleTypesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataHitMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hitMapId" type="xs:int" />
+        <xs:element minOccurs="0" name="zoom" type="xs:int" />
+        <xs:element minOccurs="0" name="parentCellIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataHitMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetDataHitMapResult" nillable="true" type="q43:ArrayOfCarOnlineSystemService.HitMapResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataHitMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hitMapId" type="xs:int" />
+        <xs:element minOccurs="0" name="zoom" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataHitMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetAllDataHitMapResult" nillable="true" type="q44:ArrayOfCarOnlineSystemService.HitMapResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeHitMapConfig">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeHitMapConfigResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealTimeCarInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lat" type="xs:float" />
+        <xs:element minOccurs="0" name="lng" type="xs:float" />
+        <xs:element minOccurs="0" name="carType" type="xs:int" />
+        <xs:element xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="companyIdsFavorite" nillable="true" type="q45:ArrayOfint" />
+        <xs:element xmlns:q46="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="companyIdsDeny" nillable="true" type="q46:ArrayOfint" />
+        <xs:element minOccurs="0" name="routerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealTimeCarInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="RealTimeCarInfoResult" nillable="true" type="q47:OneTaxiCarOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealTimeCarInfo2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="request" nillable="true" type="q48:CarOnlineSystemService.RealTimeCarInfoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealTimeCarInfo2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="RealTimeCarInfo2Result" nillable="true" type="q49:OneTaxiCarOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealTimeCarInfo3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="request" nillable="true" type="q50:CarOnlineSystemService.RealTimeCarInfoRequest" />
+        <xs:element minOccurs="0" name="radius" type="xs:int" />
+        <xs:element minOccurs="0" name="maxCar" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealTimeCarInfo3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="RealTimeCarInfo3Result" nillable="true" type="q51:OneTaxiCarOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="privateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="staxiCartype" type="xs:int" />
+        <xs:element minOccurs="0" name="gpsCarType" type="xs:int" />
+        <xs:element minOccurs="0" name="checkGPSOnTrip" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarInfoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xnCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cartype" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriverOnlines">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriverOnlinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetDriverOnlinesResult" nillable="true" type="q52:ArrayOfCarOnlineSystemService.DriverOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetViewCarInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetViewCarInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetViewCarInfoResult" nillable="true" type="q53:CarOnlineSystemService.ViewCarInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReloadLoadVehicles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReloadLoadVehiclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReloadLoadVehiclesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReloadDriverFeeTripHelper">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReloadDriverFeeTripHelperResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReloadDriverFeeTripHelperResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSummeryVehicles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hours" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSummeryVehiclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="GetSummeryVehiclesResult" nillable="true" type="q54:CarOnlineSystemService.SummaryVehicle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test123">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test123Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Test123Result" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

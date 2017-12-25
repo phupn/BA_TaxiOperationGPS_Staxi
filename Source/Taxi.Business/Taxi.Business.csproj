@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{889A0A5C-D624-49B5-877E-C365672541A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taxi.Business</RootNamespace>
+    <AssemblyName>Taxi.Business</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Asterisk.NET">
+      <HintPath>..\Taxi.Controls\DLL\Asterisk.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Taxi.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Utils\Dll\Taxi.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllCodeEntity.cs" />
+    <Compile Include="AsteriskInfo.cs" />
+    <Compile Include="AutoUpdate\AutoUpdate.cs" />
+    <Compile Include="AutoUpdate\LicenseEntity.cs" />
+    <Compile Include="BanDoXe\clsDefineConstant.cs" />
+    <Compile Include="BanDoXe\clsRoad.cs" />
+    <Compile Include="BanGiaGoc\Dulieudauvaotinhtien.cs" />
+    <Compile Include="BanGiaGoc\NhatkyThuebao.cs" />
+    <Compile Include="BanGiaGoc\TuyenDuong.cs" />
+    <Compile Include="BanGiaGoc\VuotGioQuyDinhBL.cs" />
+    <Compile Include="BaoCao\CSKH.cs" />
+    <Compile Include="BaoCao\DoiTac.cs" />
+    <Compile Include="CanhBaoSOS\CanhBaoSOS.cs" />
+    <Compile Include="CDR.cs" />
+    <Compile Include="CDRPBXIPEntity.cs" />
+    <Compile Include="Chatting.cs" />
+    <Compile Include="CheckCoDuongDai\CheckCoDuongDai.cs" />
+    <Compile Include="CommonBL.cs" />
+    <Compile Include="Config_Common.cs" />
+    <Compile Include="DanhBa\DanhBaEx.cs" />
+    <Compile Include="DieuXeDuongDai\BaoCaoNhatTrinhXeBaoDuongDai.cs" />
+    <Compile Include="DieuXeDuongDai\DUONGDAI_DONKHACH_XEDITINH.cs" />
+    <Compile Include="DieuXeDuongDai\DUONGDAI_KHACHHEN.cs" />
+    <Compile Include="DieuXeDuongDai\DUONGDAI_KHACHHEN_XEDK.cs" />
+    <Compile Include="DM\DanhBaKhachQuen.cs" />
+    <Compile Include="DM\DMTinhThanh.cs" />
+    <Compile Include="DM\DMVung_GPS.cs" />
+    <Compile Include="DM\LoaiXe.cs" />
+    <Compile Include="GlobalContacts.cs" />
+    <Compile Include="KhachDat\KhachDatEntity.cs" />
+    <Compile Include="LicenseBL.cs" />
+    <Compile Include="ManHinhBL.cs" />
+    <Compile Include="CuocGoi.cs" />
+    <Compile Include="CuocGoiDi.cs" />
+    <Compile Include="CuocGoiKhachHen.cs" />
+    <Compile Include="DanhBaCongTy.cs" />
+    <Compile Include="DanhBaKhachAo.cs" />
+    <Compile Include="CuocGoiDoiTac.cs" />
+    <Compile Include="DM\DMCongTy.cs" />
+    <Compile Include="DM\DMDiaDanh.cs" />
+    <Compile Include="DM\DMKhachVIP.cs" />
+    <Compile Include="DM\DMDoiTac.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DanhBa.cs" />
+    <Compile Include="DieuHanhTaxi.cs" />
+    <Compile Include="DM\Gara.cs" />
+    <Compile Include="DM\LoaiPhanAnh.cs" />
+    <Compile Include="DM\Sanh.cs" />
+    <Compile Include="DM\TuDienLoaiDiaDanh.cs" />
+    <Compile Include="DM\Xe.cs" />
+    <Compile Include="DM\NhanVien.cs" />
+    <Compile Include="Event\EventTimFile.cs" />
+    <Compile Include="GridLayout\GridLayOut.cs" />
+    <Compile Include="KhachDat\KhachDatBL.cs" />
+    <Compile Include="KiemSoatXeLienLac.cs" />
+    <Compile Include="LogError.cs" />
+    <Compile Include="MaHoa.cs" />
+    <Compile Include="MemberCard\MemberCard.cs" />
+    <Compile Include="NgheLaiCuocGoi.cs" />
+    <Compile Include="PhanAnh\PhanAnh.cs" />
+    <Compile Include="ProcessInComFile.cs" />
+    <Compile Include="ProcessLog_IncomingFile.cs" />
+    <Compile Include="ProcessVocFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyMoiGioi\BangKe.cs" />
+    <Compile Include="QuanLyVe\DMKhachHang.cs" />
+    <Compile Include="QuanLyVe\The.cs" />
+    <Compile Include="QuanLyVe\Ve.cs" />
+    <Compile Include="QuanTri\EventGroup.cs" />
+    <Compile Include="QuanTri\HeThong.cs" />
+    <Compile Include="QuanTri\LineGoiRa.cs" />
+    <Compile Include="QuanTri\Log.cs" />
+    <Compile Include="QuanTri\Permission.cs" />
+    <Compile Include="QuanTri\QuanTriCauHinh.cs" />
+    <Compile Include="QuanTri\QuanTriCauHinhEntity.cs" />
+    <Compile Include="QuanTri\Roles.cs" />
+    <Compile Include="QuanTri\ThoatCuoc999.cs" />
+    <Compile Include="QuanTri\ThongTinDangNhap.cs" />
+    <Compile Include="QuanTri\TuDienChucVu.cs" />
+    <Compile Include="QuanTri\TuDienPhong.cs" />
+    <Compile Include="QuanTri\UserPermission.cs" />
+    <Compile Include="QuanTri\UserRole.cs" />
+    <Compile Include="QuanTri\Users.cs" />
+    <Compile Include="Staxi\StaxiPermission.cs" />
+    <Compile Include="TaxiperationHistory.cs" />
+    <Compile Include="ThongTinCauHinh.cs" />
+    <Compile Include="ThongTinPhanAnh\ThongTinPhanAnh.cs" />
+    <Compile Include="ThongTinTruyCap.cs" />
+    <Compile Include="TimKiem_BaoCao.cs" />
+    <Compile Include="TinhTienTheoKm.cs" />
+    <Compile Include="BanDoXe\XeOnline.cs" />
+    <Compile Include="TinhTien_SuDungXe.cs" />
+    <Compile Include="CONST.cs" />
+    <Compile Include="TinNhanSMS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Taxi.Data\Taxi.Data.csproj">
+      <Project>{C6D7A3EE-B50C-4EA6-9053-2ED7F6C9975D}</Project>
+      <Name>Taxi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Entity\Taxi.Entity.csproj">
+      <Project>{735B945A-3B37-4796-8810-DE7B3B0D168F}</Project>
+      <Name>Taxi.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.MessageBox\Taxi.MessageBox.csproj">
+      <Project>{6D777AC5-0A39-4D93-807F-49D602071243}</Project>
+      <Name>Taxi.MessageBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{E7EBA72B-31F7-4280-90A5-DA0984CCE7D9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

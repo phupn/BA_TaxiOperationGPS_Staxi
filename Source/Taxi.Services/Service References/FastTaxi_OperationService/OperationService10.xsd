@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.Sockets.Operation_345.MsgToMasters_2.From_4" />
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.Enum" />
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" />
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" />
+  <xs:import schemaLocation="http://10.0.2.172:2525/OperationService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute" />
+  <xs:element name="SendToMasterOperationCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterOperationCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterOperationCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterSigningCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterSigningCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterSigningCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterNoCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterNoCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterNoCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterSignedCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.Sockets.Operation_345.MsgToMasters_2.From_4" minOccurs="0" name="carNo" nillable="true" type="q1:ArrayOfCarOnline" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterSignedCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterSignedCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterCatchingCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterCatchingCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterCatchingCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterTaxiCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterTaxiCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterTaxiCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterReceivedInBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterReceivedInBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterReceivedInBookResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterBookingDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.Sockets.Operation_345.MsgToMasters_2.From_4" minOccurs="0" name="carNo" nillable="true" type="q2:ArrayOfCarOnline" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterBookingDoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterBookingDoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterBookingFail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Utils.Enum" minOccurs="0" name="status" type="q3:Enum_TaxiOperation_CallStatus" />
+        <xs:element minOccurs="0" name="bookcode" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendToMasterBookingFailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendToMasterBookingFailResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" minOccurs="0" name="objTrip" nillable="true" type="q4:Trip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" minOccurs="0" name="AddTripResult" nillable="true" type="q5:TripBookingsSendResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" minOccurs="0" name="objTrip" nillable="true" type="q6:Trip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" minOccurs="0" name="UpdateTripResult" nillable="true" type="q7:UpdateTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripIDOld" type="xs:long" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" minOccurs="0" name="trip" nillable="true" type="q8:Trip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReplaceTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TripUpdateStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripID" type="xs:long" />
+        <xs:element minOccurs="0" name="xncode" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.DataBase.FastTaxiContext.Entities.TaxiReturn" minOccurs="0" name="status" type="q9:Trip.Status" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TripUpdateStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TripUpdateStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookID" type="xs:long" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" minOccurs="0" name="answer" nillable="true" type="q10:TimerSendBooking.TimerSendBookingAnswer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationAnswerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OperationAnswerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationAnswer2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" minOccurs="0" name="answer" nillable="true" type="q11:TimerSendTrip.TimerSendTripAnswer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationAnswer2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OperationAnswer2Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationHasReceive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookID" type="xs:long" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturn" minOccurs="0" name="hasReceive" nillable="true" type="q12:TimerSendBooking.TimerSendBookingHasReceive" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationHasReceiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OperationHasReceiveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveScheduleVehicleReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveScheduleVehicleReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveScheduleVehicleReturnResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinishVehicleReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinishVehicleReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishVehicleReturnResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DenyTripInBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookid" type="xs:long" />
+        <xs:element minOccurs="0" name="tripId" type="xs:long" />
+        <xs:element minOccurs="0" name="xnCode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DenyTripInBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DenyTripInBookingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMSResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalRoute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromLat" type="xs:float" />
+        <xs:element minOccurs="0" name="fromLng" type="xs:float" />
+        <xs:element minOccurs="0" name="toLat" type="xs:float" />
+        <xs:element minOccurs="0" name="toLng" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalRouteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BA.Fasttaxi.Network.Documents.TaxiReturnRoute" minOccurs="0" name="CalRouteResult" nillable="true" type="q13:RouteDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressByGeos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLng" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLat" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressByGeosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAddressByGeosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d58b151d-28ff-41da-963a-a9da38709285" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://115.84.178.70:1107/CarOnlineSystemService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CarOnlineSystemService.wsdl" MetadataType="Wsdl" ID="7e84ca33-8c9c-4710-b8a1-6c30e87991a0" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService" />
+    <MetadataFile FileName="CarOnlineSystemService.xsd" MetadataType="Schema" ID="c351855d-5abf-4c1b-ac51-6a4e67b50061" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd1" />
+    <MetadataFile FileName="CarOnlineSystemService1.xsd" MetadataType="Schema" ID="50b3c03f-6947-405e-a0a3-40522a4d5758" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd0" />
+    <MetadataFile FileName="CarOnlineSystemService2.xsd" MetadataType="Schema" ID="e160b74c-ebbc-4ba8-a735-b7ff49ffe971" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd3" />
+    <MetadataFile FileName="CarOnlineSystemService3.xsd" MetadataType="Schema" ID="43c23307-9244-4817-a566-32c258d9b4fc" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd2" />
+    <MetadataFile FileName="CarOnlineSystemService4.xsd" MetadataType="Schema" ID="cd48cc09-4ab1-46b3-872b-1f2c02b80949" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd5" />
+    <MetadataFile FileName="CarOnlineSystemService5.xsd" MetadataType="Schema" ID="5891823f-4cd8-467d-9b42-b4986949f662" SourceId="1" SourceUrl="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

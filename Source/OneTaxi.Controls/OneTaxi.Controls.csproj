@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85B09AC8-9FF9-4A36-8870-E02A9710418B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneTaxi.Controls</RootNamespace>
+    <AssemblyName>OneTaxi.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.Data.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.Printing.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.RichEdit.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.Utils.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.Xpo.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraBars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraLayout.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraNavBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraPrinting.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraReports.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraRichEdit.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OneTaxi.Utils\Library\Devexpress\DevExpress.XtraTreeList.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Staxi.Utils">
+      <HintPath>..\OneTaxi.Utils\Library\Staxi.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Common\Enums\InputLookUps\InputEnumLookUp_EnumKeys.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Common\Enums\InputLookUps\InputEnumLookUp_Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Common\GridViewRealTime\ModuleGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\BandedGridColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\BandedGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\Extender\RealTimeGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\GridBand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\GridColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\GridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Grids\GridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\GroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\PanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\PanelInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\BarAndDockingController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\Items\BarButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\Items\BarSubItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\Items\RibbonPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\Items\RibbonPageCategory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\Items\RibbonPageGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\RibbonBarManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\RibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Ribbons\StatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Extender\ControlExtender.cs" />
+    <Compile Include="Base\Extender\GridViewExtender.cs" />
+    <Compile Include="Base\Extender\ListExtender.cs" />
+    <Compile Include="Base\Extender\PopupControlContainerExtender.cs" />
+    <Compile Include="Base\Extender\RepositoryExtender.cs" />
+    <Compile Include="Base\Extender\RepositoryItemExtender.cs" />
+    <Compile Include="Base\Extender\RepositoryItemGridLookUpEditExtender.cs" />
+    <Compile Include="Base\Forms\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Forms\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Forms\FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Forms\FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Forms\FormRibbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Forms\FormRibbon.Designer.cs">
+      <DependentUpon>FormRibbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Forms\FormUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Forms\FormUpdate.Designer.cs">
+      <DependentUpon>FormUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Forms\ShFormKeyChain.cs" />
+    <Compile Include="Base\Forms\ShFormKeypressChain.cs" />
+    <Compile Include="Base\Forms\ShFormKeyWithMethodChain.cs" />
+    <Compile Include="Base\IBindControl.cs" />
+    <Compile Include="Base\IInput.cs" />
+    <Compile Include="Base\IKeyPress.cs" />
+    <Compile Include="Base\ILanguage.cs" />
+    <Compile Include="Base\IListKeyPress.cs" />
+    <Compile Include="Base\Inputs\AutoCompleteTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputCheckbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputCheckedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputImageComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputLookup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputRadioGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputRichEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputSpin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\InputText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Inputs\PlaceholderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\IRepository.cs" />
+    <Compile Include="Base\ITextChange.cs" />
+    <Compile Include="Base\Reports\FormReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Reports\FormReports.Designer.cs">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogs\Agencys\FrmManagerAgencys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogs\Agencys\FrmManagerAgencys.Designer.cs">
+      <DependentUpon>FrmManagerAgencys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogs\Agencys\FrmUpdateAgencys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogs\Agencys\FrmUpdateAgencys.Designer.cs">
+      <DependentUpon>FrmUpdateAgencys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogs\Drivers\FrmManagerDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogs\Drivers\FrmManagerDrivers.Designer.cs">
+      <DependentUpon>FrmManagerDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogs\Drivers\FrmUpdateDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogs\Drivers\FrmUpdateDrivers.Designer.cs">
+      <DependentUpon>FrmUpdateDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogs\Vehicles\FrmManagerVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogs\Vehicles\FrmManagerVehicles.Designer.cs">
+      <DependentUpon>FrmManagerVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogs\Vehicles\FrmUpdateVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogs\Vehicles\FrmUpdateVehicles.Designer.cs">
+      <DependentUpon>FrmUpdateVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systems\Commands\FrmCommandModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Commands\FrmCommandModule.Designer.cs">
+      <DependentUpon>FrmCommandModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Commands\FrmManagerCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Commands\FrmManagerCommand.Designer.cs">
+      <DependentUpon>FrmManagerCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Commands\FrmUpdateCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Commands\FrmUpdateCommand.Designer.cs">
+      <DependentUpon>FrmUpdateCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\FrmThemCuocGoiMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\FrmThemCuocGoiMoi.Designer.cs">
+      <DependentUpon>FrmThemCuocGoiMoi.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\Controls\Grids\GridControl.resx">
+      <DependentUpon>GridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Forms\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Forms\FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Forms\FormRibbon.resx">
+      <DependentUpon>FormRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Forms\FormUpdate.resx">
+      <DependentUpon>FormUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Reports\FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Systems\Commands\FrmManagerCommand.resx">
+      <DependentUpon>FrmManagerCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\FrmThemCuocGoiMoi.resx">
+      <DependentUpon>FrmThemCuocGoiMoi.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OneTaxi.Data\OneTaxi.Data.csproj">
+      <Project>{61ecf8b2-e3dd-422b-8b3c-600de70ee913}</Project>
+      <Name>OneTaxi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneTaxi.Services\OneTaxi.Services.csproj">
+      <Project>{a78bf6a8-bdc5-49b8-8c98-de8db2ae72cd}</Project>
+      <Name>OneTaxi.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OneTaxi.Utils\OneTaxi.Utils.csproj">
+      <Project>{1123a84c-8245-4e25-97e8-a6b38d73648a}</Project>
+      <Name>OneTaxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\Common\InputLookUps\" />
+    <Folder Include="Base\Common\RepositoryItems\" />
+    <Folder Include="Extender\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

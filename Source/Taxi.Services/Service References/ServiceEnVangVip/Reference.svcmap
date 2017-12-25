@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2247887e-b52b-4397-ba74-591887938d0b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.2.179:2525/OperationService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OperationService3.xsd" MetadataType="Schema" ID="8703a2cb-56bb-4e6c-ba85-e8f5b7323236" SourceId="1" SourceUrl="http://10.0.2.179:2525/OperationService?xsd=xsd1" />
+    <MetadataFile FileName="OperationService.wsdl" MetadataType="Wsdl" ID="d0c0d13f-7115-4608-8b7b-3017e21f80d3" SourceId="1" SourceUrl="http://10.0.2.179:2525/OperationService" />
+    <MetadataFile FileName="OperationService31.xsd" MetadataType="Schema" ID="fc0967b1-fe64-410d-baf4-489f78d3d0ad" SourceId="1" SourceUrl="http://10.0.2.179:2525/OperationService?xsd=xsd2" />
+    <MetadataFile FileName="OperationService32.xsd" MetadataType="Schema" ID="35c81fee-a82a-4526-94b7-2086ce8f5412" SourceId="1" SourceUrl="http://10.0.2.179:2525/OperationService?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BAGPS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BAGPS_BAGPS_gis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://gis.binhanh.com.vn/gis.asmx</Value>
+    </Setting>
+    <Setting Name="BAGPS_APIServices_APIServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://210.211.101.117:85/APIServices.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

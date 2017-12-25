@@ -1,0 +1,77 @@
+
+
+<!-- 
+
+Line
+
+PhoneNumber
+ThoiDiemGoi        
+ThoiDiemGoiNgay
+ThoiDiemGoiGio
+ThoiDiemKetThucGoi
+SoLuotDoChuong
+DiaChiGoi
+DiaChiDonKhach       
+KieuKhachHangGoiDen
+GoiTaxi
+GoiKhieuNai
+ThongTinKhac
+GoiLai
+LoaiXe
+SoLuong        
+MaVung
+MaNhanVienTongDai
+XeNhan
+XeDon
+DiaChiTraKhach
+GhiChuDienThoai
+mGhiChuTongDai;
+GhiChu
+TrangThaiLenh
+ThoiGianDieuXe
+ThoiGianDonKhach
+TongThoiGianDamThoai;
+TrangThaiCuocGoi
+DonDuocKhach;
+TruotKhach;
+KhachHoan
+KhongXe;
+-->
+<dataroot>
+  <BaocaoBieumau3>
+      <Line></Line>
+      <PhoneNumber></PhoneNumber>
+      <ThoiDiemGoi></ThoiDiemGoi>
+      <ThoiDiemGoiNgay></ThoiDiemGoiNgay>
+      <ThoiDiemGoiGio></ThoiDiemGoiGio>
+      <ThoiDiemKetThucGoi></ThoiDiemKetThucGoi>
+      <SoLuotDoChuong></SoLuotDoChuong>
+      <DiaChiGoi></DiaChiGoi>
+      <DiaChiDonKhach></DiaChiDonKhach>
+      <KieuKhachHangGoiDen></KieuKhachHangGoiDen>
+      <GoiTaxi></GoiTaxi>
+      <GoiKhieuNai></GoiKhieuNai>
+      <ThongTinKhac></ThongTinKhac>
+      <GoiLai></GoiLai>
+      <LoaiXe></LoaiXe>
+      <SoLuong></SoLuong>
+      <MaVung></MaVung>
+      <MaNhanVienDienThoai></MaNhanVienDienThoai>
+      <MaNhanVienTongDai></MaNhanVienTongDai>
+      <XeNhan></XeNhan>
+      <XeDon></XeDon>
+      <DiaChiTraKhach></DiaChiTraKhach>
+      <GhiChuDienThoai></GhiChuDienThoai>
+      <mGhiChuTongDai></mGhiChuTongDai>
+      <GhiChu></GhiChu>
+      <TrangThaiLenh></TrangThaiLenh>
+      <ThoiGianDieuXe></ThoiGianDieuXe>
+      <ThoiGianDonKhach></ThoiGianDonKhach>
+      <TongThoiGianDamThoai></TongThoiGianDamThoai>
+      <TrangThaiCuocGoi></TrangThaiCuocGoi>
+      <DonDuocKhach></DonDuocKhach>
+      <TruotKhach></TruotKhach>
+      <KhachHoan></KhachHoan>
+      <KhongXe></KhongXe>
+    </BaocaoBieumau3>
+  </dataroot>

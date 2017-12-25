@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SyncServiceOnline" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ISyncServiceOnline_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_ServicesLibrary.TaxiServiceAPI" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd5" namespace="WCF_SyncOnline.ServiceLibrary" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" />
+      <xsd:import schemaLocation="http://10.0.2.172:8001/WCFSyncService?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/ServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISyncServiceOnline_GetTongCuoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTongCuoc" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetTongCuoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTongCuocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnline" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKCXeNhan_DiemDonKhach" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKCXeNhan_DiemDonKhachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnlineBySHX_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnlineBySHX" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnlineBySHX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnlineBySHXResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetListObjectXeOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListObjectXeOnline" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetListObjectXeOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListObjectXeOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeDonKhach_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeDonKhach" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeDonKhach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeDonKhachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo_SANBAY" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo_SANBAYResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDoV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDoV2" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDoV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDoV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAYV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo_SANBAYV2" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAYV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo_SANBAYV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_SaveTaxiOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTaxiOperation" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_SaveTaxiOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTaxiOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_RemoveTaxiOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTaxiOperation" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_RemoveTaxiOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTaxiOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CheckXeDonCach5Phut_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckXeDonCach5Phut" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CheckXeDonCach5Phut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckXeDonCach5PhutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetAddressOfTaxiOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressOfTaxiOperation" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetAddressOfTaxiOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressOfTaxiOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_SaveMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMessages" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_SaveMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_IsReadMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsReadMessage" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_IsReadMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsReadMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_HasMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasMessage" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_HasMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessage" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetCauHinhThoatCuocTheoVung_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCauHinhThoatCuocTheoVung" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetCauHinhThoatCuocTheoVung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCauHinhThoatCuocTheoVungResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CheckIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIn" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CheckIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckInResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CheckOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOut" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CheckOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetMKLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetMKLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CountMKLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountMKLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_CountMKLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountMKLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetListVungDieuHanh_XN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListVungDieuHanh_XN" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetListVungDieuHanh_XN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListVungDieuHanh_XNResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetDSCuocKhach_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSCuocKhach" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetDSCuocKhach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDSCuocKhachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetGioKhachLen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGioKhachLen" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetGioKhachLen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGioKhachLenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetGioKhachXuong_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGioKhachXuong" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetGioKhachXuong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGioKhachXuongResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_SyncCuocKhachThueBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncCuocKhachThueBao" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_SyncCuocKhachThueBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncCuocKhachThueBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetGeoOfVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeoOfVehicle" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetGeoOfVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeoOfVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetDistance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistance" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetDistance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetListChotCuoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListChotCuoc" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetListChotCuoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListChotCuocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeDiTuyen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeDiTuyen" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeDiTuyen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeDiTuyenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetCallSumary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCallSumary" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetCallSumary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCallSumaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetVehicles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicles" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetVehicles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehiclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_TaxiOperation_SyncKHTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:TaxiOperation_SyncKHTT" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_TaxiOperation_SyncKHTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TaxiOperation_SyncKHTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_Truck_GetDanhSachXeChuaMoHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Truck_GetDanhSachXeChuaMoHang" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_Truck_GetDanhSachXeChuaMoHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Truck_GetDanhSachXeChuaMoHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetTimeServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeServer" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetTimeServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeServerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISyncServiceOnline">
+    <wsdl:operation name="GetTongCuoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetTongCuoc" message="tns:ISyncServiceOnline_GetTongCuoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetTongCuocResponse" message="tns:ISyncServiceOnline_GetTongCuoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXeOnline">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnline" message="tns:ISyncServiceOnline_GetXeOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnlineResponse" message="tns:ISyncServiceOnline_GetXeOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKCXeNhan_DiemDonKhach">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetKCXeNhan_DiemDonKhach" message="tns:ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetKCXeNhan_DiemDonKhachResponse" message="tns:ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXeOnlineBySHX">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnlineBySHX" message="tns:ISyncServiceOnline_GetXeOnlineBySHX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnlineBySHXResponse" message="tns:ISyncServiceOnline_GetXeOnlineBySHX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListObjectXeOnline">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetListObjectXeOnline" message="tns:ISyncServiceOnline_GetListObjectXeOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetListObjectXeOnlineResponse" message="tns:ISyncServiceOnline_GetListObjectXeOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXeDonKhach">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeDonKhach" message="tns:ISyncServiceOnline_GetXeDonKhach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeDonKhachResponse" message="tns:ISyncServiceOnline_GetXeDonKhach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDoResponse" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo_SANBAY">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAY" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAYResponse" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDoV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDoV2" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDoV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDoV2Response" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDoV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo_SANBAYV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAYV2" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAYV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAYV2Response" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAYV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTaxiOperation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/SaveTaxiOperation" message="tns:ISyncServiceOnline_SaveTaxiOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/SaveTaxiOperationResponse" message="tns:ISyncServiceOnline_SaveTaxiOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTaxiOperation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/RemoveTaxiOperation" message="tns:ISyncServiceOnline_RemoveTaxiOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/RemoveTaxiOperationResponse" message="tns:ISyncServiceOnline_RemoveTaxiOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckXeDonCach5Phut">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/CheckXeDonCach5Phut" message="tns:ISyncServiceOnline_CheckXeDonCach5Phut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/CheckXeDonCach5PhutResponse" message="tns:ISyncServiceOnline_CheckXeDonCach5Phut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressOfTaxiOperation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetAddressOfTaxiOperation" message="tns:ISyncServiceOnline_GetAddressOfTaxiOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetAddressOfTaxiOperationResponse" message="tns:ISyncServiceOnline_GetAddressOfTaxiOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/SaveMessages" message="tns:ISyncServiceOnline_SaveMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/SaveMessagesResponse" message="tns:ISyncServiceOnline_SaveMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsReadMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/IsReadMessage" message="tns:ISyncServiceOnline_IsReadMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/IsReadMessageResponse" message="tns:ISyncServiceOnline_IsReadMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/HasMessage" message="tns:ISyncServiceOnline_HasMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/HasMessageResponse" message="tns:ISyncServiceOnline_HasMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetMessage" message="tns:ISyncServiceOnline_GetMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetMessageResponse" message="tns:ISyncServiceOnline_GetMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCauHinhThoatCuocTheoVung">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetCauHinhThoatCuocTheoVung" message="tns:ISyncServiceOnline_GetCauHinhThoatCuocTheoVung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetCauHinhThoatCuocTheoVungResponse" message="tns:ISyncServiceOnline_GetCauHinhThoatCuocTheoVung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/CheckIn" message="tns:ISyncServiceOnline_CheckIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/CheckInResponse" message="tns:ISyncServiceOnline_CheckIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/CheckOut" message="tns:ISyncServiceOnline_CheckOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/CheckOutResponse" message="tns:ISyncServiceOnline_CheckOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMKLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetMKLogin" message="tns:ISyncServiceOnline_GetMKLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetMKLoginResponse" message="tns:ISyncServiceOnline_GetMKLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountMKLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/CountMKLogin" message="tns:ISyncServiceOnline_CountMKLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/CountMKLoginResponse" message="tns:ISyncServiceOnline_CountMKLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListVungDieuHanh_XN">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetListVungDieuHanh_XN" message="tns:ISyncServiceOnline_GetListVungDieuHanh_XN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetListVungDieuHanh_XNResponse" message="tns:ISyncServiceOnline_GetListVungDieuHanh_XN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSCuocKhach">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetDSCuocKhach" message="tns:ISyncServiceOnline_GetDSCuocKhach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetDSCuocKhachResponse" message="tns:ISyncServiceOnline_GetDSCuocKhach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGioKhachLen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetGioKhachLen" message="tns:ISyncServiceOnline_GetGioKhachLen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetGioKhachLenResponse" message="tns:ISyncServiceOnline_GetGioKhachLen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGioKhachXuong">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetGioKhachXuong" message="tns:ISyncServiceOnline_GetGioKhachXuong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetGioKhachXuongResponse" message="tns:ISyncServiceOnline_GetGioKhachXuong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncCuocKhachThueBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/SyncCuocKhachThueBao" message="tns:ISyncServiceOnline_SyncCuocKhachThueBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/SyncCuocKhachThueBaoResponse" message="tns:ISyncServiceOnline_SyncCuocKhachThueBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoOfVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetGeoOfVehicle" message="tns:ISyncServiceOnline_GetGeoOfVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetGeoOfVehicleResponse" message="tns:ISyncServiceOnline_GetGeoOfVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetDistance" message="tns:ISyncServiceOnline_GetDistance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetDistanceResponse" message="tns:ISyncServiceOnline_GetDistance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListChotCuoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetListChotCuoc" message="tns:ISyncServiceOnline_GetListChotCuoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetListChotCuocResponse" message="tns:ISyncServiceOnline_GetListChotCuoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXeDiTuyen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeDiTuyen" message="tns:ISyncServiceOnline_GetXeDiTuyen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeDiTuyenResponse" message="tns:ISyncServiceOnline_GetXeDiTuyen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCallSumary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetCallSumary" message="tns:ISyncServiceOnline_GetCallSumary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetCallSumaryResponse" message="tns:ISyncServiceOnline_GetCallSumary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetVehicles" message="tns:ISyncServiceOnline_GetVehicles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetVehiclesResponse" message="tns:ISyncServiceOnline_GetVehicles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TaxiOperation_SyncKHTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/TaxiOperation_SyncKHTT" message="tns:ISyncServiceOnline_TaxiOperation_SyncKHTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/TaxiOperation_SyncKHTTResponse" message="tns:ISyncServiceOnline_TaxiOperation_SyncKHTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Truck_GetDanhSachXeChuaMoHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/Truck_GetDanhSachXeChuaMoHang" message="tns:ISyncServiceOnline_Truck_GetDanhSachXeChuaMoHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/Truck_GetDanhSachXeChuaMoHangResponse" message="tns:ISyncServiceOnline_Truck_GetDanhSachXeChuaMoHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetTimeServer" message="tns:ISyncServiceOnline_GetTimeServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetTimeServerResponse" message="tns:ISyncServiceOnline_GetTimeServer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ISyncServiceOnline" type="tns:ISyncServiceOnline">
+    <wsp:PolicyReference URI="#NetTcpBinding_ISyncServiceOnline_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetTongCuoc">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetTongCuoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXeOnline">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetXeOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKCXeNhan_DiemDonKhach">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetKCXeNhan_DiemDonKhach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXeOnlineBySHX">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetXeOnlineBySHX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListObjectXeOnline">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetListObjectXeOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXeDonKhach">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetXeDonKhach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo_SANBAY">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDoV2">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDoV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo_SANBAYV2">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAYV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTaxiOperation">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/SaveTaxiOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTaxiOperation">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/RemoveTaxiOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckXeDonCach5Phut">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/CheckXeDonCach5Phut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressOfTaxiOperation">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetAddressOfTaxiOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMessages">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/SaveMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsReadMessage">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/IsReadMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasMessage">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/HasMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessage">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCauHinhThoatCuocTheoVung">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetCauHinhThoatCuocTheoVung" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/CheckIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/CheckOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKLogin">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetMKLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountMKLogin">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/CountMKLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListVungDieuHanh_XN">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetListVungDieuHanh_XN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSCuocKhach">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetDSCuocKhach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGioKhachLen">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetGioKhachLen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGioKhachXuong">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetGioKhachXuong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncCuocKhachThueBao">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/SyncCuocKhachThueBao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoOfVehicle">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetGeoOfVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistance">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetDistance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChotCuoc">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetListChotCuoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXeDiTuyen">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetXeDiTuyen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCallSumary">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetCallSumary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetVehicles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaxiOperation_SyncKHTT">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/TaxiOperation_SyncKHTT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Truck_GetDanhSachXeChuaMoHang">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/Truck_GetDanhSachXeChuaMoHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeServer">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetTimeServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncServiceOnline">
+    <wsdl:port name="NetTcpBinding_ISyncServiceOnline" binding="tns:NetTcpBinding_ISyncServiceOnline">
+      <soap12:address location="net.tcp://10.0.2.172:8000/WCFSyncService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.0.2.172:8000/WCFSyncService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

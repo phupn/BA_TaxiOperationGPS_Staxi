@@ -1,0 +1,179 @@
+﻿---------------------------------------------------
+1.1 Pascal case : P
+Viết chữ cái đầu tiên trong cụm từ đặt cho tên.
+Vd :  GetProducts(), ProductName 
+---------------------------------------------------
+1.2 Camel case : c
+Chữ đầu tiên của cụm từ đặt tên viết chữ thường
+Vd  :  isValid,  numberOfDay
+---------------------------------------------------
+1.3 Viết hoa cả chữ - Dùng cho hằng số
+Vd :  PI, MAX_ROWS, MAX
+---------------------------------------------------
+1.4 Kiểu Hungarian
+Cách viết tiền tố của kiểu dữ liệu cộng với tên
+Vd :  strName, iCount
+----------------------------------------------------
+<<Dùng '_' + camelCase cho biến private>>
+<<x: Không dùng đến>>
+
+------------------------------------------------------------------------------------------------------------------------------
+Kiểu						  Public	Protected	Internal	Private		Ghi chú
+------------------------------------------------------------------------------------------------------------------------------
+Tên Project						P			x			x 			x 		Tên Assembly & Namespace
+Tên file sourcecode				P			x			x 			x 	
+Namespace						P			x			x 			x 	
+Class và Struct					P			P			P			P	
+Interface						P			P			P			P		Thêm tiền tố chứ ‘I’ ở đầu VD: ICar
+Generic Class					P			P			P			P	 	Dùng T, K để đặt tên kiểu.
+Tên phương thức, hàm (Methods)	P			P			P			P		Dùng một động từ chỉ tên phương thức
+Thuộc tính (Property)			P			P			P			P		Không dùng từ Get, Set (từ có động từ) cho thuộc tính
+Trường (Field)					P			P			P			_c		Thêm dấu gạch chân ‘_’ và và dùng camelCase cho trường là private. VD: _lstSoHieuXe
+Hằng (Constant)																Viết hoa các từ của hằng.  VD:MAX_ROWS
+Static Field					P			P			P			_c		Chỉ dụng _camelCase cho private. VD: _lstSoHieuXe
+Enum							P			P			P			P		Thêm từ Type, hoặc Option ở cuối để phần biệt rõ, không cho tiền tố Enum ở đầu
+Delegate						P			P			P			P	
+Event							P			P			P			P	
+Biến cục bộ (inline variable)	x			x 			x 			c		Không được dùng một k‎ý tự để đặt tên. VD tham khảo: lstSoHieuXe, dtReportData...
+Parameter						x			x 			x 			c		vd:parSoHieuXe,parSHX,parSoHieu hoặc pSoHieuXe, pSHX,pSoHieu...
+
+
+
+Template
+
+/// <summary>
+/// 
+/// </summary>
+
+/// <Modified>        
+///	Name		Date		    Comment 
+/// </Modified>
+
+
+
+Data type	Prefix	Example
+Boolean	bool	boolFound
+Byte	byte	byteRasterData
+Array	arr	arrVar
+Collection object	col	colWidgets
+Currency	cur	curRevenue
+Date (Time)	date	dateStart
+Double	dbl	dblTolerance
+Error	err	errOrderNum
+Integer	int	intQuantity
+Long	long	longDistance
+Object	obj	objCurrent
+Single	sgl	sglAverage
+String	str	strFName
+User-defined type	udt	udtEmployee
+
+
+Control type	prefix	Example
+Label	lbl	lblHelpMessage
+LinkLabel	llbl	llblAuthor
+Button	btn	btnSave
+TextBox	txt	txtHoTen
+CheckBox	chk	chkReadOnly
+RadioButton	Rdo/opt	rdoChonLop/ optChonLop
+ListBox	lst	lstLop
+CheckedListBox	chklst	chklstDanhSach
+ComboBox	cb	cbMonHoc
+ListView	lv	lvMonHoc
+TreeView	tv	trPhong
+DateTimePicker	dtp	dtpNgaySinh
+Calendar	cal	calKeHoach
+DataColumn	col	colNgaySinh
+DataGrid	grd	grdDanhSach
+DataGridTableStyle	dgts	dgtsUnion
+DataGridTextBoxColumn	dgbc	dgbcHoTen
+GroupBox	grp	grpHocKy
+Image	img	imgIcon
+PictureBox	pbx	pbxLogo
+Panel	pnl	pnlTongHop
+MainMenu	mnu	mnuTroGiup
+MenuItem	mnu	mnuDanhSach
+ContextMenu	ctxmnu	ctxmnuLop
+TabControl	tab	tabHoSo
+Timer	tmr	tmrXuLy
+UserControl	uc	ucMyControl
+ProgressBar	prg	prgLoadFile
+RichTextBox	txt	txtReport
+ImageList	imlst	imlstAllIcons
+ToolBar	tlb	tlbActions
+StatusBar	sta	staDateTime
+Exception	ex	exSQL
+OpenFileDialog	dlg	dlgOpenFileDialog
+SaveFileDialog	dlg	dlgSaveFileDialog
+FolderBrowserDialog	dlg	dlgFolderBrowserDialog
+FontDialog	dlg	dlgFontDialog
+ColorDialog	dlg	dlgColorDialog
+PrintDialog	dlg	dlgPrintDialog
+PrintPreviewDialog	dlg	dlgPrintDialog
+PrintPreviewControl	prt	prtPrintPreviewControl
+PrintDocument	prt	prtPrintDocument
+ErrorProvider	err	errErrorProvider
+
+
+SQL CONVENTION
+
+Template 
+
+-----------------------------------------------------------------
+-- Purpose: Mục đích ...
+-- Parameters:
+-- Returns:
+
+-- MODIFICATION HISTORY
+-- Person      Date         Comments
+--------------------------------------------------------------
+
+
+VD
+-----------------------------------------------------------------
+-- Purpose: Mục đích ...
+-- Parameters:
+--     pCQ_BAN_HANH_ID: id cơ quan ban hành
+--     pCHUC_DANH_CURSOR: trả lại recordset
+-- Returns:
+--	id: giá trị trả về
+-- MODIFICATION HISTORY
+-- Person      Date         Comments
+-- quynhnx     20/12/06		Tạo mới
+-- quynhnx     22/01/07		Thêm cq_ban_hanh_id
+--------------------------------------------------------------
+
+
+Datatype	prefix	Example
+Char	chr	@chrFirstName
+Varchar	chv	@chvActivity
+Nchar	chrn	@chrnLastName
+Nvarchar	chvn	@chvnLastName
+Text	txt	@txtNote
+Ntext	txtn	@txtnComment
+Datetime	dtm	@dtmTargetDate
+Smalldatetime	dts	@dtsCompletedDate 
+Tinyint	iny	@inyActivityID
+Smallint	ins	@insEquipmentTypeID
+Integer	int	@intAsset
+Bigint	inb	@inbGTIN
+Numeric or Decimal	dec	@decProfit
+Real	rea 	@reaVelocity 
+Float	flt	@fltLength 
+Smallmoney	mns	@mnsCost 
+Money	mny	@mnyPrice 
+Binary	bin	@binPath 
+Varbinary	biv	@bivContract 
+Image	img	@imgLogo 
+Bit	bit	@bitOperational 
+Timestamp	tsp	@tspOrderID 
+Uniqueidentifier	guid	@guidPrice 
+sql_variant	var	@varInventory 
+Cursor	cur	@curInventory 
+Table	tbl	@tblLease 
+
+
+- Sử dụng chữ hoa cho tất cả các câu lệnh SQL
+SELECT, INSERT, UPDATE, WHERE, AND, OR, LIKE, etc.
+
+
+

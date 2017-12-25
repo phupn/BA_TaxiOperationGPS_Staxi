@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.1.11.179:8793/OperationService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" />
+  <xs:simpleType name="SourceCancelType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="UserCancel" />
+      <xs:enumeration value="Timeout" />
+      <xs:enumeration value="Mistake" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SourceCancelType" nillable="true" type="tns:SourceCancelType" />
+  <xs:complexType name="ArrayOfVehicleOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleOption" nillable="true" type="tns:VehicleOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleOption" nillable="true" type="tns:ArrayOfVehicleOption" />
+  <xs:complexType name="VehicleOption">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" base="q1:DataTypeBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Distance" type="xs:double" />
+          <xs:element minOccurs="0" name="Vehicle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VehicleOption" nillable="true" type="tns:VehicleOption" />
+</xs:schema>

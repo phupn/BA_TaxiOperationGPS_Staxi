@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="uiCommandManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>194, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdStaxiChieuVe1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <metadata name="imageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>477, 17</value>
+  </metadata>
+  <data name="imageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA8
+        GQAAAk1TRnQBSQFMAgEBDwEAASQBEgEkARIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAAUADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wUAAv8B8wFzAW0BAAL/
+        BwAB/wHxA+8BBwLvAbwB9AMAD/8B9BMAAf8BAAH0AVYBKAERAe8CAAH/BgABkgG8AfQBCQKzAdwB8wHx
+        AewB8gIAAfQP/xQAAf8BNQFWATUBNAFWAXIB8QUAAfQB7wHwAbUBpwHHA6wB0wHbAfEBBwHyAQAF/wH2
+        AlMBuQGyAdsF/xAAAf8BAAH/AfMBLgE0ATUDNAFPAUkB8AEAAf8CAAEHAfMBzwLHAbQB8QHwAbsB0wLU
+        AfEB7AH0BP8BdQGaBf8BswT/EAAB/wEAAf8BLgE0ASgBNAEoASIBTwFaAUkB6wH/AQAB/wH0Ae8BCQTH
+        AbUB8AGsA9MB2wHxAbwD/wF6AfYH/wGzA/8QAAP/AS4BKAEOAVUBKAERAU8BHQFPARMB/wEAAf8B7wG8
+        AawExwG0Ae8BzQPTAawB8wHvA/8BegL/AZoDUwP/AdsC/xEAAf8BAAHyAm0BVgEuAVUCHQEoARIB/wEA
+        Af8B7AEJAc4BtAGnAscBtAHvAqwBswG8Aa0BtQHvAv8BmgP/AVMC/wFTARoC/wGzAv8TAAH/AZgBVQE0
+        Ax0BLgEOAQcBAAH/AQAB7AEJAdQBrQHzAe0BxwG0AQcBxwEHAfQBiwHNAa0BBwL/AVME/wH2AlMD/wEJ
+        Av8QAAP/AzQBHQE0AVUBKAETAQcB/wMAAewBCQHUAc4BrQIHAu8CBwGtAqwBtAHvAv8B2wP/AXUBUwEa
+        BP8BegL/EAAB/wEAAf8BNQE0ASgBVQEoAUMC8AH0BAAB7AHwAtQBzgGtAgcB7wH3AacDrQHdAe8C/wEZ
+        A/8BUwHDAf8BUwEbAv8BUwL/EAAB/wEAAf8BNQEuASEBVQEoARIBGwEuAUMB9AMAAfABvAHVAtQBzgGt
+        AbsBvAStAc8B/wEHA/8BswL/ARsCUwF1Av8B9gGaAv8QAAH/AQAB/wEuATQBKAFVAS4BSQJVASIB6wL/
+        AgAB7wH0A9QBzgG1AfEErQEJAbwB8QP/ARkB3Af/AVMD/xEAAf8BAAHzAS4CNAQdAS4BFQH/AQAB/wEA
+        AfEBBwEJA9QBuwG8Aa0BzgGtAbUB8AHvBf8BGQGzBP8BmgFTBP8UAAHzAXIBVgJVAZcBCAEHAfEB/wQA
+        AgcB/wG0Ac0BswGtAc4BrQEZAfMB7wIABv8BCQG5ARoBegH2Bf8TAAH/AQAB8wFVASgBQwHzCQAB8QHv
+        AbwB8QIJAvACBwH0AgAQ/xMAAv8B8wFWAS4BEgH0BP8HAAHwBOwB7wH0BAAO/wH0Af8TAAHxBuwBbQNJ
+        AQcBAAT/ARkBswGsAa0BtQHzBv8DAAn/AQAB/xUAAe8FvAFyAVABeAGZAXgBUAEHA/8BGQGtAYoBcgEc
+        AfMB7wHsAfQB8QHzAv8BAAT/BvQB/wHxAQcB/wEAAfQO8gHzAwAB7wHwAe8BvAHvAQcBSQJ4Af8CeAFJ
+        Av8BGQGtAawBkQFYApkBdAFYAXkB8gHvAcMB9gEACv8B8QHqARQB8AEAAf8BpgOsAbMBtAG1AbsCCQG7
+        AgkBtAGRAwAB7wHwBAcBSQGZA/8BmQFJAv8BCQGtAdsBcwFYAqAB5QFZAXkBvAF0AVIBeQoAAfMBbQEU
+        Ae0B9AIAAawBrQGnAa0BtAGnAa0BtAGnAa0BtAHHAacBrAFlAwAB9wHwAfcBBwH3AQcBUAKZAf8CeAFJ
+        Av8BtAHbAbMB7AFSAZoBwwGZA3oBWQE4AVgJAAHzAW0BFAHtAfQDAAG6AQkCGQIJARkBCQEZAQkCtAHc
+        AawBpgMAAfcB8QQHAe0BcwGZAQgBeAFQAQcC/wG7AdwBswGRAXMCUQGZAQcBHAHlAlkBUgIAAv8B8wHy
+        AfMB9AHzAW0BFQHsAfQEAAEJAfcDMQHvAgkBswWyAaYDAAH3AfEClwH3AQcBbwEcAXIBUAFyAbwBAAH/
+        ARkBCQG0ARkBCQG0AW0BUgGZAQcBkgGgAlgBeQEAAf8B8wEHAfAB8QHwAQcB7AEVAewB9AUAAbMBMQJZ
+        AjEB3AGzBrIBigMAAZIB8QK8AwcB8AFtBAAB/wEJARkDuwG0AesBUgGaAcMBGgGaAVEBGgEbAQAB8wG8
+        BfQBvAHtAfQGAAGyATEBUgGaAVkBMQGzB7IBigMAAZIB8QXUAbwBbQQAAf8BtAH0AnkBcwGRAZABcgNR
+        AewBkQP/AbwB8gbzAbwB/wYAAdQB7wMxAZED0wQyAdMBrAMAAe0B8gHUAwkB1AG8AW0EAAH/AbsB/wGZ
+        AaABmgEcArMBrQGzAbQBrQG0Av8B9AG8B/IBvAHzBgAE3AXTBP8B0wGsAwAB7QHyAdQB3AIJAdQBvAFt
+        BAAB4gG7Af8CGgGgAZgBCQHcAdUC2wGtARkC/wH0AbwB8gLzAfID8AG8AfMGAAPcAdQF0wSsAdQBrAMA
+        Ae0B8wXUAfAB6gQAAeIBCQH/AfYCmQHvARkBCQG0ARkB3AEJA/8B9AG8AfID8wPyAbwB9AYAAdwLGQEJ
+        AdQBtAMAAe0B8QTyAvEB6gQAARkBuwHiAv8B9gHzAQkBGQH0ARkBtAX/AfEBvALxA/ACvAH/GAAB8ALv
+        A5IB7QHvARIEAAH/AgkBuwG0AbsBCQEZAv8BGQG7Af8B9gL/AQAB9AS8AbsCvAH0IAAB7QESBAAB9gP/
+        AfQB/wIZAbQBCQG7ARkE/wIAAfQB8QG8AQcBvAHwAfQB/yAAAe0B7AQACP8B9ALiBf8DAAL/AvQB/xkA
+        ARoMKgFLAf8RAAH/AbUKkQG0AfECAAP/AfQB8wGZAVIBTAFSAfEB8wH0BP8BKwFMBlIFMQErAUsRAA6K
+        AfEEAAH0ATEBWQJKAUsCUgQAAf8BMQlSBDEBKgQABBEBAAIOBgAGigG0Af8GigG0AgAC/wFSAjIBFAEV
+        AUoBUgFLAVIB/wIAAf8CUgP/AhoCUgJYATcCMQEqAQABEwU3Ae8BNwEQARQGAAWKBP8BswSKAbQBAAHy
+        AhUBTAIyAfMBGgExAxQBFQEUAv8CUgH/AXQBUgH/AfYB/wNYATcCMQEqAQAB5QFeA/sBKQEDATcBDgEU
+        ASkFAASKAv8B9AP/Aa0DigG0AfMB6wIUATECMgKZAjIBUgIUAhMB/wJSAXkB/wF0AlIB/wFSAlgDMQEq
+        AQAB7AE3AvsBNwFeAfABNwEwAQ4BMAE3BAAEigH/ARkBuwH/AbMB/wEJA4oBtAHqAW0BEwEUAzIB8wEa
+        AzIBSwETARQBbQH/AlIBdAF5Af8BdAFSA/8BGgExAVIBMQEqAgABNwFeA/sBNwFeATgCNwEDAfsDAAas
+        AbsB/wEZAf8BuwOsAbQC6gESAUsDUwF5AfMBUgJTATEBEwESAQgB/wFSA3QBeQH/BFIBmgH/AlIBKgIA
+        AeUBoAHlAl4B+wE3ATECNwIwARACAAWsAQkE/wSsAbQB7AHqARIBUgRZAXkB8wFSAlkBFAHsARIB/wFS
+        BHQBeQH/BFIBGgGaAVIBKgMAAfsBNwEOAeoBkgHsAg4BOAEwATEBDgEDAQAEswT/BrMBtAH/AhQCWQF6
+        AfMBUgFZAfMBeQJZAhQBBwH/BXQBeQEaAlIBmgJSAf8BUgEqBAABDgHwAQcB7wHtAg4B7AESATcBOAEx
+        AQAEswL/AQkB/wGzAbsEswG0AgABFANZAbwC8wHwAVICWQEUARIBAAH/AXQCeQJ0AXkB9gJSAf8BUgF5
+        ARoBUgEqBAAB5QHvAewBEgIOATgDEgFeAgAEswL/AQkD/wSzAbQCAAEUAfMDWQJSAVMCWQFSARQB7QEA
+        Af8BdAJ5A3QB/wF5A1IB/wJSASoFAAKgAeUBXgH7AjgBDgE3AwAFswT/AQkEswG0AgABEgHsAfYFWQJ6
+        AQABFAH0AQAB/wF5ApoCeQJ0BP8BeQJSASoHAAKgAeUBXgH7BQAGswEJAf8GswG0AgAB/wEUAf8BAAH0
+        AZoBeQEaAgAB6wETAgAB/wF5ApoEeQR0A1IBKhEADrMBuwMAAfMBEwHwBQAB7AETAwAB/wFSAnkDdAhS
+        AZkRAAG7DLMBtAH/BQAB7AUTAbwGAA3/MgAB9AG8CgcBvAHzAf8QABD/BAAB8wEHA/ABvAEHAfcB/wMA
+        Af8M7wHsAa0B8xAAAf8B9AG8Ae8BEAHvAvQB/wH0Ae8BEAHvAbwB9AH/AwABBwK8A/MB8AG8AgcB8wIA
+        AbwB9wHsAfcI7wH3AewBiwG1AQAO1gIAAfAB7wG8ARQBEAQAARABFAG8Ae8B8AMAAQcBvAHxAfID9AEH
+        AfACBwH0Af8BAAHvAZIB6wT3Ae8F9wHsAYsBtAEADtYCAAIHAe8BFQEUBAABFAEVAe8CBwMAAQcBvAHy
+        AvQB/wH0AbwB8gG8Ae8BAAH/AQAB7wHtAW0Bkgj3AZIB7AGLAbQBAA7WAgABBwHvAfcB6gFtBAABbQHq
+        AfcB7wEHAwABBwG8AfIB8AGZA/QB8gHwAf8DAAHvAewB6wHtCK0B7QHrAWYBkQEADt0CAALwAQcB6wHs
+        BAAB7AHrAQcC8AMAAfQBvAHzAXQBmgG8AfIB8AG8AQcEAAHvAewBbQHtAesCiwOtAYsB6wHtAesBiwG0
+        AQAE3QbPAdYD3QIAAfMB8AHyAuwEAALsAfIB8AHzBAAC8wFMAXQBdQELASIBbgUAAe8B7AFtAuwB7QHs
+        AYsBrQHsAu0B7AFtAYsBkQIAAt0Bzwb/Ac8C3QMAAf8B8wG8AewB8QQAAfEB7AG8AfMB/wMAAe8CCwF0
+        AXUBUgMLBQAB7wHsAW0B7QKSAfcBzwGtAe0CkgHtAesBiwG0AwAB3QHWBv8B1gHdBgABvAgAAbwGAAEc
+        ApoBdQFuAgsGAAHvAfcB7AGSAvcBkQKtAZEC9wGSAewBrgG1BAAB3QbWAd0GAAH/AbwIAAGRAfEGAAOa
+        AZQB9wEjBgAB7wH3AewB9wLvAe0CrgGRAu8B9wHtAa4B9wEAAd0C1gFmAd0BzwJmAc8B3QFmA9YDAAH0
+        AfEIAAGtAbQB8gUAAZoBGgKaAZIBIwYAAu8B7ATvAewB6wH3A+8BkgG0AbUBAAHdAtYBZgHWAWYCzwFm
+        AdYBZgPWAwAC8gQAAQkDtAGzAdoBtAHyBAADGgGaAW0BIwYAAu8BkgoHAfcBkQH3AQAC3QHWAc8BZgHP
+        AtYBzwFmAc8B1gHdAdYDAAHzAbwEAAG0AdwF2wG0AwAB8wG9AyMB7AFFBgABvAHvAfcKBwHvAbQBBwIA
+        DN0EAAH/Ae8B9AMAAQkDtAGzAdwBtAHyAwABbgRLAW4HAAH/AbwB7wIHBrwCBwHvAbQB8xMAAfMB7wHz
+        Af8CAAH/AfMB7wG0AboB8wUAAe8BEwHsAQcJAAH0AQcKvAHvAfMB/xQAAfQBBwHtAuwB7QEHAfQBCQHz
+        EgABQgFNAT4HAAE+AwABKAMAAUADAAFAAwABAQEAAQEGAAECFgAD/wEAAfABTwHgAQcEAAHoATcB4AED
+        BAAB8AEPAYABAQQAAUABBQGABQABQAECBwABAgYAAaABAgYAAeABBQcAAQcGAAFAAQ8GAAFAAQcGAAFA
+        AQEBgAUAAaABAgGABQAB8AEDAcABAwQAAegBPwHgAQMEAAHgAQMB+AEPBAAB4AEBAgAB4AELAv8B4AMA
+        AYABAQIAAeADAAGAAQECAAHgAwAB/wHBAYABAAHgAwAB/wGDAYABAAHgAwABwAEHAYABAAHgAQECAAGA
+        AQ8BgAEAAeABDwIAAYABHwGAAQAB4AEPAwABHwGAAQAB4AEPAwABHwGAAQAB4AEPAwABHwGAAQAB4AEP
+        AwABHwGAAQAB4AEPAwABHwL/AeABDwIAAYABPwP/Ac8CAAHAAT8D/wHPAgAB4AP/AYABAAL/AYABAQGA
+        AwAC/wGAAQAB8AEPAgABgAEfAYABAAHAAQMCAAGAAQ8BgAEAAYAEAAEPAYAFAAGAAQcBgAUAAYABAQGA
+        BQABwAEAAYAFAAHgAQABgAUAAeABAAGAAQABwAEBAgAB8AEAAYABAAHAAQECAAH4AQMBgAEAAcABCQIA
+        AfwBBwGAAQABxAEzAgAC/wGAAQAB4wHnAgAC/wGAAQAB+AEPAcABAQb/AYABAAL/AgAB8AEHAgABgAEB
+        AgAB4AEDBAABgwHBAcABAQQAAYMBwQHAAQUEAAGDAcEBwAEHBAABgwHBAcABDwQAAYMBwQHgAR8CAAGA
+        AQEBgwHBAcABHwIAAcABAwHvAfcB4AE/BAABzwHzAfABPwQAAc8B8QHwAT8EAAHPAQAB8AE/BAABzwEA
+        AeABPwIAAYABAQHHAQAB4AF/AgABwAEDAeEBgQHwAf8BgAEAAv8B8AEDAv8L
+</value>
+  </data>
+  <data name="cmdQuanTri.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAABoRJREFUaEPVlmlMVFcYhk340aaJMfZXk/6oWGNaqMgqgiyCQFEUBFG0oqVacQE3
+        tKLFaF2qRIoNVIHShNjWFoWqoCCIgrSyyqbIIAhWUdSoxKU2TZqYfD3vkTu59/IxwzSjhh9P5tz3fMv7
+        AjPDCCIa1rDicIIVhxOsOJxgRUtwGTPGHAn9cHfsTEtgRUvgTKlY6+/oSABn3R2APij6XRysaAli0WAs
+        9Zs4kSKmTpX4i7PQYnU1ND8oiAV3+l0crGgJOkMKMX4ODhTu42M0FO7rS9Bwp6oz/rQ59Ls4WNESxCI9
+        nwiezxbmw7y9yW2srQRnaLgTLOqvHVGQk0JXqk9rgKbfMxisaAmKkX4iBc8Vs25jx1Lazi303e4kGQKa
+        KgRqZYD22jMaXleAcMG/oV5exj+Xb7cnUs2ZfAnO8s9K3KEGteiB2c6GcxpeR4Bgxbzyhv1m60aqK/tN
+        AzTcoUYJkbIlnrqbKzW86gCBgn9meXpSpL+//MhM3ryO6s8eZ8EdalA7a8oUch83jgp/yqSbrReMvLIA
+        wrgvzM8U5udOmyaN7doQTxfLT5gENahFD3o9xo+n0iM51GuolbySAMK4h+BZiIcHzQsIkIa2r1lBjRWF
+        QwK16EEvZiDE+YLDdK/z4ssPIIxPEjwNmTyZogIDpZGkuGXUVHnSItCDXszALB97O6oqOvpyAwjjjjA/
+        QyzEFxQMJMbGUMvvRf8L9GIGZmEmQmTtSRSr+P16WHEwhPEJgofT3d2N5hM+i6ZLF4olmcv8jGdzpC50
+        N54xQwmB2d52H+ITagLnQQ8rcoiBdq62tn3TJ02Si6aJhWsXL6DW6hIjpzbPotx4P43GkRHtNKAOszBT
+        hhA7sAs7OS9qWFGPGDRODLwXrDK/akEktVaVUFvNGSPntoVT/c5Q2h/lQLvyDZR6soMOlnRJcIa2K+R9
+        Kl7jSScSAjS9mIWZSgjswk7s5jwpsKIaMcBW0Puxm9sL805OtDJqjlzaXndWAwK0JkdQTowLZZR1U17t
+        LTrVdEeCM7S0yPFUvsFbBtD3YyZmYwd2YSd2wwPnDbCigmh8V9CjNr80IpSu1JTS1YvnBqAOkF93myra
+        7lPttT4JztDUAbgZmI0duhA98MJ5HCAo9JvvCnJ1lYMCxMCYsBAy1JVRZ2MFizpAWet9qu9+RJd7nkhw
+        hqYOwM0A2IFd2Ind8AAvXAjNg4IofEfQoTYf4etJhtoy6mqqHBR1gKqOPmq+8Zjabj+V4AxNHYCboYBd
+        2KkL0QFvaq8a4wqiqDzIxeWFeWdnNNbkZe2h6y1/mET9JsZPvEmYVn4DOENTv4m5GWqwE7vhQYYQnuBN
+        7VVjXEEU4fP+Qb/5esEofDveuFxlEuVjlLtTo3yMcndqsBO74aHfywOB5vtBY1wNCgVFglF4xrCeK9Um
+        wRcZp3Pgi4zT1Sj/UsBDv5cBX26aB1Ng2C3xn+JQKc74ivaGO1OCw1sSnKFxtYOhBDAFK3JgWG97/ZDI
+        jAujTa6jaN/sD+jAIlcJztBwx/VwWD3A3Y4Gs5Rm75ZGDy52o4wYdw3QcHc6cwfbq8fqAe5dazRLcqQr
+        pUbYU9YSD5bUOfa0N8KZ7dVj9QD3u5vNssFpJGUv8aQfPvdiwR1quF49Vg/w8Pols6yf8CblLPcxCWq4
+        Xj1WD9B347JZYO7HVX4mQQ3Xq8fqAR7dbDULzB1eHajh5/hA+j7WT4IzarhePVYP8LinzSwwl7s+2Miv
+        64Jp+3xPOrDpUwnO60QN16vH6gGe3DaYBQHyNoYYyYkPoqykZdTe3i7BeaXdG2yvHqsH+Ku33SwIcDwx
+        1MixTaH0dbQvZW9dLsEZvwGuV4/VAzy7c9UsCFCYFKGh4MsI+iVhpgRn1HC9eqwe4O+7nWaBuaJtc02C
+        Gq5Xj9UC7D/iGJxfEkznWwKotj2YGjpnUOO1EPmK5wqhl1QtpK6rJ6S5kh3zTYKaDsNRKq2OMjnzSPEM
+        Ss119OU8KbCini/SxvRml31EubWOdKzBmQqbXKmw2ZUKxCueoWeV2tHWNCdpLi8vj8rLy1lwh5qkdHsa
+        ysyE/e8ZOE8KrKhn3pqRf8btG03r096mBAboccmjKTJ+ZMuhQ4eosrKS6uvrWXCHGktmcp4UWFHPlFAb
+        f+/ZNgafOTYkXkk8G8Gzr9C9wmxaVqyOppSUFEpPTzcJamLjotBrdqbAg/OkwIrDCVYcTrDicIIVhw80
+        4j8MPg329SvrSgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="cmdCongCu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="cmdTroGiup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="cmdQuanLyXe.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="cmdDanhMuc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        bgSvakHJ30oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="cmdStaxiChieuVe.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>115</value>
+  </metadata>
+  <metadata name="mnuRigthClick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="uiContextMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>420, 56</value>
+  </metadata>
+  <metadata name="uiContextMenu3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="uiContextMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>709, 56</value>
+  </metadata>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 56</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAE
+        DQAAAk1TRnQBSQFMAgEBAwEAASQBEgEkARIBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABEAMAAQEBAAEgBgABEBIAA8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPA
+        Af8DwAH/A8AB/wPAAf8DwAH/A8AB/08AAQEDAAEBbAADwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/
+        A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/GAAB8AHKAaYB/wHMAZkBAAH/AcwBmQEA
+        Af8CzAGZAf8cAAMDAQQDDgETAxcBIAMUARwDDAEQAwMBBAMAAQFgAAPAAf8DwAH/A8AB/wPAAf8DwAH/
+        A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8BzAGZAQAB/wHMAZkBAAH/
+        AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wHMAZkBAAH/AcwBmQEAAf8BzAIA
+        Af8BmQIAAf8BmQIAAf8BmQIAAf8BmQIAAf8BmQIAAf8BmQIAAf8EAAMNAREDMAFMA0QBewNBAXIDMQFP
+        Ax0BKgMQARYDBQEHAwABAQsAAQEDAwEEAwEBAkQAA8AB/wPAAf8DwAH/A8AB/wGZAgAB/wPAAf8DwAH/
+        A8AB/wPAAf8DwAH/AwAB/wMAAf8DwAH/A8AB/wPAAf8DwAH/AcwBmQEAAf8CzAGZAf8CzAGZAf8CzAGZ
+        Af8CzAGZAf8CzAGZAf8CzAGZAf8BzAGZAQAB/wHMAZkBAAH/AfABygGmAf8B8AHKAaYB/wHwAcoBpgH/
+        AfABygGmAf8B8AHKAaYB/wHwAcoBpgH/AZkCAAH/AwABAQJHAUYBgAJiAUgB9gNZAccDUAGjA08BnANH
+        AYMDOgFhAyQBNQMSARgDBAEFBAADBQEHAxEBFwMPARQDAwEEQAADwAH/A8AB/wPAAf8DwAH/AZkCAAH/
+        AZkCAAH/A8AB/wPAAf8DwAH/AZkCAAH/AwAB/wMAAf8DAAH/A8AB/wPAAf8DwAH/AcwBmQEAAf8BzAGZ
+        AQAB/wHMAZkBAAH/AcwBmQEAAf8BzAGZAQAB/wKZAQAB/wIAAcwB/wKZAcwB/wPAAf8BzAIAAf8BmQIA
+        Af8BmQIAAf8BmQIAAf8BmQIAAf8BmQIAAf8BmQIAAf8DAwEEA1sByAH/AeIBwwH/AfYBxgGUAf8B6gGg
+        AQAB/wJhAVsB4QNWAbYDUQGhA0oBjAM3AVoDEQEXAwABAQMiATIDKAE9AygBPAMNARFAAAPAAf8DwAH/
+        A8AB/wPAAf8DwAH/AZkCAAH/AZkCAAH/A8AB/wGZAgAB/wGZAgAB/wGZAgAB/wMAAf8DwAH/A8AB/wPA
+        Af8DwAH/AswBAAH/AcwBmQEACf8CzAL/AgAC/wIAAv8CAAL/ApkW/wGZAgAB/wHMAgAB/wMNARECZwFZ
+        AfIB/wHYAbEC/wHHAZAC/wHJAY4C/wHKAY4B/wHvAaYBAAH/AmIBSAH2A1YBtgNDAXcDGAEiAwEBAgJA
+        AT8BbwNKAY0DNwFaAxQBG0AAA8AB/wPAAf8DwAH/A8AB/wPAAf8BmQIAAf8BmQIAAf8BmQIAAf8BmQIA
+        Af8BmQIAAf8BmQIAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wLMAQAB/wHMAZkBAAX/A/EB/wIAAv8CAAL/
+        AgAC/wIAAv8CAAL/AswS/wGZAgAB/wHMAZkBAAH/AkIBQQFzAegBoQEAAv8B1QGpAv8BxAGLAv8BzAGa
+        Av8BzAGYAv8BxQGDAv8BzAGHAf8BqAGGAUAB/QMwAUsDDQESAwABAQJAAT8BbgFZAlYBvgM/AW0DGAEi
+        QAADwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8BmQIAAf8BmQIAAf8BmQIAAf8BmQIAAf8DwAH/A8AB/wPA
+        Af8DwAH/A8AB/wPAAf8CzAGZAf8BzAGZAQAF/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8D8QH/
+        A/EB/wPxBf8BmQIAAf8BzAGZAQAB/wNIAYUB+wHMAZoC/wHHAY0C/wHCAYYC/wHPAZsB/wHZAYcBAAH/
+        A1sByAFYAlYBvANCAXYDDQESAwIBAwMAAQEDQwF4AWECXQHiA0UBfQMaASVAAAPAAf8DwAH/A8AB/wPA
+        Af8DwAH/A8AB/wGZAgAB/wGZAgAB/wGZAgAB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8CzAGZ
+        Af8CzAEABf8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAO/wHMAgAB/wHMAZkBAAH/AlYBVQGx
+        Af8B2gGzAv8BwgGEAf8B/AHBAYUC/wHBAYAB/wH+AbsBAAH/AVgCVgG8A04BmAMyAVADEQEXAwMEBAEF
+        AVQCUgGmAysB/ANIAYUDGwEmQAADwAH/A8AB/wPAAf8DwAH/A8AB/wGZAgAB/wGZAgAB/wGZAgAB/wGZ
+        AgAB/wGZAgAB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wLMAZkB/wLMAQAF/wIAAv8CAAL/AgAC/wLM
+        Av8BxgHWAe8B/wIAAv8CAAL/AgAC/wIAAv8D8QX/AcwBmQEAAf8BzAGZAQAB/wJeAVgB3QH/AdwBsgH/
+        AlkBQgH1Al8BTAHzAf8B2QGuAv8BvgEAAf8CXwEyAfsDUAGjA0oBigMwAU0DGwEmAx0BKgFeAlwBzgF/
+        AWcBDgH+A0cBgwMZASNAAAPAAf8DwAH/A8AB/wPAAf8DwAH/AcwCAAH/AcwCAAH/A8AB/wGZAgAB/wGZ
+        AgAB/wGZAgAB/wPAAf8DwAH/A8AB/wPAAf8DwAH/AswBmQH/AswBmQX/A/EB/wLMAv8CzAL/A/EB/wPq
+        Af8CmQL/AgAC/wIAAv8CAAL/AgAC/wLMAv8BzAGZAQAB/wHMAZkBAAH/Al8BMgH7Af8BygGUAf8DTAGT
+        A0oBiwH9Ac8BnwL/Ab8BAAL/AbkBAAH/AmEBWgHkA1EBogNOAZcDRAF8A04BmAJ/ARYB/gNdAe0DPwFv
+        AxQBG0AAA8AB/wPAAf8DwAH/A8AB/wHMAgAB/wHMAgAB/wPAAf8DwAH/AZkCAAH/AZkCAAH/AZkCAAH/
+        AZkCAAH/A8AB/wPAAf8DwAH/A8AB/wLMAZkB/wLMAZkF/wPxAf8D8QH/A/EN/wPxAf8CAAL/AgAC/wIA
+        Av8CAAL/AcwBmQEAAf8BzAGZAQAB/wJGAUUBfwJWAVUBsQMTARoDDAEQAmABWwHWAf8B4AG5Av8BswEA
+        Av8BsQEAAf8CXAE+AfgBWwJZAcMBXAJZAckDKwH8Af8BogEAAf8BWQJXAb8DMAFMAwsBD0AAA8AB/wPA
+        Af8DwAH/A8AB/wHMAgAB/wPAAf8DwAH/A8AB/wPAAf8BmQIAAf8BmQIAAf8DwAH/A8AB/wPAAf8DwAH/
+        A8AB/wLMAZkB/wLMAZkR/wPqAf8B8AHKAaYB/wLMAZkB/wPqBf8CzAL/AgAC/wIAAv8BzAGZAQAB/wHM
+        AZkBAAH/EAADHwEtAl0BTgHwAf8B3gGzAv8BrwEAAv8BqQEAAv8BqAEAAv8BoQEAAv8BnQEAAf8BfwF0
+        AQ8B/gFKAkkBiQMWAR8DAwEEQAADwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/
+        A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A/EB/wLMAZkB/wHwAcoBpgH/AfABygGmAf8B8AHKAaYB/wHw
+        AcoBpgH/AfABygGmCf8B8AHKAaYB/wHwAcoBpgH/AfABygGmAf8CzAGZAf8CzAGZAf8BzAGZAQAB/wPx
+        Af8UAAMnAToCXwFXAegB/wHNAZkC/wHQAZQC/wHBAQAC/wGpAQAB/wHqAgAB/wNRAaIDGAEhAwQBBUQA
+        A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/
+        A8AB/wQAA/EB/wPxAf8D8QH/A/EB/wPxAf8D8QH/CAAD8QH/A/EB/wPxAf8D8QH/A/EB/wPxAf8cAAMR
+        ARcBTAJLAZACXAFXAd8BZAFgAVMB8QNbAcgBRwJGAYADDQESAwMBBEgAA8AB/wPAAf8DwAH/A8AB/wPA
+        Af8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/wPAAf8DwAH/A8AB/2MAAQEDAAEBAwABAQMA
+        AQFQAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUAAYAXAAP/AwAC/wHnAf8EAAH8AT8BgAH/
+        BgABgAExBwABEEYAAfAHAAH4AQEEAAKBAfwBAwQAA/8BDwIACw==
+</value>
+  </data>
+  <data name="gridEXLayout1.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="ImageCol"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;ImageIndex&gt;0&lt;/ImageIndex&gt;&lt;Key&gt;ImageCol&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;24&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="Line"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Máy&lt;/Caption&gt;&lt;DataMember&gt;Line&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Line&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="PhoneNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Điện thoại&lt;/Caption&gt;&lt;DataMember&gt;PhoneNumber&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhoneNumber&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="ThoiDiemGoi"&gt;&lt;Caption&gt;Thời gian&lt;/Caption&gt;&lt;DataMember&gt;ThoiDiemGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;FormatString&gt;HH:mm:ss dd/MM&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;ThoiDiemGoi&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;75&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="RingNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ch&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;CellToolTipText&gt;Số hồi chuông&lt;/CellToolTipText&gt;&lt;DataMember&gt;SoLuotDoChuong&lt;/DataMember&gt;&lt;DefaultGroupPrefix&gt;Ch&lt;/DefaultGroupPrefix&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;HeaderToolTip&gt;Số hồi chuông&lt;/HeaderToolTip&gt;&lt;Key&gt;RingNumber&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="GoiTaxi"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G Taxi&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;GoiTaxi&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderLineAlignment&gt;Center&lt;/HeaderLineAlignment&gt;&lt;HeaderToolTip&gt;Gọi taxi&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiTaxi&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="GoiLai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G  lại&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;GoiLai&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;HeaderToolTip&gt;Gọi lại&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiLai&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;30&lt;/Width&gt;&lt;/Column6&gt;&lt;Column7 ID="GoiKhac"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G khác&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ThongTinKhac&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderToolTip&gt;Gọi khác&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiKhac&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="PhanLoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Phân loại&lt;/Caption&gt;&lt;DataMember&gt;PhanLoai&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhanLoai&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;42&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="SoLuong"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;SL&lt;/Caption&gt;&lt;DataMember&gt;SoLuong&lt;/DataMember&gt;&lt;HeaderToolTip&gt;Số lượng xe&lt;/HeaderToolTip&gt;&lt;Key&gt;SoLuong&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="LoaiXe"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Loại xe&lt;/Caption&gt;&lt;DataMember&gt;LoaiXe&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;LoaiXe&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;55&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="DiaChiDonKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Địa chỉ đón khách&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;DiaChiDonKhach&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DiaChiDonKhach&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;RightToLeft&gt;No&lt;/RightToLeft&gt;&lt;Width&gt;200&lt;/Width&gt;&lt;/Column11&gt;&lt;Column12 ID="Xe4"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe4&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ChonTaxi4Cho&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Xe4&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column12&gt;&lt;Column13 ID="Xe7"&gt;&lt;Caption&gt;Xe7&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ChonTaxi7Cho&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Xe7&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column13&gt;&lt;Column14 ID="Vung"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Vùng&lt;/Caption&gt;&lt;DataMember&gt;Vung&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;Vung&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;38&lt;/Width&gt;&lt;/Column14&gt;&lt;Column15 ID="SBDD"&gt;&lt;Caption&gt;SBDD&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;SanBay_DuongDai&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;SBDD&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column15&gt;&lt;Column16 ID="XeNhan"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;XeNhan&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;80&lt;/Width&gt;&lt;/Column16&gt;&lt;Column17 ID="XeDon"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón&lt;/Caption&gt;&lt;DataMember&gt;XeDon&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDon&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column17&gt;&lt;Column18 ID="XeNhan_CB"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;DataMember&gt;XeNhan_CB&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan_CB&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column18&gt;&lt;Column19 ID="DanhSachXeDeCu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đề cử&lt;/Caption&gt;&lt;DataMember&gt;DanhSachXeDeCu&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DanhSachXeDeCu&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column19&gt;&lt;Column20 ID="XeDenDiem"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;/Column20&gt;&lt;Column21 ID="XeDenDiem_CB"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem_CB&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column21&gt;&lt;Column22 ID="XeDenDiemDonKhachDeCu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón khách không thuộc xe nhận&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhachDeCu&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhachDeCu&lt;/Key&gt;&lt;Position&gt;22&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column22&gt;&lt;Column23 ID="LenhDienThoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh điện thoại&lt;/Caption&gt;&lt;DataMember&gt;LenhDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lệnh của nhân viên điện thoại&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhDienThoai&lt;/Key&gt;&lt;Position&gt;23&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column23&gt;&lt;Column24 ID="LenhTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh tổng đài&lt;/Caption&gt;&lt;DataMember&gt;LenhTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lênh của tổng đài&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhTongDai&lt;/Key&gt;&lt;Position&gt;24&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column24&gt;&lt;Column25 ID="MOIKHACH_LenhMoiKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh CS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_LenhMoiKhach&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_LenhMoiKhach&lt;/Key&gt;&lt;Position&gt;25&lt;/Position&gt;&lt;/Column25&gt;&lt;Column26 ID="DiaChiTra"&gt;&lt;Caption&gt;Địa chỉ trả&lt;/Caption&gt;&lt;DataMember&gt;DiaChiTraKhach&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DiaChiTra&lt;/Key&gt;&lt;Position&gt;26&lt;/Position&gt;&lt;/Column26&gt;&lt;Column27 ID="GhiChu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú ĐTV&lt;/Caption&gt;&lt;DataMember&gt;GhiChuDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChu&lt;/Key&gt;&lt;Position&gt;27&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;105&lt;/Width&gt;&lt;/Column27&gt;&lt;Column28 ID="GhiChuTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú TĐV&lt;/Caption&gt;&lt;DataMember&gt;GhiChuTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChuTongDai&lt;/Key&gt;&lt;Position&gt;28&lt;/Position&gt;&lt;/Column28&gt;&lt;Column29 ID="MaNhanVienDienThoai"&gt;&lt;Caption&gt;NV ĐT&lt;/Caption&gt;&lt;DataMember&gt;MaNhanVienDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Mã nhân viên&lt;/HeaderToolTip&gt;&lt;Key&gt;MaNhanVienDienThoai&lt;/Key&gt;&lt;Position&gt;29&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;50&lt;/Width&gt;&lt;/Column29&gt;&lt;Column30 ID="MaNhanVienTongDai"&gt;&lt;Caption&gt;NV TĐ&lt;/Caption&gt;&lt;DataMember&gt;MaNhanVienTongDai&lt;/DataMember&gt;&lt;Key&gt;MaNhanVienTongDai&lt;/Key&gt;&lt;Position&gt;30&lt;/Position&gt;&lt;Width&gt;58&lt;/Width&gt;&lt;/Column30&gt;&lt;Column31 ID="MOIKHACH_NhanVien"&gt;&lt;Caption&gt;NVCS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_NhanVien&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_NhanVien&lt;/Key&gt;&lt;Position&gt;31&lt;/Position&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column31&gt;&lt;Column32 ID="HienThiThoiDiemChuyenTongDai"&gt;&lt;Caption&gt;TG chuyển TĐ&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiDiemChuyenTongDai&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiDiemChuyenTongDai&lt;/Key&gt;&lt;Position&gt;32&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;66&lt;/Width&gt;&lt;/Column32&gt;&lt;Column33 ID="HienThiThoiGianDieuXe"&gt;&lt;Caption&gt;TG điều xe&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiGianDieuXe&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiGianDieuXe&lt;/Key&gt;&lt;Position&gt;33&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;/Column33&gt;&lt;Column34 ID="HienThiThoiGianDonKhach"&gt;&lt;Caption&gt;TG đón khách&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiGianDonKhach&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiGianDonKhach&lt;/Key&gt;&lt;Position&gt;34&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column34&gt;&lt;Column35 ID="HienThiDoDaiCuocGoi"&gt;&lt;Caption&gt;TG đàm thoại&lt;/Caption&gt;&lt;DataMember&gt;HienThiDoDaiCuocGoi&lt;/DataMember&gt;&lt;Key&gt;HienThiDoDaiCuocGoi&lt;/Key&gt;&lt;Position&gt;35&lt;/Position&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column35&gt;&lt;Column36 ID="ThongTinCuocGoiLai"&gt;&lt;Caption&gt;ThongTinGoiLai&lt;/Caption&gt;&lt;DataMember&gt;ThongTinGoiLai&lt;/DataMember&gt;&lt;Key&gt;ThongTinCuocGoiLai&lt;/Key&gt;&lt;Position&gt;36&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column36&gt;&lt;Column37 ID="TrangThaiCuocGoi"&gt;&lt;Caption&gt;TrangThaiCuocGoi&lt;/Caption&gt;&lt;DataMember&gt;TrangThaiCuocGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;TrangThaiCuocGoi&lt;/Key&gt;&lt;Position&gt;37&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column37&gt;&lt;Column38 ID="TrangThaiLenh"&gt;&lt;Caption&gt;TrangThaiLenh&lt;/Caption&gt;&lt;DataMember&gt;TrangThaiLenh&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;TrangThaiLenh&lt;/Key&gt;&lt;Position&gt;38&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column38&gt;&lt;Column39 ID="KieuKhachHangGoiDen"&gt;&lt;Caption&gt;KieuKhachHangGoiDen&lt;/Caption&gt;&lt;DataMember&gt;KieuKhachHangGoiDen&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;KieuKhachHangGoiDen&lt;/Key&gt;&lt;Position&gt;39&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column39&gt;&lt;Column40 ID="XeDenDiemDonKhach_TD"&gt;&lt;Caption&gt;XeDenDiemDonKhach_TD&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhach_TD&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhach_TD&lt;/Key&gt;&lt;Position&gt;40&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column40&gt;&lt;Column41 ID="XeDenDiemDonKhachDeCu_TD"&gt;&lt;Caption&gt;XeDenDiemDonKhachDeCu_TD&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhachDeCu_TD&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhachDeCu_TD&lt;/Key&gt;&lt;Position&gt;41&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column41&gt;&lt;Column42 ID="MOIKHACH_KhieuNai_ThongTinThem"&gt;&lt;Caption&gt;Ghi chú mời khách&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/Key&gt;&lt;Position&gt;42&lt;/Position&gt;&lt;/Column42&gt;&lt;/Columns&gt;&lt;GridLines&gt;Both&lt;/GridLines&gt;&lt;GridLineStyle&gt;Solid&lt;/GridLineStyle&gt;&lt;GroupCondition ID="" /&gt;&lt;HeaderLines&gt;2&lt;/HeaderLines&gt;&lt;PreviewRowLines&gt;0&lt;/PreviewRowLines&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;RowHeight&gt;22&lt;/RowHeight&gt;&lt;RowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;LineAlignment&gt;Far&lt;/LineAlignment&gt;&lt;/RowFormatStyle&gt;&lt;/RootTable&gt;&lt;SearchColumnIndex&gt;2&lt;/SearchColumnIndex&gt;&lt;RowWithErrorsFormatStyle&gt;&lt;PredefinedStyle&gt;RowWithErrorsFormatStyle&lt;/PredefinedStyle&gt;&lt;/RowWithErrorsFormatStyle&gt;&lt;LinkFormatStyle&gt;&lt;PredefinedStyle&gt;LinkFormatStyle&lt;/PredefinedStyle&gt;&lt;/LinkFormatStyle&gt;&lt;CardCaptionFormatStyle&gt;&lt;PredefinedStyle&gt;CardCaptionFormatStyle&lt;/PredefinedStyle&gt;&lt;/CardCaptionFormatStyle&gt;&lt;GroupByBoxFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxFormatStyle&gt;&lt;GroupByBoxInfoFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxInfoFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxInfoFormatStyle&gt;&lt;GroupRowFormatStyle&gt;&lt;PredefinedStyle&gt;GroupRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupRowFormatStyle&gt;&lt;HeaderFormatStyle&gt;&lt;PredefinedStyle&gt;HeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/HeaderFormatStyle&gt;&lt;RowHeaderFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;10&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowHeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/RowHeaderFormatStyle&gt;&lt;PreviewRowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;PredefinedStyle&gt;PreviewRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/PreviewRowFormatStyle&gt;&lt;RowFormatStyle&gt;&lt;Appearance&gt;RaisedLight&lt;/Appearance&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Empty&lt;/TextAlignment&gt;&lt;/RowFormatStyle&gt;&lt;SelectedFormatStyle&gt;&lt;Font&gt;Tahoma, 9.75pt, style=Bold&lt;/Font&gt;&lt;PredefinedStyle&gt;SelectedFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedFormatStyle&gt;&lt;SelectedInactiveFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedInactiveFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedInactiveFormatStyle&gt;&lt;WatermarkImage /&gt;&lt;BackColor&gt;White&lt;/BackColor&gt;&lt;Font&gt;Microsoft Sans Serif, 7.8pt&lt;/Font&gt;&lt;VisualStyle&gt;Office2003&lt;/VisualStyle&gt;&lt;AllowEdit&gt;False&lt;/AllowEdit&gt;&lt;AllowRemoveColumns&gt;True&lt;/AllowRemoveColumns&gt;&lt;GroupByBoxVisible&gt;False&lt;/GroupByBoxVisible&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;TableSpacing&gt;8&lt;/TableSpacing&gt;&lt;TabKeyBehavior&gt;ControlNavigation&lt;/TabKeyBehavior&gt;&lt;EnterKeyBehavior&gt;None&lt;/EnterKeyBehavior&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <data name="gridEXLayout2.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="Line"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;L&lt;/Caption&gt;&lt;DataMember&gt;Line&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Line&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;20&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="PhoneNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Điện thoại&lt;/Caption&gt;&lt;DataMember&gt;PhoneNumber&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhoneNumber&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="ThoiDiemGoi"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Thời gian&lt;/Caption&gt;&lt;DataMember&gt;ThoiDiemGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;FormatString&gt;HH:mm:ss dd/MM&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;ThoiDiemGoi&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;75&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="DiaChiDon"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Địa chỉ đón khách&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;DiaChiDonKhach&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DiaChiDon&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;RightToLeft&gt;No&lt;/RightToLeft&gt;&lt;Width&gt;114&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="XeNhan"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;XeNhan&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;51&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="SoLuong"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;SL&lt;/Caption&gt;&lt;DataMember&gt;SoLuong&lt;/DataMember&gt;&lt;HeaderToolTip&gt;Số lượng xe&lt;/HeaderToolTip&gt;&lt;Key&gt;SoLuong&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="LoaiXe"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Loại xe&lt;/Caption&gt;&lt;DataMember&gt;LoaiXe&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;LoaiXe&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;55&lt;/Width&gt;&lt;/Column6&gt;&lt;Column7 ID="Vung"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Vùng&lt;/Caption&gt;&lt;DataMember&gt;Vung&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;Vung&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;38&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="XeDenDiem"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;/Column8&gt;&lt;Column9 ID="LenhDienThoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh điện thoại&lt;/Caption&gt;&lt;DataMember&gt;LenhDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lệnh của nhân viên điện thoại&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhDienThoai&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column9&gt;&lt;Column10 ID="LenhTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh tổng đài&lt;/Caption&gt;&lt;DataMember&gt;LenhTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lênh của tổng đài&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhTongDai&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column10&gt;&lt;Column11 ID="MOIKHACH_LenhMoiKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh CS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_LenhMoiKhach&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_LenhMoiKhach&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column11&gt;&lt;Column12 ID="GhiChu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú&lt;/Caption&gt;&lt;DataMember&gt;GhiChuDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChu&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;80&lt;/Width&gt;&lt;/Column12&gt;&lt;Column13 ID="GhiChuTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú tổng đài&lt;/Caption&gt;&lt;DataMember&gt;GhiChuTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChuTongDai&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;/Column13&gt;&lt;Column14 ID="MOIKHACH_KhieuNai_ThongTinThem"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú mời khách&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column14&gt;&lt;Column15 ID="XeDon"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón&lt;/Caption&gt;&lt;DataMember&gt;XeDon&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDon&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column15&gt;&lt;/Columns&gt;&lt;GridLines&gt;Both&lt;/GridLines&gt;&lt;GridLineStyle&gt;Solid&lt;/GridLineStyle&gt;&lt;GroupCondition ID="" /&gt;&lt;PreviewRowLines&gt;0&lt;/PreviewRowLines&gt;&lt;RowHeaders&gt;False&lt;/RowHeaders&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;RowHeight&gt;18&lt;/RowHeight&gt;&lt;RowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;LineAlignment&gt;Far&lt;/LineAlignment&gt;&lt;/RowFormatStyle&gt;&lt;/RootTable&gt;&lt;RowWithErrorsFormatStyle&gt;&lt;PredefinedStyle&gt;RowWithErrorsFormatStyle&lt;/PredefinedStyle&gt;&lt;/RowWithErrorsFormatStyle&gt;&lt;LinkFormatStyle&gt;&lt;PredefinedStyle&gt;LinkFormatStyle&lt;/PredefinedStyle&gt;&lt;/LinkFormatStyle&gt;&lt;CardCaptionFormatStyle&gt;&lt;PredefinedStyle&gt;CardCaptionFormatStyle&lt;/PredefinedStyle&gt;&lt;/CardCaptionFormatStyle&gt;&lt;GroupByBoxFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxFormatStyle&gt;&lt;GroupByBoxInfoFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxInfoFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxInfoFormatStyle&gt;&lt;GroupRowFormatStyle&gt;&lt;PredefinedStyle&gt;GroupRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupRowFormatStyle&gt;&lt;HeaderFormatStyle&gt;&lt;PredefinedStyle&gt;HeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/HeaderFormatStyle&gt;&lt;RowHeaderFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;10&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowHeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/RowHeaderFormatStyle&gt;&lt;PreviewRowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;PredefinedStyle&gt;PreviewRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/PreviewRowFormatStyle&gt;&lt;RowFormatStyle&gt;&lt;Appearance&gt;RaisedLight&lt;/Appearance&gt;&lt;Font&gt;Tahoma, 8.25pt&lt;/Font&gt;&lt;FontSize&gt;8&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Empty&lt;/TextAlignment&gt;&lt;/RowFormatStyle&gt;&lt;SelectedFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedFormatStyle&gt;&lt;SelectedInactiveFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedInactiveFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedInactiveFormatStyle&gt;&lt;WatermarkImage /&gt;&lt;BackColor&gt;White&lt;/BackColor&gt;&lt;Font&gt;Microsoft Sans Serif, 8.25pt&lt;/Font&gt;&lt;VisualStyle&gt;Office2003&lt;/VisualStyle&gt;&lt;AllowDelete&gt;True&lt;/AllowDelete&gt;&lt;AllowEdit&gt;False&lt;/AllowEdit&gt;&lt;AllowRemoveColumns&gt;True&lt;/AllowRemoveColumns&gt;&lt;GroupByBoxVisible&gt;False&lt;/GroupByBoxVisible&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;TableSpacing&gt;8&lt;/TableSpacing&gt;&lt;TabKeyBehavior&gt;ControlNavigation&lt;/TabKeyBehavior&gt;&lt;EnterKeyBehavior&gt;None&lt;/EnterKeyBehavior&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <data name="gridEXLayout3.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="ImageCol"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;ImageIndex&gt;0&lt;/ImageIndex&gt;&lt;Key&gt;ImageCol&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;24&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="Line"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Máy&lt;/Caption&gt;&lt;DataMember&gt;Line&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Line&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="PhoneNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Điện thoại&lt;/Caption&gt;&lt;DataMember&gt;PhoneNumber&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhoneNumber&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="ThoiDiemGoi"&gt;&lt;Caption&gt;Thời gian&lt;/Caption&gt;&lt;DataMember&gt;ThoiDiemGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;FormatString&gt;dd/MM HH:mm:ss&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;ThoiDiemGoi&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;75&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="RingNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ch&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;CellToolTipText&gt;Số hồi chuông&lt;/CellToolTipText&gt;&lt;DataMember&gt;SoLuotDoChuong&lt;/DataMember&gt;&lt;DefaultGroupPrefix&gt;Ch&lt;/DefaultGroupPrefix&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;HeaderToolTip&gt;Số hồi chuông&lt;/HeaderToolTip&gt;&lt;Key&gt;RingNumber&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="GoiTaxi"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G Taxi&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;GoiTaxi&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderLineAlignment&gt;Center&lt;/HeaderLineAlignment&gt;&lt;HeaderToolTip&gt;Gọi taxi&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiTaxi&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="GoiLai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G  lại&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;GoiLai&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;HeaderToolTip&gt;Gọi lại&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiLai&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;30&lt;/Width&gt;&lt;/Column6&gt;&lt;Column7 ID="GoiKhac"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G khác&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ThongTinKhac&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderToolTip&gt;Gọi khác&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiKhac&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="PhanLoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Phân loại&lt;/Caption&gt;&lt;DataMember&gt;PhanLoai&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhanLoai&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;42&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="SoLuong"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;SL&lt;/Caption&gt;&lt;DataMember&gt;SoLuong&lt;/DataMember&gt;&lt;HeaderToolTip&gt;Số lượng xe&lt;/HeaderToolTip&gt;&lt;Key&gt;SoLuong&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="LoaiXe"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Loại xe&lt;/Caption&gt;&lt;DataMember&gt;LoaiXe&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;LoaiXe&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;55&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="DiaChiDonKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Địa chỉ đón khách&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;DiaChiDonKhach&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DiaChiDonKhach&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;RightToLeft&gt;No&lt;/RightToLeft&gt;&lt;Width&gt;200&lt;/Width&gt;&lt;/Column11&gt;&lt;Column12 ID="Xe4"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe4&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ChonTaxi4Cho&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Xe4&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column12&gt;&lt;Column13 ID="Xe7"&gt;&lt;Caption&gt;Xe7&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ChonTaxi7Cho&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Xe7&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column13&gt;&lt;Column14 ID="Vung"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Vùng&lt;/Caption&gt;&lt;DataMember&gt;Vung&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;Vung&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;38&lt;/Width&gt;&lt;/Column14&gt;&lt;Column15 ID="SBDD"&gt;&lt;Caption&gt;SBDD&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;SanBay_DuongDai&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;SBDD&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column15&gt;&lt;Column16 ID="XeNhan"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;XeNhan&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;80&lt;/Width&gt;&lt;/Column16&gt;&lt;Column17 ID="XeDon"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón&lt;/Caption&gt;&lt;DataMember&gt;XeDon&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDon&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;/Column17&gt;&lt;Column18 ID="XeNhan_CB"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;DataMember&gt;XeNhan_CB&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan_CB&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column18&gt;&lt;Column19 ID="DanhSachXeDeCu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đề cử&lt;/Caption&gt;&lt;DataMember&gt;DanhSachXeDeCu&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DanhSachXeDeCu&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column19&gt;&lt;Column20 ID="XeDenDiem"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;/Column20&gt;&lt;Column21 ID="XeDenDiem_CB"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem_CB&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column21&gt;&lt;Column22 ID="XeDenDiemDonKhachDeCu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón khách không thuộc xe nhận&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhachDeCu&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhachDeCu&lt;/Key&gt;&lt;Position&gt;22&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column22&gt;&lt;Column23 ID="LenhDienThoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh điện thoại&lt;/Caption&gt;&lt;DataMember&gt;LenhDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lệnh của nhân viên điện thoại&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhDienThoai&lt;/Key&gt;&lt;Position&gt;23&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column23&gt;&lt;Column24 ID="LenhTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh tổng đài&lt;/Caption&gt;&lt;DataMember&gt;LenhTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lênh của tổng đài&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhTongDai&lt;/Key&gt;&lt;Position&gt;24&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column24&gt;&lt;Column25 ID="MOIKHACH_LenhMoiKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh CS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_LenhMoiKhach&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_LenhMoiKhach&lt;/Key&gt;&lt;Position&gt;25&lt;/Position&gt;&lt;/Column25&gt;&lt;Column26 ID="GhiChu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú ĐTV&lt;/Caption&gt;&lt;DataMember&gt;GhiChuDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChu&lt;/Key&gt;&lt;Position&gt;26&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;105&lt;/Width&gt;&lt;/Column26&gt;&lt;Column27 ID="GhiChuTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú TĐV&lt;/Caption&gt;&lt;DataMember&gt;GhiChuTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChuTongDai&lt;/Key&gt;&lt;Position&gt;27&lt;/Position&gt;&lt;/Column27&gt;&lt;Column28 ID="MaNhanVienDienThoai"&gt;&lt;Caption&gt;NV ĐT&lt;/Caption&gt;&lt;DataMember&gt;MaNhanVienDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Mã nhân viên&lt;/HeaderToolTip&gt;&lt;Key&gt;MaNhanVienDienThoai&lt;/Key&gt;&lt;Position&gt;28&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;50&lt;/Width&gt;&lt;/Column28&gt;&lt;Column29 ID="MaNhanVienTongDai"&gt;&lt;Caption&gt;NV TĐ&lt;/Caption&gt;&lt;DataMember&gt;MaNhanVienTongDai&lt;/DataMember&gt;&lt;Key&gt;MaNhanVienTongDai&lt;/Key&gt;&lt;Position&gt;29&lt;/Position&gt;&lt;Width&gt;58&lt;/Width&gt;&lt;/Column29&gt;&lt;Column30 ID="MOIKHACH_NhanVien"&gt;&lt;Caption&gt;NVCS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_NhanVien&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_NhanVien&lt;/Key&gt;&lt;Position&gt;30&lt;/Position&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column30&gt;&lt;Column31 ID="HienThiThoiDiemChuyenTongDai"&gt;&lt;Caption&gt;TG chuyển TĐ&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiDiemChuyenTongDai&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiDiemChuyenTongDai&lt;/Key&gt;&lt;Position&gt;31&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;66&lt;/Width&gt;&lt;/Column31&gt;&lt;Column32 ID="HienThiThoiGianDieuXe"&gt;&lt;Caption&gt;TG điều xe&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiGianDieuXe&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiGianDieuXe&lt;/Key&gt;&lt;Position&gt;32&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;/Column32&gt;&lt;Column33 ID="HienThiThoiGianDonKhach"&gt;&lt;Caption&gt;TG đón khách&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiGianDonKhach&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiGianDonKhach&lt;/Key&gt;&lt;Position&gt;33&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column33&gt;&lt;Column34 ID="HienThiDoDaiCuocGoi"&gt;&lt;Caption&gt;TG đàm thoại&lt;/Caption&gt;&lt;DataMember&gt;HienThiDoDaiCuocGoi&lt;/DataMember&gt;&lt;Key&gt;HienThiDoDaiCuocGoi&lt;/Key&gt;&lt;Position&gt;34&lt;/Position&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column34&gt;&lt;Column35 ID="ThongTinCuocGoiLai"&gt;&lt;Caption&gt;ThongTinGoiLai&lt;/Caption&gt;&lt;DataMember&gt;ThongTinGoiLai&lt;/DataMember&gt;&lt;Key&gt;ThongTinCuocGoiLai&lt;/Key&gt;&lt;Position&gt;35&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column35&gt;&lt;Column36 ID="TrangThaiCuocGoi"&gt;&lt;Caption&gt;TrangThaiCuocGoi&lt;/Caption&gt;&lt;DataMember&gt;TrangThaiCuocGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;TrangThaiCuocGoi&lt;/Key&gt;&lt;Position&gt;36&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column36&gt;&lt;Column37 ID="TrangThaiLenh"&gt;&lt;Caption&gt;TrangThaiLenh&lt;/Caption&gt;&lt;DataMember&gt;TrangThaiLenh&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;TrangThaiLenh&lt;/Key&gt;&lt;Position&gt;37&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column37&gt;&lt;Column38 ID="KieuKhachHangGoiDen"&gt;&lt;Caption&gt;KieuKhachHangGoiDen&lt;/Caption&gt;&lt;DataMember&gt;KieuKhachHangGoiDen&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;KieuKhachHangGoiDen&lt;/Key&gt;&lt;Position&gt;38&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column38&gt;&lt;Column39 ID="XeDenDiemDonKhach_TD"&gt;&lt;Caption&gt;XeDenDiemDonKhach_TD&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhach_TD&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhach_TD&lt;/Key&gt;&lt;Position&gt;39&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column39&gt;&lt;Column40 ID="XeDenDiemDonKhachDeCu_TD"&gt;&lt;Caption&gt;XeDenDiemDonKhachDeCu_TD&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhachDeCu_TD&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhachDeCu_TD&lt;/Key&gt;&lt;Position&gt;40&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column40&gt;&lt;Column41 ID="MOIKHACH_KhieuNai_ThongTinThem"&gt;&lt;Caption&gt;Ghi chú mời khách&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/Key&gt;&lt;Position&gt;41&lt;/Position&gt;&lt;/Column41&gt;&lt;/Columns&gt;&lt;GridLines&gt;Both&lt;/GridLines&gt;&lt;GridLineStyle&gt;Solid&lt;/GridLineStyle&gt;&lt;GroupCondition ID="" /&gt;&lt;HeaderLines&gt;2&lt;/HeaderLines&gt;&lt;PreviewRowLines&gt;0&lt;/PreviewRowLines&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;RowHeight&gt;22&lt;/RowHeight&gt;&lt;RowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;LineAlignment&gt;Far&lt;/LineAlignment&gt;&lt;/RowFormatStyle&gt;&lt;/RootTable&gt;&lt;SearchColumnIndex&gt;2&lt;/SearchColumnIndex&gt;&lt;RowWithErrorsFormatStyle&gt;&lt;PredefinedStyle&gt;RowWithErrorsFormatStyle&lt;/PredefinedStyle&gt;&lt;/RowWithErrorsFormatStyle&gt;&lt;LinkFormatStyle&gt;&lt;PredefinedStyle&gt;LinkFormatStyle&lt;/PredefinedStyle&gt;&lt;/LinkFormatStyle&gt;&lt;CardCaptionFormatStyle&gt;&lt;PredefinedStyle&gt;CardCaptionFormatStyle&lt;/PredefinedStyle&gt;&lt;/CardCaptionFormatStyle&gt;&lt;GroupByBoxFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxFormatStyle&gt;&lt;GroupByBoxInfoFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxInfoFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxInfoFormatStyle&gt;&lt;GroupRowFormatStyle&gt;&lt;PredefinedStyle&gt;GroupRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupRowFormatStyle&gt;&lt;HeaderFormatStyle&gt;&lt;PredefinedStyle&gt;HeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/HeaderFormatStyle&gt;&lt;RowHeaderFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;10&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowHeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/RowHeaderFormatStyle&gt;&lt;PreviewRowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;PredefinedStyle&gt;PreviewRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/PreviewRowFormatStyle&gt;&lt;RowFormatStyle&gt;&lt;Appearance&gt;RaisedLight&lt;/Appearance&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Empty&lt;/TextAlignment&gt;&lt;/RowFormatStyle&gt;&lt;SelectedFormatStyle&gt;&lt;Font&gt;Tahoma, 9.75pt, style=Bold&lt;/Font&gt;&lt;PredefinedStyle&gt;SelectedFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedFormatStyle&gt;&lt;SelectedInactiveFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedInactiveFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedInactiveFormatStyle&gt;&lt;WatermarkImage /&gt;&lt;BackColor&gt;White&lt;/BackColor&gt;&lt;Font&gt;Microsoft Sans Serif, 7.8pt&lt;/Font&gt;&lt;VisualStyle&gt;Office2003&lt;/VisualStyle&gt;&lt;AllowEdit&gt;False&lt;/AllowEdit&gt;&lt;AllowRemoveColumns&gt;True&lt;/AllowRemoveColumns&gt;&lt;GroupByBoxVisible&gt;False&lt;/GroupByBoxVisible&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;TableSpacing&gt;8&lt;/TableSpacing&gt;&lt;TabKeyBehavior&gt;ControlNavigation&lt;/TabKeyBehavior&gt;&lt;EnterKeyBehavior&gt;None&lt;/EnterKeyBehavior&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <data name="gridEXLayout4.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="ImageCol"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;ImageIndex&gt;0&lt;/ImageIndex&gt;&lt;Key&gt;ImageCol&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;24&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="Line"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Máy&lt;/Caption&gt;&lt;DataMember&gt;Line&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Line&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="PhoneNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Điện thoại&lt;/Caption&gt;&lt;DataMember&gt;PhoneNumber&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhoneNumber&lt;/Key&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="ThoiDiemGoi"&gt;&lt;Caption&gt;Thời gian&lt;/Caption&gt;&lt;DataMember&gt;ThoiDiemGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;FormatString&gt;dd/MM HH:mm:ss&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;ThoiDiemGoi&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;75&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="RingNumber"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ch&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;CellToolTipText&gt;Số hồi chuông&lt;/CellToolTipText&gt;&lt;DataMember&gt;SoLuotDoChuong&lt;/DataMember&gt;&lt;DefaultGroupPrefix&gt;Ch&lt;/DefaultGroupPrefix&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;HeaderToolTip&gt;Số hồi chuông&lt;/HeaderToolTip&gt;&lt;Key&gt;RingNumber&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="GoiTaxi"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G Taxi&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;GoiTaxi&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderLineAlignment&gt;Center&lt;/HeaderLineAlignment&gt;&lt;HeaderToolTip&gt;Gọi taxi&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiTaxi&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="GoiLai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G  lại&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;GoiLai&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;HeaderToolTip&gt;Gọi lại&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiLai&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;30&lt;/Width&gt;&lt;/Column6&gt;&lt;Column7 ID="GoiKhac"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;G khác&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ThongTinKhac&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;HeaderToolTip&gt;Gọi khác&lt;/HeaderToolTip&gt;&lt;Key&gt;GoiKhac&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;35&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="PhanLoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Phân loại&lt;/Caption&gt;&lt;DataMember&gt;PhanLoai&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhanLoai&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;42&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="SoLuong"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;SL&lt;/Caption&gt;&lt;DataMember&gt;SoLuong&lt;/DataMember&gt;&lt;HeaderToolTip&gt;Số lượng xe&lt;/HeaderToolTip&gt;&lt;Key&gt;SoLuong&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;25&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="LoaiXe"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Loại xe&lt;/Caption&gt;&lt;DataMember&gt;LoaiXe&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;LoaiXe&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;55&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="DiaChiDonKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Địa chỉ đón khách&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;DiaChiDonKhach&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DiaChiDonKhach&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;RightToLeft&gt;No&lt;/RightToLeft&gt;&lt;Width&gt;200&lt;/Width&gt;&lt;/Column11&gt;&lt;Column12 ID="Xe4"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe4&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ChonTaxi4Cho&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Xe4&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column12&gt;&lt;Column13 ID="Xe7"&gt;&lt;Caption&gt;Xe7&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;ChonTaxi7Cho&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Xe7&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column13&gt;&lt;Column14 ID="Vung"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Vùng&lt;/Caption&gt;&lt;DataMember&gt;Vung&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;Vung&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;38&lt;/Width&gt;&lt;/Column14&gt;&lt;Column15 ID="SBDD"&gt;&lt;Caption&gt;SBDD&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;SanBay_DuongDai&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;SBDD&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column15&gt;&lt;Column16 ID="XeNhan"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;CellToolTip&gt;UseCellToolTipText&lt;/CellToolTip&gt;&lt;DataMember&gt;XeNhan&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;80&lt;/Width&gt;&lt;/Column16&gt;&lt;Column17 ID="XeDon"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón&lt;/Caption&gt;&lt;DataMember&gt;XeDon&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDon&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column17&gt;&lt;Column18 ID="XeNhan_CB"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe nhận&lt;/Caption&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;DataMember&gt;XeNhan_CB&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeNhan_CB&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column18&gt;&lt;Column19 ID="DanhSachXeDeCu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đề cử&lt;/Caption&gt;&lt;DataMember&gt;DanhSachXeDeCu&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DanhSachXeDeCu&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column19&gt;&lt;Column20 ID="XeDenDiem"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;/Column20&gt;&lt;Column21 ID="XeDenDiem_CB"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đến điểm&lt;/Caption&gt;&lt;BoundMode&gt;Unbound&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiem_CB&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column21&gt;&lt;Column22 ID="XeDenDiemDonKhachDeCu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Xe đón khách không thuộc xe nhận&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhachDeCu&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhachDeCu&lt;/Key&gt;&lt;Position&gt;22&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column22&gt;&lt;Column23 ID="LenhDienThoai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh điện thoại&lt;/Caption&gt;&lt;DataMember&gt;LenhDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lệnh của nhân viên điện thoại&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhDienThoai&lt;/Key&gt;&lt;Position&gt;23&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column23&gt;&lt;Column24 ID="LenhTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh tổng đài&lt;/Caption&gt;&lt;DataMember&gt;LenhTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Lênh của tổng đài&lt;/HeaderToolTip&gt;&lt;Key&gt;LenhTongDai&lt;/Key&gt;&lt;Position&gt;24&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column24&gt;&lt;Column25 ID="MOIKHACH_LenhMoiKhach"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Lệnh CS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_LenhMoiKhach&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_LenhMoiKhach&lt;/Key&gt;&lt;Position&gt;25&lt;/Position&gt;&lt;/Column25&gt;&lt;Column26 ID="GhiChu"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú ĐTV&lt;/Caption&gt;&lt;DataMember&gt;GhiChuDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChu&lt;/Key&gt;&lt;Position&gt;26&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;105&lt;/Width&gt;&lt;/Column26&gt;&lt;Column27 ID="GhiChuTongDai"&gt;&lt;AllowSort&gt;False&lt;/AllowSort&gt;&lt;Caption&gt;Ghi chú TĐV&lt;/Caption&gt;&lt;DataMember&gt;GhiChuTongDai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GhiChuTongDai&lt;/Key&gt;&lt;Position&gt;27&lt;/Position&gt;&lt;/Column27&gt;&lt;Column28 ID="MaNhanVienDienThoai"&gt;&lt;Caption&gt;NV ĐT&lt;/Caption&gt;&lt;DataMember&gt;MaNhanVienDienThoai&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;HeaderToolTip&gt;Mã nhân viên&lt;/HeaderToolTip&gt;&lt;Key&gt;MaNhanVienDienThoai&lt;/Key&gt;&lt;Position&gt;28&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;50&lt;/Width&gt;&lt;/Column28&gt;&lt;Column29 ID="MaNhanVienTongDai"&gt;&lt;Caption&gt;NV TĐ&lt;/Caption&gt;&lt;DataMember&gt;MaNhanVienTongDai&lt;/DataMember&gt;&lt;Key&gt;MaNhanVienTongDai&lt;/Key&gt;&lt;Position&gt;29&lt;/Position&gt;&lt;Width&gt;58&lt;/Width&gt;&lt;/Column29&gt;&lt;Column30 ID="MOIKHACH_NhanVien"&gt;&lt;Caption&gt;NVCS&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_NhanVien&lt;/DataMember&gt;&lt;Key&gt;MOIKHACH_NhanVien&lt;/Key&gt;&lt;Position&gt;30&lt;/Position&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column30&gt;&lt;Column31 ID="HienThiThoiDiemChuyenTongDai"&gt;&lt;Caption&gt;TG chuyển TĐ&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiDiemChuyenTongDai&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiDiemChuyenTongDai&lt;/Key&gt;&lt;Position&gt;31&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;66&lt;/Width&gt;&lt;/Column31&gt;&lt;Column32 ID="HienThiThoiGianDieuXe"&gt;&lt;Caption&gt;TG điều xe&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiGianDieuXe&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiGianDieuXe&lt;/Key&gt;&lt;Position&gt;32&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;/Column32&gt;&lt;Column33 ID="HienThiThoiGianDonKhach"&gt;&lt;Caption&gt;TG đón khách&lt;/Caption&gt;&lt;DataMember&gt;HienThiThoiGianDonKhach&lt;/DataMember&gt;&lt;Key&gt;HienThiThoiGianDonKhach&lt;/Key&gt;&lt;Position&gt;33&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column33&gt;&lt;Column34 ID="HienThiDoDaiCuocGoi"&gt;&lt;Caption&gt;TG đàm thoại&lt;/Caption&gt;&lt;DataMember&gt;HienThiDoDaiCuocGoi&lt;/DataMember&gt;&lt;Key&gt;HienThiDoDaiCuocGoi&lt;/Key&gt;&lt;Position&gt;34&lt;/Position&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column34&gt;&lt;Column35 ID="ThongTinCuocGoiLai"&gt;&lt;Caption&gt;ThongTinGoiLai&lt;/Caption&gt;&lt;DataMember&gt;ThongTinGoiLai&lt;/DataMember&gt;&lt;Key&gt;ThongTinCuocGoiLai&lt;/Key&gt;&lt;Position&gt;35&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column35&gt;&lt;Column36 ID="TrangThaiCuocGoi"&gt;&lt;Caption&gt;TrangThaiCuocGoi&lt;/Caption&gt;&lt;DataMember&gt;TrangThaiCuocGoi&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;TrangThaiCuocGoi&lt;/Key&gt;&lt;Position&gt;36&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column36&gt;&lt;Column37 ID="TrangThaiLenh"&gt;&lt;Caption&gt;TrangThaiLenh&lt;/Caption&gt;&lt;DataMember&gt;TrangThaiLenh&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;TrangThaiLenh&lt;/Key&gt;&lt;Position&gt;37&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column37&gt;&lt;Column38 ID="KieuKhachHangGoiDen"&gt;&lt;Caption&gt;KieuKhachHangGoiDen&lt;/Caption&gt;&lt;DataMember&gt;KieuKhachHangGoiDen&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;KieuKhachHangGoiDen&lt;/Key&gt;&lt;Position&gt;38&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column38&gt;&lt;Column39 ID="XeDenDiemDonKhach_TD"&gt;&lt;Caption&gt;XeDenDiemDonKhach_TD&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhach_TD&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhach_TD&lt;/Key&gt;&lt;Position&gt;39&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column39&gt;&lt;Column40 ID="XeDenDiemDonKhachDeCu_TD"&gt;&lt;Caption&gt;XeDenDiemDonKhachDeCu_TD&lt;/Caption&gt;&lt;DataMember&gt;XeDenDiemDonKhachDeCu_TD&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;XeDenDiemDonKhachDeCu_TD&lt;/Key&gt;&lt;Position&gt;40&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column40&gt;&lt;Column41 ID="MOIKHACH_KhieuNai_ThongTinThem"&gt;&lt;Caption&gt;Ghi chú mời khách&lt;/Caption&gt;&lt;DataMember&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;MOIKHACH_KhieuNai_ThongTinThem&lt;/Key&gt;&lt;Position&gt;41&lt;/Position&gt;&lt;/Column41&gt;&lt;/Columns&gt;&lt;GridLines&gt;Both&lt;/GridLines&gt;&lt;GridLineStyle&gt;Solid&lt;/GridLineStyle&gt;&lt;GroupCondition ID="" /&gt;&lt;HeaderLines&gt;2&lt;/HeaderLines&gt;&lt;PreviewRowLines&gt;0&lt;/PreviewRowLines&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;RowHeight&gt;22&lt;/RowHeight&gt;&lt;RowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;LineAlignment&gt;Far&lt;/LineAlignment&gt;&lt;/RowFormatStyle&gt;&lt;/RootTable&gt;&lt;SearchColumnIndex&gt;2&lt;/SearchColumnIndex&gt;&lt;RowWithErrorsFormatStyle&gt;&lt;PredefinedStyle&gt;RowWithErrorsFormatStyle&lt;/PredefinedStyle&gt;&lt;/RowWithErrorsFormatStyle&gt;&lt;LinkFormatStyle&gt;&lt;PredefinedStyle&gt;LinkFormatStyle&lt;/PredefinedStyle&gt;&lt;/LinkFormatStyle&gt;&lt;CardCaptionFormatStyle&gt;&lt;PredefinedStyle&gt;CardCaptionFormatStyle&lt;/PredefinedStyle&gt;&lt;/CardCaptionFormatStyle&gt;&lt;GroupByBoxFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxFormatStyle&gt;&lt;GroupByBoxInfoFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxInfoFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxInfoFormatStyle&gt;&lt;GroupRowFormatStyle&gt;&lt;PredefinedStyle&gt;GroupRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupRowFormatStyle&gt;&lt;HeaderFormatStyle&gt;&lt;PredefinedStyle&gt;HeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/HeaderFormatStyle&gt;&lt;RowHeaderFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;10&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowHeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/RowHeaderFormatStyle&gt;&lt;PreviewRowFormatStyle&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;PredefinedStyle&gt;PreviewRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/PreviewRowFormatStyle&gt;&lt;RowFormatStyle&gt;&lt;Appearance&gt;RaisedLight&lt;/Appearance&gt;&lt;Font&gt;Tahoma, 9pt&lt;/Font&gt;&lt;FontSize&gt;9&lt;/FontSize&gt;&lt;PredefinedStyle&gt;RowFormatStyle&lt;/PredefinedStyle&gt;&lt;TextAlignment&gt;Empty&lt;/TextAlignment&gt;&lt;/RowFormatStyle&gt;&lt;SelectedFormatStyle&gt;&lt;Font&gt;Tahoma, 9.75pt, style=Bold&lt;/Font&gt;&lt;PredefinedStyle&gt;SelectedFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedFormatStyle&gt;&lt;SelectedInactiveFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedInactiveFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedInactiveFormatStyle&gt;&lt;WatermarkImage /&gt;&lt;BackColor&gt;White&lt;/BackColor&gt;&lt;Font&gt;Microsoft Sans Serif, 7.8pt&lt;/Font&gt;&lt;VisualStyle&gt;Office2003&lt;/VisualStyle&gt;&lt;AllowEdit&gt;False&lt;/AllowEdit&gt;&lt;AllowRemoveColumns&gt;True&lt;/AllowRemoveColumns&gt;&lt;GroupByBoxVisible&gt;False&lt;/GroupByBoxVisible&gt;&lt;RowHeaders&gt;True&lt;/RowHeaders&gt;&lt;TableSpacing&gt;8&lt;/TableSpacing&gt;&lt;TabKeyBehavior&gt;ControlNavigation&lt;/TabKeyBehavior&gt;&lt;EnterKeyBehavior&gt;None&lt;/EnterKeyBehavior&gt;&lt;RowHeaderContent&gt;RowIndex&lt;/RowHeaderContent&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="visualStyleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>257, 56</value>
+  </metadata>
+  <metadata name="toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>580, 17</value>
+  </metadata>
+  <data name="cmdChenMotCuocGoi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="cmdTraCuuTheMCC.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="cmdCheckCo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBggGBQkIBwgKCQkKDRYODQwMDRoTFBAWHxwhIB8cHh4j
+        JzIqIyUvJR4eKzssLzM1ODg4ISo9QTw2TTY3ODX/2wBDAQkKCg0LDRkODhk1JB4kNSw1LDU1NTYzNSs1
+        Niw0KTU0NTY1LikvNTUvNCw0NDQ1LTYsLzA0LjQxLTIsNCw2NCz/wAARCAAhACEDASIAAhEBAxEB/8QA
+        GgAAAwADAQAAAAAAAAAAAAAAAAYHAgQFA//EADEQAAECBQIDBQcFAAAAAAAAAAECAwAEBQYREiETQXEx
+        YYGRsQcXNVFyodEUIkJSU//EABgBAAMBAQAAAAAAAAAAAAAAAAABBAMC/8QAHxEAAgEEAgMAAAAAAAAA
+        AAAAAAIBAxExYRMyIkFR/9oADAMBAAIRAxEAPwCqXVdTNtSaTpDs07nhNZ+57onjFSr14VX9MmoFC1gq
+        S3xC2jbkAIzqgVdN/vSzkxwAt5TDaynISE5AGO/HmY9JC3a1b10sOpkn30S7wy40glK0HY46gmLUVUXZ
+        yctyoVqgVN1gzsyy+yvSocQkHwOxEPtm3yKy4JGo6UTn8FpGEu/gxh7QLUdqqG5+ntFyaRhDiE9q08j1
+        Hp0hCmKPVqEWpuYlXpbQsaHCNgobj0h+FVdhguEEIfvPa/xT5GCJuF/g7i1MvC3PaA+/NMF4MTK3EoB0
+        6s5KTnxBjelbwrdduZliXmVSzMw8EhpCUnQjO+5G+2YaL2s819pM1JaUzrScYOwdT8uvyieU2cm7VrYf
+        clAJlkEBt9JGMjGfLMUrK1Fv7Fgf7+upyisNScg7onHf3qUADoR48yfQxPqhcNVrLKZedm3H0agQjAGT
+        2DsHfGvUJ6ZrNUdmn8rffVnCRnoB6Q62RY7zcy3Uqs0W+GdTLCu3PJShyxyEOIWkt5yGTS92s9/b7iCK
+        hBE/O47BCzffwtv6vxBBGdPtAScqxPijn0Q9wQR1V7BAQQQRkM//2Q==
+</value>
+  </data>
+  <data name="cmdDSSanBayDuongDai.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="cmdDatHen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAABnFJREFUWEfFlnlMVFcUxsetdrGtiU232FrRWhujtX802lTTxDZNRbAutVFjqFtL
+        FJe0pq0WK6IgDqhIRXCBCC4wggq2gqYwA2KNKIiAzAzMsAnDvso27F/PuY83DDIqk7TpTX55Z96795zv
+        nnvuAQWA/xWL8Y6jD/4r5Bi2sBg8MSwxF+dTChB5vQARxLnkfJxJkjitkQjXGBGmlp7h/Ju/9c05m8Tr
+        8sV6Ffk5Rf7sEnA59QEOxebgYMx9rDuQiDluKqz1S8S+6Cx4E15RTOYAvKMzxfc1fgnSfFp3gNYfir2P
+        2NRi+wTE3y1BcLwOR+O0mLNJhfC4DOH08OVs+PdxKJaI6YNs+T3PE/NpXWBcDoLitYhPK7FPgDrLRMeQ
+        R6nTY1OABnPJmRs9T1zLwfGrEsfi75NICbbl9xsD1GI+rwv9S4dTCXokZpYOXcB+X2/UNTairLIKpooK
+        lJSXobisFEWlJSgsKUbBgyLkFxfCKCjoo1C84288h+fyGl7LPmrrG+Cj9Cb3gwPLWAwW0NzShLr6GtTU
+        VaGqpgKV1eWoqDKRqFLcuK2xm6bmRrBfOYYtLIYQ0NqM+oZaUi6JqK6tlERUlwmH5SREFlNW0W+Xk0h5
+        Dq/htWw3Nz+0T0BrawsaHtYLEXIm2CFngx1KGZEC8VO2+b08h9fwWiGANmSfgLZWsfDfotVeAWZzm1j4
+        sKkRjZQJtkU2GqQd1dZV0w6rhc07raypQlBELPzCEvDd3ijMdzsJp80hcN0bCfcAFa7d1GKfPUVobjcL
+        580tD0UBsc1CGhrrrMTUCjtda8TyX87g210q7Dyuxu8XM3AuyYAIIvBSBjxDkrHBJwaLtgRjztpjM6yD
+        WmMxWEBHR7tw/iSup6rhceQ8FmwOhTIiFTG3iqDJMCBNZ4DOoBek6w1IumfEn7eLcDj6DpZuC2+btz7Y
+        S7F793Dr4MwAAZ2dnSJIm7mV6qFF2Hw1OSNsc1aOqlLgsus8zmoMSEg3QmvQ0v0vRHmFCTW1VLR0LOWV
+        JhQ+KEC2PhtXbuUhKE6PT11DWiY7KXdYB2cGCOjq6hKB2ukozO1SPbCQFrodbGfnPYDT1lCcURtwJ0eP
+        3PxcCliJujo6GkGN5VlfXyu+5eTlICXjPvxjtZi66EDLhAXK9x8roLu7WwSyRfItNZb8KKWdd55bkGsJ
+        aMw3Iu5qvCXwo7CIiyk6atPqnskL/bSKZVEjbAro6e0RwZpbmygbHcLmq9neYaZqj8Hq3dF05oWU9hzU
+        WO3cZCrBwqVfo4jasi0BnIlMXSaCr+oxe/WxFgfHfU42BfDgoF1dnejukbLBdcG/tx+KpGrXQJ1hRFFJ
+        oWX39dR0mAiVCu4eHgMCW5NfbMTFGzn45reY7okLlF5yXJsCrEmhqufnKvcwBFxIR5o2jwquVDjtTzmL
+        qYGH5x6sdXXFsRMnLIFlyipKkEy1sPFwEqYs9vtbjmtTgDxku7e3VzQZvuN6o05Uen+xydSK4NZPa3jN
+        PW0m3E+nY5KzbxO5HboAHvM3nhSNhu85X7d+59Lu0++mY833ro/NgCxge1ja0wXYwmVnOI5QhxNHQPdc
+        On9JAAd3XrJUPB8NLMNHkHQ3G+vpX7xBR0DjeV8/H3NDQwNrsDkCVTfhGZqMpL4ilNPO+Pn7PzE4w0Wo
+        SsqC88/Rg4uQxmhvb889fgeVnZwJW2x198U6zyj8kVoEnaiDSnIspd9WQGvka6i8kIWZKwObbV7DPiHD
+        WQzxIvEKMZ54l5ihGPnc7HnrA03+UXd6NBn5yBONyHbAR+FGdCYhCyu94h7fiIbCLJeg6Yt/CGuLTOZW
+        nCv+DkiZsB1YbsWatExsC7mDyQt9H9+Kh8q89UFey3+NbAu4rBXtlVPL58tFxpXOsM3v+BvvnIN/uCqw
+        dcJnO/ZTNl8mhsn+BgV4GoqxY8eSI+V7X/m2uVFv5/bKHY6bDF8zhqudC47PfMXeK72TnZXm8Z9sOq4Y
+        NWomBX+bGGPxZ+18KNB4iZ2MnfLFIgdHr6JZLkfNy3Ze6uEOx02G7zlfNaefono+WH64feKXnqYx4z/a
+        SGvmEjN4LfGMxZ+186FAYxgxhnhLMeqF6a/OXLHtzTlbzjo4eugcFvi0Cebvyn3j4w0Xxk1b6KkYMfpz
+        mjuLmEa8Towc4M/6h73QGEVwRl4jJhBTCA40lZhE8C0aRzxLDPpvCIDiH2Hr+EYewGauAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="timerNhayBaoCuocGoiMoi.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>671, 17</value>
+  </metadata>
+  <metadata name="uiPanelManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>562, 56</value>
+  </metadata>
+  <metadata name="serialPort1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>368, 17</value>
+  </metadata>
+</root>

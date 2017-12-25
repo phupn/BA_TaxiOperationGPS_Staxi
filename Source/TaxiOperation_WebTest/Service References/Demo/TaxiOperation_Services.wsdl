@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDomain">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDomainResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentication" type="tns:Authentication" />
+      <s:complexType name="Authentication">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="BookingTaxi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tenKH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcDon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loaiXe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sl" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcTra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ghiChu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tgDon" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookingTaxiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BookingTaxiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomain" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxiSoapIn">
+    <wsdl:part name="parameters" element="tns:BookingTaxi" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxiSoapOut">
+    <wsdl:part name="parameters" element="tns:BookingTaxiResponse" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxiAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:portType name="TaxiOperation_ServicesSoap">
+    <wsdl:operation name="GetDomain">
+      <wsdl:input message="tns:GetDomainSoapIn" />
+      <wsdl:output message="tns:GetDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BookingTaxi">
+      <wsdl:input message="tns:BookingTaxiSoapIn" />
+      <wsdl:output message="tns:BookingTaxiSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TaxiOperation_ServicesSoap" type="tns:TaxiOperation_ServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDomain">
+      <soap:operation soapAction="http://tempuri.org/GetDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDomainAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingTaxi">
+      <soap:operation soapAction="http://tempuri.org/BookingTaxi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BookingTaxiAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TaxiOperation_ServicesSoap12" type="tns:TaxiOperation_ServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDomain">
+      <soap12:operation soapAction="http://tempuri.org/GetDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDomainAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingTaxi">
+      <soap12:operation soapAction="http://tempuri.org/BookingTaxi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BookingTaxiAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TaxiOperation_Services">
+    <wsdl:port name="TaxiOperation_ServicesSoap" binding="tns:TaxiOperation_ServicesSoap">
+      <soap:address location="http://10.0.2.175:81/TaxiOperation_Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TaxiOperation_ServicesSoap12" binding="tns:TaxiOperation_ServicesSoap12">
+      <soap12:address location="http://10.0.2.175:81/TaxiOperation_Services.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

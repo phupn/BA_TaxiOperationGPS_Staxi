@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BB1149D-AB19-462E-8D3D-F18A207B6EF8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taxi.Services</RootNamespace>
+    <AssemblyName>Taxi.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Taxi.Common">
+      <HintPath>..\Taxi.Controls\DLL\Taxi.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectService.cs" />
+    <Compile Include="Operations\Common\GuidMsg.cs" />
+    <Compile Include="Operations\Inferfaces\IServiceOnline.cs" />
+    <Compile Include="Operations\Inferfaces\IServiceOperation.cs" />
+    <Compile Include="Operations\Common\SendTextContext.cs" />
+    <Compile Include="Operations\ServiceOnline.cs" />
+    <Compile Include="Operations\ServiceOnlineFactory.cs" />
+    <Compile Include="Operations\Common\TripOperation.cs" />
+    <Compile Include="Operations\Common\Vehicle.cs" />
+    <Compile Include="Operations\ServiceOperationFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operations\ServiceOperationG5.cs" />
+    <Compile Include="Service References\FastTaxi_OperationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceApp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceApp_XHD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceEnVangVip\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceG5\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Services_TCPOP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service_ServerCenter\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SMS_Viettel\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StaxiMan_Services\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WCFServiceGEO\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services_Common.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BAGIS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BAGPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WCFServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WCFServicesAppXHD.cs" />
+    <Compile Include="WCFServicesApp.cs" />
+    <Compile Include="WCF_SMSVina.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\BAGIS\gis.wsdl" />
+    <None Include="Service References\BAGIS\Taxi.Services.BAGIS.GSAddressResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BAGIS\Taxi.Services.BAGIS.GSPOIResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BAGIS\Taxi.Services.BAGIS.GSRegionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BAGIS\Taxi.Services.BAGIS.GSSpeedResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BAGPS\Service.wsdl" />
+    <None Include="Service References\BAGPS\Taxi.Services.BAGPS.LicenseEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService1.wsdl" />
+    <None Include="Service References\FastTaxi_OperationService\OperationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\OperationService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\Taxi.Services.FastTaxi_OperationService.RouteDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\Taxi.Services.FastTaxi_OperationService.TripBookingsSendResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastTaxi_OperationService\Taxi.Services.FastTaxi_OperationService.UpdateTripType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService.wsdl" />
+    <None Include="Service References\ServiceApp\OperationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\OperationService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp\Taxi.Services.ServiceApp.OneTaxiCar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceApp\Taxi.Services.ServiceApp.OperatorCenterGPSData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceApp\Taxi.Services.ServiceApp.TcpOPVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService.wsdl" />
+    <None Include="Service References\ServiceApp_XHD\OperationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\OperationService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\Taxi.Services.ServiceApp_XHD.OneTaxiCar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\Taxi.Services.ServiceApp_XHD.OperatorCenterGPSData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceApp_XHD\Taxi.Services.ServiceApp_XHD.TcpOPVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceEnVangVip\OperationService.wsdl" />
+    <None Include="Service References\ServiceEnVangVip\OperationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEnVangVip\OperationService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEnVangVip\OperationService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService.wsdl" />
+    <None Include="Service References\ServiceG5\OperationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\OperationService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceG5\Taxi.Services.ServiceG5.OneTaxiCar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceG5\Taxi.Services.ServiceG5.OperatorCenterGPSData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceG5\Taxi.Services.ServiceG5.TcpOPVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPBookTrip.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPCalPriceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPCarTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPCommandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPCompLandmark.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPConfigSignCarTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\Taxi.Services.Services_TCPOP.TcpOPVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Services_TCPOP\TcpOP.wsdl" />
+    <None Include="Service References\Services_TCPOP\TcpOP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services_TCPOP\TcpOP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services_TCPOP\TcpOP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services_TCPOP\TcpOP3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services_TCPOP\TcpOP4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services_TCPOP\TcpOP5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_ServerCenter\Data.wsdl" />
+    <None Include="Service References\Service_ServerCenter\Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_ServerCenter\Data1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_ServerCenter\Data2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service_ServerCenter\Taxi.Services.Service_ServerCenter.DataCompanyInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service_ServerCenter\Taxi.Services.Service_ServerCenter.DataDriverLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPBookTrip.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPCarTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPCommandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPCompLandmark.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPConfigSignCarTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPDriverResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\Taxi.Services.SMS_Viettel.TcpOPVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SMS_Viettel\TcpOP.wsdl" />
+    <None Include="Service References\SMS_Viettel\TcpOP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SMS_Viettel\TcpOP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SMS_Viettel\TcpOP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SMS_Viettel\TcpOP3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SMS_Viettel\TcpOP4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StaxiMan_Services\Service.wsdl" />
+    <None Include="Service References\StaxiMan_Services\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StaxiMan_Services\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StaxiMan_Services\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StaxiMan_Services\Taxi.Services.StaxiMan_Services.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServiceGEO\ServicesOnline.wsdl" />
+    <None Include="Service References\WCFServiceGEO\Taxi.Services.WCFServiceGEO.PriceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServiceGEO\WCFServiceGEO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServiceGEO\WCFServiceGEO1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServiceGEO\WCFServiceGEO2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServiceGEO\WCFServiceGEO3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\SyncServiceOnline.wsdl" />
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.Call_Sumary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.ChotCuoc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.CuocKhach.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.TongCuoc_Ca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.T_Messages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.T_ThoatCuoc999.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.T_XeOnline.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.T_XeOnline_TT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.VungBound.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\Taxi.Services.WCFServices.XeOnlineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService91.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService92.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService93.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService94.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService95.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService96.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService97.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFServices\WCFSyncService98.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BAGIS\" />
+    <WCFMetadataStorage Include="Service References\BAGPS\" />
+    <WCFMetadataStorage Include="Service References\FastTaxi_OperationService\" />
+    <WCFMetadataStorage Include="Service References\ServiceApp\" />
+    <WCFMetadataStorage Include="Service References\ServiceApp_XHD\" />
+    <WCFMetadataStorage Include="Service References\ServiceEnVangVip\" />
+    <WCFMetadataStorage Include="Service References\ServiceG5\" />
+    <WCFMetadataStorage Include="Service References\Services_TCPOP\" />
+    <WCFMetadataStorage Include="Service References\Service_ServerCenter\" />
+    <WCFMetadataStorage Include="Service References\SMS_Viettel\" />
+    <WCFMetadataStorage Include="Service References\StaxiMan_Services\" />
+    <WCFMetadataStorage Include="Service References\WCFServiceGEO\" />
+    <WCFMetadataStorage Include="Service References\WCFServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGPS\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGPS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGPS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGPS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGIS\gis.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGIS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGIS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BAGIS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Taxi.Business\Taxi.Business.csproj">
+      <Project>{889a0a5c-d624-49b5-877e-c365672541a8}</Project>
+      <Name>Taxi.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Data\Taxi.Data.csproj">
+      <Project>{c6d7a3ee-b50c-4ea6-9053-2ed7f6c9975d}</Project>
+      <Name>Taxi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{E7EBA72B-31F7-4280-90A5-DA0984CCE7D9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FastTaxi_OperationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FastTaxi_OperationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FastTaxi_OperationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceEnVangVip\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceEnVangVip\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceEnVangVip\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_ServerCenter\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_ServerCenter\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service_ServerCenter\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceG5\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceG5\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceG5\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceApp\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceApp\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceApp\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFServiceGEO\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFServiceGEO\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WCFServiceGEO\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceApp_XHD\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceApp_XHD\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceApp_XHD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StaxiMan_Services\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StaxiMan_Services\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StaxiMan_Services\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StaxiMan_Services\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SMS_Viettel\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SMS_Viettel\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SMS_Viettel\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SMS_Viettel\TcpOP.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Services_TCPOP\TcpOP.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Services_TCPOP\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Services_TCPOP\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Services_TCPOP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

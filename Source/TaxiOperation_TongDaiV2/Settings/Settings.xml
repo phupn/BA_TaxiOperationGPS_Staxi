@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Settings>
+ 
+  <!--<IPAddress></IPAddress>
+  <Source></Source>
+  <Catalog>e8zvertZ2qED2LLoS0n4sw==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH762WIEAN4FtVS612Q==</Password>-->
+  
+  <!--BA ThanhCong Test-->
+  <!--<Settings>
+    <IPAddress>10.0.2.110</IPAddress>
+    <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+    <Catalog>ztVZdgFEVX4tYqoICENAfUb6VfeKd6W2FSdvxMLbM+M=</Catalog>
+    <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+    <Password>CiV0UUaPYMk=</Password>
+  </Settings>-->
+  
+  <!--Staxi Test-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfdD0VcwbNhJI</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>-->
+  
+  <!--BA-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfdtLc7zM+Ur6</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>-->
+  
+  <!--<IPAddress>TaxiSongNhue_That_14.177.66.186</IPAddress>
+  <Source>HohKLR56kPZcMtJYQaqAow==</Source>
+  <Catalog>e8zvertZ2qED2LLoS0n4sw==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH762WIEAN4FtVS612Q==</Password>-->
+  
+  <!--Group-->
+  <!--<IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgkp+wAH+a68I6Jpf3fZYwN</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAff98ZUCCqRmGULFeBLRA/Wo=</Catalog>
+  <User>PLusDTlaIKFiwrLDKIx2GA==</User>
+  <Password>PLusDTlaIKHYDXtNU/HMFw==</Password>-->
+  
+  <IPAddress>10.0.2.110</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>ztVZdgFEVX4tYqoICENAfdFNGL4Lv5Gop2yVbExi360=</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>
+  
+  <!--<IPAddress>TaxiSongNhue_That_14.177.66.186</IPAddress>
+  <Source>HohKLR56kPZcMtJYQaqAow==</Source>
+  <Catalog>e8zvertZ2qED2LLoS0n4sw==</Catalog>
+  <User>EXaYlC9cNwA=</User>
+  <Password>ufuCH7 =</Password>-->
+</Settings>

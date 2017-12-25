@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--Staxi Test-->
+<!--<Settings>
+  <IPAddress>10.0.2.107</IPAddress>
+  <Source>0gcjprYLwwgNEaz1tRgWqUW2AbTJCITd</Source>
+  <Catalog>L9XXEDob/+TacgBYmzq08w==</Catalog>
+  <User>s5o4DG1jAFZA3h1G1ai0/g==</User>
+  <Password>CiV0UUaPYMk=</Password>
+</Settings>-->
+  
+
+<!--Staxi 229-->
+<Settings>
+  <IPAddress>10.0.2.107</IPAddress>
+  <Source>wDg6YjPN9qqXL7ebHHBELPInRQNrL+QL</Source>
+  <Catalog>L9XXEDob/+TacgBYmzq08w==</Catalog>
+  <User>L9XXEDob/+TacgBYmzq08w==</User>
+  <Password>CiV0UUaPYMk=</Password>
+</Settings>
+

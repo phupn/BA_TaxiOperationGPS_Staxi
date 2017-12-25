@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a223a675-14c1-41af-b2f2-363bbbd06e02" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://taxivina.staxi.vn:5008/Services/TcpOP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TcpOP.wsdl" MetadataType="Wsdl" ID="01d1b413-94d1-4e7d-a2d1-2141e672b5c6" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?wsdl" />
+    <MetadataFile FileName="TcpOP.xsd" MetadataType="Schema" ID="4f4741ae-82b7-4793-b1ab-4a60f6a6feb5" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd0" />
+    <MetadataFile FileName="TcpOP1.xsd" MetadataType="Schema" ID="4e030fae-186b-4a92-9a65-ea486fd40acb" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd1" />
+    <MetadataFile FileName="TcpOP2.xsd" MetadataType="Schema" ID="6dd6c6d0-44e0-4584-a792-d2fcfc89e614" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd2" />
+    <MetadataFile FileName="TcpOP3.xsd" MetadataType="Schema" ID="856e0b9e-b4ba-41f0-a8a4-a1960c2cc1d6" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd3" />
+    <MetadataFile FileName="TcpOP4.xsd" MetadataType="Schema" ID="04a973ac-f686-479a-84fd-a573c4a4bce2" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?xsd=xsd4" />
+    <MetadataFile FileName="TcpOP.disco" MetadataType="Disco" ID="69baaaba-e1d3-48ff-8a9a-b392ad2850bc" SourceId="1" SourceUrl="http://taxivina.staxi.vn:5008/Services/TcpOP.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

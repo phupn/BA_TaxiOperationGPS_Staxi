@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6D7A3EE-B50C-4EA6-9053-2ED7F6C9975D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taxi.Data</RootNamespace>
+    <AssemblyName>Taxi.Data</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Taxi.Common">
+      <HintPath>..\Taxi.Utils\Dll\Taxi.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BanCo\CommonData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\DbConnections\TaxiOperationDb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\DbConnections\TaxiOperationDbEntityBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\DbConnections\TaxiOperationDbService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\BaoCaoLoi.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\BaoCaoNhanSuTrongCa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\BaoCaoThongKeDieuHanh.cs" />
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\BaoCaoTongHopBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\SummaryGPS.cs" />
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\TinhHinhPhuongTien\BaoCaoTinhHinhPhuongTien.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\TinhHinhPhuongTien\TongHopXe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\BaoCaoXe\BaoCaoTongHop\TinhHinhPhuongTien\XeHongBanVat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\CanhBaoXe\CanhBaoSOS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\CanhBaoXe\CanhBaoXe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\CanhBaoXe\CNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\CanhBaoXe\Xe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\ColorOfStatusModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\Command.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\Config\BanCo_Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\Config\MobileOperationCommands.cs" />
+    <Compile Include="BanCo\Entity\Config\MobileOperationStepWorkflows.cs" />
+    <Compile Include="BanCo\Entity\Config\MobileOperationWorkflows.cs" />
+    <Compile Include="BanCo\Entity\DieuXeDuongDai\DUONGDAI_KHACHHEN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\BanCo_VungDieuHanh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\NhatKiThueBao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\TaxiOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\TaxiOperationKetThuc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\TaxiOperation_Truck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\TaxiOperation_Truck_End.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DieuXe\ThongTinTimKiem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\BanCo_GiamSatXe_TrangThai.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\BC_XeKhongKD.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\DMKhachQuen_Type.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\DMXe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\DoDau.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\SYS_USERS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\THUEBAO_T_CHAYTUYEN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\THUEBAO_T_KIEUTUYEN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\TuDienChucVu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\TuDienPhong.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\T_DMKHACHHANG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\T_NhaMang.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\T_NHANVIEN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\DM\T_TypesOfGoods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\BanCo_GiamSatXe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\BanCo_GiamSatXe_Reason.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\BanCo_GiamSatXe_Reasons_Type.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\BanCo_VehicleCorrupt.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\CanhBaoEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\ConfigurationStatusModel.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\ConfigurationViolateError.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\CuocGoiV2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\GiamSatXe_HoatDong.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\GiamSatXe_LienLac.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\GiamSatXe_Shift.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\GiamSatXe_ShiftNotes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\GiamSatXe\StatusManagement.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\VehicleCorrupt.cs" />
+    <Compile Include="BanCo\Entity\GiamSatXe\XeKhongKinhDoanh.cs" />
+    <Compile Include="BanCo\Entity\GIS\Dictrict.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\LogEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\Login\CheckInCheckOut.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\LyDoKhongKinhDoanh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\MasterData\DMGara.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\MasterData\DMXE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\MasterData\TuDien_LoaiXe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\MasterData\TypesOfGoods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\MasterData\DoiTacStep.cs" />
+    <Compile Include="BanCo\Entity\MasterData\VungDieuHanh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\StaxiFile.cs" />
+    <Compile Include="BanCo\Entity\TinhToanGiaTien\T_TINHTOAN_GIATIEN_CA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TinhToanGiaTien\T_TINHTOAN_GIATIEN_METER.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\BangGiaCuoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\ChayTuyen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\DiemXuatPhat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\DMTuyenThueBao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\DSKhachDat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\NhatKyThueBao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\TuyenThueBao\VuotGioQuyDinh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Entity\T_DOITAC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\GPS\Road.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanCo\VehicleOnline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BanDoXeOnline\clsRoad.cs" />
+    <Compile Include="BanDoXeOnline\XeOnlineData.cs" />
+    <Compile Include="BanGiaGoc\Dulieudauvaotinhtien.cs" />
+    <Compile Include="BanGiaGoc\NhatkyThuebao.cs" />
+    <Compile Include="BanGiaGoc\Tuyen.cs" />
+    <Compile Include="BanGiaGoc\VuotGioQuydinh.cs" />
+    <Compile Include="BaoCaoNew\BC_4_7_BaoCaoKetQuaDieuHanhTheoVung.cs" />
+    <Compile Include="BaoCaoNew\BC_4_9_TKeSoLieuDieuHanh.cs" />
+    <Compile Include="BaoCaoNew\BC_PhanMemDieuHanh.cs" />
+    <Compile Include="CanhBaoDieuApp\CanhBaoCuocSanBay.cs" />
+    <Compile Include="CanhBaoDieuApp\CanhBaoDieuApp.cs" />
+    <Compile Include="CanhBaoDieuApp\CanhBaoDieuAppKetThuc.cs" />
+    <Compile Include="CanhBaoSOS\CanhBaoSOS_DA.cs" />
+    <Compile Include="CDR.cs" />
+    <Compile Include="Chatting.cs" />
+    <Compile Include="CheckCoDuongDai\CheckCoDuongDai.cs" />
+    <Compile Include="Config_CommonDA.cs" />
+    <Compile Include="DieuXeDuongDai\BaoCaoDieuxeDuongDai.cs" />
+    <Compile Include="DieuXeDuongDai\DUONGDAI_DONKHACH_XEDITINH_DA.cs" />
+    <Compile Include="DieuXeDuongDai\DUONGDAI_KHACHHEN_DA.cs" />
+    <Compile Include="DieuXeDuongDai\DUONGDAI_KHACHHEN_XEDK_DA.cs" />
+    <Compile Include="DM\DanhBaKhachQuen.cs" />
+    <Compile Include="DM\DMTinhThanh.cs" />
+    <Compile Include="DM\DMVung_GPS.cs" />
+    <Compile Include="DM\LoaiDoiTac.cs" />
+    <Compile Include="DM\LoaiXe.cs" />
+    <Compile Include="DM\SystemBookID.cs" />
+    <Compile Include="EnVang\MessageConfirm.cs" />
+    <Compile Include="EnVang\ThongTinKhachHangVip.cs" />
+    <Compile Include="FastTaxi\BaoCao\BaoCaoChiTietCuocGoiTheoMaMoiGioi.cs" />
+    <Compile Include="FastTaxi\BaoCao\BaoCaoChiTietXeBaoDiDuongDai.cs" />
+    <Compile Include="FastTaxi\BookingsDetail.cs" />
+    <Compile Include="FastTaxi\Commune.cs" />
+    <Compile Include="FastTaxi\DISTRICT.cs" />
+    <Compile Include="FastTaxi\G5LoaiXe.cs" />
+    <Compile Include="FastTaxi\KhachHangDungThe.cs" />
+    <Compile Include="FastTaxi\LoiViPham.cs" />
+    <Compile Include="FastTaxi\PROVINCE.cs" />
+    <Compile Include="FastTaxi\Booking.cs" />
+    <Compile Include="FastTaxi\StaxiBook.cs" />
+    <Compile Include="FastTaxi\StaxiCarType.cs" />
+    <Compile Include="FastTaxi\SYS_VersionInfo.cs" />
+    <Compile Include="FastTaxi\VungGPS.cs" />
+    <Compile Include="FastTaxi\XeDiDuongDai.cs" />
+    <Compile Include="G5\BaoCao\bc_1_11_BaoCaoCuocKhongDieuApp.cs" />
+    <Compile Include="G5\BaoCao\bc_1_1_BaoCaoTongHopCuocKhachDieuHanh.cs" />
+    <Compile Include="G5\BaoCao\bc_1_2_BaoCaoCuocKhachTheoCa.cs" />
+    <Compile Include="G5\BaoCao\bc_1_3_BaoCaoChiTietCuocGoiDen.cs" />
+    <Compile Include="G5\BaoCao\bc_1_8_BaoCaoChiTietKhachDat.cs" />
+    <Compile Include="G5\BaoCao\bc_4_5_BaoCaoTongHopKQDieuHanhNV.cs" />
+    <Compile Include="G5\BaoCao\bc_4_8_BaoCaoTongHoCuocGoiDiTheoNhanVien.cs" />
+    <Compile Include="G5\BaoCao\bc_6_10_BaoCaoChiTietCuocGoiDiemTheoMoiGioi.cs" />
+    <Compile Include="G5\BaoCao\bc_6_1_DanhSachDiaChiMoiGioi.cs" />
+    <Compile Include="G5\BaoCao\bc_6_2_DiaChiMoiGioiCuocGoiThap.cs" />
+    <Compile Include="G5\BaoCao\bc_6_3_DanhSachDiaChiMoiGioiKhongPhatSinh.cs" />
+    <Compile Include="G5\BaoCao\bc_6_6_BaoCaoTongHopCuocMoiGioiTheoXe.cs" />
+    <Compile Include="G5\BaoCao\bc_6_9_BaoCaoKhachMoiGioiTheoNgay.cs" />
+    <Compile Include="G5\BaoCao\bc_7_1_BaoCaoTinhTrangDam.cs" />
+    <Compile Include="G5\BaoCao\bc_7_2_BaoCaoTinhTrangThoai.cs" />
+    <Compile Include="G5\ConfigLayout\ConfigLayout.cs" />
+    <Compile Include="G5\ConfigLayout\LayoutSetting.cs" />
+    <Compile Include="G5\DanhMuc\CommandModule.cs" />
+    <Compile Include="G5\DanhMuc\CustomerHabits.cs" />
+    <Compile Include="G5\DanhMuc\DMCongTy.cs" />
+    <Compile Include="G5\DanhMuc\DMDanhBaBuuDien.cs" />
+    <Compile Include="G5\DanhMuc\DMDanhBaCongTy.cs" />
+    <Compile Include="G5\DanhMuc\DMDiaDanh.cs" />
+    <Compile Include="G5\DanhMuc\DMDiaDanhKm.cs" />
+    <Compile Include="G5\DanhMuc\DMDoiTac.cs" />
+    <Compile Include="G5\DanhMuc\DMKhachAo.cs" />
+    <Compile Include="G5\DanhMuc\DMKhachQuen.cs" />
+    <Compile Include="G5\DanhMuc\DMKhachVip.cs" />
+    <Compile Include="G5\DanhMuc\DMNhanVien.cs" />
+    <Compile Include="G5\DanhMuc\DMXe.cs" />
+    <Compile Include="G5\DanhMuc\DuongPho.cs" />
+    <Compile Include="G5\DanhMuc\G5Command.cs" />
+    <Compile Include="G5\DanhMuc\G5CommandCmd.cs" />
+    <Compile Include="G5\DanhMuc\G5Layout.cs" />
+    <Compile Include="G5\DanhMuc\Gara.cs" />
+    <Compile Include="G5\DanhMuc\KieuKhachHangPhanAnh.cs" />
+    <Compile Include="G5\DanhMuc\LoaiDoiTac.cs" />
+    <Compile Include="G5\DanhMuc\LoaiPhanAnh.cs" />
+    <Compile Include="G5\DanhMuc\LoaiXe.cs" />
+    <Compile Include="G5\DanhMuc\MobileNetwork.cs" />
+    <Compile Include="G5\DanhMuc\MobileNetwork_AREACODE.cs" />
+    <Compile Include="G5\DanhMuc\POICommon.cs" />
+    <Compile Include="G5\DanhMuc\TenDuongVietTat.cs" />
+    <Compile Include="G5\DanhMuc\UserInfo.cs" />
+    <Compile Include="G5\BaoCao\bc_1_10_BCCuocKhachTTDHDieuApp.cs" />
+    <Compile Include="G5\T_TaxiOperation.cs" />
+    <Compile Include="G5\T_TaxiOperation_SendCommand.cs" />
+    <Compile Include="KhachDat\SystemBook.cs" />
+    <Compile Include="LicenseDA.cs" />
+    <Compile Include="ManHinhDA.cs" />
+    <Compile Include="CuocGoi.cs" />
+    <Compile Include="CSKH\CSKHChiTiet.cs" />
+    <Compile Include="CSKH\DoiTac.cs" />
+    <Compile Include="CuocGoiDi.cs" />
+    <Compile Include="CuocGoiKhachHen.cs" />
+    <Compile Include="DanhBaCongTy.cs" />
+    <Compile Include="DanhBaKhachAo.cs" />
+    <Compile Include="CuocGoiDoiTac.cs" />
+    <Compile Include="DanhBa.cs" />
+    <Compile Include="DieuHanhTaxi.cs" />
+    <Compile Include="DM\DMCongty.cs" />
+    <Compile Include="DM\LoaiPhanAnh.cs" />
+    <Compile Include="DM\Sanh.cs" />
+    <Compile Include="DM\DMDiaDanh.cs" />
+    <Compile Include="DM\DMKhachVIP.cs" />
+    <Compile Include="DM\DMDoiTac.cs" />
+    <Compile Include="DM\Gara.cs" />
+    <Compile Include="DM\NhanVien.cs" />
+    <Compile Include="DM\TuDienLoaiDiaDanh.cs" />
+    <Compile Include="DM\TuDienLoaiXe.cs" />
+    <Compile Include="DM\Xe.cs" />
+    <Compile Include="GridLayout\GridLayout.cs" />
+    <Compile Include="KhachDat\KhachDatDA.cs" />
+    <Compile Include="KiemSoatXeLienLac.cs" />
+    <Compile Include="MemberCard\MemberCard.cs" />
+    <Compile Include="Msg.cs" />
+    <Compile Include="PhanAnh\PhanAnh.cs" />
+    <Compile Include="ProcessInComFile.cs" />
+    <Compile Include="ProcessLog_IncomingFile.cs" />
+    <Compile Include="ProcessVocFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyMoiGioi\BangKe.cs" />
+    <Compile Include="QuanLyVe\DMKhachHang.cs" />
+    <Compile Include="QuanLyVe\The.cs" />
+    <Compile Include="QuanLyVe\Ve.cs" />
+    <Compile Include="QuanTri\CapNhatToaDo.cs" />
+    <Compile Include="QuanTri\EventGroup.cs" />
+    <Compile Include="QuanTri\HeThong.cs" />
+    <Compile Include="QuanTri\LineGoiRa.cs" />
+    <Compile Include="QuanTri\Log.cs" />
+    <Compile Include="QuanTri\Permission.cs" />
+    <Compile Include="QuanTri\QuanTriCauHinh.cs" />
+    <Compile Include="QuanTri\Roles.cs" />
+    <Compile Include="QuanTri\ThoatCuoc999.cs" />
+    <Compile Include="QuanTri\TuDienChucVu.cs" />
+    <Compile Include="QuanTri\TuDienPhong.cs" />
+    <Compile Include="QuanTri\UserPermission.cs" />
+    <Compile Include="QuanTri\UserRole.cs" />
+    <Compile Include="QuanTri\Users.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="DM\TuDienChucVu.cs" />
+    <Compile Include="DM\TuDienPhong.cs" />
+    <Compile Include="ThongTinPhanAnh\ThongTinPhanAnh.cs" />
+    <Compile Include="TinhTien_SuDung.cs" />
+    <Compile Include="ThongTinTruyCap.cs" />
+    <Compile Include="TimKiem_BaoCao.cs" />
+    <Compile Include="TinhTienTheoKm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ApplicationDataProcess.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Taxi.Entity\Taxi.Entity.csproj">
+      <Project>{735B945A-3B37-4796-8810-DE7B3B0D168F}</Project>
+      <Name>Taxi.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{E7EBA72B-31F7-4280-90A5-DA0984CCE7D9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AutoUpdate\" />
+    <Folder Include="BanCo\Entity\Maps\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

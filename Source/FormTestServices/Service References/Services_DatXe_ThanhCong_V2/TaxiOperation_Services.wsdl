@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="BookingTaxi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Addr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Time" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="GhiChu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="brand" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="src" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="dmn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookingTaxiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BookingTaxiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentication" type="tns:Authentication" />
+      <s:complexType name="Authentication">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="BookingTaxi_V2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Addr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Time" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="brand" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="src" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="dmn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extension1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extension2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookingTaxi_V2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BookingTaxi_V2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBooking_V2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dmn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="brand" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tickedID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBooking_V2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelBooking_V2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BookingTaxiSoapIn">
+    <wsdl:part name="parameters" element="tns:BookingTaxi" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxiSoapOut">
+    <wsdl:part name="parameters" element="tns:BookingTaxiResponse" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxiAuthentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxi_V2SoapIn">
+    <wsdl:part name="parameters" element="tns:BookingTaxi_V2" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxi_V2SoapOut">
+    <wsdl:part name="parameters" element="tns:BookingTaxi_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="BookingTaxi_V2Authentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="CancelBooking_V2SoapIn">
+    <wsdl:part name="parameters" element="tns:CancelBooking_V2" />
+  </wsdl:message>
+  <wsdl:message name="CancelBooking_V2SoapOut">
+    <wsdl:part name="parameters" element="tns:CancelBooking_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="CancelBooking_V2Authentication">
+    <wsdl:part name="Authentication" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:portType name="TaxiOperation_ServicesSoap">
+    <wsdl:operation name="BookingTaxi">
+      <wsdl:input message="tns:BookingTaxiSoapIn" />
+      <wsdl:output message="tns:BookingTaxiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BookingTaxi_V2">
+      <wsdl:input message="tns:BookingTaxi_V2SoapIn" />
+      <wsdl:output message="tns:BookingTaxi_V2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelBooking_V2">
+      <wsdl:input message="tns:CancelBooking_V2SoapIn" />
+      <wsdl:output message="tns:CancelBooking_V2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TaxiOperation_ServicesSoap" type="tns:TaxiOperation_ServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BookingTaxi">
+      <soap:operation soapAction="http://tempuri.org/BookingTaxi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BookingTaxiAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingTaxi_V2">
+      <soap:operation soapAction="http://tempuri.org/BookingTaxi_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BookingTaxi_V2Authentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBooking_V2">
+      <soap:operation soapAction="http://tempuri.org/CancelBooking_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CancelBooking_V2Authentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TaxiOperation_ServicesSoap12" type="tns:TaxiOperation_ServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BookingTaxi">
+      <soap12:operation soapAction="http://tempuri.org/BookingTaxi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BookingTaxiAuthentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingTaxi_V2">
+      <soap12:operation soapAction="http://tempuri.org/BookingTaxi_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BookingTaxi_V2Authentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBooking_V2">
+      <soap12:operation soapAction="http://tempuri.org/CancelBooking_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CancelBooking_V2Authentication" part="Authentication" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TaxiOperation_Services">
+    <wsdl:port name="TaxiOperation_ServicesSoap" binding="tns:TaxiOperation_ServicesSoap">
+      <soap:address location="http://210.211.124.121:8787/TaxiOperation_Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TaxiOperation_ServicesSoap12" binding="tns:TaxiOperation_ServicesSoap12">
+      <soap12:address location="http://210.211.124.121:8787/TaxiOperation_Services.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

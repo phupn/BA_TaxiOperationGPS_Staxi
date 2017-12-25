@@ -1,0 +1,17 @@
+﻿SP_T_TaxiOperation_BookTaxi_V2
+Loại Xe :
+	--1=bất kỳ
+	--2=tc car bất kỳ
+	--3=tc sân bay
+	--4=4 chỗ giá rẻ
+	--5=5 chỗ cao cấp
+	--7=7 chỗ
+
+	public enum Brand
+    {
+        HaNoi = 1,
+        VinhPhuc = 2,
+        HaNam = 3,
+        ThuaThienHue = 4,
+        QuangNinh = 5
+    }

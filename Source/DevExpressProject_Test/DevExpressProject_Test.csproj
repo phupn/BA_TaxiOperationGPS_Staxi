@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87A8BFB7-75FA-4807-AC6A-933105FF10A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevExpressProject_Test</RootNamespace>
+    <AssemblyName>DevExpressProject_Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>RunDevTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.Data.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.Printing.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.RichEdit.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.Utils.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.Xpo.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraBars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraLayout.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraNavBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraReports.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraRichEdit.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Taxi.Controls\DLL\DevExpress.XtraTreeList.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Femiani.Forms.UI">
+      <HintPath>..\Femiani.Forms.UI\obj\x86\Debug\Femiani.Forms.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="OneTaxi.Controls">
+      <HintPath>..\OneTaxi.Controls\obj\Debug\OneTaxi.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Taxi.Common">
+      <HintPath>..\Taxi.Utils\Dll\Taxi.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DevControl\DevGroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevControl\DevGroupControl.Designer.cs">
+      <DependentUpon>DevGroupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevControl\DevPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevControl\DevPanel.Designer.cs">
+      <DependentUpon>DevPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstDev.Designer.cs">
+      <DependentUpon>FirstDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quyen.cs" />
+    <Compile Include="UCTEST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTEST.Designer.cs">
+      <DependentUpon>UCTEST.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FirstDev.resx">
+      <DependentUpon>FirstDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UCTEST.resx">
+      <DependentUpon>UCTEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Taxi.Controls\Taxi.Controls.csproj">
+      <Project>{aac3ce12-f739-4f19-8fd9-5399cd29ce2e}</Project>
+      <Name>Taxi.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Data\Taxi.Data.csproj">
+      <Project>{c6d7a3ee-b50c-4ea6-9053-2ed7f6c9975d}</Project>
+      <Name>Taxi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{e7eba72b-31f7-4280-90a5-da0984cce7d9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4b43c975-2502-4f1a-b877-fd57c13169e8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Map-Marker-Flag--Right-Azure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1432969081_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1432969167_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440418368_view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440487949_icon-81-document-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440488034_icon-81-document-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440488140_file_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440488177_icon-32-clipboard-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440488210_free-09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440490216_open-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440490815_Stock Index Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440490819_Stock Index Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find16x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google_Maps_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_blue_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_blue_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_blue_gray_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_gray_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_marker_carpoint_red_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_dot_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legend-icon-dot-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loan_calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkerA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkerB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marker-B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\markerMG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phones.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-frame_sticker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RentalCar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RentalCar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RentalCar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_launcher.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_map_random_maker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_marker_end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_marker_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_tracking_start_marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_sms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_ChieuVe3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STaxi_MarkerA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STaxi_MarkerB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STaxi_MarkerC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STaxi_MarkerD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_Return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_Vehicle_Return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparentsquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_telephone_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xe.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xe1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe140.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe143.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe172.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe173.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe272.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe273.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe340.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe341.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe343.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe370.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe371.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe372.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe373.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe440.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe441.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe442.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe443.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe470.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe471.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe472.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe473.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe540.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe542.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe570.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe571.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe573.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe643.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe670.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe672.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe673.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe740.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe741.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe742.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe743.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe770.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe771.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe772.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe773.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe840.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe841.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe842.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe870.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe871.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe872.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe6401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe6701.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe61601.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xecb_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xecb_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xecbdungdolau_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xecbdungdolau_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeCK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeCK_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeTM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeTM_DH.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

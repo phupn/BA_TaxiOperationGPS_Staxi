@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A83E28CF-1837-4E84-8C01-798DD50CF68E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StaxiMan</RootNamespace>
+    <AssemblyName>StaxiMan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Staxi_96_ic_launcher.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BACryptor">
+      <HintPath>..\Taxi.Utils\Dll\BACryptor.dll</HintPath>
+    </Reference>
+    <Reference Include="BALicenseManager">
+      <HintPath>..\Taxi.Utils\Dll\BALicenseManager.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Taxi.Common">
+      <HintPath>..\Taxi.Controls\DLL\Taxi.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationClient">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildLicense_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildLicense_Form.Designer.cs">
+      <DependentUpon>BuildLicense_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyConnection_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyConnection_Form.Designer.cs">
+      <DependentUpon>CompanyConnection_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyDatabaseManagement_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyDatabaseManagement_Form.Designer.cs">
+      <DependentUpon>CompanyDatabaseManagement_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyLicense_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyLicense_Form.Designer.cs">
+      <DependentUpon>CompanyLicense_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Form.Designer.cs">
+      <DependentUpon>Company_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseAPI_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseAPI_Form.Designer.cs">
+      <DependentUpon>LicenseAPI_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestHistory_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestHistory_Form.Designer.cs">
+      <DependentUpon>RequestHistory_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaxiManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaxiManagement.Designer.cs">
+      <DependentUpon>StaxiManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaxiMan_FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaxiMan_FormBase.Designer.cs">
+      <DependentUpon>StaxiMan_FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin_Form.Designer.cs">
+      <DependentUpon>UserLogin_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BuildLicense_Form.resx">
+      <DependentUpon>BuildLicense_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyConnection_Form.resx">
+      <DependentUpon>CompanyConnection_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyDatabaseManagement_Form.resx">
+      <DependentUpon>CompanyDatabaseManagement_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyLicense_Form.resx">
+      <DependentUpon>CompanyLicense_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Form.resx">
+      <DependentUpon>Company_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseAPI_Form.resx">
+      <DependentUpon>LicenseAPI_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RequestHistory_Form.resx">
+      <DependentUpon>RequestHistory_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaxiManagement.resx">
+      <DependentUpon>StaxiManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaxiMan_FormBase.resx">
+      <DependentUpon>StaxiMan_FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin_Form.resx">
+      <DependentUpon>UserLogin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{f42f0e0b-3f0d-4230-afdf-fd9f8089f593}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaxiMan_DAL\StaxiMan_DAL.csproj">
+      <Project>{c6cea13a-3aa8-420d-a54e-7d83b5aed6a8}</Project>
+      <Name>StaxiMan_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Controls\Taxi.Controls.csproj">
+      <Project>{aac3ce12-f739-4f19-8fd9-5399cd29ce2e}</Project>
+      <Name>Taxi.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.MessageBox\Taxi.MessageBox.csproj">
+      <Project>{6d777ac5-0a39-4d93-807f-49d602071243}</Project>
+      <Name>Taxi.MessageBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{e7eba72b-31f7-4280-90a5-da0984cce7d9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="DLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staxi_96_ic_launcher.ico" />
+    <None Include="Resources\AccountPersone.png" />
+    <None Include="Resources\licence.png" />
+    <None Include="Resources\Mail.png" />
+    <None Include="Resources\AccountPersone_48.png" />
+    <None Include="Resources\Location.png" />
+    <None Include="Resources\1487933273_home_basic_blue.png" />
+    <None Include="Resources\1487933329_button-check_basic_blue.png" />
+    <None Include="Resources\1489227204_system_monitor.png" />
+    <Content Include="Settings\Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

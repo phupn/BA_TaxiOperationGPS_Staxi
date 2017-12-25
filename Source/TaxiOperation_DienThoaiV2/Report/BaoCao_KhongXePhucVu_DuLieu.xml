@@ -1,0 +1,14 @@
+﻿<dataroot>
+  <KhongXePhucVu>
+    <Line>line</Line>
+    <PhoneNumber>So dien thoai      </PhoneNumber>
+    <DiaChiDi>Dia chi don khach</DiaChiDi>
+    <ThoiDiemGoi> ngay gio goi     </ThoiDiemGoi>
+    <CuocGoiKhongThanhCong>   Ky kieu cuoi goi khong thanh cong   </CuocGoiKhongThanhCong>
+      <MaNhanVienDienThoai>ma nv truc dien thoai </MaNhanVienDienThoai>
+    <MaNhanVienTongDai>ma nv viet truc tong dai      </MaNhanVienTongDai>
+    <GhiChuChoDienThoai>thong tin ghichu cua dirnthoai  </GhiChuChoDienThoai>
+    <GhiChuChoTongDai>chi chu cua tong dai      </GhiChuChoTongDai>
+    <TrangThaiLenh>1: Khongxe phuc vu Trang thai lenh</TrangThaiLenh>
+  </KhongXePhucVu>
+</dataroot>

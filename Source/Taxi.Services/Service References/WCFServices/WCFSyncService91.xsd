@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="T_XeOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BienSoXe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiemGiaoCa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoiXe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmptyKm" type="xs:double" />
+      <xs:element minOccurs="0" name="FreeWatingTime" type="xs:int" />
+      <xs:element minOccurs="0" name="Gara" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasPassenger" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HuongDiChuyen" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="ID_Online" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStop" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KDSOS" type="xs:double" />
+      <xs:element minOccurs="0" name="KhoangCach" type="xs:double" />
+      <xs:element minOccurs="0" name="KinhDo" type="xs:float" />
+      <xs:element minOccurs="0" name="KmCoKhach" type="xs:double" />
+      <xs:element minOccurs="0" name="KmRong" type="xs:double" />
+      <xs:element minOccurs="0" name="KmWithPassenger" type="xs:double" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="LoaiXe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoaiXeGPS" type="xs:int" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Money" type="xs:int" />
+      <xs:element minOccurs="0" name="SoCho" type="xs:int" />
+      <xs:element minOccurs="0" name="SoHieuXe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoKMBatDauDiChuyen" type="xs:double" />
+      <xs:element minOccurs="0" name="SoKMDiChuyenTuDo" type="xs:double" />
+      <xs:element minOccurs="0" name="SoKm" type="xs:double" />
+      <xs:element minOccurs="0" name="SoPhutXeKhongKhach" type="xs:double" />
+      <xs:element minOccurs="0" name="TGCapNhat" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TGDiChuyenGanNhat" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TGDungXeNoMay" type="xs:int" />
+      <xs:element minOccurs="0" name="TGGPS" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TGKetThucCK" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TGSOS" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThoiDiemChenDuLieu" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThoiDiemCoKhach" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThoiDiemKetThucCK" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThoiDiemXeGui" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TongCuoc" type="xs:int" />
+      <xs:element minOccurs="0" name="TongDoanhThu" type="xs:int" />
+      <xs:element minOccurs="0" name="TrangThai" type="xs:int" />
+      <xs:element minOccurs="0" name="TrangThaiKhac" type="xs:int" />
+      <xs:element minOccurs="0" name="TrangThaiKhacText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VCo" type="xs:int" />
+      <xs:element minOccurs="0" name="VDSOS" type="xs:double" />
+      <xs:element minOccurs="0" name="VGPS" type="xs:int" />
+      <xs:element minOccurs="0" name="ViDo" type="xs:float" />
+      <xs:element minOccurs="0" name="VungID" type="xs:int" />
+      <xs:element minOccurs="0" name="WaitingTime" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T_XeOnline" nillable="true" type="tns:T_XeOnline" />
+  <xs:complexType name="ArrayOfT_XeOnline">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="T_XeOnline" nillable="true" type="tns:T_XeOnline" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfT_XeOnline" nillable="true" type="tns:ArrayOfT_XeOnline" />
+  <xs:complexType name="T_XeOnline_TT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BienSoXe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KinhDoDonKhach" type="xs:float" />
+      <xs:element minOccurs="0" name="KinhDoTraKhach" type="xs:float" />
+      <xs:element minOccurs="0" name="MaCungXN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoHieuXe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TDDonKhach" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TDTraKhach" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TGCapNhat" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrangThai" type="xs:int" />
+      <xs:element minOccurs="0" name="ViDoDonKhach" type="xs:float" />
+      <xs:element minOccurs="0" name="ViDoTraKhach" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T_XeOnline_TT" nillable="true" type="tns:T_XeOnline_TT" />
+  <xs:complexType name="T_Messages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contents" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToIPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isRead" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T_Messages" nillable="true" type="tns:T_Messages" />
+  <xs:complexType name="T_ThoatCuoc999">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GioiHanSoCuocDuocBat" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="SoPhutDuocThoatCuoc" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ThoiDiemBatDau999" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThoiDiemKetThuc999" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Vung" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T_ThoatCuoc999" nillable="true" type="tns:T_ThoatCuoc999" />
+</xs:schema>

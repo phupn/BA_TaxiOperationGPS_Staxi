@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GridEXLayoutFile LayoutType="Janus.Windows.GridEX.GridEX" LayoutVersion="1.1">
+    <RootTable>
+        <Columns Collection="true">
+            <Column0 ID="NgayHienThi">
+                <Caption>Ngày</Caption>
+                <DataMember>NgayHienThi</DataMember>
+                <DefaultGroupPrefix />
+                <Key>NgayHienThi</Key>
+                <Position>0</Position>
+                <Width>62</Width>
+            </Column0>
+            <Column1 ID="GioHienThi">
+                <DataMember>GioHienThi</DataMember>
+                <Key>GioHienThi</Key>
+                <Position>1</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Visible>False</Visible>
+                <Width>62</Width>
+            </Column1>
+            <Column2 ID="TongTaxi">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Gọi Taxi</Caption>
+                <DataMember>TongTaxi</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongTaxi</Key>
+                <Position>2</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>70</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column2>
+            <Column3 ID="TongGoiLai">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Gọi lại</Caption>
+                <DataMember>TongGoiLai</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongGoiLai</Key>
+                <Position>3</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>64</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column3>
+            <Column4 ID="TongKhieuNai">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Chuyển KH</Caption>
+                <DataMember>TongKhieuNai</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongKhieuNai</Key>
+                <Position>4</Position>
+                <TextAlignment>Near</TextAlignment>
+                <Width>73</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column4>
+            <Column5 ID="TongDichVu">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Dịch vụ</Caption>
+                <DataMember>TongDichVu</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongDichVu</Key>
+                <Position>5</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>65</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column5>
+            <Column6 ID="TongHoiDam">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Hỏi đàm</Caption>
+                <DataMember>TongHoiDam</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongHoiDam</Key>
+                <Position>6</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>63</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column6>
+            <Column7 ID="TongGoiKhac">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Gọi khác</Caption>
+                <DataMember>TongGoiKhac</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongGoiKhac</Key>
+                <Position>7</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>59</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column7>
+            <Column8 ID="TongCuocGoi">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Tổng</Caption>
+                <DataMember>TongCuocGoi</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongCuocGoi</Key>
+                <Position>8</Position>
+                <TextAlignment>Center</TextAlignment>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column8>
+            <Column9 ID="GoiNho">
+                <AggregateFunction>Sum</AggregateFunction>
+                <DataMember>GoiNho</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>GoiNho</Key>
+                <Position>9</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>84</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column9>
+            <Column10 ID="TongDonDuoc">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Đón được</Caption>
+                <DataMember>TongDonDuoc</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongDonDuoc</Key>
+                <Position>10</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>61</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column10>
+            <Column11 ID="TongTruotHoanKhongXe">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Tổng không đón được</Caption>
+                <DataMember>TongTruotHoanKhongXe</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongTruotHoanKhongXe</Key>
+                <Position>11</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>62</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column11>
+            <Column12 ID="TongTruot">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Trượt</Caption>
+                <DataMember>TongTruot</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>TongTruot</Key>
+                <Position>12</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>63</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column12>
+            <Column13 ID="TongHoan">
+                <Caption>Hoãn</Caption>
+                <DataMember>TongHoan</DataMember>
+                <EditType>NoEdit</EditType>
+                <Key>TongHoan</Key>
+                <Position>13</Position>
+                <Width>60</Width>
+            </Column13>
+            <Column14 ID="KhongXe">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Không xe</Caption>
+                <DataMember>KhongXe</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>KhongXe</Key>
+                <Position>14</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>78</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column14>
+            <Column15 ID="Cuoc999">
+                <AggregateFunction>Sum</AggregateFunction>
+                <Caption>Khác</Caption>
+                <DataMember>Cuoc999</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>Cuoc999</Key>
+                <Position>15</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>68</Width>
+                <TotalFormatString>#,###</TotalFormatString>
+            </Column15>
+            <Column16 ID="PhanTramDonDuoc">
+                <Caption>% đón được</Caption>
+                <DataMember>PhanTramDonDuoc</DataMember>
+                <FormatString>#.#</FormatString>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>PhanTramDonDuoc</Key>
+                <Position>16</Position>
+                <TextAlignment>Center</TextAlignment>
+                <Width>75</Width>
+            </Column16>
+            <Column17 ID="NgayHienThi">
+                <Caption>Ngày</Caption>
+                <DataMember>NgayHienThi</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>NgayHienThi</Key>
+                <Position>17</Position>
+                <Width>62</Width>
+            </Column17>
+            <Column18 ID="Cuoc888">
+                <Caption>Xe KXĐ</Caption>
+                <DataMember>Cuoc888</DataMember>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Key>Cuoc888</Key>
+                <Position>18</Position>
+                <TextAlignment>Center</TextAlignment>
+            </Column18>
+        </Columns>
+        <CellLayoutMode>UseColumnSets</CellLayoutMode>
+        <ColumnSets Collection="true">
+            <ColumnSet0 ID="ColumnSet1">
+                <Key>ColumnSet1</Key>
+                <Caption>Thời gian</Caption>
+                <ColumnCount>1</ColumnCount>
+                <Position>0</Position>
+                <ColumnWidth0>62</ColumnWidth0>
+                <EntriesCount>3</EntriesCount>
+                <ColIndex0>0</ColIndex0>
+                <Row0>0</Row0>
+                <Col0>0</Col0>
+                <RowSpan0>1</RowSpan0>
+                <ColSpan0>1</ColSpan0>
+                <ColIndex1>1</ColIndex1>
+                <Row1>0</Row1>
+                <Col1>0</Col1>
+                <RowSpan1>1</RowSpan1>
+                <ColSpan1>1</ColSpan1>
+                <ColIndex2>17</ColIndex2>
+                <Row2>0</Row2>
+                <Col2>0</Col2>
+                <RowSpan2>1</RowSpan2>
+                <ColSpan2>1</ColSpan2>
+            </ColumnSet0>
+            <ColumnSet1 ID="">
+                <Caption>Cuộc gọi tiếp nhận</Caption>
+                <ColumnCount>7</ColumnCount>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Position>1</Position>
+                <ColumnWidth0>70</ColumnWidth0>
+                <ColumnWidth1>64</ColumnWidth1>
+                <ColumnWidth2>73</ColumnWidth2>
+                <ColumnWidth3>65</ColumnWidth3>
+                <ColumnWidth4>63</ColumnWidth4>
+                <ColumnWidth5>59</ColumnWidth5>
+                <ColumnWidth6>100</ColumnWidth6>
+                <EntriesCount>7</EntriesCount>
+                <ColIndex0>2</ColIndex0>
+                <Row0>0</Row0>
+                <Col0>0</Col0>
+                <RowSpan0>1</RowSpan0>
+                <ColSpan0>1</ColSpan0>
+                <ColIndex1>3</ColIndex1>
+                <Row1>0</Row1>
+                <Col1>1</Col1>
+                <RowSpan1>1</RowSpan1>
+                <ColSpan1>1</ColSpan1>
+                <ColIndex2>4</ColIndex2>
+                <Row2>0</Row2>
+                <Col2>2</Col2>
+                <RowSpan2>1</RowSpan2>
+                <ColSpan2>1</ColSpan2>
+                <ColIndex3>5</ColIndex3>
+                <Row3>0</Row3>
+                <Col3>3</Col3>
+                <RowSpan3>1</RowSpan3>
+                <ColSpan3>1</ColSpan3>
+                <ColIndex4>6</ColIndex4>
+                <Row4>0</Row4>
+                <Col4>4</Col4>
+                <RowSpan4>1</RowSpan4>
+                <ColSpan4>1</ColSpan4>
+                <ColIndex5>7</ColIndex5>
+                <Row5>0</Row5>
+                <Col5>5</Col5>
+                <RowSpan5>1</RowSpan5>
+                <ColSpan5>1</ColSpan5>
+                <ColIndex6>8</ColIndex6>
+                <Row6>0</Row6>
+                <Col6>6</Col6>
+                <RowSpan6>1</RowSpan6>
+                <ColSpan6>1</ColSpan6>
+            </ColumnSet1>
+            <ColumnSet2 ID="">
+                <Caption>Cuộc gọi nhỡ</Caption>
+                <ColumnCount>1</ColumnCount>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Position>2</Position>
+                <ColumnWidth0>84</ColumnWidth0>
+                <EntriesCount>1</EntriesCount>
+                <ColIndex0>9</ColIndex0>
+                <Row0>0</Row0>
+                <Col0>0</Col0>
+                <RowSpan0>1</RowSpan0>
+                <ColSpan0>1</ColSpan0>
+            </ColumnSet2>
+            <ColumnSet3 ID="">
+                <Caption>Kết quả điều hành</Caption>
+                <ColumnCount>7</ColumnCount>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Position>3</Position>
+                <ColumnWidth0>61</ColumnWidth0>
+                <ColumnWidth1>62</ColumnWidth1>
+                <ColumnWidth2>63</ColumnWidth2>
+                <ColumnWidth3>60</ColumnWidth3>
+                <ColumnWidth4>78</ColumnWidth4>
+                <ColumnWidth5>68</ColumnWidth5>
+                <ColumnWidth6>75</ColumnWidth6>
+                <EntriesCount>7</EntriesCount>
+                <ColIndex0>10</ColIndex0>
+                <Row0>0</Row0>
+                <Col0>0</Col0>
+                <RowSpan0>1</RowSpan0>
+                <ColSpan0>1</ColSpan0>
+                <ColIndex1>11</ColIndex1>
+                <Row1>0</Row1>
+                <Col1>1</Col1>
+                <RowSpan1>1</RowSpan1>
+                <ColSpan1>1</ColSpan1>
+                <ColIndex2>12</ColIndex2>
+                <Row2>0</Row2>
+                <Col2>2</Col2>
+                <RowSpan2>1</RowSpan2>
+                <ColSpan2>1</ColSpan2>
+                <ColIndex3>13</ColIndex3>
+                <Row3>0</Row3>
+                <Col3>3</Col3>
+                <RowSpan3>1</RowSpan3>
+                <ColSpan3>1</ColSpan3>
+                <ColIndex4>14</ColIndex4>
+                <Row4>0</Row4>
+                <Col4>4</Col4>
+                <RowSpan4>1</RowSpan4>
+                <ColSpan4>1</ColSpan4>
+                <ColIndex5>15</ColIndex5>
+                <Row5>0</Row5>
+                <Col5>5</Col5>
+                <RowSpan5>1</RowSpan5>
+                <ColSpan5>1</ColSpan5>
+                <ColIndex6>16</ColIndex6>
+                <Row6>0</Row6>
+                <Col6>6</Col6>
+                <RowSpan6>1</RowSpan6>
+                <ColSpan6>1</ColSpan6>
+            </ColumnSet3>
+            <ColumnSet4 ID="">
+                <Caption>Hãng</Caption>
+                <ColumnCount>1</ColumnCount>
+                <HeaderAlignment>Center</HeaderAlignment>
+                <Position>4</Position>
+                <ColumnWidth0>100</ColumnWidth0>
+                <EntriesCount>1</EntriesCount>
+                <ColIndex0>18</ColIndex0>
+                <Row0>0</Row0>
+                <Col0>0</Col0>
+                <RowSpan0>1</RowSpan0>
+                <ColSpan0>1</ColSpan0>
+            </ColumnSet4>
+        </ColumnSets>
+        <ColumnSetRowCount>1</ColumnSetRowCount>
+        <GroupCondition ID="" />
+    </RootTable>
+    <RowWithErrorsFormatStyle>
+        <PredefinedStyle>RowWithErrorsFormatStyle</PredefinedStyle>
+    </RowWithErrorsFormatStyle>
+    <LinkFormatStyle>
+        <PredefinedStyle>LinkFormatStyle</PredefinedStyle>
+    </LinkFormatStyle>
+    <CardCaptionFormatStyle>
+        <PredefinedStyle>CardCaptionFormatStyle</PredefinedStyle>
+    </CardCaptionFormatStyle>
+    <GroupByBoxFormatStyle>
+        <PredefinedStyle>GroupByBoxFormatStyle</PredefinedStyle>
+    </GroupByBoxFormatStyle>
+    <GroupByBoxInfoFormatStyle>
+        <PredefinedStyle>GroupByBoxInfoFormatStyle</PredefinedStyle>
+    </GroupByBoxInfoFormatStyle>
+    <GroupRowFormatStyle>
+        <PredefinedStyle>GroupRowFormatStyle</PredefinedStyle>
+    </GroupRowFormatStyle>
+    <HeaderFormatStyle>
+        <PredefinedStyle>HeaderFormatStyle</PredefinedStyle>
+    </HeaderFormatStyle>
+    <PreviewRowFormatStyle>
+        <PredefinedStyle>PreviewRowFormatStyle</PredefinedStyle>
+    </PreviewRowFormatStyle>
+    <RowFormatStyle>
+        <PredefinedStyle>RowFormatStyle</PredefinedStyle>
+    </RowFormatStyle>
+    <SelectedFormatStyle>
+        <PredefinedStyle>SelectedFormatStyle</PredefinedStyle>
+    </SelectedFormatStyle>
+    <SelectedInactiveFormatStyle>
+        <PredefinedStyle>SelectedInactiveFormatStyle</PredefinedStyle>
+    </SelectedInactiveFormatStyle>
+    <WatermarkImage />
+    <Font>Microsoft Sans Serif, 8.25pt</Font>
+    <VisualStyle>Standard</VisualStyle>
+    <AllowCardSizing>False</AllowCardSizing>
+    <AllowColumnDrag>False</AllowColumnDrag>
+    <AllowEdit>False</AllowEdit>
+    <GroupByBoxVisible>False</GroupByBoxVisible>
+    <TotalRow>True</TotalRow>
+    <TotalRowPosition>BottomFixed</TotalRowPosition>
+</GridEXLayoutFile>

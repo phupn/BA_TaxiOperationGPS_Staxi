@@ -1,0 +1,996 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using Taxi.Business;
+using Taxi.Utils;
+
+namespace Taxi.GUI
+{
+    public partial class frmBodamInputDataCP: Form
+    {
+        private DieuHanhTaxi mDieuHanhTaxi = new DieuHanhTaxi();
+        private bool gGoiLai = false;
+        private int g_intGoilaiHoanTruot = 0;
+        private DieuHanhTaxi gDieuHanhGoiLai = new DieuHanhTaxi();
+
+        private string mDSXeNhanDangHoatDong;
+
+        public string DSXeNhanDangHoatDong
+        {
+            get { return mDSXeNhanDangHoatDong; }
+            set { mDSXeNhanDangHoatDong = value; }
+        }
+
+        // ghi nhat trang thai cap nhat dia chi don khach
+        private bool g_boolCapNhatDCTraKhach = false;
+
+        public bool IsCapNhatDCTraKhach
+        {
+            get { return g_boolCapNhatDCTraKhach; }
+        }
+
+        public DieuHanhTaxi GetDieuHanhTaxi
+        {
+            get {
+                  
+                return mDieuHanhTaxi; }
+            //  set { mDieuHanhTaxi = value; }
+        }
+        private int gLen = 0;
+        public frmBodamInputDataCP()
+        {
+            InitializeComponent();
+
+        }
+
+        /// <summary>
+        /// Truyen vao mot doi tuong DieuHanh, tuong duoc mot cuoc goi 
+        /// </summary>
+        /// <param name="DieuHanhTaxi"></param>
+        public frmBodamInputDataCP(DieuHanhTaxi DieuHanhTaxi)
+        {
+            InitializeComponent();
+            mDieuHanhTaxi = DieuHanhTaxi;
+            editDiaChiTraKhach.Visible = false;
+            chkSanBay.Visible = false;
+            chkDuongDai.Visible = false;
+
+        }
+
+        public frmBodamInputDataCP(DieuHanhTaxi DieuHanhTaxi, bool boolCapNhatDCTraKhach)
+        {
+            InitializeComponent();
+            mDieuHanhTaxi = DieuHanhTaxi;
+            g_boolCapNhatDCTraKhach = boolCapNhatDCTraKhach;
+
+            this.SetData2Form();
+            editDiaChiTraKhach.Visible = true ;
+            chkSanBay.Visible = true ;
+            chkDuongDai.Visible = true ;
+            editDiaChiTraKhach.Text = mDieuHanhTaxi.DiaChiTraKhach ; // thiet lap cho nhap
+            lblGhiChu.Text = "Đ/C trả khách";
+            label23.Text = string.Empty;
+            label24.Text = string.Empty;
+            label25.Text = string.Empty;
+            label27.Text = string.Empty;
+            maskXeDon.Enabled = false;
+            maskXeNhan.Enabled = false;
+            editLenhTongDai.Enabled = false;
+            editGhiChu.Visible  = false ; 
+        }
+
+        private void frmBoDamInputData_Load(object sender, EventArgs e)
+        {
+            ////txtDiaChiDonKhach.Focus();
+            //if(mDieuHanhTaxi.XeNhan.Length<=0)
+            //    maskXeDon.Enabled = false;
+            //else 
+            this.SetData2Form();
+            if (mDieuHanhTaxi.LenhDienThoai.Contains("gọi lại"))
+            {
+                maskXeDon.Enabled = false;
+                maskXeNhan.Enabled = false;
+                editLenhTongDai.Enabled = false;
+                editGhiChu.Focus();
+                editGhiChu.Text = "1";
+            }
+
+            if(!g_boolCapNhatDCTraKhach)
+                maskXeDon.Enabled =true;
+            if (mDieuHanhTaxi.GoiLai)
+            {
+                maskXeDon.Enabled = false;
+                maskXeNhan.Enabled = false;
+            }
+
+
+            if (mDieuHanhTaxi.XeNhan.Length > 0)
+            {
+                maskXeNhan.TextBox.SelectionLength = 0;
+                maskXeNhan.TextBox.SelectionStart = mDieuHanhTaxi.XeNhan.Length;
+                SendKeys.Send("{RIGHT}");
+            }
+            
+        }
+        /// <summary>
+        /// Thiet lap gia tri của dư lieu len form
+        /// </summary>
+        private void SetData2Form()
+        {
+            if (mDieuHanhTaxi != null)
+            {
+                // line + phone + time
+
+                lblLinePhoneTime.Text = "[" + mDieuHanhTaxi.Line + "]  " + mDieuHanhTaxi.PhoneNumber + "  " + mDieuHanhTaxi.ThoiDiemGoiGio;
+               
+                lblDiaChiDonKhach.Text = mDieuHanhTaxi.DiaChiDonKhach;
+                
+                int iSoLuong = 0;
+
+                if (mDieuHanhTaxi.SoLuong == "") iSoLuong = 0;
+                else iSoLuong = int.Parse(mDieuHanhTaxi.SoLuong);
+                string strXeCho;
+                if ((iSoLuong == 2) && (mDieuHanhTaxi.LoaiXe.Contains("0")))
+                {
+                    strXeCho = "1 xe 4 chỗ, 1 xe 7 chỗ";
+                }
+                else
+                {
+                    strXeCho = mDieuHanhTaxi.SoLuong;
+                    if (mDieuHanhTaxi.LoaiXe.Contains("4")) strXeCho+= " xe, 4 chỗ" ;
+                    else if (mDieuHanhTaxi.LoaiXe.Contains("7")) strXeCho += " xe, 7 chỗ";
+                    else if (mDieuHanhTaxi.LoaiXe.Contains("0")) strXeCho += " xe, 4 hoặc 7 chỗ";
+                }
+                
+                lblSoLuong_LoaiXe.Text = strXeCho;
+
+              maskXeDon.TextBox.Text = mDieuHanhTaxi.XeDon;           
+              maskXeNhan.TextBox.Text  =mDieuHanhTaxi.XeNhan;                       
+                
+                editLenhTongDai.Text = mDieuHanhTaxi.LenhTongDai;
+                editGhiChu.Text = mDieuHanhTaxi.GhiChuTongDai;
+                if(mDieuHanhTaxi.SanBay_DuongDai=="D")
+                {
+                     chkDuongDai.Checked = true;
+                     chkSanBay.Checked  = false;
+                }
+                else if (mDieuHanhTaxi.SanBay_DuongDai == "S")
+                {
+                    chkDuongDai.Checked = false ;
+                    chkSanBay.Checked  = true ;
+                }
+                else 
+                {
+                    chkDuongDai.Checked = false;
+                    chkSanBay.Checked = false;
+                }
+            }
+        }
+        /// <summary>
+        /// lay du lieu tra form gan vao cho doi tuong mDieuHanhTaxi
+        /// </summary>
+        
+        private void GetData2Form()
+        {
+            
+        }
+
+        #region Validate du lieu
+        /// <summary>
+        /// Kiem tra trong cac xe da trung nhau khong
+        /// </summary>
+        /// <param name="DanhSachTaxi"></param>
+        /// <returns></returns>
+        private bool CheckTrungLapXeChay(string DanhSachTaxi)
+        {
+           
+                string[] arrTaxi = DanhSachTaxi.Split(".".ToCharArray());
+                for (int i = 0; i < arrTaxi.Length; i++)
+                {
+                    if (arrTaxi[i].Length != 3) { return true; }
+                }
+                for (int i = 0; i < arrTaxi.Length - 1; i++)
+                {
+                    for (int j = i + 1; j < arrTaxi.Length; j++)
+                    {
+                 
+                        if(arrTaxi[j] == arrTaxi[i]) return true ;
+                    }
+                }
+                return false;
+           
+        }
+
+        /// <summary>
+        /// Check xe cua Taxi Chay co trong Nhung ChieuTaxichay hay khong
+        /// </summary>
+        /// <param name="NhungXeCoTheChay"></param>
+        /// <param name="TaxiChay"></param>
+        /// <returns></returns>
+        private bool CheckDulieu_XeChay(string NhungXeCoTheChay, string TaxiChay)
+        {
+            bool boolRet = true;    
+            if (TaxiChay.Contains("."))
+            {
+
+                string[] arrTaxiChay = TaxiChay.Split(".".ToCharArray());
+
+                for (int i = 0; i < arrTaxiChay.Length; i++)
+                {
+                    boolRet = boolRet & NhungXeCoTheChay.Contains((string)arrTaxiChay[i]);
+                }
+
+                return boolRet;
+            }
+            else
+            {
+                return (boolRet & NhungXeCoTheChay.Contains(TaxiChay));
+            }
+            return false;
+        }
+
+        #endregion Validate du lieu
+
+        private void editXeNhanDon_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void editXeNhanDon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == 46)) && (!Char.IsWhiteSpace(e.KeyChar)))
+            {
+
+                e.Handled = false;
+
+            }
+            else if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = false;
+            }
+            else
+                e.Handled = true;
+        }
+
+        private void editXeNhanDon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Alt) && (e.KeyCode == Keys.N))
+            {
+                maskXeNhan.Focus();
+            }
+        }
+
+
+        /// <summary>
+        /// Nhap thong tin va thiet lap trang thai cuoc goi
+        /// trang thai lenh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            string[] arrTaxi;
+            DateTime timeServer = new DateTime();
+            timeServer = DieuHanhTaxi.GetTimeServer();
+            if (timeServer == DateTime.MinValue)
+            {
+                MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                msgDialog.Show("Không nhận được thờ gian của tổng đài.");
+                return;
+            }
+
+            string strXeNhanTruoc = mDieuHanhTaxi.XeNhan; 
+
+            #region // CAP NHAT CHO TRUONG HOP NHAP DIA CHI TRA KHACH
+
+            if (g_boolCapNhatDCTraKhach)
+            {
+                mDieuHanhTaxi.DiaChiTraKhach = editDiaChiTraKhach.Text; // Lay thong tin tu day
+                if (chkSanBay.Checked) mDieuHanhTaxi.SanBay_DuongDai = "S";
+                if (chkDuongDai.Checked) mDieuHanhTaxi.SanBay_DuongDai = "D";
+                if (!(chkSanBay.Checked) && !(chkDuongDai.Checked)) mDieuHanhTaxi.SanBay_DuongDai = "N";
+
+                 arrTaxi = mDieuHanhTaxi.XeDon.Split(".".ToCharArray());
+                for (int i = 0; i < arrTaxi.Length; i++)
+                {
+                   
+                     
+                    KiemSoatXeLienLac objKSXe = new KiemSoatXeLienLac();
+                    if (KiemSoatXeLienLac.CheckXeDangHoatDong(arrTaxi[i].ToString ()))
+                    {
+                       
+                        objKSXe.SoHieuXe = arrTaxi[i].ToString();
+                        objKSXe.ThoiDiemBao = timeServer;
+                        objKSXe.MaLaiXe = KiemSoatXeLienLac.GetKSXe_BySoHieuXe(arrTaxi[i].ToString()).MaLaiXe;
+                        objKSXe.ViTriDiemBao = mDieuHanhTaxi.DiaChiTraKhach;
+                        objKSXe.ViTriDiemDen = mDieuHanhTaxi.DiaChiTraKhach ;
+                        objKSXe.TrangThaiLaiXeBao = Taxi.Utils.KieuLaiXeBao.BaoDiemCuaTrungTam_DCTraKhach   ;
+                        
+                        if(mDieuHanhTaxi.SanBay_DuongDai == "S")
+                            objKSXe.LoaiChoKhach = Taxi.Utils.LoaiChoKhach.ChoKhachSanBay ;
+                        else if (mDieuHanhTaxi.SanBay_DuongDai == "D")
+                            objKSXe.LoaiChoKhach = Taxi.Utils.LoaiChoKhach.ChoKhachDuongDai;
+                        else if (mDieuHanhTaxi.SanBay_DuongDai == "N")
+                            objKSXe.LoaiChoKhach = Taxi.Utils.LoaiChoKhach.ChoKhachNoiTinh ;
+
+                        objKSXe.GhiChu = editGhiChu.Text;
+                        objKSXe.IsHoatDong = true;
+                        if (!objKSXe.InsertUpdate())
+                        {
+                            //  LogError.WriteLog("Loi luu xe don vao KiemSoat_LienLac", new Exception("Luu DB"));
+                        }
+                    }
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                return;
+            }
+            //////////////////////////////////////////////////
+            #endregion
+
+            #region KHONG XE
+            // Neu la lenh tong dai = Khong xe (khong can nhap xe nhan)
+            if (editLenhTongDai.Text.Contains("không xe"))
+            {
+                // da nhap xe nhan, thi khong the nhap khong xe
+                if (mDieuHanhTaxi.XeNhan.Length > 0)
+                {
+                    MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                    msgDialog.Show("Bạn đã nhập xe nhận, không thể nhập không xe.");                   
+                    return;
+                }
+                string strXeNhan = StringTools.TrimSpace(maskXeNhan.TextBox.Text);
+                while ((strXeNhan.Length > 0) && (strXeNhan[0].ToString() == "."))
+                {
+                    strXeNhan = strXeNhan.Substring(1, strXeNhan.Length - 1);
+                }
+                while ((strXeNhan.Length > 0) && (strXeNhan[strXeNhan.Length - 1].ToString() == "."))
+                {
+                    strXeNhan = strXeNhan.Substring(0, strXeNhan.Length - 1);
+                }
+                if (strXeNhan.Length > 0)
+                {
+                    if (CheckTrungLapXeChay(strXeNhan))
+                    {
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Bạn phải nhập xe taxi chạy chính xác");
+                        maskXeNhan.Focus();
+                        return;
+                    }
+                }
+
+                string strXeDon = StringTools.TrimSpace(maskXeDon.TextBox.Text);
+                while ((strXeDon.Length > 0) && (strXeDon[0].ToString() == "."))
+                {
+                    strXeDon = strXeDon.Substring(1, strXeDon.Length - 1);
+                }
+                while ((strXeDon.Length > 0) && (strXeDon[strXeDon.Length - 1].ToString() == "."))
+                {
+                    strXeDon = strXeDon.Substring(0, strXeDon.Length - 1);
+                }
+                if (strXeDon.Length > 0)
+                {
+                    if (CheckTrungLapXeChay(strXeDon))
+                    {
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Bạn phải nhập xe taxi chạy chính xác");
+                        maskXeDon.Focus();
+                        return;
+                    }
+                }
+                 if ((strXeNhan.Length > 0) || (strXeDon.Length > 0))
+                    {
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Bạn không được nhập xe nhận, xe đón - cho trường hợp không xe");
+                        maskXeNhan.Focus(); 
+                        return;
+                    }
+               
+                mDieuHanhTaxi.LenhTongDai = editLenhTongDai.Text;
+                mDieuHanhTaxi.TrangThaiLenh = Taxi.Utils.TrangThaiLenhTaxi.BoDam;
+
+            }
+            #endregion KHONG XE
+
+            #region MOIKHACH
+            else if (editLenhTongDai.Text.Contains("mời khách"))
+            {
+                string strXeNhan = StringTools.TrimSpace(maskXeNhan.TextBox.Text);
+                while ((strXeNhan.Length > 0) && (strXeNhan[0].ToString() == "."))
+                {
+                    strXeNhan = strXeNhan.Substring(1, strXeNhan.Length - 1);
+                }
+                while ((strXeNhan.Length > 0) && (strXeNhan[strXeNhan.Length - 1].ToString() == "."))
+                {
+                    strXeNhan = strXeNhan.Substring(0, strXeNhan.Length - 1);
+                }
+                if (strXeNhan.Length<=0)
+                {
+                    
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Phải có xe nhận mới được mời khách");
+                        maskXeNhan.Focus();
+                        return;                  
+                }
+                string strXeDon = StringTools.TrimSpace(maskXeDon.TextBox.Text);
+                while ((strXeDon.Length > 0) && (strXeDon[0].ToString() == "."))
+                {
+                    strXeDon = strXeDon.Substring(1, strXeDon.Length - 1);
+                }
+                while ((strXeDon.Length > 0) && (strXeDon[strXeDon.Length - 1].ToString() == "."))
+                {
+                    strXeDon = strXeDon.Substring(0, strXeDon.Length - 1);
+                }
+                if (strXeDon.Length>0)
+                {
+                    MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                    msgDialog.Show("Bạn không cần nhập thông tin lệnh tổng đài khi có xe đón.");
+                    editLenhTongDai.Text = "";
+                    return;  
+                }
+                mDieuHanhTaxi.LenhTongDai =StringTools.TrimSpace ( editLenhTongDai.Text);
+            }
+            #endregion MOI KHACH
+
+            else  
+            {                
+                //Neu  co xe (co xe nhan)
+                string strXeNhan = StringTools.TrimSpace(maskXeNhan.TextBox.Text);
+                while ((strXeNhan.Length > 0) && (strXeNhan[0].ToString() == "."))
+                {
+                    strXeNhan = strXeNhan.Substring(1, strXeNhan.Length - 1);
+                }
+                while ((strXeNhan.Length > 0) && (strXeNhan[strXeNhan.Length - 1].ToString() == ".")  )
+                {
+                    strXeNhan = strXeNhan.Substring(0, strXeNhan.Length - 1);
+                }
+                if (strXeNhan.Length > 0)
+                {
+                    if (CheckTrungLapXeChay(strXeNhan))
+                    {
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Bạn phải nhập xe taxi chính xác");
+                        maskXeNhan.Focus(); 
+                        return;
+                    }
+                }
+                string strXeDon = StringTools.TrimSpace(maskXeDon.TextBox.Text);
+                while ((strXeDon.Length > 0) && (strXeDon[0].ToString() == "."))
+                {
+                    strXeDon = strXeDon.Substring(1, strXeDon.Length - 1);
+                }
+                while ((strXeDon.Length > 0) && (strXeDon[strXeDon.Length - 1].ToString() == "."))
+                {
+                    strXeDon = strXeDon.Substring(0, strXeDon.Length - 1);
+                }
+                // nhap xe don , chua co xe nhan
+                if ((strXeDon.Length > 0) && (strXeNhan.Length<=0 ))
+                {
+                    
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Bạn phải nhập xe nhận.");
+                        maskXeDon.Focus();
+                        return;
+
+                }
+
+                if (strXeDon.Length > 0)
+                {
+                    if (CheckTrungLapXeChay(strXeDon))
+                    {
+                        MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                        msgDialog.Show("Bạn phải nhập xe taxi chạy chính xác");
+                        maskXeDon.Focus(); 
+                        return;
+                    }
+                }
+                if((strXeNhan.Length>0)&&(strXeDon.Length>0))
+                {
+                    // cho phep nhap 999 o xe don va thoat luon
+                    if (strXeDon != "999")
+                    {
+                        if (!(CheckDulieu_XeChay(strXeNhan, strXeDon)))
+                        {
+                            MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                            msgDialog.Show("Xe đón không có trong xe nhận.Bạn phải nhập xe taxi chính xác");
+                            maskXeDon.Focus();
+                            return;
+                        }
+                    }
+               }
+               if (strXeDon.Length > 0)
+               {
+                   if(editGhiChu.Text.Length >0)
+                   {
+                       MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                       msgDialog.Show("Bạn không được nhập thông tin vào ghi chú khi đã nhập xe đón");
+                       editGhiChu.Text = "";
+                       return;
+                   }
+                   if (editLenhTongDai.Text.Length > 0)
+                   {
+                       MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                       msgDialog.Show("Bạn không được nhập thông tin vào lệnh tổng đài khi đã nhập xe đón");
+                       editGhiChu.Text = "";
+                       return;
+                   }
+               }
+
+                // Goi lai khi lenh dien thoai co goi lai
+                //Kiem tra xe du lieu cu phan ghi chu co bi sua khong
+
+                //-- Kiem tra xe nhan va xe don da hoat dong chua
+                    arrTaxi = strXeNhan.Split(".".ToCharArray());
+                   string strXeNhanChuaHoatDong = "";
+                   for (int i = 0; i < arrTaxi.Length; i++)
+                   {
+                       if (!KiemSoatXeLienLac.CheckXeDangHoatDong(arrTaxi[i].ToString()))
+                       {
+                           strXeNhanChuaHoatDong += arrTaxi[i].ToString() + ".";
+                       }
+                   }
+                   if (strXeNhanChuaHoatDong.Length > 3)// it nhat có một xe nhận
+                   {
+                       MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                       msgDialog.Show("Xe " + strXeNhanChuaHoatDong + " chưa ra hoạt động bạn cần kiểm tra lại.");
+                       return;
+                   }
+                   // Kiem tra xe nhan da co trong ds xe chua
+                string strDSXeNhanDaNhanDiem = KiemTraXeNhanDaNhanCuoc(mDieuHanhTaxi.ID_DieuHanh, strXeNhan);
+                   if (strDSXeNhanDaNhanDiem.Length>=3)
+                   {
+                       MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                       if (msgDialog.Show(this, "Xe " + strDSXeNhanDaNhanDiem + " đang nhận điểm cần kiểm tra lại. Bạn có cho nhận điểm không?", "Thông báo", Taxi.MessageBox.MessageBoxButtons.OKCancel, Taxi.MessageBox.MessageBoxIcon.Question).ToString() == DialogResult.Cancel.ToString())
+                       {
+                           return; 
+                       }
+                       ///
+                   }
+                
+               //-- END--  Kiem tra xe nhan va xe don da hoat dong chua  ---
+                mDieuHanhTaxi.XeNhan = strXeNhan;
+                mDieuHanhTaxi.XeDon = strXeDon;
+                mDieuHanhTaxi.LenhTongDai = editLenhTongDai.Text;
+                mDieuHanhTaxi.GhiChuTongDai = lblGhiChuTongDai.Text; //editGhiChu.Text;
+                mDieuHanhTaxi.TrangThaiLenh = Taxi.Utils.TrangThaiLenhTaxi.BoDam;
+                
+                // KHACH CO XE DON
+                if (mDieuHanhTaxi.XeDon.Length > 0)
+                    mDieuHanhTaxi.TrangThaiLenh = Taxi.Utils.TrangThaiLenhTaxi.KetThuc;
+                // KHACH TRUOT
+                if (mDieuHanhTaxi.GhiChuTongDai.Contains("trượt"))
+                {
+                    mDieuHanhTaxi.TrangThaiCuocGoi = Taxi.Utils.TrangThaiCuocGoi.CuocGoiTruot;
+                    mDieuHanhTaxi.TrangThaiLenh = Taxi.Utils.TrangThaiLenhTaxi.KetThuc;
+                }
+
+                //NHAN THONG TIN GOI LAI-->KETHUC
+                if (mDieuHanhTaxi.GhiChuTongDai.Contains("gọi lại"))
+                {
+                    mDieuHanhTaxi.TrangThaiCuocGoi = Taxi.Utils.TrangThaiCuocGoi.CuocGoiLai;
+                    mDieuHanhTaxi.TrangThaiLenh = Taxi.Utils.TrangThaiLenhTaxi.KetThuc;
+                }
+
+                // KHACH HOAN
+                if (mDieuHanhTaxi.GhiChuTongDai.Contains("hoãn"))
+                {
+                    mDieuHanhTaxi.TrangThaiCuocGoi = Taxi.Utils.TrangThaiCuocGoi.CuocGoiHoan;
+                    mDieuHanhTaxi.TrangThaiLenh = Taxi.Utils.TrangThaiLenhTaxi.KetThuc;
+                }
+                // Thiet lap thoi gian dieu xe
+                if ((StringTools.TrimSpace(mDieuHanhTaxi.XeNhan).Length > 0)&&(mDieuHanhTaxi.ThoiGianDieuXe<=0))
+                {                   
+                    // Xu ly gio truot ngay
+                    //timeServer 
+                    TimeSpan  timeTemp = (timeServer - mDieuHanhTaxi.ThoiDiemGoi);
+                    mDieuHanhTaxi.ThoiGianDieuXe = StringTools.GetSoGiayTuKhoangThoiGian(timeTemp);
+                  
+                }
+                if ((StringTools.TrimSpace(mDieuHanhTaxi.XeNhan).Length > 0))
+                {
+                    // Ghi nhan trang thai cua xe
+                    // cap nhật từng xe                    
+                    arrTaxi = mDieuHanhTaxi.XeNhan.Split(".".ToCharArray());
+                           
+                    for (int i = 0; i < arrTaxi.Length; i++)
+                    {
+                         if(!strXeNhanTruoc.Contains (arrTaxi[i].ToString()))
+                         {
+                            KiemSoatXeLienLac objKSXe = new KiemSoatXeLienLac();
+                            if (KiemSoatXeLienLac.CheckXeDangHoatDong(arrTaxi[i].ToString()))
+                            {
+                                objKSXe.SoHieuXe = arrTaxi[i].ToString();
+                                objKSXe.ThoiDiemBao = timeServer;
+                                objKSXe.MaLaiXe = KiemSoatXeLienLac.GetKSXe_BySoHieuXe(arrTaxi[i].ToString()).MaLaiXe;
+                                objKSXe.ViTriDiemBao = mDieuHanhTaxi.DiaChiDonKhach;
+                                objKSXe.ViTriDiemDen = string.Empty;
+                                objKSXe.TrangThaiLaiXeBao = Taxi.Utils.KieuLaiXeBao.BaoDiemCuaTrungTam_NhanDiem;
+                                objKSXe.LoaiChoKhach = Taxi.Utils.LoaiChoKhach.ChoKhachNoiTinh;
+                                objKSXe.GhiChu = string.Empty;
+                                objKSXe.IsHoatDong = true;
+                                if (!objKSXe.InsertUpdate())
+                                {
+                                    //  LogError.WriteLog("Loi luu xe don vao KiemSoat_LienLac", new Exception("Luu DB"));
+                                }
+                             }
+                         }
+                    }
+                }
+                // Thiet lap thoi gian don khach
+                if ((StringTools.TrimSpace(mDieuHanhTaxi.XeDon).Length > 0) && (mDieuHanhTaxi.ThoiGianDonKhach<=0))
+                {
+                     
+                    TimeSpan timeTemp = (timeServer - mDieuHanhTaxi.ThoiDiemGoi);
+                    mDieuHanhTaxi.ThoiGianDonKhach = StringTools.GetSoGiayTuKhoangThoiGian(timeTemp);    
+                                   
+                                   
+                    // Ghi nhan trang thai cua xe
+                    // cap nhật từng xe                    
+                    arrTaxi = mDieuHanhTaxi.XeDon .Split(".".ToCharArray());
+
+                    for (int i = 0; i < arrTaxi.Length; i++)
+                    {
+                        
+                            KiemSoatXeLienLac objKSXe = new KiemSoatXeLienLac();
+                               objKSXe.SoHieuXe = arrTaxi[i].ToString();
+                                objKSXe.ThoiDiemBao = timeServer;
+                                objKSXe.MaLaiXe = KiemSoatXeLienLac.GetKSXe_BySoHieuXe(arrTaxi[i].ToString()).MaLaiXe;
+                                objKSXe.ViTriDiemBao = mDieuHanhTaxi.DiaChiDonKhach;
+                                objKSXe.ViTriDiemDen = string.Empty;
+                                objKSXe.TrangThaiLaiXeBao = Taxi.Utils.KieuLaiXeBao.BaoDiemCuaTrungTam_DonKhach  ;
+                                objKSXe.LoaiChoKhach = Taxi.Utils.LoaiChoKhach.ChoKhachNoiTinh;
+                                objKSXe.GhiChu = string.Empty;
+                                objKSXe.IsHoatDong = true;
+                               
+                                if (!objKSXe.InsertUpdate())
+                                {
+                                    //  LogError.WriteLog("Loi luu xe don vao KiemSoat_LienLac", new Exception("Luu DB"));
+                                }
+                             
+                    }   
+                }
+  
+            }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+/// <summary>
+        /// ham tra ve ds xe nhan da nhan diem truoc day
+        /// input : 123.546.897
+        /// ouptpt: 123
+        /// </summary>
+        /// <param name="strXeNhan"></param>
+        /// <returns></returns>
+        private string  KiemTraXeNhanDaNhanCuoc(long IDCuocKhach,string strXeNhan)
+        {
+            string strDSXeNhanDaNhanDiem = "";
+             string[] arrTaxi = strXeNhan.Split(".".ToCharArray());
+             for (int i = 0; i < arrTaxi.Length; i++)
+             {
+                 if (DieuHanhTaxi.KiemTraXeNhanDaDangNhanCuocKhach(IDCuocKhach, arrTaxi[i].ToString()))
+                     strDSXeNhanDaNhanDiem += arrTaxi[i].ToString() +".";
+             }
+             return strDSXeNhanDaNhanDiem;
+        }
+
+        private void editLenhTongDai_TextChanged(object sender, EventArgs e)
+        {
+            if (StringTools.TrimSpace(editLenhTongDai.Text).Contains ("1")) // moi khach
+            {
+                if (!(mDieuHanhTaxi.XeNhan .Length >0))
+                {
+                    MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                    msgDialog.Show("Bạn không thể nhập mời khách, khi chưa có xe nhận");
+                    editLenhTongDai.Text = string.Empty;
+                    return;
+                }
+                editLenhTongDai.Text = "mời khách";
+            }
+            if (StringTools.TrimSpace(editLenhTongDai.Text).Contains ("2")) // khogn xe
+            {
+
+                editLenhTongDai.Text = "không xe";
+            }
+        }
+
+        private void editGhiChu_TextChanged(object sender, EventArgs e)
+        {
+            if (g_boolCapNhatDCTraKhach) return;
+
+
+            //(1-Gọi lại, 2-Hoãn, 3-Trượt)
+            if (StringTools.TrimSpace(editGhiChu.Text).Contains ("1")) // moi khach
+            {
+                if (!mDieuHanhTaxi.LenhDienThoai.Contains("gọi lại"))
+                {
+                    MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                    msgDialog.Show("Bạn không thể nhập gọi lại, khi chưa có lệnh điện thoại gọi lại");
+                    editGhiChu.Text = string.Empty; lblGhiChuTongDai.Text = "";
+                    return;
+                }
+                g_intGoilaiHoanTruot = 1;
+                
+               //[ editGhiChu.Text = "gọi lại";]
+                lblGhiChuTongDai.Text = "gọi lại"; 
+
+            }
+            if (StringTools.TrimSpace(editGhiChu.Text).Contains("2")) // moi khach
+            {
+                //if (!mDieuHanhTaxi.LenhDienThoai.Contains("hoãn"))
+                //{
+                //    MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                //    msgDialog.Show("Bạn không thể nhập hoãn, khi chưa có lệnh điện thoại hoãn");
+                //    editGhiChu.Text = string.Empty; lblGhiChuTongDai.Text = "";
+                //    return;
+                //}
+                g_intGoilaiHoanTruot = 2;
+                //[editGhiChu.Text = "hoãn"; ]
+                lblGhiChuTongDai.Text = "hoãn";
+            }
+            if (StringTools.TrimSpace(editGhiChu.Text).Contains ("3")) // moi khach
+            {
+                if (!(mDieuHanhTaxi.XeNhan.Length >0))
+                {
+                    MessageBox.MessageBox msgDialog = new Taxi.MessageBox.MessageBox();
+                    msgDialog.Show("Bạn không thể nhập trượt, khi chưa có khi chưa có xe nhận");
+                    editGhiChu.Text = string.Empty; lblGhiChuTongDai.Text = "";
+                    return;
+                }
+                g_intGoilaiHoanTruot = 3;
+                //[editGhiChu.Text = "trượt";]
+                lblGhiChuTongDai.Text = "trượt";
+            }
+            
+        }
+
+        /// <summary>
+        /// Input :
+        ///     - SoXeDon : 2  
+        ///     - XeDon : 123.356
+        /// Output :
+        ///     - True if la dung
+        ///     - False if la sai
+        /// </summary>
+        /// <param name="SoXeDon"></param>
+        /// <param name="XeDon"></param>
+        /// <returns></returns>        
+        private bool CheckSoXeDonVoiXeDon(int SoXeDon, string XeDon)
+        {
+            int intSoXe = 0;
+            if (XeDon.Length == 3)
+                intSoXe = 1;
+            else
+            {
+                string[] arrXeDons = XeDon.Split(".".ToCharArray() );
+                intSoXe = arrXeDons.Length;
+            }
+            if (SoXeDon == intSoXe)
+                return true;
+            else return false;
+        }
+
+        #region XU LY HOTKEY
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            else if (keyData == (Keys.Alt | Keys.N))
+            {
+                maskXeNhan.Focus();
+                return true;
+            }
+            else if (keyData == (Keys.Alt | Keys.X))
+            {
+                maskXeDon.Focus();
+                return true;
+            }
+            else if (keyData == (Keys.Alt | Keys.L))
+            {
+                editLenhTongDai.Focus();
+                return true;
+            }
+            else if (keyData == (Keys.Alt | Keys.G))
+            {
+                editGhiChu.Focus();
+                return true;
+            }
+           
+            return false;
+        }
+        #endregion XU LY HOTKEY
+
+        private void maskXeNhan_TextChanged(object sender, EventArgs e)
+        {
+            ////Neu  co xe (co xe nhan)
+            //string strXeNhan = StringTools.TrimSpace(maskXeNhan.TextBox.Text);
+            //while ((strXeNhan.Length > 0) && ((strXeNhan[0].ToString() == ".")||(strXeNhan[0].ToString() == "_")))
+            //{
+            //    strXeNhan = strXeNhan.Substring(1, strXeNhan.Length - 1);
+            //}
+            //while ((strXeNhan.Length > 0) && ((strXeNhan[strXeNhan.Length - 1].ToString() == ".")||(strXeNhan[strXeNhan.Length - 1].ToString() == "_")))
+            //{
+            //    strXeNhan = strXeNhan.Substring(0, strXeNhan.Length - 1);
+            //}
+            //if (strXeNhan.Length >= 3)
+            //{
+                
+            //    maskXeDon.Enabled = true;
+            //}
+            //else maskXeDon.Enabled = false ;
+        }
+
+        /// <summary>
+        /// kiem soat nhap phim 1;2;3
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void editGhiChu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (g_boolCapNhatDCTraKhach) return;
+            if ((e.KeyChar == (char)Keys.D1)||(e.KeyChar == (char)Keys.D2)||(e.KeyChar == (char)Keys.D3))
+            {
+                e.Handled = false;
+            }
+            else
+                e.Handled = true;
+        }
+
+        //private void editGhiChu_Validating(object sender, CancelEventArgs e)
+        //{
+        //    //if (g_boolCapNhatDCTraKhach) return;
+        //    //e.Cancel = false;
+        //    //if (g_intGoilaiHoanTruot == 1)//goi lai
+        //    //{
+        //    //    if (editGhiChu.Text != "gọi lại")
+        //    //    {
+        //    //        e.Cancel = true  ;
+        //    //        errorProvider.SetError(editGhiChu, "Bạn không được sửa thông tin");
+                    
+        //    //    }
+        //    //}
+        //    //else if (g_intGoilaiHoanTruot == 2)//goi lai
+        //    //{
+        //    //    if (editGhiChu.Text != "hoãn")
+        //    //    {
+        //    //        e.Cancel = true  ;
+        //    //        errorProvider.SetError(editGhiChu, "Bạn không được sửa thông tin");
+                    
+        //    //    }
+        //    //}
+        //    //else if (g_intGoilaiHoanTruot == 3)//goi lai
+        //    //{
+        //    //    if (editGhiChu.Text != "trượt")
+        //    //    {
+        //    //        e.Cancel = true  ;
+        //    //        errorProvider.SetError(editGhiChu, "Bạn không được sửa thông tin");
+                    
+        //    //    }
+        //    //}
+        //    //if (!e.Cancel)
+        //    //{
+        //    //    e.Cancel = false;
+        //    //    errorProvider.SetError(editGhiChu, "");
+        //    //}
+        //    //return;
+        //}
+
+        private void maskXeNhan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (g_boolCapNhatDCTraKhach) return;
+            int ascii = Convert.ToInt16(e.KeyChar);
+            if (char.IsDigit(e.KeyChar) || (e.KeyChar==(char)Keys.Back ) || (ascii == 46)) // dau cham "."
+            {
+                e.Handled = false;
+            }
+            else
+                e.Handled = true;
+        }
+
+        private void chkSanBay_CheckedChanged(object sender, EventArgs e)
+        {
+            if((chkSanBay.Checked)&&(chkDuongDai.Checked))
+                chkDuongDai.Checked = !chkSanBay.Checked; 
+        }
+
+        private void chkDuongDai_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((chkSanBay.Checked) && (chkDuongDai.Checked))
+                chkSanBay.Checked = !chkDuongDai.Checked; 
+        }
+
+        private void maskXeNhan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.btnOK_Click(sender, new EventArgs());
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                btnOK.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                maskXeDon.Focus();
+            }
+        }
+
+        private void maskXeDon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.btnOK_Click(sender, new EventArgs());
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                maskXeNhan.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                editLenhTongDai.Focus();
+            }
+        }
+
+        private void editLenhTongDai_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.btnOK_Click(sender, new EventArgs());
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                maskXeDon.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                editGhiChu.Focus();
+            }
+        }
+
+        private void editDiaChiTraKhach_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.btnOK_Click(sender, new EventArgs());
+            }
+        }
+
+        private void editGhiChu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                this.btnOK_Click(sender, new EventArgs());
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                editLenhTongDai.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                btnOK.Focus();
+            }
+        }
+private bool CheckTonTaiXeNhan(string DSXeNhan)
+        {
+            bool bTonTaiXe = false;
+            string[] arrTaxi = DSXeNhan.Split(".".ToCharArray());
+
+            for (int i = 0; i < arrTaxi.Length; i++)
+            {
+                if (DSXeNhanDangHoatDong.Contains(arrTaxi[i])){ bTonTaiXe = true;break;}
+            }
+            return bTonTaiXe ;
+        }
+       
+        
+
+    }
+}

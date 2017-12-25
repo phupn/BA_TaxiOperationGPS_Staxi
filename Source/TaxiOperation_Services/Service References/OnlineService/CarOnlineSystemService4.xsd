@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataBase.StaxiContext.Entities.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://115.84.178.70:1107/CarOnlineSystemService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="TaxiReturnTrip.ReturnTripStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotReady" />
+      <xs:enumeration value="Ready" />
+      <xs:enumeration value="CSKHCancel" />
+      <xs:enumeration value="GPSCancel" />
+      <xs:enumeration value="OperatorCancel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TaxiReturnTrip.ReturnTripStatus" nillable="true" type="tns:TaxiReturnTrip.ReturnTripStatus" />
+  <xs:simpleType name="TaxiReturnTrip.ReturnTripSourceType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Driver">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Operator">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WebGPS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WebCSKH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TaxiReturnTrip.ReturnTripSourceType" nillable="true" type="tns:TaxiReturnTrip.ReturnTripSourceType" />
+  <xs:simpleType name="TaxiReturnTrip.ReturnTripType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="From" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TaxiReturnTrip.ReturnTripType" nillable="true" type="tns:TaxiReturnTrip.ReturnTripType" />
+</xs:schema>

@@ -1,0 +1,597 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{000E53BE-02EA-4865-9FE9-FFD9815086FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaxiOperation_TongDai</RootNamespace>
+    <AssemblyName>BanGia</AssemblyName>
+    <ApplicationIcon>Taxi.ico</ApplicationIcon>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Alvas.Audio, Version=5.8.3022.27534, Culture=neutral, PublicKeyToken=b0b8e5d43e21ecb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Alvas.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL" />
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Data.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.CalendarCombo.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Common.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ExplorerBar.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.TimeLine.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Validator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCaoPhanAnh\BaoCaoGiaiQuyetPhanAnh[3.2].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\BaoCaoGiaiQuyetPhanAnh[3.2].Designer.cs">
+      <DependentUpon>BaoCaoGiaiQuyetPhanAnh[3.2].cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\BaoCaoTongHopPhanAnh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\BaoCaoTongHopPhanAnh.Designer.cs">
+      <DependentUpon>BaoCaoTongHopPhanAnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\frmBC_3_1_TongHopPhanAnh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\frmBC_3_1_TongHopPhanAnh.Designer.cs">
+      <DependentUpon>frmBC_3_1_TongHopPhanAnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\frmBC_3_2_GiaiQuyetPhanAnh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoPhanAnh\frmBC_3_2_GiaiQuyetPhanAnh.Designer.cs">
+      <DependentUpon>frmBC_3_2_GiaiQuyetPhanAnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_1_3_ChiTietCuocGoiDen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_1_3_ChiTietCuocGoiDen.Designer.cs">
+      <DependentUpon>frmBC_1_3_ChiTietCuocGoiDen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_5_4_DiSanBayDuongDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_5_4_DiSanBayDuongDai.Designer.cs">
+      <DependentUpon>frmBC_5_4_DiSanBayDuongDai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_5_5_XeGapSuCo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_5_5_XeGapSuCo.Designer.cs">
+      <DependentUpon>frmBC_5_5_XeGapSuCo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_5_6_SuCoVeThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBC_5_6_SuCoVeThe.Designer.cs">
+      <DependentUpon>frmBC_5_6_SuCoVeThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinCaNhan.Designer.cs">
+      <DependentUpon>CapNhatThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChenMoiMotCuocDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChenMoiMotCuocDienThoai.Designer.cs">
+      <DependentUpon>frmChenMoiMotCuocDienThoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBangGiaInputData_V3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBangGiaInputData_V3.designer.cs">
+      <DependentUpon>frmBangGiaInputData_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDMDiaDanhKm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDMDiaDanhKm.Designer.cs">
+      <DependentUpon>frmDMDiaDanhKm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHienThiBanDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHienThiBanDo.designer.cs">
+      <DependentUpon>frmHienThiBanDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhachHangPhanAnhInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhachHangPhanAnhInput.Designer.cs">
+      <DependentUpon>frmKhachHangPhanAnhInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBanGiaInputData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanGiaInputData.Designer.cs">
+      <DependentUpon>frmBanGiaInputData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBanGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanGia.Designer.cs">
+      <DependentUpon>frmBanGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCall.Designer.cs">
+      <DependentUpon>frmCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangGoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangGoi.Designer.cs">
+      <DependentUpon>frmDangGoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhongXeChuyenVung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhongXeChuyenVung.Designer.cs">
+      <DependentUpon>frmKhongXeChuyenVung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoBieuMau14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoBieuMau14.designer.cs">
+      <DependentUpon>frmBaoCaoBieuMau14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmProgress.Designer.cs">
+      <DependentUpon>fmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckInOut.Designer.cs">
+      <DependentUpon>frmCheckInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDienThoaiHenKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDienThoaiHenKhach.Designer.cs">
+      <DependentUpon>frmDienThoaiHenKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDMDiaDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDMDiaDanh.Designer.cs">
+      <DependentUpon>frmDMDiaDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimFile.Designer.cs">
+      <DependentUpon>frmTimFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTinhTienTheoKmCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhTienTheoKmCP.Designer.cs">
+      <DependentUpon>frmTinhTienTheoKmCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraCuuVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraCuuVe.Designer.cs">
+      <DependentUpon>frmTraCuuVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamSatXe\frmGiamSatXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiamSatXe\frmGiamSatXe.Designer.cs">
+      <DependentUpon>frmGiamSatXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamSatXe\frmRaHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiamSatXe\frmRaHoatDong.Designer.cs">
+      <DependentUpon>frmRaHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamSatXe\frmSanBayDuongDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiamSatXe\frmSanBayDuongDai.Designer.cs">
+      <DependentUpon>frmSanBayDuongDai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiamSatXe\frmThongTinSuCo_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiamSatXe\frmThongTinSuCo_Input.Designer.cs">
+      <DependentUpon>frmThongTinSuCo_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoCaoPhanAnh\BaoCaoGiaiQuyetPhanAnh[3.2].resx">
+      <DependentUpon>BaoCaoGiaiQuyetPhanAnh[3.2].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoPhanAnh\BaoCaoTongHopPhanAnh.resx">
+      <DependentUpon>BaoCaoTongHopPhanAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoPhanAnh\frmBC_3_1_TongHopPhanAnh.resx">
+      <DependentUpon>frmBC_3_1_TongHopPhanAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoPhanAnh\frmBC_3_2_GiaiQuyetPhanAnh.resx">
+      <DependentUpon>frmBC_3_2_GiaiQuyetPhanAnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmBC_1_3_ChiTietCuocGoiDen.resx">
+      <DependentUpon>frmBC_1_3_ChiTietCuocGoiDen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmBC_5_4_DiSanBayDuongDai.resx">
+      <DependentUpon>frmBC_5_4_DiSanBayDuongDai.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmBC_5_5_XeGapSuCo.resx">
+      <DependentUpon>frmBC_5_5_XeGapSuCo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmBC_5_6_SuCoVeThe.resx">
+      <DependentUpon>frmBC_5_6_SuCoVeThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinCaNhan.resx">
+      <DependentUpon>CapNhatThongTinCaNhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChenMoiMotCuocDienThoai.resx">
+      <DependentUpon>frmChenMoiMotCuocDienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBangGiaInputData_V3.resx">
+      <DependentUpon>frmBangGiaInputData_V3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDMDiaDanhKm.resx">
+      <DependentUpon>frmDMDiaDanhKm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHienThiBanDo.resx">
+      <DependentUpon>frmHienThiBanDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHangPhanAnhInput.resx">
+      <DependentUpon>frmKhachHangPhanAnhInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBanGiaInputData.resx">
+      <DependentUpon>frmBanGiaInputData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBanGia.resx">
+      <DependentUpon>frmBanGia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCall.resx">
+      <DependentUpon>frmCall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangGoi.resx">
+      <DependentUpon>frmDangGoi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhongXeChuyenVung.resx">
+      <DependentUpon>frmKhongXeChuyenVung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoBieuMau14.resx">
+      <DependentUpon>frmBaoCaoBieuMau14.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmProgress.resx">
+      <DependentUpon>fmProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckInOut.resx">
+      <DependentUpon>frmCheckInOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDienThoaiHenKhach.resx">
+      <DependentUpon>frmDienThoaiHenKhach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDMDiaDanh.resx">
+      <DependentUpon>frmDMDiaDanh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimFile.resx">
+      <DependentUpon>frmTimFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhTienTheoKmCP.resx">
+      <DependentUpon>frmTinhTienTheoKmCP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraCuuVe.resx">
+      <DependentUpon>frmTraCuuVe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamSatXe\frmGiamSatXe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGiamSatXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamSatXe\frmRaHoatDong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRaHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamSatXe\frmSanBayDuongDai.resx">
+      <DependentUpon>frmSanBayDuongDai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamSatXe\frmThongTinSuCo_Input.resx">
+      <DependentUpon>frmThongTinSuCo_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChat\MessageTemplate.resx">
+      <DependentUpon>MessageTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChat\Messenger.resx">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChat\SendMessage.resx">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QuanLyChat\MessageTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChat\MessageTemplate.Designer.cs">
+      <DependentUpon>MessageTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChat\Messenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChat\Messenger.designer.cs">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChat\SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChat\SendMessage.designer.cs">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WCFSyncService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BAGPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Femiani.Forms.UI\Femiani.Forms.UI.csproj">
+      <Project>{77FB2ED1-B6BE-4425-8B29-51E8565E84EC}</Project>
+      <Name>Femiani.Forms.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Business\Taxi.Business.csproj">
+      <Project>{889A0A5C-D624-49B5-877E-C365672541A8}</Project>
+      <Name>Taxi.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Controls\Taxi.Controls.csproj">
+      <Project>{AAC3CE12-F739-4F19-8FD9-5399CD29CE2E}</Project>
+      <Name>Taxi.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Entity\Taxi.Entity.csproj">
+      <Project>{735B945A-3B37-4796-8810-DE7B3B0D168F}</Project>
+      <Name>Taxi.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.MessageBox\Taxi.MessageBox.csproj">
+      <Project>{6D777AC5-0A39-4D93-807F-49D602071243}</Project>
+      <Name>Taxi.MessageBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Taxi.Utils\Taxi.Utils.csproj">
+      <Project>{E7EBA72B-31F7-4280-90A5-DA0984CCE7D9}</Project>
+      <Name>Taxi.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.bmp" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\Search.bmp" />
+    <Content Include="DLL\Alvas.Audio.dll" />
+    <Content Include="DLL\GMap.NET.Core.dll" />
+    <Content Include="DLL\GMap.NET.WindowsForms.dll" />
+    <Content Include="DLL\Validator.dll" />
+    <Content Include="Images\ApplicationTemplate.png" />
+    <Content Include="Images\Approve.bmp" />
+    <Content Include="Images\Attachement.JPG" />
+    <Content Include="Images\Classifications.png" />
+    <Content Include="Images\Close.bmp" />
+    <Content Include="Images\CountryProvince.png" />
+    <Content Include="Images\Date and Time.png" />
+    <Content Include="Images\Delete.bmp" />
+    <None Include="Images\disk.png" />
+    <Content Include="Images\Dollar.png" />
+    <Content Include="Images\eApplicationSet.gif" />
+    <Content Include="Images\Edit.bmp" />
+    <Content Include="Images\eFolder.bmp" />
+    <Content Include="Images\ExportCVS.JPG" />
+    <Content Include="Images\ExportHTML.png" />
+    <Content Include="Images\FeeAttachment.png" />
+    <Content Include="Images\FilingMan.gif" />
+    <Content Include="Images\FilingReport.gif" />
+    <Content Include="Images\Function.jpg" />
+    <Content Include="Images\Help.bmp" />
+    <Content Include="Images\Images.bmp" />
+    <Content Include="Images\LockXP.png" />
+    <Content Include="Images\LogOff.png" />
+    <Content Include="Images\MyDocXP.png" />
+    <Content Include="Images\New.bmp" />
+    <Content Include="Images\OpenFolder.bmp" />
+    <Content Include="Images\Printer.bmp" />
+    <Content Include="Images\Save.bmp" />
+    <Content Include="Images\Scan.bmp" />
+    <Content Include="Images\Search.bmp" />
+    <Content Include="Images\SystemAdmin.png" />
+    <Content Include="Images\SystemSetting.png" />
+    <Content Include="Images\SystemUpdate.png" />
+    <Content Include="Images\TurnOffXP.png" />
+    <Content Include="Images\Undo.jpg" />
+    <Content Include="Images\UserXP.png" />
+    <None Include="Resources\Abou.jpg" />
+    <None Include="Resources\view_refresh.png" />
+    <None Include="Resources\Printer.bmp" />
+    <None Include="Resources\Excel-24x24.png" />
+    <None Include="Service References\WCFSyncService\configuration91.svcinfo" />
+    <None Include="Service References\WCFSyncService\configuration.svcinfo" />
+    <None Include="Service References\WCFSyncService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Actions-application-exit-icon.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\maps.png" />
+    <None Include="Resources\ok-icon.png" />
+    <None Include="Resources\lightred.gif" />
+    <Content Include="Taxi.ico" />
+    <None Include="Service References\WCFSyncService\SyncServiceOnline1.wsdl" />
+    <None Include="Service References\WCFSyncService\TaxiOperation_TongDai.WCFSyncService.T_XeOnline.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFSyncService\TaxiOperation_TongDai.WCFSyncService.XeOnlineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFSyncService\WCFSyncService.xsd" />
+    <None Include="Service References\WCFSyncService\WCFSyncService1.xsd" />
+    <None Include="Service References\WCFSyncService\WCFSyncService2.xsd" />
+    <None Include="Service References\WCFSyncService\WCFSyncService3.xsd" />
+    <None Include="Service References\WCFSyncService\WCFSyncService4.xsd" />
+    <None Include="Web References\BAGPS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BAGPS\Service.disco" />
+    <None Include="Web References\BAGPS\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.1.65:85/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BAGPS\</RelPath>
+      <UpdateFromURL>http://192.168.1.65:85/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BanGia_BAGPS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WCFSyncService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

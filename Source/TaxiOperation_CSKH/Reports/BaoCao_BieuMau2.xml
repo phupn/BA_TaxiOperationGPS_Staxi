@@ -1,0 +1,24 @@
+﻿<!--
+Ngay     varchar (50),
+TongCuocGoiTaxi     int,
+CuocGoiDonDuoc int,
+CuocGoiTruotHoan int,
+CuocGoiKhongXe int,
+PhanTramDonDuoc int,
+CuocGoiMoiGioi int,
+CuocGoiVangLai int,
+PhanTramMoiGioi int
+-->
+<dataroot>
+  <BaoCaoBieuMau2>
+    <Ngay></Ngay>  
+    <TongCuocGoiTaxi></TongCuocGoiTaxi>
+    <CuocGoiDonDuoc></CuocGoiDonDuoc> 
+    <CuocGoiTruotHoan></CuocGoiTruotHoan>
+    <CuocGoiKhongXe></CuocGoiKhongXe> 
+    <PhanTramDonDuoc></PhanTramDonDuoc>
+    <CuocGoiMoiGioi></CuocGoiMoiGioi> 
+    <CuocGoiVangLai></CuocGoiVangLai> 
+    <PhanTramMoiGioi></PhanTramMoiGioi>
+  </BaoCaoBieuMau2>
+</dataroot>

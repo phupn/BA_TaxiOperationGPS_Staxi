@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.179:2525/OperationService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="SendACKGetPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="result" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKGetPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKGetPhoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKInvite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="result" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKInviteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKInviteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isRemoveLandmark" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInitTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromLat" type="xs:float" />
+        <xs:element minOccurs="0" name="fromLng" type="xs:float" />
+        <xs:element minOccurs="0" name="toName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toLat" type="xs:float" />
+        <xs:element minOccurs="0" name="toLng" type="xs:float" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="tripType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="customerType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicleOptions" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element minOccurs="0" name="isRoute" type="xs:boolean" />
+        <xs:element minOccurs="0" name="routeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="routeMoney" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInitTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendInitTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLogoutDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLogoutDriverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendLogoutDriverResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCatched">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCatchedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorCatchedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSmsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSmsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCustomerUnSeenCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmd" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCustomerUnSeenCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendCustomerUnSeenCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendTextResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="result" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmDoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendConfirmDoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCmd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cmd" type="xs:int" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCmdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorCmdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmLandmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="landmarkId" type="xs:int" />
+        <xs:element minOccurs="0" name="ok" type="xs:boolean" />
+        <xs:element minOccurs="0" name="node" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmLandmarkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendConfirmLandmarkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKRenewLandmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="landmarkId" type="xs:int" />
+        <xs:element minOccurs="0" name="node" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKRenewLandmarkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKRenewLandmarkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKActiveChange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="driverCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soHieuXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="messageCode" type="xs:short" />
+        <xs:element minOccurs="0" name="cmdId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKActiveChangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKActiveChangeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLandmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="landmarkId" type="xs:int" />
+        <xs:element minOccurs="0" name="node" type="xs:int" />
+        <xs:element minOccurs="0" name="cmdId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLandmarkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendLandmarkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKDriverNewTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tripId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tripKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKDriverNewTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKDriverNewTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

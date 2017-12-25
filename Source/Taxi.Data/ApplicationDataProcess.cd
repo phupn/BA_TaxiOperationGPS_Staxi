@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Taxi.Data.DBObject" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAQAAAAAAAAAAAAAgIAAAAAQACAAAAAAIAA=</HashCode>
+      <FileName>DBObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.FilingBook" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAABAAAAAAAAAAAAEAACAAAAAAAABAAAA=</HashCode>
+      <FileName>FilingBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Signature" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Signature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Applicant" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Applicant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Author" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Document" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.ExhibitionClaim" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExhibitionClaim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Fee" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.GoodService" Collapsed="true">
+    <Position X="23.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GoodService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.IPClassification" Collapsed="true">
+    <Position X="28" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPClassification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Locarno" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Locarno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Pct" Collapsed="true">
+    <Position X="25.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAIAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAQA=</HashCode>
+      <FileName>Pct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.PriorityClaim" Collapsed="true">
+    <Position X="30.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PriorityClaim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Sample" Collapsed="true">
+    <Position X="21.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Data.Vienna" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vienna.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Taxi.Utils.DBObject" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Taxi.Data.Figure">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Figure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

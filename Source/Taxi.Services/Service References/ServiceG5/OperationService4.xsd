@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" />
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" />
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.Concretes.OperatorServer" />
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" />
+  <xs:import schemaLocation="http://10.0.2.179:7372/OperationService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" />
+  <xs:element name="SendACKGetPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q1:guid" />
+        <xs:element minOccurs="0" name="result" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKGetPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKGetPhoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKInvite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q2:guid" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKInviteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKInviteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q3:guid" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" minOccurs="0" name="cancelType" type="q4:SourceCancelType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInitTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q5:guid" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="from" nillable="true" type="q6:AddressInfo" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="to" nillable="true" type="q7:AddressInfo" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="carType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="customerType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" minOccurs="0" name="vehicleOptions" nillable="true" type="q8:ArrayOfVehicleOption" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="currentLatLng" nillable="true" type="q9:LatLng" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstVehiclesDeny" nillable="true" type="q10:ArrayOfstring" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" minOccurs="0" name="bookTripType" type="q11:BookTripType" />
+        <xs:element minOccurs="0" name="money" type="xs:int" />
+        <xs:element minOccurs="0" name="distance" type="xs:float" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="direction" type="q12:Direction" />
+        <xs:element minOccurs="0" name="moneyExtend" type="xs:int" />
+        <xs:element minOccurs="0" name="moneyExtendByTime" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInitTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendInitTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RadioInitTrip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q13:guid" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="from" nillable="true" type="q14:AddressInfo" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="to" nillable="true" type="q15:AddressInfo" />
+        <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="carType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="customerType" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" minOccurs="0" name="vehicleOptions" nillable="true" type="q16:ArrayOfVehicleOption" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="currentLatLng" nillable="true" type="q17:LatLng" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstVehiclesDeny" nillable="true" type="q18:ArrayOfstring" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehiclesOkDone" nillable="true" type="q19:ArrayOfstring" />
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehiclesOkFail" nillable="true" type="q20:ArrayOfstring" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="state" type="q21:ConfirmDoneBook" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.System.DataTypes" minOccurs="0" name="bookTripType" type="q22:BookTripType" />
+        <xs:element minOccurs="0" name="money" type="xs:int" />
+        <xs:element minOccurs="0" name="distance" type="xs:float" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="direction" type="q23:Direction" />
+        <xs:element minOccurs="0" name="moneyExtend" type="xs:int" />
+        <xs:element minOccurs="0" name="moneyExtendByTime" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RadioInitTripResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RadioInitTripResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLogoutDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendLogoutDriverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendLogoutDriverResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCatched">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q24:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCatchedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorCatchedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMissCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q25:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMissCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMissCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q26:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendTextResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q27:guid" />
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmDoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendConfirmDoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCmd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q28:guid" />
+        <xs:element minOccurs="0" name="cmdId" type="xs:int" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorCmdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorCmdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKDriverCmd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cmdId" type="xs:int" />
+        <xs:element minOccurs="0" name="stepId" type="xs:int" />
+        <xs:element minOccurs="0" name="status" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendACKDriverCmdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendACKDriverCmdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncCommand">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncCommandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SyncCommandResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncVehicle">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SyncVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SyncVehicleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleOnlne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleOnlneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Staxi.Servers.Sockets.Concretes.OperatorServer" minOccurs="0" name="GetVehicleOnlneResult" nillable="true" type="q29:OperatorCenter.GPSData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleToNotSync">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicles" nillable="true" type="q30:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVehicleToNotSyncResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateVehicleToNotSyncResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOperatorClientConnecting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOperatorClientConnectingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsOperatorClientConnectingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="GetVehicleResult" nillable="true" type="q31:TcpOP.VehicleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWrongCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q32:guid" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWrongCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendWrongCustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmDoneBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q33:guid" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" minOccurs="0" name="state" type="q34:ConfirmDoneBook" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConfirmDoneBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendConfirmDoneBookResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDeleteBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bookIds" nillable="true" type="q35:ArrayOfguid" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDeleteBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendDeleteBookResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bookids" nillable="true" type="q36:ArrayOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorDispatched">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q37:guid" />
+        <xs:element minOccurs="0" name="vehicle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOperatorDispatchedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOperatorDispatchedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendAskBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q38:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendAskBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendAskBookResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="carType" type="xs:int" />
+        <xs:element minOccurs="0" name="lat" type="xs:float" />
+        <xs:element minOccurs="0" name="lng" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Staxi.Core.Systems.Hosting" minOccurs="0" name="FindCarResult" nillable="true" type="q39:ArrayOfOneTaxiCar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCarInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q40:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vehiclePlate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="driverPhone" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q41:TcpOP.BookTripType" />
+        <xs:element minOccurs="0" name="carNoOld" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCarInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveCarInfoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCatchedUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q42:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="money" type="xs:int" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q43:TcpOP.BookTripType" />
+        <xs:element minOccurs="0" name="giaPhuTroi" type="xs:int" />
+        <xs:element minOccurs="0" name="quangduong" type="xs:int" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="dir" type="q44:TcpOP.Direction" />
+        <xs:element minOccurs="0" name="param6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param8" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param9" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param10" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveCatchedUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveCatchedUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveDriverCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q45:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q46:TcpOP.BookTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveDriverCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveDriverCancelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveNoCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="bookId" type="q47:guid" />
+        <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" minOccurs="0" name="tripType" type="q48:TcpOP.BookTripType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_ReceiveNoCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendSMS_ReceiveNoCarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

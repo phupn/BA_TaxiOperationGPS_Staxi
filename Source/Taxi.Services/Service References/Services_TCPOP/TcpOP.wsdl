@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TcpOP" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Staxi.Business.DataTypes" />
+      <xsd:import schemaLocation="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices.Services" />
+      <xsd:import schemaLocation="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Staxi.WebServices" />
+      <xsd:import schemaLocation="http://125.212.226.60:1108/Services/TcpOP.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITcpOP_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_CalPriceNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalPriceNew" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_CalPriceNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalPriceNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBooks" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetCarTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarTypes" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetCarTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetCommands_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommands" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetCommands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetCompLandmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompLandmark" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetCompLandmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompLandmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_OpSendCompLandmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpSendCompLandmark" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_OpSendCompLandmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpSendCompLandmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetConfigSignCarType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigSignCarType" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetConfigSignCarType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigSignCarTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetDrivers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrivers" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetDrivers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriversResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetVehicles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicles" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetVehicles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehiclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicle" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_GetVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_UpdateVehicleToNotSync_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleToNotSync" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_UpdateVehicleToNotSync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleToNotSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveCarInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveCarInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveCatchedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUser" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveCatchedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveDriverCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveDriverCancel" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveDriverCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveDriverCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveNoCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveNoCar" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveNoCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveNoCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_LongTripReceiveCatchedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_LongTripReceiveCatchedUser" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_LongTripReceiveCatchedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_LongTripReceiveCatchedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveCatchedUser_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUser_V2" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_ReceiveCatchedUser_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_ReceiveCatchedUser_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_CustomerPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_CustomerPhone" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_CustomerPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_CustomerPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_ReceiveCarInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_ReceiveCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_ReceiveCarInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_ReceiveCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_ViewCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_ViewCar" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_ViewCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_ViewCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_CatchedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_CatchedUser" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_CatchedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_CatchedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_NoCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_NoCar" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_NoCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_NoCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_ThankCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_ThankCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_ThankCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_ThankCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_Other_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_Other" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSms_VinaTaxi_Other_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSms_VinaTaxi_OtherResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_DuongThao_CustomerPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_DuongThao_CustomerPhone" />
+  </wsdl:message>
+  <wsdl:message name="ITcpOP_SendSMS_DuongThao_CustomerPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSMS_DuongThao_CustomerPhoneResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITcpOP">
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/Ping" message="tns:ITcpOP_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/PingResponse" message="tns:ITcpOP_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalPriceNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/CalPriceNew" message="tns:ITcpOP_CalPriceNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/CalPriceNewResponse" message="tns:ITcpOP_CalPriceNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetBooks" message="tns:ITcpOP_GetBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetBooksResponse" message="tns:ITcpOP_GetBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetCarTypes" message="tns:ITcpOP_GetCarTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetCarTypesResponse" message="tns:ITcpOP_GetCarTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommands">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetCommands" message="tns:ITcpOP_GetCommands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetCommandsResponse" message="tns:ITcpOP_GetCommands_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompLandmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetCompLandmark" message="tns:ITcpOP_GetCompLandmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetCompLandmarkResponse" message="tns:ITcpOP_GetCompLandmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpSendCompLandmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/OpSendCompLandmark" message="tns:ITcpOP_OpSendCompLandmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/OpSendCompLandmarkResponse" message="tns:ITcpOP_OpSendCompLandmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSignCarType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetConfigSignCarType" message="tns:ITcpOP_GetConfigSignCarType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetConfigSignCarTypeResponse" message="tns:ITcpOP_GetConfigSignCarType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrivers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetDrivers" message="tns:ITcpOP_GetDrivers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetDriversResponse" message="tns:ITcpOP_GetDrivers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetVehicles" message="tns:ITcpOP_GetVehicles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetVehiclesResponse" message="tns:ITcpOP_GetVehicles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/GetVehicle" message="tns:ITcpOP_GetVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/GetVehicleResponse" message="tns:ITcpOP_GetVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleToNotSync">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/UpdateVehicleToNotSync" message="tns:ITcpOP_UpdateVehicleToNotSync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/UpdateVehicleToNotSyncResponse" message="tns:ITcpOP_UpdateVehicleToNotSync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCarInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveCarInfo" message="tns:ITcpOP_SendSMS_ReceiveCarInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveCarInfoResponse" message="tns:ITcpOP_SendSMS_ReceiveCarInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveCatchedUser" message="tns:ITcpOP_SendSMS_ReceiveCatchedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveCatchedUserResponse" message="tns:ITcpOP_SendSMS_ReceiveCatchedUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveDriverCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveDriverCancel" message="tns:ITcpOP_SendSMS_ReceiveDriverCancel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveDriverCancelResponse" message="tns:ITcpOP_SendSMS_ReceiveDriverCancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveNoCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveNoCar" message="tns:ITcpOP_SendSMS_ReceiveNoCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveNoCarResponse" message="tns:ITcpOP_SendSMS_ReceiveNoCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_LongTripReceiveCatchedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_LongTripReceiveCatchedUser" message="tns:ITcpOP_SendSMS_LongTripReceiveCatchedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_LongTripReceiveCatchedUserResponse" message="tns:ITcpOP_SendSMS_LongTripReceiveCatchedUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveCatchedUser_V2" message="tns:ITcpOP_SendSMS_ReceiveCatchedUser_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_ReceiveCatchedUser_V2Response" message="tns:ITcpOP_SendSMS_ReceiveCatchedUser_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_CustomerPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_CustomerPhone" message="tns:ITcpOP_SendSMS_CustomerPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_CustomerPhoneResponse" message="tns:ITcpOP_SendSMS_CustomerPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_ReceiveCarInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ReceiveCarInfo" message="tns:ITcpOP_SendSms_VinaTaxi_ReceiveCarInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ReceiveCarInfoResponse" message="tns:ITcpOP_SendSms_VinaTaxi_ReceiveCarInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_ViewCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ViewCar" message="tns:ITcpOP_SendSms_VinaTaxi_ViewCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ViewCarResponse" message="tns:ITcpOP_SendSms_VinaTaxi_ViewCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_CatchedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_CatchedUser" message="tns:ITcpOP_SendSms_VinaTaxi_CatchedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_CatchedUserResponse" message="tns:ITcpOP_SendSms_VinaTaxi_CatchedUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_NoCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_NoCar" message="tns:ITcpOP_SendSms_VinaTaxi_NoCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_NoCarResponse" message="tns:ITcpOP_SendSms_VinaTaxi_NoCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_ThankCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ThankCustomer" message="tns:ITcpOP_SendSms_VinaTaxi_ThankCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ThankCustomerResponse" message="tns:ITcpOP_SendSms_VinaTaxi_ThankCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_Other">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_Other" message="tns:ITcpOP_SendSms_VinaTaxi_Other_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_OtherResponse" message="tns:ITcpOP_SendSms_VinaTaxi_Other_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_DuongThao_CustomerPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_DuongThao_CustomerPhone" message="tns:ITcpOP_SendSMS_DuongThao_CustomerPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITcpOP/SendSMS_DuongThao_CustomerPhoneResponse" message="tns:ITcpOP_SendSMS_DuongThao_CustomerPhone_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITcpOP" type="tns:ITcpOP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalPriceNew">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/CalPriceNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBooks">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarTypes">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetCarTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommands">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetCommands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompLandmark">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetCompLandmark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpSendCompLandmark">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/OpSendCompLandmark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigSignCarType">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetConfigSignCarType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrivers">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetDrivers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetVehicles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicle">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/GetVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicleToNotSync">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/UpdateVehicleToNotSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCarInfo">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_ReceiveCarInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_ReceiveCatchedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveDriverCancel">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_ReceiveDriverCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveNoCar">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_ReceiveNoCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_LongTripReceiveCatchedUser">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_LongTripReceiveCatchedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_ReceiveCatchedUser_V2">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_ReceiveCatchedUser_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_CustomerPhone">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_CustomerPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_ReceiveCarInfo">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ReceiveCarInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_ViewCar">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ViewCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_CatchedUser">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_CatchedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_NoCar">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_NoCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_ThankCustomer">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_ThankCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSms_VinaTaxi_Other">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSms_VinaTaxi_Other" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS_DuongThao_CustomerPhone">
+      <soap:operation soapAction="http://tempuri.org/ITcpOP/SendSMS_DuongThao_CustomerPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TcpOP">
+    <wsdl:port name="BasicHttpBinding_ITcpOP" binding="tns:BasicHttpBinding_ITcpOP">
+      <soap:address location="http://125.212.226.60:1108/Services/TcpOP.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

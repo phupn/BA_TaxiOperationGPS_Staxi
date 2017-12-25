@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd2" namespace="WCF_SyncOnline.ServiceLibrary" />
+  <xs:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" />
+  <xs:element name="GetXeOnline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="request" nillable="true" type="q1:XeOnlineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetXeOnlineResult" nillable="true" type="q2:XeOnlineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKCXeNhan_DiemDonKhach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="MaXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SHXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKCXeNhan_DiemDonKhachResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKCXeNhan_DiemDonKhachResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnlineBySHX">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SHXe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXeOnlineBySHXResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" minOccurs="0" name="GetXeOnlineBySHXResult" nillable="true" type="q3:T_XeOnline" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="banKinhGioiHan" type="xs:int" />
+        <xs:element minOccurs="0" name="isBAMap" type="xs:boolean" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachXeDeCu_ToaDoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo_SANBAY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KD" type="xs:double" />
+        <xs:element minOccurs="0" name="VD" type="xs:double" />
+        <xs:element minOccurs="0" name="maXN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiXe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soLuongXe" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhSachXeDeCu_ToaDo_SANBAYResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LayDanhSachXeDeCu_ToaDo_SANBAYResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="SyncServiceOnline" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ISyncServiceOnline_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd2" namespace="WCF_SyncOnline.ServiceLibrary" />
+      <xsd:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.1.65:8001/WCFSyncService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WCF_SyncOnline.ServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnline" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKCXeNhan_DiemDonKhach" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKCXeNhan_DiemDonKhachResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnlineBySHX_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnlineBySHX" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_GetXeOnlineBySHX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXeOnlineBySHXResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo_SANBAY" />
+  </wsdl:message>
+  <wsdl:message name="ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhSachXeDeCu_ToaDo_SANBAYResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISyncServiceOnline">
+    <wsdl:operation name="GetXeOnline">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnline" message="tns:ISyncServiceOnline_GetXeOnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnlineResponse" message="tns:ISyncServiceOnline_GetXeOnline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKCXeNhan_DiemDonKhach">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetKCXeNhan_DiemDonKhach" message="tns:ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetKCXeNhan_DiemDonKhachResponse" message="tns:ISyncServiceOnline_GetKCXeNhan_DiemDonKhach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXeOnlineBySHX">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnlineBySHX" message="tns:ISyncServiceOnline_GetXeOnlineBySHX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/GetXeOnlineBySHXResponse" message="tns:ISyncServiceOnline_GetXeOnlineBySHX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDoResponse" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo_SANBAY">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAY" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAYResponse" message="tns:ISyncServiceOnline_LayDanhSachXeDeCu_ToaDo_SANBAY_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ISyncServiceOnline" type="tns:ISyncServiceOnline">
+    <wsp:PolicyReference URI="#NetTcpBinding_ISyncServiceOnline_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetXeOnline">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetXeOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKCXeNhan_DiemDonKhach">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetKCXeNhan_DiemDonKhach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXeOnlineBySHX">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/GetXeOnlineBySHX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhSachXeDeCu_ToaDo_SANBAY">
+      <soap12:operation soapAction="http://tempuri.org/ISyncServiceOnline/LayDanhSachXeDeCu_ToaDo_SANBAY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncServiceOnline">
+    <wsdl:port name="NetTcpBinding_ISyncServiceOnline" binding="tns:NetTcpBinding_ISyncServiceOnline">
+      <soap12:address location="net.tcp://192.168.1.65:8000/WCFSyncService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.65:8000/WCFSyncService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

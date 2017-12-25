@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="gridEXExporter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>7, 5</value>
+  </metadata>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>146, 5</value>
+  </metadata>
+  <data name="gridEXLayout3.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;GroupTotals&gt;Always&lt;/GroupTotals&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="NgayHienThi"&gt;&lt;Caption&gt;Ngày&lt;/Caption&gt;&lt;DataMember&gt;NgayHienThi&lt;/DataMember&gt;&lt;Key&gt;NgayHienThi&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;/Column0&gt;&lt;Column1 ID="GioHienThi"&gt;&lt;DataMember&gt;GioHienThi&lt;/DataMember&gt;&lt;Key&gt;GioHienThi&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;62&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="TongTaxi"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Gọi Taxi&lt;/Caption&gt;&lt;DataMember&gt;TongTaxi&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongTaxi&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column2&gt;&lt;Column3 ID="TongGoiLai"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Gọi lại&lt;/Caption&gt;&lt;DataMember&gt;TongGoiLai&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongGoiLai&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;64&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column3&gt;&lt;Column4 ID="TongKhieuNai"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Chuyển KH&lt;/Caption&gt;&lt;DataMember&gt;TongKhieuNai&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongKhieuNai&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;67&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column4&gt;&lt;Column5 ID="TongDichVu"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Dịch vụ&lt;/Caption&gt;&lt;DataMember&gt;TongDichVu&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongDichVu&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;65&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column5&gt;&lt;Column6 ID="TongHoiDam"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Hỏi đàm&lt;/Caption&gt;&lt;DataMember&gt;TongHoiDam&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongHoiDam&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;63&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column6&gt;&lt;Column7 ID="TongGoiKhac"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Gọi khác&lt;/Caption&gt;&lt;DataMember&gt;TongGoiKhac&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongGoiKhac&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column7&gt;&lt;Column8 ID="TongCuocGoi"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Tổng&lt;/Caption&gt;&lt;DataMember&gt;TongCuocGoi&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongCuocGoi&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column8&gt;&lt;Column9 ID="GoiNho"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;DataMember&gt;GoiNho&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;GoiNho&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;84&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column9&gt;&lt;Column10 ID="TongDonDuoc"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Đón được&lt;/Caption&gt;&lt;DataMember&gt;TongDonDuoc&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongDonDuoc&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;61&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column10&gt;&lt;Column11 ID="TongTruotHoanKhongXe"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Tổng không đón được&lt;/Caption&gt;&lt;DataMember&gt;TongTruotHoanKhongXe&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongTruotHoanKhongXe&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;95&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column11&gt;&lt;Column12 ID="TongTruot"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Trượt hoãn&lt;/Caption&gt;&lt;DataMember&gt;TongTruot&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongTruot&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;63&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column12&gt;&lt;Column13 ID="KhongXe"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Không xe&lt;/Caption&gt;&lt;DataMember&gt;KhongXe&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;KhongXe&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column13&gt;&lt;Column14 ID="PhanTramDonDuoc"&gt;&lt;Caption&gt;% đón được&lt;/Caption&gt;&lt;DataMember&gt;PhanTramDonDuoc&lt;/DataMember&gt;&lt;FormatString&gt;#.#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhanTramDonDuoc&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column14&gt;&lt;Column15 ID="Cuoc999"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;Caption&gt;Khác&lt;/Caption&gt;&lt;DataMember&gt;Cuoc999&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Cuoc999&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;67&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column15&gt;&lt;Column16 ID="Cuoc888"&gt;&lt;AggregateFunction&gt;Sum&lt;/AggregateFunction&gt;&lt;DataMember&gt;Cuoc888&lt;/DataMember&gt;&lt;FormatString&gt;#,#&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Cuoc888&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;82&lt;/Width&gt;&lt;TotalFormatString&gt;#,#&lt;/TotalFormatString&gt;&lt;/Column16&gt;&lt;/Columns&gt;&lt;CellLayoutMode&gt;UseColumnSets&lt;/CellLayoutMode&gt;&lt;ColumnSets Collection="true"&gt;&lt;ColumnSet0 ID="ColumnSet1"&gt;&lt;Key&gt;ColumnSet1&lt;/Key&gt;&lt;Caption&gt;Thời gian&lt;/Caption&gt;&lt;ColumnCount&gt;1&lt;/ColumnCount&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;ColumnWidth0&gt;62&lt;/ColumnWidth0&gt;&lt;EntriesCount&gt;1&lt;/EntriesCount&gt;&lt;ColIndex0&gt;1&lt;/ColIndex0&gt;&lt;Row0&gt;0&lt;/Row0&gt;&lt;Col0&gt;0&lt;/Col0&gt;&lt;RowSpan0&gt;1&lt;/RowSpan0&gt;&lt;ColSpan0&gt;1&lt;/ColSpan0&gt;&lt;/ColumnSet0&gt;&lt;ColumnSet1 ID=""&gt;&lt;Caption&gt;Cuộc gọi tiếp nhận&lt;/Caption&gt;&lt;ColumnCount&gt;7&lt;/ColumnCount&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;ColumnWidth0&gt;70&lt;/ColumnWidth0&gt;&lt;ColumnWidth1&gt;64&lt;/ColumnWidth1&gt;&lt;ColumnWidth2&gt;67&lt;/ColumnWidth2&gt;&lt;ColumnWidth3&gt;65&lt;/ColumnWidth3&gt;&lt;ColumnWidth4&gt;63&lt;/ColumnWidth4&gt;&lt;ColumnWidth5&gt;59&lt;/ColumnWidth5&gt;&lt;ColumnWidth6&gt;100&lt;/ColumnWidth6&gt;&lt;EntriesCount&gt;7&lt;/EntriesCount&gt;&lt;ColIndex0&gt;2&lt;/ColIndex0&gt;&lt;Row0&gt;0&lt;/Row0&gt;&lt;Col0&gt;0&lt;/Col0&gt;&lt;RowSpan0&gt;1&lt;/RowSpan0&gt;&lt;ColSpan0&gt;1&lt;/ColSpan0&gt;&lt;ColIndex1&gt;3&lt;/ColIndex1&gt;&lt;Row1&gt;0&lt;/Row1&gt;&lt;Col1&gt;1&lt;/Col1&gt;&lt;RowSpan1&gt;1&lt;/RowSpan1&gt;&lt;ColSpan1&gt;1&lt;/ColSpan1&gt;&lt;ColIndex2&gt;4&lt;/ColIndex2&gt;&lt;Row2&gt;0&lt;/Row2&gt;&lt;Col2&gt;2&lt;/Col2&gt;&lt;RowSpan2&gt;1&lt;/RowSpan2&gt;&lt;ColSpan2&gt;1&lt;/ColSpan2&gt;&lt;ColIndex3&gt;5&lt;/ColIndex3&gt;&lt;Row3&gt;0&lt;/Row3&gt;&lt;Col3&gt;3&lt;/Col3&gt;&lt;RowSpan3&gt;1&lt;/RowSpan3&gt;&lt;ColSpan3&gt;1&lt;/ColSpan3&gt;&lt;ColIndex4&gt;6&lt;/ColIndex4&gt;&lt;Row4&gt;0&lt;/Row4&gt;&lt;Col4&gt;4&lt;/Col4&gt;&lt;RowSpan4&gt;1&lt;/RowSpan4&gt;&lt;ColSpan4&gt;1&lt;/ColSpan4&gt;&lt;ColIndex5&gt;7&lt;/ColIndex5&gt;&lt;Row5&gt;0&lt;/Row5&gt;&lt;Col5&gt;5&lt;/Col5&gt;&lt;RowSpan5&gt;1&lt;/RowSpan5&gt;&lt;ColSpan5&gt;1&lt;/ColSpan5&gt;&lt;ColIndex6&gt;8&lt;/ColIndex6&gt;&lt;Row6&gt;0&lt;/Row6&gt;&lt;Col6&gt;6&lt;/Col6&gt;&lt;RowSpan6&gt;1&lt;/RowSpan6&gt;&lt;ColSpan6&gt;1&lt;/ColSpan6&gt;&lt;/ColumnSet1&gt;&lt;ColumnSet2 ID=""&gt;&lt;Caption&gt;Cuộc gọi nhỡ&lt;/Caption&gt;&lt;ColumnCount&gt;1&lt;/ColumnCount&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;ColumnWidth0&gt;84&lt;/ColumnWidth0&gt;&lt;EntriesCount&gt;1&lt;/EntriesCount&gt;&lt;ColIndex0&gt;9&lt;/ColIndex0&gt;&lt;Row0&gt;0&lt;/Row0&gt;&lt;Col0&gt;0&lt;/Col0&gt;&lt;RowSpan0&gt;1&lt;/RowSpan0&gt;&lt;ColSpan0&gt;1&lt;/ColSpan0&gt;&lt;/ColumnSet2&gt;&lt;ColumnSet3 ID=""&gt;&lt;Caption&gt;Kết quả điều hành&lt;/Caption&gt;&lt;ColumnCount&gt;6&lt;/ColumnCount&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;ColumnWidth0&gt;61&lt;/ColumnWidth0&gt;&lt;ColumnWidth1&gt;95&lt;/ColumnWidth1&gt;&lt;ColumnWidth2&gt;63&lt;/ColumnWidth2&gt;&lt;ColumnWidth3&gt;69&lt;/ColumnWidth3&gt;&lt;ColumnWidth4&gt;67&lt;/ColumnWidth4&gt;&lt;ColumnWidth5&gt;100&lt;/ColumnWidth5&gt;&lt;EntriesCount&gt;6&lt;/EntriesCount&gt;&lt;ColIndex0&gt;10&lt;/ColIndex0&gt;&lt;Row0&gt;0&lt;/Row0&gt;&lt;Col0&gt;0&lt;/Col0&gt;&lt;RowSpan0&gt;1&lt;/RowSpan0&gt;&lt;ColSpan0&gt;1&lt;/ColSpan0&gt;&lt;ColIndex1&gt;11&lt;/ColIndex1&gt;&lt;Row1&gt;0&lt;/Row1&gt;&lt;Col1&gt;1&lt;/Col1&gt;&lt;RowSpan1&gt;1&lt;/RowSpan1&gt;&lt;ColSpan1&gt;1&lt;/ColSpan1&gt;&lt;ColIndex2&gt;12&lt;/ColIndex2&gt;&lt;Row2&gt;0&lt;/Row2&gt;&lt;Col2&gt;2&lt;/Col2&gt;&lt;RowSpan2&gt;1&lt;/RowSpan2&gt;&lt;ColSpan2&gt;1&lt;/ColSpan2&gt;&lt;ColIndex3&gt;13&lt;/ColIndex3&gt;&lt;Row3&gt;0&lt;/Row3&gt;&lt;Col3&gt;3&lt;/Col3&gt;&lt;RowSpan3&gt;1&lt;/RowSpan3&gt;&lt;ColSpan3&gt;1&lt;/ColSpan3&gt;&lt;ColIndex4&gt;14&lt;/ColIndex4&gt;&lt;Row4&gt;0&lt;/Row4&gt;&lt;Col4&gt;5&lt;/Col4&gt;&lt;RowSpan4&gt;1&lt;/RowSpan4&gt;&lt;ColSpan4&gt;1&lt;/ColSpan4&gt;&lt;ColIndex5&gt;15&lt;/ColIndex5&gt;&lt;Row5&gt;0&lt;/Row5&gt;&lt;Col5&gt;4&lt;/Col5&gt;&lt;RowSpan5&gt;1&lt;/RowSpan5&gt;&lt;ColSpan5&gt;1&lt;/ColSpan5&gt;&lt;/ColumnSet3&gt;&lt;ColumnSet4 ID="ColumnSet2"&gt;&lt;Key&gt;ColumnSet2&lt;/Key&gt;&lt;Caption&gt;KXĐ xe đón&lt;/Caption&gt;&lt;ColumnCount&gt;1&lt;/ColumnCount&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;ColumnWidth0&gt;82&lt;/ColumnWidth0&gt;&lt;EntriesCount&gt;1&lt;/EntriesCount&gt;&lt;ColIndex0&gt;16&lt;/ColIndex0&gt;&lt;Row0&gt;0&lt;/Row0&gt;&lt;Col0&gt;0&lt;/Col0&gt;&lt;RowSpan0&gt;1&lt;/RowSpan0&gt;&lt;ColSpan0&gt;1&lt;/ColSpan0&gt;&lt;/ColumnSet4&gt;&lt;/ColumnSets&gt;&lt;ColumnSetRowCount&gt;1&lt;/ColumnSetRowCount&gt;&lt;GroupCondition ID="" /&gt;&lt;Groups Collection="true"&gt;&lt;Group0 ID="Group0"&gt;&lt;ColIndex&gt;0&lt;/ColIndex&gt;&lt;/Group0&gt;&lt;/Groups&gt;&lt;GroupTotalRowFormatStyle&gt;&lt;FontBold&gt;True&lt;/FontBold&gt;&lt;/GroupTotalRowFormatStyle&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <data name="gridEXLayout4.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="NgayHienThi"&gt;&lt;Caption&gt;Ngày&lt;/Caption&gt;&lt;DataMember&gt;NgayHienThi&lt;/DataMember&gt;&lt;Key&gt;NgayHienThi&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;101&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="GioHienThi"&gt;&lt;DataMember&gt;GioHienThi&lt;/DataMember&gt;&lt;Key&gt;GioHienThi&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;62&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="TongTaxi"&gt;&lt;Caption&gt;Gọi Taxi&lt;/Caption&gt;&lt;DataMember&gt;TongTaxi&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongTaxi&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="TongGoiLai"&gt;&lt;Caption&gt;Gọi lại&lt;/Caption&gt;&lt;DataMember&gt;TongGoiLai&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongGoiLai&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;64&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="TongKhieuNai"&gt;&lt;Caption&gt;Chuyển KH&lt;/Caption&gt;&lt;DataMember&gt;TongKhieuNai&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongKhieuNai&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;TextAlignment&gt;Near&lt;/TextAlignment&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="TongDichVu"&gt;&lt;Caption&gt;Dịch vụ&lt;/Caption&gt;&lt;DataMember&gt;TongDichVu&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongDichVu&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;65&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="TongHoiDam"&gt;&lt;Caption&gt;Hỏi đàm&lt;/Caption&gt;&lt;DataMember&gt;TongHoiDam&lt;/DataMember&gt;&lt;Key&gt;TongHoiDam&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;/Column6&gt;&lt;Column7 ID="TongGoiKhac"&gt;&lt;Caption&gt;Gọi khác&lt;/Caption&gt;&lt;DataMember&gt;TongGoiKhac&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongGoiKhac&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;63&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="TongCuocGoi"&gt;&lt;Caption&gt;Tổng&lt;/Caption&gt;&lt;DataMember&gt;TongCuocGoi&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongCuocGoi&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="GoiNho"&gt;&lt;DataMember&gt;GoiNho&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;GoiNho&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;84&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="TongDonDuoc"&gt;&lt;Caption&gt;Đón được&lt;/Caption&gt;&lt;DataMember&gt;TongDonDuoc&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongDonDuoc&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;61&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="TongTruotHoanKhongXe"&gt;&lt;Caption&gt;Tổng không đón được&lt;/Caption&gt;&lt;DataMember&gt;TongTruotHoanKhongXe&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongTruotHoanKhongXe&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;95&lt;/Width&gt;&lt;/Column11&gt;&lt;Column12 ID="TongTruot"&gt;&lt;Caption&gt;Trượt hoãn&lt;/Caption&gt;&lt;DataMember&gt;TongTruot&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;TongTruot&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;63&lt;/Width&gt;&lt;/Column12&gt;&lt;Column13 ID="KhongXe"&gt;&lt;Caption&gt;Không xe&lt;/Caption&gt;&lt;DataMember&gt;KhongXe&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;KhongXe&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;69&lt;/Width&gt;&lt;/Column13&gt;&lt;Column14 ID="PhanTramDonDuoc"&gt;&lt;Caption&gt;% đón được&lt;/Caption&gt;&lt;DataMember&gt;PhanTramDonDuoc&lt;/DataMember&gt;&lt;FormatString&gt;#.##&lt;/FormatString&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;PhanTramDonDuoc&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/Column14&gt;&lt;Column15 ID="Cuoc999"&gt;&lt;Caption&gt;Khác&lt;/Caption&gt;&lt;DataMember&gt;Cuoc999&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Cuoc999&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;67&lt;/Width&gt;&lt;/Column15&gt;&lt;Column16 ID="Cuoc888"&gt;&lt;DataMember&gt;Cuoc888&lt;/DataMember&gt;&lt;HeaderAlignment&gt;Center&lt;/HeaderAlignment&gt;&lt;Key&gt;Cuoc888&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;82&lt;/Width&gt;&lt;/Column16&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;0&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;ColumnSetRowCount&gt;1&lt;/ColumnSetRowCount&gt;&lt;GroupCondition ID="" /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>34</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAA
+        AADg4OAA39/fANDQ0ADPz88AwMDAAK///wCQ//8Aj/D/AIDw/wCw36AAv7+/ALCwsACvr68AoKCgAJ+f
+        nwCQkJAAj4+PAICAgAB/8P8AcPD/AG/w/wBg8P8AX/D/AFDw/wBP8P8AQPD/AD/w/wAw8P8AL/D/ACDw
+        /wAf8P8AEPD/AA/w/wAP7/8AAO//AADv8AAA4PAAAODvAADf7wAA3+AAANDvAADQ4AAA0N8AAM/fAADP
+        0AAAwNAAAMDPAAC/zwAAv8AAALDAAACwvwAAr78AAK+wAACgrwAAn6AAAJCgAACQnwAAj5AAAICQAH9/
+        fwBwcHAAYGBgAF9fXwBQUFAAT09PAEBAQAAAcH8AAHBwAABvcAAAb28AAGBvAABgYAAAX2AAAE9QAD8/
+        PwAwMDAALy8vACAgIAAfHx8AEBAQAA8PDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD///8AUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFR
+        UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFR
+        UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFMTExMAExM
+        TFFRUVBQUFFRUVFRUVFRUVFRUVEAUU5MS09PT081Li5MLjdQUEBQUVFRUVFRUVFRUVFRUUAuLi8vLy8u
+        Li4uTAxMLlBNC0FQUVFRUVFRUVFRUVElLiUYFBQUGBsiJiksLi4uUE0LO1BRUVFRUVFRUVFRUSYUFhgd
+        IiIiIiIiRhFCLiw5UD5BUEdRUVFRUVFRUVFRJRwcIiQvMjIyLyI1CwpCKi5QS01QOS5RUVFRUVFRUVFR
+        EUYpMiEhIiUpMhtEAjgpLDZQUDk5OSlRUVFRUVFRUVECCjUcHQBPIiIlMh8UGiYlKS4uOTUwSSJRUVFR
+        UVFRUVFGLhcZHyAhISIiMDIUGiEmJi45MDBDOSJRUVFRUVFRURIuFBUXGBodHx8iKTIyFB0zOTAwMDku
+        OTFOT1FRUVFRURQoBxQWGBocHh8hIiowNDkwMDA1OS44LE0/UVFRUVFRURQhBQcUFBkfLE9PT08uLU9P
+        Tyk5LjgpTT1RUVFRUVFRUSEaL09PSj48Dg8QEE8pTyYmTzkuNCdPTzpRUVFRUVFRURROAQIECgwNDhAQ
+        TyZPGSZPTy4wJkVPNVFRUVFRUVFRFU8AAgMKCwwODw9PJk8/ERE/Ty4fJiwzUVFRUVFRUVFRFU8DAwQN
+        DxERERFQJk8RET8RTxkfJi1RUVFRUVFRUVEVTwwPETs/S09PT08mTz8/PxE/TxkfUVFRUVFRUVFRUVEV
+        T09PT0g4MTEtKyYuT08/P08uUVFRUVFRUVFRUVFRUVEICAgTFxgZGSEhJSYmLk9PLlFRUVFRUVFRUVFR
+        UVFRUVFRCAUIFhYZGRkhJCUjLi5RUVFRUVFRUVFRUVFRUVFRUVFRUQgFBggWFhkZIVFRUVFRUVFRUVFR
+        UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFR
+        UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFR
+        UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFR
+        UVFRUVFRUVFRUf/////////////////////+AYf/wAAD/4AAA/+AAAH/AAAB/wAAAP8AAAB/gAAAP4AA
+        AB/AAAADwAAAAeAAAAHwAAAB+AAAAPwAAAD8AAAA/gAAAP4AAAH/AAAD/4AAD//AAB//8AA///wB////
+        ////////////////////////
+</value>
+  </data>
+</root>

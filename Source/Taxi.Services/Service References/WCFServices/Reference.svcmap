@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7d748127-4d6e-40eb-b0e9-be950fb6179c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.2.172:8001/WCFSyncService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFSyncService9.xsd" MetadataType="Schema" ID="92742353-566a-4e26-afd7-494290f85c68" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd8" />
+    <MetadataFile FileName="WCFSyncService91.xsd" MetadataType="Schema" ID="75ea89bf-5e99-43ae-965d-2079cfe14880" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd7" />
+    <MetadataFile FileName="WCFSyncService92.xsd" MetadataType="Schema" ID="c4b768e0-0891-4f85-8bed-1ecb4af13af1" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd6" />
+    <MetadataFile FileName="WCFSyncService93.xsd" MetadataType="Schema" ID="dce0f0a1-2556-4028-a43f-7e24deeaed79" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd5" />
+    <MetadataFile FileName="WCFSyncService94.xsd" MetadataType="Schema" ID="dab612d8-8afa-40f0-9977-8dd492fe0b9f" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd4" />
+    <MetadataFile FileName="WCFSyncService95.xsd" MetadataType="Schema" ID="63c25b1e-21f1-4280-842f-236236524466" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd3" />
+    <MetadataFile FileName="WCFSyncService96.xsd" MetadataType="Schema" ID="4f8c8825-8076-4f64-91c7-9270a69f8d66" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd2" />
+    <MetadataFile FileName="WCFSyncService97.xsd" MetadataType="Schema" ID="7b19efa1-e887-49e6-8a93-1d0b4fbf47e8" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd1" />
+    <MetadataFile FileName="WCFSyncService98.xsd" MetadataType="Schema" ID="5819fd3e-3265-4d45-81c0-72fe77c2bfcf" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService?xsd=xsd0" />
+    <MetadataFile FileName="SyncServiceOnline.wsdl" MetadataType="Wsdl" ID="97e7c14e-c265-4845-816f-609dd9535939" SourceId="1" SourceUrl="http://10.0.2.172:8001/WCFSyncService" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
